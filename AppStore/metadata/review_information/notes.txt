@@ -1,0 +1,13 @@
+Thank you for reviewing DevTools.
+
+DevTools is a client for Apple's official App Store Connect API. Normally the user connects with their own App Store Connect API key (Issuer ID, Key ID and a .p8 private key), which we cannot share.
+
+To review all features without a key, please use the built-in demo mode:
+1. Launch the app.
+2. On the welcome screen tap "Try the demo".
+3. All screens (Home, Apps, TestFlight, Insights, Account) are filled with sample data. Actions that would change data in App Store Connect show "Not available in demo mode".
+4. Account → "Exit demo" returns to the welcome screen.
+
+The app does not collect any data. The API key is stored only in the device Keychain and the app talks directly to api.appstoreconnect.apple.com. Encryption: only standard HTTPS and Apple CryptoKit signing of the API token (exempt).
+
+The Apple Watch app and widgets show the data that the iPhone app loaded.

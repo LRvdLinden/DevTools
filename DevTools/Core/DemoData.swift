@@ -228,7 +228,8 @@ enum DemoData {
         let countries: [(String, Double)] = [("US", 0.31), ("NL", 0.18), ("GB", 0.12), ("DE", 0.11), ("CA", 0.06), ("BE", 0.05), ("FR", 0.05), ("AU", 0.04), ("JP", 0.04), ("SE", 0.04)]
         var rows: [SalesRow] = []
         for (ai, a) in apps.enumerated() where a.base > 0 {
-            let trend = 1.0 + 0.004 * Double(dayIndex % 365)
+            let age = max(0, Date().timeIntervalSince(date) / 86_400)
+            let trend = max(0.45, 1.5 - 0.0045 * age)
             let weekday = Calendar.current.component(.weekday, from: date)
             let weekend = (weekday == 1 || weekday == 7) ? 1.25 : 1.0
             let wave = 1 + 0.18 * sin(Double(dayIndex) / 4.5 + Double(ai))

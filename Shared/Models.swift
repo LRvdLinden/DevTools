@@ -144,7 +144,7 @@ extension SharedSnapshot {
         func hist(_ base: Int, _ phase: Double) -> [HistoryPoint] {
             (0..<30).map { i in
                 HistoryPoint(date: cal.date(byAdding: .day, value: i - 30, to: .now) ?? .now,
-                             value: base + Int(Double(base) * 0.25 * sin(Double(i) / 3 + phase)) + i * base / 40)
+                             value: base + Int(Double(base) * 0.12 * sin(Double(i) / 3 + phase)) + i * base / 14)
             }
         }
         let a = hist(150, 0), b = hist(70, 1), c = hist(46, 2), d = hist(26, 3), e = hist(15, 4)

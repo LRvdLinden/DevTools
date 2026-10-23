@@ -62,14 +62,15 @@ name, tid = pick_type(["iPhone 17 Pro Max", "iPhone 16 Pro Max", "iPhone 16 Plus
 if tid:
     u = boot("shot-iphone", tid, ios_rt); status_bar(u)
     sh(["xcrun", "simctl", "install", u, APP])
+    time.sleep(90)  # let first-boot system notifications pass
     for i, s in enumerate(screens):
         try: shoot(u, BUNDLE, ["-screen", s], f"{OUT}/iphone-{i+1:02d}-{s}.png")
         except Exception as e: LOG.write(f"ERR {s}: {e}\n")
     # splash (with animation running)
     try:
         sh(["xcrun", "simctl", "terminate", u, BUNDLE], check=False)
-        sh(["xcrun", "simctl", "launch", u, BUNDLE, "-demo", "-AppleLanguages", "(en)", "-AppleLocale", "en_US"])
-        time.sleep(1.9); sh(["xcrun", "simctl", "io", u, "screenshot", "--type=png", f"{OUT}/iphone-00-splash.png"])
+        sh(["xcrun", "simctl", "launch", u, BUNDLE, "-demo", "-holdSplash", "-AppleLanguages", "(en)", "-AppleLocale", "en_US"])
+        time.sleep(3.0); sh(["xcrun", "simctl", "io", u, "screenshot", "--type=png", f"{OUT}/iphone-00-splash.png"])
     except Exception as e: LOG.write(f"ERR splash: {e}\n")
     sh(["xcrun", "simctl", "shutdown", u], check=False)
     LOG.write(f"iPhone: {name}\n")
@@ -78,8 +79,9 @@ name, tid = pick_type(["iPad Pro 13-inch (M5)", "iPad Pro 13-inch (M4)", "iPad P
 if tid:
     u = boot("shot-ipad", tid, ios_rt); status_bar(u)
     sh(["xcrun", "simctl", "install", u, APP])
+    time.sleep(90)
     for i, s in enumerate(["home", "insights", "app", "build", "reviews"]):
-        try: shoot(u, BUNDLE, ["-screen", s], f"{OUT}/ipad-{i+1:02d}-{s}.png", wait=8)
+        try: shoot(u, BUNDLE, ["-screen", s], f"{OUT}/ipad-{i+1:02d}-{s}.png", wait=11)
         except Exception as e: LOG.write(f"ERR ipad {s}: {e}\n")
     sh(["xcrun", "simctl", "shutdown", u], check=False)
     LOG.write(f"iPad: {name}\n")
@@ -90,6 +92,7 @@ try:
     if tid:
         u = boot("shot-watch", tid, w_rt)
         sh(["xcrun", "simctl", "install", u, WATCH_APP])
+        time.sleep(30)
         for i in range(3):
             try: shoot(u, WATCH_BUNDLE, ["-page", str(i)], f"{OUT}/watch-{i+1:02d}.png", wait=8)
             except Exception as e: LOG.write(f"ERR watch {i}: {e}\n")

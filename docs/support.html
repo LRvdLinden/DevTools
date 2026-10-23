@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DevTools – Support</title><link rel="icon" href="icon.png"><style>
+:root{--bg:#0b1020;--card:#151b2e;--text:#e8ecf5;--muted:#9aa3b8;--accent:#2f8bff;--cyan:#3cd3ff}
+@media (prefers-color-scheme: light){:root{--bg:#f3f5fa;--card:#fff;--text:#111522;--muted:#5d6577}}
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text",Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
+main{max-width:760px;margin:0 auto;padding:48px 20px 80px}
+header{display:flex;align-items:center;gap:16px;margin-bottom:28px}header img{width:64px;height:64px}
+h1{font-size:30px;margin:0}h2{font-size:20px;margin:32px 0 8px}.sub{color:var(--muted);margin:2px 0 0}
+.card{background:var(--card);border-radius:16px;padding:20px 22px;margin:16px 0;box-shadow:0 6px 24px rgba(0,0,0,.12)}
+a{color:var(--accent)}.btn{display:inline-block;background:linear-gradient(90deg,#2f6bff,#21c8f0);color:#fff;text-decoration:none;padding:12px 20px;border-radius:999px;font-weight:600;margin:6px 8px 6px 0}
+footer{color:var(--muted);font-size:13px;margin-top:40px}ul{padding-left:20px}nav a{margin-right:16px}
+</style></head><body><main>
+<header><img src="icon.png" alt=""><div><h1>DevTools</h1><p class="sub">Developer Dashboard for App Store Connect</p></div></header>
+<nav><a href="index.html">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+
+<h2>Support</h2><div class="card"><p>Questions, bugs or feature ideas? Open an issue on GitHub – we usually answer within a few days.</p>
+<a class="btn" href="https://github.com/LRvdLinden/DevTools/issues/new">Contact support</a></div>
+<h2>Connecting your account</h2><div class="card"><ol>
+<li>In App Store Connect go to <strong>Users and Access → Integrations → App Store Connect API → Team Keys</strong>.</li>
+<li>Tap <strong>+</strong>, enter a name (e.g. “DevTools”) and choose the <strong>Admin</strong> role. Tap <strong>Generate</strong>.</li>
+<li>Copy the <strong>Issuer ID</strong> shown above the list of keys.</li>
+<li>Download the key file <code>AuthKey_XXXXXXXXXX.p8</code> (Apple only allows this once) and save it to the Files app on your iPhone, e.g. via AirDrop or iCloud Drive.</li>
+<li>In DevTools tap <strong>Connect App Store Connect</strong>, enter the Issuer ID and choose the .p8 file – the Key ID is filled in automatically.</li>
+<li>For downloads and proceeds, enter your <strong>vendor number</strong>: App Store Connect → <strong>Business</strong>, the 8-digit number next to your address.</li></ol>
+<p>DevTools also contains this guide: Account → Guide.</p></div>
+<h2>Troubleshooting</h2><div class="card"><ul>
+<li><strong>401 – Authentication failed:</strong> the Issuer ID or Key ID is wrong, the .p8 belongs to another key, or the key was revoked.</li>
+<li><strong>403 – No access:</strong> the key's role is too limited. Use a key with the Admin role.</li>
+<li><strong>No downloads:</strong> the vendor number is missing, the key lacks the Sales/Finance role, or Apple has not published the report yet (about one day delay).</li>
+<li><strong>Apple Watch shows no data:</strong> open DevTools on your iPhone once, then tap Fetch on the watch.</li></ul></div>
+<footer>© 2026 PixelForges · DevTools is an independent app and is not affiliated with or endorsed by Apple Inc. App Store Connect and TestFlight are trademarks of Apple Inc.</footer>
+</main></body></html>

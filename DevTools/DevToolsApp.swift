@@ -64,6 +64,7 @@ struct RootView: View {
         if store.active != nil {
             Task { await store.refresh() }
         }
+        if LaunchArgs.args.contains("-holdSplash") { return }
         let minimum = 2.4
         let maximum = store.active == nil ? 2.4 : (hasCache ? 4.0 : 7.0)
         while true {

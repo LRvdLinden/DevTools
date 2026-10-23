@@ -45,6 +45,8 @@ final class DevStore {
 
     func startDemo() {
         generation += 1
+        loading = false
+        salesLoading = false
         isDemo = true
         apps = DemoData.summaries()
         error = nil
@@ -114,6 +116,8 @@ final class DevStore {
 
     private func resetData() {
         generation += 1
+        loading = false
+        salesLoading = false
         apps = []
         sales = SalesSummary()
         salesPeriods = []

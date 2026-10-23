@@ -1,0 +1,1 @@
+app store connect,testflight,developer,indie,analytics,downloads,sales,reviews,release,build,ios

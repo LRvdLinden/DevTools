@@ -302,16 +302,15 @@ struct WatchOverviewView: View {
 
                 Text("\(snapshot.accountName ?? "DevTools") · \(snapshot.updated.formatted(.relative(presentation: .named)))")
                     .font(.caption2).foregroundStyle(.secondary).lineLimit(2)
-            }
-        }
-        .navigationTitle("DevTools")
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
                 Button { store.refresh() } label: {
-                    if store.refreshing { ProgressView() } else { Image(systemName: "arrow.clockwise") }
+                    if store.refreshing { ProgressView() } else { Label("Ophalen", systemImage: "arrow.clockwise") }
+                }
+                if let message = store.message {
+                    Text(message).font(.caption2).foregroundStyle(.orange)
                 }
             }
         }
+        .navigationTitle("DevTools")
     }
 }
 
