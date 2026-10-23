@@ -1,0 +1,36 @@
+name: Build check
+
+on:
+  push:
+    branches: ['**', '!ci-logs']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  xcode:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Xcode version
+        run: xcodebuild -version | tee xcode-version.txt
+      - name: Build iOS app (incl. Watch + widgets), unsigned
+        run: |
+          set -o pipefail
+          xcodebuild -project DevTools.xcodeproj -scheme DevTools \
+            -destination 'generic/platform=iOS' -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tee build.log || echo "BUILD_FAILED" >> build.log
+      - name: Publish result to ci-logs branch
+        if: always()
+        run: |
+          SHA=$(git rev-parse --short HEAD)
+          mkdir -p /tmp/out && cd /tmp/out
+          cp $GITHUB_WORKSPACE/xcode-version.txt . || true
+          grep -E "error:|BUILD SUCCEEDED|BUILD FAILED|BUILD_FAILED|\*\* " $GITHUB_WORKSPACE/build.log | sort -u | head -400 > summary.txt || true
+          tail -150 $GITHUB_WORKSPACE/build.log > tail.txt || true
+          echo "$SHA" > sha.txt
+          git init -q && git checkout -q -b ci-logs
+          git config user.name "ci" && git config user.email "ci@users.noreply.github.com"
+          git add . && git commit -qm "CI $SHA"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" ci-logs
