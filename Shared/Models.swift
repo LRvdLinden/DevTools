@@ -135,3 +135,46 @@ func L(_ value: String.LocalizationValue) -> String { String(localized: value) }
 
 /// Runtime lookup for a string that is already held in a variable.
 func LS(_ key: String) -> String { NSLocalizedString(key, comment: "") }
+
+// MARK: - Sample data (widget gallery, watch demo, previews)
+
+extension SharedSnapshot {
+    static var sample: SharedSnapshot {
+        let cal = Calendar.current
+        func hist(_ base: Int, _ phase: Double) -> [HistoryPoint] {
+            (0..<30).map { i in
+                HistoryPoint(date: cal.date(byAdding: .day, value: i - 30, to: .now) ?? .now,
+                             value: base + Int(Double(base) * 0.25 * sin(Double(i) / 3 + phase)) + i * base / 40)
+            }
+        }
+        let a = hist(150, 0), b = hist(70, 1), c = hist(46, 2), d = hist(26, 3), e = hist(15, 4)
+        var total: [HistoryPoint] = []
+        for i in a.indices { total.append(HistoryPoint(date: a[i].date, value: a[i].value + b[i].value + c[i].value + d[i].value + e[i].value)) }
+        func sum(_ h: [HistoryPoint]) -> Int { h.reduce(0) { $0 + $1.value } }
+        return SharedSnapshot(
+            updated: .now,
+            apps: [
+                WidgetAppSummary(id: "6740000001", name: "Bingr", version: "1.0.0", state: "IN_REVIEW", liveVersion: "1.0.0", pendingVersion: "1.1.0", pendingState: "IN_REVIEW", downloads: sum(a), build: "142", rating: 4.8, ratingCount: 1284, proceeds: 812, updates: 9_400, history: a),
+                WidgetAppSummary(id: "6740000002", name: "Pitwall", version: "1.1.0", state: "PENDING_DEVELOPER_RELEASE", liveVersion: "1.1.0", pendingVersion: "1.2.0", pendingState: "PENDING_DEVELOPER_RELEASE", downloads: sum(b), build: "58", rating: 4.7, ratingCount: 532, proceeds: 0, updates: 4_100, history: b),
+                WidgetAppSummary(id: "6740000003", name: "Manga Vault", version: "1.2.1", state: "PREPARE_FOR_SUBMISSION", liveVersion: "1.2.1", pendingVersion: "1.3.0", pendingState: "PREPARE_FOR_SUBMISSION", downloads: sum(c), build: "37", rating: 4.6, ratingCount: 318, proceeds: 2_330, updates: 2_900, history: c),
+                WidgetAppSummary(id: "6740000004", name: "TVArt", version: "1.4.0", state: "READY_FOR_DISTRIBUTION", liveVersion: "1.4.0", pendingVersion: "2.0.0", pendingState: "READY_FOR_DISTRIBUTION", downloads: sum(d), build: "24", rating: 4.9, ratingCount: 147, proceeds: 0, updates: 1_200, history: d),
+                WidgetAppSummary(id: "6740000005", name: "HomeyDev", version: "1.3.7", state: "METADATA_REJECTED", liveVersion: "1.3.7", pendingVersion: "1.4.0", pendingState: "METADATA_REJECTED", downloads: sum(e), build: "88", rating: 4.5, ratingCount: 96, proceeds: 0, updates: 700, history: e),
+                WidgetAppSummary(id: "6740000006", name: "World Radio", version: "1.0.0", state: "WAITING_FOR_REVIEW", pendingVersion: "1.0.0", pendingState: "WAITING_FOR_REVIEW", build: "9")
+            ],
+            accountName: "PixelForges", downloads: sum(total), downloadsRange: "30d",
+            proceeds: 3_142, currency: "EUR", history: total, updates: 18_300)
+    }
+
+    /// Asset name of the bundled demo icon for a sample app (watch demo).
+    static func demoIcon(for name: String) -> String? {
+        switch name {
+        case "Bingr": return "demo-bingr"
+        case "Pitwall": return "demo-pitwall"
+        case "Manga Vault": return "demo-manga"
+        case "TVArt": return "demo-tvart"
+        case "HomeyDev": return "demo-homey"
+        case "World Radio": return "demo-radio"
+        default: return nil
+        }
+    }
+}

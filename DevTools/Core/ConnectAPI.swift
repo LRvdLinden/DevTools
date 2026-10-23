@@ -112,6 +112,10 @@ struct ConnectAPI {
 
     @discardableResult
     func send(_ method: String, _ url: URL, body: Data? = nil, accept: String = "application/json") async throws -> (Data, Int) {
+        if account.id == DemoData.accountID {
+            try? await Task.sleep(for: .milliseconds(250))
+            return (try DemoData.response(method: method, url: url), 200)
+        }
         var request = URLRequest(url: url)
         request.httpMethod = method
         request.setValue("Bearer \(try token())", forHTTPHeaderField: "Authorization")

@@ -8,7 +8,7 @@ import UIKit
 @main
 struct DevToolsWatchApp: App {
     @State private var store = WatchStore()
-    @State private var splash = true
+    @State private var splash = !ProcessInfo.processInfo.arguments.contains("-noSplash")
 
     var body: some Scene {
         WindowGroup {
@@ -49,10 +49,11 @@ final class WatchStore: NSObject {
         super.init()
         let saved = SharedSnapshot.load(suite: SharedSnapshot.watchSuite, key: Self.key)
         snapshot = saved.apps.isEmpty ? nil : saved
+        if ProcessInfo.processInfo.arguments.contains("-demo") { snapshot = .sample }
     }
 
     func activate() {
-        guard WCSession.isSupported() else { return }
+        guard WCSession.isSupported(), !ProcessInfo.processInfo.arguments.contains("-demo") else { return }
         WCSession.default.delegate = self
         WCSession.default.activate()
     }
@@ -156,6 +157,8 @@ struct WatchAppIcon: View {
         Group {
             if let url = SharedSnapshot.iconURL(for: app.id, suite: SharedSnapshot.watchSuite), let img = UIImage(contentsOfFile: url.path) {
                 Image(uiImage: img).resizable().scaledToFill()
+            } else if let demo = SharedSnapshot.demoIcon(for: app.name), let img = UIImage(named: demo) {
+                Image(uiImage: img).resizable().scaledToFill()
             } else {
                 ZStack {
                     LinearGradient(colors: [Watch.accent, Watch.cyan], startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -205,13 +208,18 @@ struct WatchSplash: View {
 
 struct WatchRootView: View {
     @Environment(WatchStore.self) private var store
+    @State private var page: Int = {
+        let args = ProcessInfo.processInfo.arguments
+        guard let i = args.firstIndex(of: "-page"), i + 1 < args.count else { return 0 }
+        return Int(args[i + 1]) ?? 0
+    }()
 
     var body: some View {
         if let snapshot = store.snapshot {
-            TabView {
-                WatchOverviewView(snapshot: snapshot)
-                WatchAppsView(snapshot: snapshot)
-                WatchAttentionView(snapshot: snapshot)
+            TabView(selection: $page) {
+                WatchOverviewView(snapshot: snapshot).tag(0)
+                WatchAppsView(snapshot: snapshot).tag(1)
+                WatchAttentionView(snapshot: snapshot).tag(2)
             }
             .tabViewStyle(.verticalPage)
         } else {

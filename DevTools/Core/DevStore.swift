@@ -38,7 +38,26 @@ final class DevStore {
         loadCachedApps()
     }
 
-    var active: DeveloperAccount? { accounts.first { $0.id == selectedID } }
+    /// Demo mode (App Review / screenshots): sample data, nothing is saved.
+    var isDemo = false
+
+    var active: DeveloperAccount? { isDemo ? DemoData.account : accounts.first { $0.id == selectedID } }
+
+    func startDemo() {
+        generation += 1
+        isDemo = true
+        apps = DemoData.summaries()
+        error = nil
+        lastRefresh = .now
+        Task { await refreshSales(force: true) }
+    }
+
+    func endDemo() {
+        isDemo = false
+        resetData()
+        loadCachedApps()
+        if active != nil { Task { await refresh() } }
+    }
     var api: ConnectAPI? { active.map { ConnectAPI(account: $0) } }
 
     func requireAPI() throws -> ConnectAPI {
@@ -57,6 +76,7 @@ final class DevStore {
             throw ConnectError(message: L("Vul Issuer ID en Key ID in en kies een geldig .p8-bestand"))
         }
         try Vault.save(pem, key: item.id.uuidString)
+        isDemo = false
         accounts.append(item)
         selectedID = item.id
         apps = []
@@ -83,6 +103,7 @@ final class DevStore {
     }
 
     func select(_ account: DeveloperAccount) {
+        if isDemo { isDemo = false }
         guard account.id != selectedID else { return }
         selectedID = account.id
         resetData()
@@ -127,6 +148,14 @@ final class DevStore {
     // MARK: Refresh
 
     func refresh() async {
+        if isDemo {
+            apps = DemoData.summaries()
+            lastRefresh = .now
+            progress = 1
+            phase = L("Klaar")
+            await refreshSales(force: true)
+            return
+        }
         guard let account = active, !loading else { return }
         let gen = generation
         let api = ConnectAPI(account: account)
@@ -274,6 +303,7 @@ final class DevStore {
     // MARK: Widgets + Watch
 
     func publishSnapshot() {
+        if isDemo && !ProcessInfo.processInfo.arguments.contains("-demo") { return }
         let byApp = Dictionary(sales.perApp.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
         let hasSales = !sales.points.isEmpty
         // Daily installs per app from the loaded report periods.

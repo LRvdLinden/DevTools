@@ -1,0 +1,36 @@
+name: App Store screenshots
+
+on:
+  push:
+    branches: ['build10', 'main']
+
+permissions:
+  contents: write
+
+jobs:
+  shots:
+    if: contains(github.event.head_commit.message, '[shots]')
+    runs-on: macos-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build for simulator
+        run: |
+          set -o pipefail
+          xcodebuild -project DevTools.xcodeproj -scheme DevTools -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' -derivedDataPath dd -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO build 2>&1 | tail -40 > build-sim.log || echo "SIM_BUILD_FAILED" >> build-sim.log
+          ls dd/Build/Products >> build-sim.log 2>&1 || true
+      - name: Take screenshots
+        run: python3 .github/scripts/shots.py || true
+      - name: Publish to ci-shots branch
+        if: always()
+        run: |
+          SHA=$(git rev-parse --short HEAD)
+          mkdir -p /tmp/out && cp -R shots/. /tmp/out/ 2>/dev/null || true
+          cp build-sim.log /tmp/out/ 2>/dev/null || true
+          cd /tmp/out && echo "$SHA" > sha.txt
+          git init -q && git checkout -q -b ci-shots
+          git config user.name "ci" && git config user.email "ci@users.noreply.github.com"
+          git add . && git commit -qm "Shots $SHA"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" ci-shots

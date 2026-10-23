@@ -11,6 +11,15 @@ struct AccountView: View {
 
     var body: some View {
         List {
+            if store.isDemo {
+                Section {
+                    Label("Demo-modus actief – voorbeeldgegevens", systemImage: "play.rectangle.fill").foregroundStyle(Theme.accent)
+                    Text("Dit is de demo-modus. Koppel je eigen App Store Connect-account om echte gegevens te zien.")
+                        .font(.footnote).foregroundStyle(Theme.textSecondary)
+                    Button(role: .destructive) { store.endDemo() } label: { Label("Demo afsluiten", systemImage: "xmark.circle") }
+                } header: { Text("Demo-modus") }
+                .cardRows()
+            }
             Section {
                 ForEach(store.accounts) { item in
                     HStack(spacing: 12) {

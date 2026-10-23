@@ -228,6 +228,11 @@ enum SalesEngine {
         guard let vendor = account.vendorNumber?.trimmingCharacters(in: .whitespaces), !vendor.isEmpty else {
             return Result(error: L("Geen vendornummer ingesteld."))
         }
+        if account.id == DemoData.accountID {
+            let periods = dates(for: range).map { SalesPeriod(date: $0, rows: DemoData.salesRows(for: $0, weekly: range.weekly)) }
+            if let progress { await progress(1) }
+            return Result(periods: periods)
+        }
         let api = ConnectAPI(account: account)
         let dates = dates(for: range)
         var periods: [SalesPeriod] = []

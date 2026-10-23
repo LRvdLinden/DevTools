@@ -82,30 +82,6 @@ struct AppIntentProvider: AppIntentTimelineProvider {
     }
 }
 
-extension SharedSnapshot {
-    static var sample: SharedSnapshot {
-        let cal = Calendar.current
-        func hist(_ base: Int) -> [HistoryPoint] {
-            (0..<30).map { i in
-                HistoryPoint(date: cal.date(byAdding: .day, value: i - 30, to: .now) ?? .now,
-                             value: base + Int(Double(base) * 0.4 * sin(Double(i) / 3)) + i)
-            }
-        }
-        let a = hist(40), b = hist(14), c = hist(5)
-        var total: [HistoryPoint] = []
-        for i in a.indices { total.append(HistoryPoint(date: a[i].date, value: a[i].value + b[i].value + c[i].value)) }
-        return SharedSnapshot(
-            updated: .now,
-            apps: [
-                WidgetAppSummary(id: "1", name: "Bingr", version: "1.0.0", state: "READY_FOR_SALE", liveVersion: "1.0.0", downloads: a.reduce(0) { $0 + $1.value }, build: "138", rating: 4.8, ratingCount: 120, proceeds: 312, updates: 420, history: a),
-                WidgetAppSummary(id: "2", name: "Pitwall", version: "1.1", state: "IN_REVIEW", liveVersion: "1.0", pendingVersion: "1.1", pendingState: "IN_REVIEW", downloads: b.reduce(0) { $0 + $1.value }, build: "42", rating: 4.6, ratingCount: 31, proceeds: 80, history: b),
-                WidgetAppSummary(id: "3", name: "TVArt", version: "2.0", state: "READY_FOR_DISTRIBUTION", pendingVersion: "2.0", pendingState: "READY_FOR_DISTRIBUTION", downloads: c.reduce(0) { $0 + $1.value }, build: "12", history: c)
-            ],
-            accountName: "PixelForges", downloads: total.reduce(0) { $0 + $1.value }, downloadsRange: "30d",
-            proceeds: 392, currency: "EUR", history: total, updates: 640)
-    }
-}
-
 // MARK: - Shared styling
 
 enum W {

@@ -22,7 +22,7 @@ struct DevToolsApp: App {
 struct RootView: View {
     @Environment(DevStore.self) private var store
     @Environment(\.scenePhase) private var scenePhase
-    @State private var showSplash = true
+    @State private var showSplash = !LaunchArgs.noSplash
     @State private var splashFinished = 0
 
     var body: some View {
@@ -54,6 +54,11 @@ struct RootView: View {
     }
 
     private func runSplash() async {
+        if LaunchArgs.demo && !store.isDemo { store.startDemo() }
+        if LaunchArgs.noSplash {
+            showSplash = false
+            return
+        }
         let start = Date()
         let hasCache = !store.apps.isEmpty
         if store.active != nil {
@@ -72,26 +77,111 @@ struct RootView: View {
     }
 }
 
+/// Launch arguments used for demo mode and the App Store screenshots
+/// (e.g. `-demo -noSplash -screen insights`).
+enum LaunchArgs {
+    static let args = ProcessInfo.processInfo.arguments
+    static var demo: Bool { args.contains("-demo") }
+    static var noSplash: Bool { args.contains("-noSplash") }
+    static var screen: String? {
+        guard let i = args.firstIndex(of: "-screen"), i + 1 < args.count else { return nil }
+        return args[i + 1]
+    }
+}
+
+enum ScreenRoute: Hashable {
+    case app(String)
+    case version(String, VersionInfo)
+    case reviews(String)
+    case builds(String)
+    case build(String, String)
+    case guide
+}
+
+struct RouteDestination: View {
+    let route: ScreenRoute
+    @Environment(DevStore.self) private var store
+
+    var body: some View {
+        switch route {
+        case .app(let id): AppDetailView(appID: id)
+        case .version(let id, let v): VersionDetailView(appID: id, version: v)
+        case .reviews(let id):
+            if let app = store.apps.first(where: { $0.id == id }) { ReviewsView(app: app) }
+        case .builds(let id):
+            if let app = store.apps.first(where: { $0.id == id }) { AppBuildsView(app: app) }
+        case .build(let id, let buildID):
+            if let app = store.apps.first(where: { $0.id == id }) { BuildDetailView(app: app, buildID: buildID) }
+        case .guide: GuideView()
+        }
+    }
+}
+
+/// Initial tab + pushed screens for a `-screen` launch argument.
+enum ScreenPlan {
+    static func tab(_ screen: String?) -> Int {
+        switch screen {
+        case "apps", "app", "version", "reviews": return 1
+        case "testflight", "build": return 2
+        case "insights": return 3
+        case "account", "guide": return 4
+        default: return 0
+        }
+    }
+
+    @MainActor
+    static func path(_ screen: String?, apps: [AppSummary]) -> [ScreenRoute] {
+        guard let first = apps.first else { return [] }
+        switch screen {
+        case "app": return [.app(first.id)]
+        case "version":
+            let target = apps.first { $0.pendingVersion?.state == "PREPARE_FOR_SUBMISSION" } ?? first
+            guard let v = target.pendingVersion ?? target.versions.first else { return [.app(target.id)] }
+            return [.app(target.id), .version(target.id, v)]
+        case "reviews": return [.app(first.id), .reviews(first.id)]
+        case "build":
+            guard let b = first.latestBuild else { return [.builds(first.id)] }
+            return [.builds(first.id), .build(first.id, b.id)]
+        case "guide": return [.guide]
+        default: return []
+        }
+    }
+}
+
 /// iPhone: tab bar. iPad: sidebar.
 struct MainView: View {
     @Environment(\.horizontalSizeClass) private var sizeClass
+    @Environment(DevStore.self) private var store
+    @State private var tab = ScreenPlan.tab(LaunchArgs.screen)
+    @State private var paths: [[ScreenRoute]] = Array(repeating: [], count: 5)
 
     var body: some View {
         if sizeClass == .regular {
             SidebarRootView()
         } else {
-            TabView {
-                NavigationStack { DashboardView() }
-                    .tabItem { Label("Home", systemImage: "house.fill") }
-                NavigationStack { AppsListView() }
-                    .tabItem { Label("Apps", systemImage: "square.stack.3d.up.fill") }
-                NavigationStack { TestFlightView() }
-                    .tabItem { Label("TestFlight", systemImage: "airplane") }
-                NavigationStack { InsightsView() }
-                    .tabItem { Label("Insights", systemImage: "chart.xyaxis.line") }
-                NavigationStack { AccountView() }
-                    .tabItem { Label("Account", systemImage: "person.crop.circle.fill") }
+            TabView(selection: $tab) {
+                stack(0) { DashboardView() }
+                    .tabItem { Label("Home", systemImage: "house.fill") }.tag(0)
+                stack(1) { AppsListView() }
+                    .tabItem { Label("Apps", systemImage: "square.stack.3d.up.fill") }.tag(1)
+                stack(2) { TestFlightView() }
+                    .tabItem { Label("TestFlight", systemImage: "airplane") }.tag(2)
+                stack(3) { InsightsView() }
+                    .tabItem { Label("Insights", systemImage: "chart.xyaxis.line") }.tag(3)
+                stack(4) { AccountView() }
+                    .tabItem { Label("Account", systemImage: "person.crop.circle.fill") }.tag(4)
             }
+            .onAppear {
+                if LaunchArgs.screen != nil {
+                    paths[tab] = ScreenPlan.path(LaunchArgs.screen, apps: store.apps)
+                }
+            }
+        }
+    }
+
+    private func stack<Content: View>(_ index: Int, @ViewBuilder _ root: () -> Content) -> some View {
+        NavigationStack(path: $paths[index]) {
+            root().navigationDestination(for: ScreenRoute.self) { RouteDestination(route: $0) }
         }
     }
 }
@@ -103,7 +193,15 @@ enum SidebarItem: Hashable {
 
 struct SidebarRootView: View {
     @Environment(DevStore.self) private var store
-    @State private var selection: SidebarItem? = .home
+    @State private var selection: SidebarItem? = {
+        switch LaunchArgs.screen {
+        case "apps": return .apps
+        case "testflight", "build": return .testflight
+        case "insights": return .insights
+        case "account", "guide": return .account
+        default: return .home
+        }
+    }()
     @State private var path = NavigationPath()
 
     var body: some View {
@@ -145,9 +243,16 @@ struct SidebarRootView: View {
         } detail: {
             NavigationStack(path: $path) {
                 detail(for: selection ?? .home)
+                    .navigationDestination(for: ScreenRoute.self) { RouteDestination(route: $0) }
             }
         }
         .onChange(of: selection) { _, _ in path = NavigationPath() }
+        .onAppear {
+            if let screen = LaunchArgs.screen, ["app", "version", "reviews", "build", "guide"].contains(screen) {
+                if screen == "app", let first = store.apps.first { selection = .app(first.id); return }
+                for r in ScreenPlan.path(screen, apps: store.apps) { path.append(r) }
+            }
+        }
         .navigationSplitViewStyle(.balanced)
     }
 
@@ -171,6 +276,7 @@ struct SidebarRootView: View {
 
 /// First launch: no account linked yet.
 struct WelcomeView: View {
+    @Environment(DevStore.self) private var store
     @State private var showAdd = false
     @State private var showGuide = false
     @State private var appear = false
@@ -219,6 +325,17 @@ struct WelcomeView: View {
                     }
                     Button { showAdd = true } label: { Label("Koppel App Store Connect", systemImage: "key.fill") }
                         .buttonStyle(GradientPillButtonStyle())
+                    Button { withAnimation { store.startDemo() } } label: {
+                        VStack(spacing: 2) {
+                            Label("Bekijk demo", systemImage: "play.rectangle.fill").font(.headline)
+                            Text("Bekijk DevTools met voorbeeldgegevens, zonder API-sleutel.").font(.caption)
+                        }
+                        .foregroundStyle(.white)
+                        .padding(.vertical, 12)
+                        .frame(maxWidth: .infinity)
+                        .overlay(Capsule().strokeBorder(.white.opacity(0.35), lineWidth: 1))
+                    }
+                    .buttonStyle(.plain)
                     Button { showGuide = true } label: { Label("Hoe kom ik aan een API-sleutel?", systemImage: "book.pages.fill") }
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(Theme.cyan)
