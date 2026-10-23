@@ -291,6 +291,7 @@ struct WelcomeView: View {
 
     var body: some View {
         ZStack {
+            Color(rgb: 0x030A1C).ignoresSafeArea()
             AuroraBackground()
             ScrollView {
                 VStack(spacing: 26) {

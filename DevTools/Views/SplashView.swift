@@ -19,6 +19,7 @@ struct SplashView: View {
 
     var body: some View {
         ZStack {
+            Color(rgb: 0x030A1C).ignoresSafeArea()
             AuroraBackground(animated: !reduceMotion)
             GridGlow()
             if !reduceMotion { ParticleField() }
