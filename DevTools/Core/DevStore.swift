@@ -274,29 +274,55 @@ final class DevStore {
     // MARK: Widgets + Watch
 
     func publishSnapshot() {
-        let salesByApp = Dictionary(sales.perApp.map { ($0.id, $0.installs) }, uniquingKeysWith: { a, _ in a })
-        let summaries = apps.map { app in
-            WidgetAppSummary(id: app.id, name: app.name,
-                             version: app.liveVersion?.versionString ?? app.pendingVersion?.versionString ?? "—",
-                             state: app.headlineState,
-                             liveVersion: app.liveVersion?.versionString,
-                             pendingVersion: app.pendingVersion?.versionString,
-                             pendingState: app.pendingVersion?.state,
-                             downloads: salesByApp[app.id],
-                             build: app.latestBuild?.number)
+        let byApp = Dictionary(sales.perApp.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
+        let hasSales = !sales.points.isEmpty
+        // Daily installs per app from the loaded report periods.
+        var perAppHistory: [String: [HistoryPoint]] = [:]
+        for period in salesPeriods {
+            var day: [String: Int] = [:]
+            for row in period.rows where row.kind == .download || row.kind == .redownload {
+                day[row.appleID, default: 0] += row.units
+            }
+            for app in apps {
+                perAppHistory[app.id, default: []].append(HistoryPoint(date: period.date, value: day[app.id] ?? 0))
+            }
+        }
+        let summaries = apps.map { app -> WidgetAppSummary in
+            let s = byApp[app.id]
+            return WidgetAppSummary(id: app.id, name: app.name,
+                                    version: app.liveVersion?.versionString ?? app.pendingVersion?.versionString ?? "—",
+                                    state: app.headlineState,
+                                    liveVersion: app.liveVersion?.versionString,
+                                    pendingVersion: app.pendingVersion?.versionString,
+                                    pendingState: app.pendingVersion?.state,
+                                    downloads: hasSales ? (s?.installs ?? 0) : nil,
+                                    build: app.latestBuild?.number,
+                                    buildState: app.latestBuild.map { $0.needsCompliance ? "MISSING_EXPORT_COMPLIANCE" : $0.displayState },
+                                    rating: app.rating,
+                                    ratingCount: app.ratingCount,
+                                    proceeds: hasSales ? (s?.proceeds ?? 0) : nil,
+                                    updates: hasSales ? (s?.updates ?? 0) : nil,
+                                    history: hasSales ? perAppHistory[app.id] : nil)
         }
         let series = sales.points.suffix(30).map { $0.installs }
+        let total = sales.points.map { HistoryPoint(date: $0.date, value: $0.installs) }
         let snapshot = SharedSnapshot(updated: .now, apps: summaries,
                                       accountName: active?.name,
-                                      downloads: sales.points.isEmpty ? nil : sales.installs,
-                                      downloadsRange: sales.points.isEmpty ? nil : salesRange.rawValue,
+                                      downloads: hasSales ? sales.installs : nil,
+                                      downloadsRange: hasSales ? salesRange.rawValue : nil,
                                       series: series.isEmpty ? nil : Array(series),
-                                      proceeds: sales.points.isEmpty ? nil : sales.proceeds,
-                                      currency: sales.currency.isEmpty ? nil : sales.currency)
+                                      proceeds: hasSales ? sales.proceeds : nil,
+                                      currency: sales.currency.isEmpty ? nil : sales.currency,
+                                      history: total.isEmpty ? nil : total,
+                                      updates: hasSales ? sales.updates : nil)
         snapshot.save()
         WidgetCenter.shared.reloadAllTimelines()
         PhoneWatchBridge.shared.send(snapshot)
-        Task { await IconExporter.export(apps: Array(apps.prefix(12))) }
+        let top = Array(apps.prefix(20))
+        Task {
+            await IconExporter.export(apps: top)
+            PhoneWatchBridge.shared.send(SharedSnapshot.load())
+        }
     }
 }
 

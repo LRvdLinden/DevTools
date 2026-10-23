@@ -2,7 +2,7 @@
 
 Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch, in the style of HomeyDev (Homey Developer Tools). It is built on the official [App Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi).
 
-**Version 1.0.0 (build 11)** · Team `EU3UY476T6` · Bundle `nl.lrvdlinden.devtools`
+**Version 1.0.0 (build 12)** · Team `EU3UY476T6` · Bundle `nl.lrvdlinden.devtools`
 
 ## Features
 
@@ -18,8 +18,9 @@ Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch,
 | **Test groups** | Create internal/external groups, enable public link and share it, add testers (email invite) and remove them, delete groups |
 | **Reviews** | Rating distribution chart, filter by stars or unanswered, reply to reviews and edit or delete replies |
 | **Insights** | Installs, new downloads, re-downloads, updates, in-app purchases and proceeds. Trend chart with scrubbing, installs per app over time (top 5), proceeds per app, countries with flags, devices donut, status of all apps |
-| **Widgets** | Overview (S/M/L with app icons), Downloads with sparkline and proceeds, App Review |
-| **Apple Watch** | Animated splash, downloads, live/review counts, apps with status. Complications show downloads |
+| **Widgets** | Same layout as HomeyDev: *Downloads* (pick one app or all apps, Insights chart), *Top apps* (icons, sparklines, change), *Review & status* |
+| **Apple Watch** | Same layout as HomeyDev: vertical pages *Overview*, *My apps* (with icons) and *Attention*, a Fetch button and an app detail screen. Complications show downloads, change, live and in review |
+| **Guide** | Account → Guide: how to get the API key, Issuer ID, Key ID, .p8 and vendor number, which roles you need, and troubleshooting |
 | **Accounts** | Multiple API keys, account switcher, vendor number per account, light/dark/system theme |
 
 ## Setup

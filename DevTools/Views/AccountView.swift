@@ -69,6 +69,9 @@ struct AccountView: View {
             .cardRows()
 
             Section("Hulp") {
+                NavigationLink { GuideView() } label: {
+                    Label("Handleiding: API-sleutel, Issuer ID & vendornummer", systemImage: "book.pages.fill")
+                }
                 Button { openURL(URL(string: "https://appstoreconnect.apple.com/access/integrations/api")!) } label: {
                     Label("API-sleutels beheren", systemImage: "key")
                 }
@@ -133,7 +136,11 @@ struct AccountEditorSheet: View {
                         LabeledContent("Key ID", value: existing?.keyID ?? "")
                     }
                 } header: { Text("App Store Connect API") } footer: {
-                    Text("Maak een teamsleutel aan in App Store Connect → Gebruikers en toegang → Integraties → App Store Connect API. Kies de rol Admin (of App Manager + Sales) voor alle functies.")
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Maak een teamsleutel aan in App Store Connect → Gebruikers en toegang → Integraties → App Store Connect API. Kies de rol Admin voor alle functies.")
+                        NavigationLink { GuideView() } label: { Label("Hoe kom ik hieraan? Bekijk de handleiding", systemImage: "book.pages") }
+                            .font(.footnote.weight(.semibold))
+                    }
                 }
                 Section {
                     TextField("Vendornummer (bijv. 8xxxxxxx)", text: $vendor).keyboardType(.numberPad)

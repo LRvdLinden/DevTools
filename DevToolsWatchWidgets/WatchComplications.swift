@@ -1,75 +1,119 @@
 import SwiftUI
 import WidgetKit
 
-struct WatchEntry: TimelineEntry {
+/// Watch face complications: downloads, 7-day change and apps in review.
+/// They read the summary the watch app stored in its App Group (like HomeyDev).
+struct ComplicationEntry: TimelineEntry {
     let date: Date
-    let snap: SharedSnapshot
+    let snapshot: SharedSnapshot?
 }
 
-struct WatchProvider: TimelineProvider {
-    func placeholder(in context: Context) -> WatchEntry { WatchEntry(date: .now, snap: .placeholder) }
-    func getSnapshot(in context: Context, completion: @escaping (WatchEntry) -> Void) { completion(WatchEntry(date: .now, snap: WatchSnapshot.load())) }
-    func getTimeline(in context: Context, completion: @escaping (Timeline<WatchEntry>) -> Void) {
-        completion(Timeline(entries: [WatchEntry(date: .now, snap: WatchSnapshot.load())], policy: .after(.now.addingTimeInterval(1800))))
+struct ComplicationProvider: TimelineProvider {
+    private static func stored() -> SharedSnapshot? {
+        let s = SharedSnapshot.load(suite: SharedSnapshot.watchSuite, key: "watchSnapshot")
+        return s.apps.isEmpty ? nil : s
+    }
+
+    func placeholder(in context: Context) -> ComplicationEntry {
+        ComplicationEntry(date: .now, snapshot: SharedSnapshot(updated: .now, apps: [], downloads: 1240, downloadsRange: "30d"))
+    }
+
+    func getSnapshot(in context: Context, completion: @escaping (ComplicationEntry) -> Void) {
+        completion(ComplicationEntry(date: .now, snapshot: Self.stored() ?? placeholder(in: context).snapshot))
+    }
+
+    func getTimeline(in context: Context, completion: @escaping (Timeline<ComplicationEntry>) -> Void) {
+        let entry = ComplicationEntry(date: .now, snapshot: Self.stored())
+        completion(Timeline(entries: [entry], policy: .after(.now.addingTimeInterval(30 * 60))))
     }
 }
 
-enum WatchSnapshot {
-    static func load() -> SharedSnapshot {
-        guard let d = UserDefaults(suiteName: "group.nl.lrvdlinden.devtools.watch")?.data(forKey: "watchSnapshot"),
-              let val = try? JSONDecoder().decode(SharedSnapshot.self, from: d) else { return .placeholder }
-        return val
+private enum CFmt {
+    static func compact(_ n: Int) -> String { n.formatted(.number.notation(.compactName)) }
+    static func signed(_ n: Int) -> String { n > 0 ? "+\(compact(n))" : n < 0 ? "−\(compact(-n))" : "±0" }
+    static func headline(_ s: SharedSnapshot?) -> String {
+        guard let s else { return "–" }
+        if let d = s.downloads { return compact(d) }
+        return "\(s.apps.count)"
     }
 }
 
-struct ComplicationView: View {
-    let entry: WatchEntry
-    @Environment(\.widgetFamily) var family
-
-    private var headline: String {
-        if let d = entry.snap.downloads { return d.formatted(.number.notation(.compactName)) }
-        return "\(entry.snap.apps.count)"
-    }
+struct DownloadsComplicationView: View {
+    @Environment(\.widgetFamily) private var family
+    let entry: ComplicationEntry
 
     var body: some View {
+        let s = entry.snapshot
         switch family {
         case .accessoryCircular:
             ZStack {
                 AccessoryWidgetBackground()
                 VStack(spacing: 0) {
-                    Image(systemName: entry.snap.downloads == nil ? "square.grid.2x2.fill" : "arrow.down")
-                        .font(.caption2)
-                    Text(headline).font(.headline).minimumScaleFactor(0.6)
+                    Image(systemName: s?.downloads == nil ? "square.grid.2x2.fill" : "arrow.down.circle.fill").font(.system(size: 11))
+                    Text(CFmt.headline(s))
+                        .font(.system(size: 14, weight: .bold, design: .rounded))
+                        .minimumScaleFactor(0.5)
                 }
             }
-            .containerBackground(.clear, for: .widget)
-        case .accessoryInline:
-            Text("DevTools · \(entry.snap.liveCount) live · \(entry.snap.inReview) review")
+            .widgetAccentable()
         case .accessoryCorner:
-            Text(headline)
-                .widgetLabel { Text("DevTools") }
-                .containerBackground(.clear, for: .widget)
+            Text(CFmt.headline(s))
+                .font(.system(size: 18, weight: .bold, design: .rounded))
+                .widgetLabel {
+                    Text(s?.delta7.map { "\(CFmt.signed($0)) 7d" } ?? "DevTools")
+                }
+        case .accessoryInline:
+            if let s {
+                Text("⬇︎ \(CFmt.headline(s))\(s.inReview == 0 ? "" : " · \(s.inReview) review")")
+            } else {
+                Text("DevTools")
+            }
         default:
             VStack(alignment: .leading, spacing: 1) {
-                Label("DevTools", systemImage: "square.grid.2x2.fill").font(.caption2.weight(.semibold))
-                if let d = entry.snap.downloads {
-                    Text("\(d.formatted()) downloads").font(.headline)
-                } else {
-                    Text("\(entry.snap.apps.count) apps").font(.headline)
+                HStack(spacing: 4) {
+                    Image(systemName: "square.grid.2x2.fill").font(.system(size: 11, weight: .bold))
+                    Text("DevTools").font(.system(size: 12, weight: .semibold))
                 }
-                Text("\(entry.snap.liveCount) live · \(entry.snap.inReview) in review").font(.caption2)
+                .widgetAccentable()
+                if let s {
+                    if let d = s.downloads {
+                        Text(d.formatted(.number))
+                            .font(.system(size: 20, weight: .bold, design: .rounded).monospacedDigit())
+                            .minimumScaleFactor(0.6)
+                    } else {
+                        Text("\(s.apps.count) apps").font(.system(size: 20, weight: .bold, design: .rounded))
+                    }
+                    HStack(spacing: 6) {
+                        if let d7 = s.delta7 { Text("\(CFmt.signed(d7)) 7d") }
+                        Text("✓ \(s.liveCount)")
+                        if s.inReview > 0 { Text("⏳ \(s.inReview)") }
+                    }
+                    .font(.system(size: 12).monospacedDigit())
+                    .foregroundStyle(.secondary)
+                } else {
+                    Text("Open de iPhone-app").font(.system(size: 12)).foregroundStyle(.secondary)
+                }
             }
-            .containerBackground(.clear, for: .widget)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 }
 
-@main
-struct DevWatchWidgets: Widget {
+struct DownloadsComplication: Widget {
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: "DevToolsWatchComplications", provider: WatchProvider()) { ComplicationView(entry: $0) }
-            .configurationDisplayName("DevTools")
-            .description("Downloads en app-status")
-            .supportedFamilies([.accessoryCircular, .accessoryRectangular, .accessoryInline, .accessoryCorner])
+        StaticConfiguration(kind: "DevToolsWatchComplications", provider: ComplicationProvider()) { entry in
+            DownloadsComplicationView(entry: entry)
+                .containerBackground(.fill.tertiary, for: .widget)
+        }
+        .configurationDisplayName("Downloads")
+        .description("Downloads, groei en apps in review.")
+        .supportedFamilies([.accessoryCircular, .accessoryRectangular, .accessoryInline, .accessoryCorner])
+    }
+}
+
+@main
+struct DevWatchWidgets: WidgetBundle {
+    var body: some Widget {
+        DownloadsComplication()
     }
 }

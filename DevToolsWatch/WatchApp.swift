@@ -1,53 +1,23 @@
 import SwiftUI
+import Charts
+import Observation
 import WatchConnectivity
 import WidgetKit
-
-final class WatchBridge: NSObject, ObservableObject, WCSessionDelegate {
-    @Published var snapshot = WatchBridge.saved()
-
-    static let suite = "group.nl.lrvdlinden.devtools.watch"
-
-    static func saved() -> SharedSnapshot {
-        guard let data = UserDefaults(suiteName: suite)?.data(forKey: "watchSnapshot"),
-              let value = try? JSONDecoder().decode(SharedSnapshot.self, from: data) else { return .placeholder }
-        return value
-    }
-
-    override init() {
-        super.init()
-        if WCSession.isSupported() {
-            WCSession.default.delegate = self
-            WCSession.default.activate()
-        }
-    }
-
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        if let d = session.receivedApplicationContext["snapshot"] as? Data { apply(d) }
-    }
-
-    func session(_ session: WCSession, didReceiveApplicationContext context: [String: Any]) {
-        if let d = context["snapshot"] as? Data { apply(d) }
-    }
-
-    private func apply(_ d: Data) {
-        guard let value = try? JSONDecoder().decode(SharedSnapshot.self, from: d) else { return }
-        UserDefaults(suiteName: Self.suite)?.set(d, forKey: "watchSnapshot")
-        DispatchQueue.main.async {
-            self.snapshot = value
-            WidgetCenter.shared.reloadAllTimelines()
-        }
-    }
-}
+import UIKit
 
 @main
 struct DevToolsWatchApp: App {
-    @StateObject private var bridge = WatchBridge()
+    @State private var store = WatchStore()
     @State private var splash = true
 
     var body: some Scene {
         WindowGroup {
             ZStack {
-                WatchDashboard().environmentObject(bridge)
+                NavigationStack {
+                    WatchRootView()
+                }
+                .environment(store)
+                .tint(Watch.accent)
                 if splash {
                     WatchSplash()
                         .transition(.opacity.combined(with: .scale(scale: 1.2)))
@@ -55,12 +25,150 @@ struct DevToolsWatchApp: App {
                 }
             }
             .task {
-                try? await Task.sleep(for: .seconds(1.6))
-                withAnimation(.easeInOut(duration: 0.45)) { splash = false }
+                store.activate()
+                try? await Task.sleep(for: .seconds(1.4))
+                withAnimation(.easeInOut(duration: 0.4)) { splash = false }
             }
         }
     }
 }
+
+// MARK: - Store (same idea as HomeyDev: context from the iPhone + "Ophalen" request)
+
+@MainActor
+@Observable
+final class WatchStore: NSObject {
+    private(set) var snapshot: SharedSnapshot?
+    private(set) var refreshing = false
+    private(set) var message: String?
+    private(set) var iconVersion = 0
+
+    private static let key = "watchSnapshot"
+
+    override init() {
+        super.init()
+        let saved = SharedSnapshot.load(suite: SharedSnapshot.watchSuite, key: Self.key)
+        snapshot = saved.apps.isEmpty ? nil : saved
+    }
+
+    func activate() {
+        guard WCSession.isSupported() else { return }
+        WCSession.default.delegate = self
+        WCSession.default.activate()
+    }
+
+    /// Asks the iPhone for its latest summary.
+    func refresh() {
+        let session = WCSession.default
+        guard session.activationState == .activated, session.isReachable else {
+            message = "iPhone niet bereikbaar. Open DevTools op je iPhone."
+            return
+        }
+        refreshing = true
+        message = nil
+        session.sendMessage(["request": "snapshot"], replyHandler: { reply in
+            let data = reply["snapshot"] as? Data
+            let icons = reply["icons"] as? [String: Data]
+            Task { @MainActor in
+                self.refreshing = false
+                if let data { self.apply(data, icons: icons) } else { self.message = "Open DevTools op je iPhone om gegevens te laden." }
+            }
+        }, errorHandler: { error in
+            let text = error.localizedDescription
+            Task { @MainActor in
+                self.refreshing = false
+                self.message = text
+            }
+        })
+    }
+
+    fileprivate func apply(_ data: Data, icons: [String: Data]?) {
+        guard let new = try? JSONDecoder().decode(SharedSnapshot.self, from: data) else { return }
+        snapshot = new
+        UserDefaults(suiteName: SharedSnapshot.watchSuite)?.set(data, forKey: Self.key)
+        if let icons, !icons.isEmpty {
+            for (id, png) in icons {
+                guard let url = SharedSnapshot.iconURL(for: id, suite: SharedSnapshot.watchSuite) else { continue }
+                try? FileManager.default.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
+                try? png.write(to: url)
+            }
+            iconVersion += 1
+        }
+        WidgetCenter.shared.reloadAllTimelines()
+    }
+}
+
+extension WatchStore: WCSessionDelegate {
+    nonisolated func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        let context = session.receivedApplicationContext
+        let data = context["snapshot"] as? Data
+        let icons = context["icons"] as? [String: Data]
+        Task { @MainActor in
+            if let data { self.apply(data, icons: icons) }
+            if self.snapshot == nil { self.refresh() }
+        }
+    }
+
+    nonisolated func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
+        let data = applicationContext["snapshot"] as? Data
+        let icons = applicationContext["icons"] as? [String: Data]
+        Task { @MainActor in if let data { self.apply(data, icons: icons) } }
+    }
+}
+
+// MARK: - Styling
+
+enum Watch {
+    static let accent = Color(red: 0.10, green: 0.55, blue: 1.0)
+    static let cyan = Color(red: 0.24, green: 0.83, blue: 1.0)
+    static let live = Color.green
+    static let review = Color.orange
+    static let pending = Color(red: 0.6, green: 0.52, blue: 1.0)
+
+    static func compact(_ n: Int) -> String { n.formatted(.number.notation(.compactName)) }
+    static func number(_ n: Int) -> String { n.formatted(.number) }
+    static func signed(_ n: Int) -> String { n > 0 ? "+\(compact(n))" : n < 0 ? "−\(compact(-n))" : "±0" }
+    static func money(_ v: Double?, _ c: String?) -> String {
+        guard let v else { return "—" }
+        guard let c, !c.isEmpty else { return String(format: "%.0f", v) }
+        return v.formatted(.currency(code: c).precision(.fractionLength(0)))
+    }
+
+    static func color(for state: String) -> Color {
+        switch state {
+        case "READY_FOR_SALE": return live
+        case "READY_FOR_DISTRIBUTION": return cyan
+        case "WAITING_FOR_REVIEW", "IN_REVIEW", "READY_FOR_REVIEW", "MISSING_EXPORT_COMPLIANCE": return review
+        case "REJECTED", "METADATA_REJECTED", "INVALID_BINARY": return .red
+        case "PENDING_DEVELOPER_RELEASE": return pending
+        default: return .secondary
+        }
+    }
+}
+
+struct WatchAppIcon: View {
+    let app: WidgetAppSummary
+    var size: CGFloat = 26
+    @Environment(WatchStore.self) private var store
+
+    var body: some View {
+        let _ = store.iconVersion
+        Group {
+            if let url = SharedSnapshot.iconURL(for: app.id, suite: SharedSnapshot.watchSuite), let img = UIImage(contentsOfFile: url.path) {
+                Image(uiImage: img).resizable().scaledToFill()
+            } else {
+                ZStack {
+                    LinearGradient(colors: [Watch.accent, Watch.cyan], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    Text(String(app.name.prefix(1))).font(.system(size: size * 0.45, weight: .bold, design: .rounded)).foregroundStyle(.white)
+                }
+            }
+        }
+        .frame(width: size, height: size)
+        .clipShape(RoundedRectangle(cornerRadius: size * 0.225, style: .continuous))
+    }
+}
+
+// MARK: - Splash
 
 struct WatchSplash: View {
     @State private var on = false
@@ -93,76 +201,269 @@ struct WatchSplash: View {
     }
 }
 
-struct WatchDashboard: View {
-    @EnvironmentObject private var bridge: WatchBridge
+// MARK: - Pages: Overzicht, Apps, Aandacht (vertical paging, like HomeyDev)
+
+struct WatchRootView: View {
+    @Environment(WatchStore.self) private var store
 
     var body: some View {
-        let s = bridge.snapshot
-        NavigationStack {
-            List {
-                VStack(alignment: .leading, spacing: 2) {
-                    if let d = s.downloads {
-                        Text(d.formatted(.number.notation(.compactName))).font(.system(size: 38, weight: .bold, design: .rounded)).foregroundStyle(.cyan)
-                        Text("downloads · \(s.downloadsRange ?? "")").font(.caption2).foregroundStyle(.secondary)
-                    } else {
-                        Text("\(s.apps.count)").font(.system(size: 38, weight: .bold, design: .rounded))
-                        Text("apps").font(.caption2).foregroundStyle(.secondary)
-                    }
-                }
-                HStack {
-                    Label("\(s.liveCount) live", systemImage: "checkmark.seal.fill").foregroundStyle(.green)
-                    Spacer()
-                    Label("\(s.inReview)", systemImage: "hourglass").foregroundStyle(s.inReview > 0 ? .orange : .secondary)
-                }
-                .font(.caption.weight(.semibold))
-                if let p = s.proceeds, let c = s.currency {
-                    Label(p.formatted(.currency(code: c)), systemImage: "eurosign.circle.fill").foregroundStyle(.green).font(.caption)
-                }
-                Section("Mijn apps") {
-                    ForEach(s.apps) { app in
-                        NavigationLink {
-                            WatchAppDetail(app: app)
-                        } label: {
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(app.name).font(.headline).lineLimit(1)
-                                Text(app.statusLabel).font(.caption2).foregroundStyle(color(for: app.state))
-                            }
-                        }
-                    }
-                }
-                Text("Synchroniseert via je iPhone · \(s.updated.formatted(date: .omitted, time: .shortened))")
-                    .font(.system(size: 10)).foregroundStyle(.secondary)
+        if let snapshot = store.snapshot {
+            TabView {
+                WatchOverviewView(snapshot: snapshot)
+                WatchAppsView(snapshot: snapshot)
+                WatchAttentionView(snapshot: snapshot)
             }
-            .navigationTitle("DevTools")
-        }
-    }
-
-    private func color(for state: String) -> Color {
-        switch state {
-        case "READY_FOR_SALE": return .green
-        case "READY_FOR_DISTRIBUTION": return .cyan
-        case "WAITING_FOR_REVIEW", "IN_REVIEW": return .orange
-        case "REJECTED", "METADATA_REJECTED", "INVALID_BINARY": return .red
-        default: return .secondary
+            .tabViewStyle(.verticalPage)
+        } else {
+            WatchEmptyView()
         }
     }
 }
 
-struct WatchAppDetail: View {
+struct WatchEmptyView: View {
+    @Environment(WatchStore.self) private var store
+
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 10) {
+                Image("SplashLogo").resizable().scaledToFit().frame(width: 52, height: 52)
+                Text("DevTools").font(.headline)
+                Text("Open de app op je iPhone. Je gegevens komen dan vanzelf naar je Apple Watch.")
+                    .font(.footnote).foregroundStyle(.secondary).multilineTextAlignment(.center)
+                Button { store.refresh() } label: {
+                    if store.refreshing { ProgressView() } else { Label("Ophalen", systemImage: "arrow.clockwise") }
+                }
+                if let message = store.message {
+                    Text(message).font(.caption2).foregroundStyle(.orange).multilineTextAlignment(.center)
+                }
+            }
+            .padding(.horizontal, 4)
+        }
+    }
+}
+
+struct WatchOverviewView: View {
+    let snapshot: SharedSnapshot
+    @Environment(WatchStore.self) private var store
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading, spacing: 0) {
+                    if let d = snapshot.downloads {
+                        Text("Downloads · \(snapshot.downloadsRange ?? "")").font(.caption2).foregroundStyle(.secondary)
+                        Text(Watch.number(d))
+                            .font(.system(size: 34, weight: .bold, design: .rounded).monospacedDigit())
+                            .minimumScaleFactor(0.6)
+                            .lineLimit(1)
+                        if let d7 = snapshot.delta7 {
+                            Text("\(Watch.signed(d7)) · 7d")
+                                .font(.caption.monospacedDigit())
+                                .foregroundStyle(d7 >= 0 ? .green : .red)
+                        }
+                    } else {
+                        Text("Apps").font(.caption2).foregroundStyle(.secondary)
+                        Text("\(snapshot.apps.count)")
+                            .font(.system(size: 34, weight: .bold, design: .rounded).monospacedDigit())
+                        Text("Vul je vendornummer in op de iPhone voor downloads").font(.system(size: 10)).foregroundStyle(.secondary)
+                    }
+                }
+
+                if snapshot.totalHistory.count > 1 {
+                    Chart(Array(snapshot.totalHistory.suffix(30)), id: \.date) { (p: HistoryPoint) in
+                        AreaMark(x: .value("Dag", p.date), y: .value("Downloads", p.value))
+                            .foregroundStyle(Watch.accent.opacity(0.25).gradient)
+                            .interpolationMethod(.catmullRom)
+                        LineMark(x: .value("Dag", p.date), y: .value("Downloads", p.value))
+                            .foregroundStyle(Watch.accent)
+                            .interpolationMethod(.catmullRom)
+                    }
+                    .chartXAxis(.hidden)
+                    .chartYAxis(.hidden)
+                    .chartYScale(domain: .automatic(includesZero: false))
+                    .frame(height: 44)
+                }
+
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 6) {
+                    WatchStat(title: "Live", value: "\(snapshot.liveCount)", icon: "checkmark.seal.fill", tint: Watch.live)
+                    WatchStat(title: "In review", value: "\(snapshot.inReview)", icon: "hourglass",
+                              tint: snapshot.inReview == 0 ? .secondary : Watch.review)
+                    WatchStat(title: "Opbrengst", value: Watch.money(snapshot.proceeds, snapshot.currency), icon: "eurosign.circle.fill", tint: Watch.live)
+                    WatchStat(title: "Rating", value: snapshot.averageRating.map { String(format: "%.1f", $0) } ?? "—", icon: "star.fill", tint: .yellow)
+                }
+
+                Text("\(snapshot.accountName ?? "DevTools") · \(snapshot.updated.formatted(.relative(presentation: .named)))")
+                    .font(.caption2).foregroundStyle(.secondary).lineLimit(2)
+            }
+        }
+        .navigationTitle("DevTools")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button { store.refresh() } label: {
+                    if store.refreshing { ProgressView() } else { Image(systemName: "arrow.clockwise") }
+                }
+            }
+        }
+    }
+}
+
+struct WatchStat: View {
+    let title: String
+    let value: String
+    let icon: String
+    let tint: Color
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Label(title, systemImage: icon).font(.system(size: 11)).foregroundStyle(tint).lineLimit(1)
+            Text(value).font(.system(.title3, design: .rounded).weight(.semibold).monospacedDigit()).lineLimit(1).minimumScaleFactor(0.6)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(8)
+        .background(.white.opacity(0.08), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+    }
+}
+
+struct WatchAppsView: View {
+    let snapshot: SharedSnapshot
+
+    var body: some View {
+        List(snapshot.topApps) { (app: WidgetAppSummary) in
+            NavigationLink { WatchAppDetailView(app: app, currency: snapshot.currency) } label: { WatchAppRow(app: app) }
+        }
+        .navigationTitle("Mijn apps")
+    }
+}
+
+struct WatchAppRow: View {
     let app: WidgetAppSummary
 
     var body: some View {
-        List {
-            Text(app.name).font(.title3.bold())
-            LabeledContent("Status", value: app.statusLabel)
-            if let live = app.liveVersion { LabeledContent("Live", value: live) }
-            if let p = app.pendingVersion {
-                LabeledContent("Volgende", value: p)
-                if let ps = app.pendingState { LabeledContent("Stand", value: SharedSnapshot.label(for: ps)) }
+        HStack(spacing: 8) {
+            WatchAppIcon(app: app, size: 26)
+            VStack(alignment: .leading, spacing: 1) {
+                Text(app.name).font(.footnote.weight(.semibold)).lineLimit(1)
+                HStack(spacing: 4) {
+                    if let d = app.downloads { Text(Watch.compact(d)).monospacedDigit() }
+                    if let d7 = app.delta7, d7 != 0 {
+                        Text(Watch.signed(d7)).foregroundStyle(d7 > 0 ? .green : .red)
+                    }
+                    if app.downloads == nil { Text(app.statusLabel).foregroundStyle(Watch.color(for: app.state)) }
+                }
+                .font(.caption2)
+                .foregroundStyle(.secondary)
             }
-            if let b = app.build { LabeledContent("Build", value: b) }
-            if let d = app.downloads { LabeledContent("Downloads", value: d.formatted()) }
+            Spacer(minLength: 0)
+            Circle().fill(Watch.color(for: app.activeState)).frame(width: 7, height: 7)
+        }
+    }
+}
+
+struct WatchAppDetailView: View {
+    let app: WidgetAppSummary
+    var currency: String?
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 8) {
+                HStack(spacing: 8) {
+                    WatchAppIcon(app: app, size: 34)
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text(app.downloads.map { Watch.number($0) } ?? "—")
+                            .font(.system(size: 26, weight: .bold, design: .rounded).monospacedDigit())
+                            .minimumScaleFactor(0.6)
+                        Text("downloads").font(.caption2).foregroundStyle(.secondary)
+                    }
+                }
+                if let d7 = app.delta7 {
+                    Text("\(Watch.signed(d7)) · 7d").font(.caption.monospacedDigit()).foregroundStyle(d7 >= 0 ? .green : .red)
+                }
+
+                if app.series.count > 1 {
+                    Chart(Array(app.series.suffix(30)), id: \.date) { (p: HistoryPoint) in
+                        LineMark(x: .value("Dag", p.date), y: .value("Downloads", p.value))
+                            .foregroundStyle(Watch.accent)
+                            .interpolationMethod(.catmullRom)
+                    }
+                    .chartXAxis(.hidden)
+                    .chartYAxis(.hidden)
+                    .chartYScale(domain: .automatic(includesZero: false))
+                    .frame(height: 50)
+                }
+
+                VStack(alignment: .leading, spacing: 4) {
+                    row("Status", app.statusLabel, Watch.color(for: app.state))
+                    if let live = app.liveVersion { row("Live", "v\(live)", Watch.live) }
+                    if let p = app.pendingVersion {
+                        let state = app.pendingState ?? ""
+                        row("Volgende", "v\(p) · \(SharedSnapshot.label(for: state))", Watch.color(for: state))
+                    }
+                    if let b = app.build { row("Build", b, Watch.cyan) }
+                    if let u = app.updates { row("Updates", Watch.compact(u), Watch.pending) }
+                    if let p = app.proceeds { row("Opbrengst", Watch.money(p, currency), Watch.live) }
+                    if let r = app.rating, (app.ratingCount ?? 0) > 0 { row("Rating", String(format: "%.1f ★", r), .yellow) }
+                }
+            }
         }
         .navigationTitle(app.name)
+    }
+
+    private func row(_ title: String, _ value: String, _ tint: Color) -> some View {
+        HStack {
+            Text(title).foregroundStyle(.secondary)
+            Spacer()
+            Text(value).foregroundStyle(tint).lineLimit(1).minimumScaleFactor(0.7)
+        }
+        .font(.caption)
+    }
+}
+
+struct WatchAttentionView: View {
+    let snapshot: SharedSnapshot
+
+    var body: some View {
+        List {
+            Section("In review") {
+                if snapshot.inReviewApps.isEmpty {
+                    Label("Niets in review", systemImage: "checkmark.seal.fill").foregroundStyle(.green).font(.footnote)
+                }
+                ForEach(snapshot.inReviewApps) { (app: WidgetAppSummary) in
+                    NavigationLink { WatchAppDetailView(app: app, currency: snapshot.currency) } label: {
+                        HStack(spacing: 6) {
+                            WatchAppIcon(app: app, size: 22)
+                            VStack(alignment: .leading) {
+                                Text(app.name).font(.footnote.weight(.semibold)).lineLimit(1)
+                                Text("v\(app.pendingVersion ?? app.version) · \(SharedSnapshot.label(for: app.activeState))").font(.caption2).foregroundStyle(.orange)
+                            }
+                        }
+                    }
+                }
+            }
+            Section("Aandacht nodig") {
+                if snapshot.attentionApps.isEmpty {
+                    Label("Alles in orde", systemImage: "checkmark.circle.fill").foregroundStyle(.green).font(.footnote)
+                }
+                ForEach(snapshot.attentionApps.prefix(8)) { (app: WidgetAppSummary) in
+                    NavigationLink { WatchAppDetailView(app: app, currency: snapshot.currency) } label: {
+                        HStack(spacing: 6) {
+                            WatchAppIcon(app: app, size: 22)
+                            VStack(alignment: .leading) {
+                                Text(app.name).font(.footnote).lineLimit(1)
+                                Text(attentionText(app)).font(.caption2).foregroundStyle(Watch.color(for: attentionState(app))).lineLimit(1)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navigationTitle("Aandacht")
+    }
+
+    private func attentionState(_ app: WidgetAppSummary) -> String {
+        app.buildState == "MISSING_EXPORT_COMPLIANCE" ? "MISSING_EXPORT_COMPLIANCE" : app.activeState
+    }
+
+    private func attentionText(_ app: WidgetAppSummary) -> String {
+        SharedSnapshot.label(for: attentionState(app))
     }
 }

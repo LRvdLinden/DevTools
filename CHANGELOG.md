@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.0.0 (build 12)
+- **Apple Watch app rebuilt in the HomeyDev style.** It has three vertical pages:
+  - *Overview:* downloads with the 7-day change, a chart, and Live / In review / Proceeds / Rating.
+  - *My apps:* each app with its real icon, downloads, trend and status dot, and a detail screen.
+  - *Attention:* apps in review, apps that need attention, and builds missing export compliance.
+- An **Ophalen** (Fetch) button asks the iPhone for fresh data. The app icons are copied to the watch as well.
+- **Complication** like the one in HomeyDev: downloads, the 7-day change, live count and apps in review (circular, corner, inline and rectangular).
+- **Widgets rebuilt in the HomeyDev style:**
+  - *Downloads* (S/M/L): choose one app or all apps under Edit widget. It shows a Homey Insights chart with min/max and a dot on the latest value, the 7-day change, proceeds, rating and updates.
+  - *Top apps* (M/L): icon, sparkline, downloads, change, version, rating and status.
+  - *Review & status* (S/M/L): Live, In review, Rejected, Rating, and lists of apps in review and apps that need attention.
+- **Handleiding (guide) in Account:** step-by-step instructions for creating an API key, the Issuer ID, the Key ID, downloading the .p8, finding the vendor number (Business), which role you need, security, and troubleshooting 401/403. It is also linked from the add-account screen and the welcome screen.
+- The snapshot for widgets and the watch now holds daily downloads per app, rating, proceeds, updates and build status.
+
 ## 1.0.0 (build 11)
 - Only **Ready for Sale** now counts as **Live**. **Ready for Distribution** gets its own status, "Klaar voor distributie" (cyan): the step before going live. This applies in the app, the widgets and on the Watch.
 - Version status is now read from Apple's `appStoreState`, which is the only field that says READY_FOR_SALE once a version is actually live.

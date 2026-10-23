@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 import WatchConnectivity
 
 @main
@@ -171,6 +172,7 @@ struct SidebarRootView: View {
 /// First launch: no account linked yet.
 struct WelcomeView: View {
     @State private var showAdd = false
+    @State private var showGuide = false
     @State private var appear = false
 
     private let features: [(String, String, String)] = [
@@ -217,6 +219,9 @@ struct WelcomeView: View {
                     }
                     Button { showAdd = true } label: { Label("Koppel App Store Connect", systemImage: "key.fill") }
                         .buttonStyle(GradientPillButtonStyle())
+                    Button { showGuide = true } label: { Label("Hoe kom ik aan een API-sleutel?", systemImage: "book.pages.fill") }
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(Theme.cyan)
                     Text("Je hebt een App Store Connect API-sleutel (.p8) nodig. Maak die aan in App Store Connect → Gebruikers en toegang → Integraties.")
                         .font(.footnote)
                         .foregroundStyle(.white.opacity(0.6))
@@ -230,10 +235,18 @@ struct WelcomeView: View {
         }
         .preferredColorScheme(.dark)
         .sheet(isPresented: $showAdd) { AccountEditorSheet(existing: nil) }
+        .sheet(isPresented: $showGuide) {
+            NavigationStack {
+                GuideView().toolbar { ToolbarItem(placement: .confirmationAction) { Button("Klaar") { showGuide = false } } }
+            }
+            .preferredColorScheme(nil)
+        }
         .onAppear { withAnimation(.spring(response: 0.7, dampingFraction: 0.7)) { appear = true } }
     }
 }
 
+/// Sends the snapshot (and small app icons) to the Apple Watch and answers the
+/// watch's "refresh" requests, like HomeyDev.
 final class PhoneWatchBridge: NSObject, WCSessionDelegate {
     static let shared = PhoneWatchBridge()
 
@@ -246,8 +259,36 @@ final class PhoneWatchBridge: NSObject, WCSessionDelegate {
 
     func send(_ snapshot: SharedSnapshot) {
         guard WCSession.isSupported(), WCSession.default.activationState == .activated,
+              WCSession.default.isPaired, WCSession.default.isWatchAppInstalled,
               let data = try? JSONEncoder().encode(snapshot) else { return }
-        try? WCSession.default.updateApplicationContext(["snapshot": data])
+        var context: [String: Any] = ["snapshot": data, "sent": Date().timeIntervalSince1970]
+        let icons = Self.watchIcons(for: snapshot)
+        if !icons.isEmpty { context["icons"] = icons }
+        try? WCSession.default.updateApplicationContext(context)
+    }
+
+    /// 48 pt JPEG icons (a few KB each) so the watch can show real app icons.
+    static func watchIcons(for snapshot: SharedSnapshot) -> [String: Data] {
+        var out: [String: Data] = [:]
+        for app in snapshot.apps.prefix(20) {
+            guard let url = SharedSnapshot.iconURL(for: app.id), let image = UIImage(contentsOfFile: url.path) else { continue }
+            let size = CGSize(width: 48, height: 48)
+            let small = UIGraphicsImageRenderer(size: size).image { _ in image.draw(in: CGRect(origin: .zero, size: size)) }
+            if let jpg = small.jpegData(compressionQuality: 0.75) { out[app.id] = jpg }
+        }
+        return out
+    }
+
+    func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
+        guard message["request"] as? String == "snapshot" else { replyHandler([:]); return }
+        let snapshot = SharedSnapshot.load()
+        var reply: [String: Any] = [:]
+        if !snapshot.apps.isEmpty, let data = try? JSONEncoder().encode(snapshot) {
+            reply["snapshot"] = data
+            let icons = Self.watchIcons(for: snapshot)
+            if !icons.isEmpty { reply["icons"] = icons }
+        }
+        replyHandler(reply)
     }
 
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
