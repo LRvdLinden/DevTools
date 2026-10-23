@@ -1,24 +1,15 @@
 # DevTools
 
-Native Apple developer companion for **iOS, iPadOS and watchOS** (SwiftUI), designed after the architecture of [Homey Developer Tools for iOS](https://github.com/LRvdLinden/Athom-Homey-dev-ios).
+SwiftUI developer companion for App Store Connect on **iPhone, iPad and Apple Watch**.
 
-## Status
+## Latest project package
 
-Version 1.0.0, build 2 (development). The corrected Xcode project currently exists as a downloadable ZIP in the ChatGPT conversation. This repository is not yet a complete source mirror.
+**Version 1.0.0, Build 9** includes the native iOS/iPadOS app, watchOS app, iOS widgets, Watch complications and the full-bleed DevTools icon. Fixes cover launch screen and orientation requirements for App Store Connect submission.
 
-## Intended targets
+**Repository state:** Source files and Xcode ZIP will be available after running the bundled `sync-devtools-to-github.sh` from the Build 9 GitHub sync package. A placeholder README alone does not mean the source is synced.
 
-- `DevTools` — iOS 17+ / iPadOS 17+
-- `DevToolsWidgets` — iPhone and iPad widgets
-- `DevToolsWatch` — watchOS 10+
-- `DevToolsWatchWidgets` — Apple Watch complications
+Once synced, use:
+- `DevTools.xcodeproj` to open the full Xcode project
+- `releases/DevTools-1.0.0-build9-iOS-watchOS.zip` to download the Xcode ZIP
 
-Bundle IDs use `nl.lrvdlinden.devtools` and appropriate suffixes.
-
-## Current features and limitations
-
-App Store Connect API-key sign-in, app and build lists, reviews, dashboards, basic widgets, Watch overview and complications are implemented as a first development pass. Downloads, revenue, subscriptions, production push and AI model integrations require further work. No Xcode build has been run yet.
-
-The build 2 archive corrects a missing target-build-settings generation bug in build 1; it explicitly sets `iphoneos iphonesimulator` and `watchos watchsimulator`, adds shared schemes and Watch group entitlements.
-
-**Never commit App Store Connect `.p8` private keys.**
+Never commit Apple Developer API private keys (`.p8`) or provisioning certificates.
