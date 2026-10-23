@@ -1,1 +1,1 @@
-asc,connect,downloads,analytics,indie,ios,release,proceeds,revenue,metrics,stats,testers,charts
+app store connect,testflight,developer,indie,analytics,downloads,sales,reviews,release,build,ios
