@@ -1,0 +1,6 @@
+test/
+*.md
+.github/
+i18n/
+tools/
+.DS_Store

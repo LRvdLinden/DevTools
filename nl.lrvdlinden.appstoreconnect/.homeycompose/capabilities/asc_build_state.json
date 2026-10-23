@@ -1,0 +1,22 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Build status",
+    "nl": "Build-status",
+    "de": "Build-Status",
+    "fr": "Statut du build",
+    "it": "Stato build",
+    "sv": "Build-status",
+    "no": "Build-status",
+    "es": "Estado de la build",
+    "da": "Build-status",
+    "ru": "Статус сборки",
+    "pl": "Status buildu",
+    "ko": "빌드 상태",
+    "ar": "حالة البنية"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capabilities/build.svg"
+}

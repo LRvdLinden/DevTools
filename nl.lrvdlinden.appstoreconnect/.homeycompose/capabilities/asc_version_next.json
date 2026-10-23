@@ -1,0 +1,22 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Next version",
+    "nl": "Volgende versie",
+    "de": "Nächste Version",
+    "fr": "Prochaine version",
+    "it": "Prossima versione",
+    "sv": "Nästa version",
+    "no": "Neste versjon",
+    "es": "Próxima versión",
+    "da": "Næste version",
+    "ru": "Следующая версия",
+    "pl": "Następna wersja",
+    "ko": "다음 버전",
+    "ar": "الإصدار التالي"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capabilities/version.svg"
+}

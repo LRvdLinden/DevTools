@@ -1,0 +1,49 @@
+{
+  "name": {
+    "en": "Top apps",
+    "nl": "Top apps",
+    "de": "Top-Apps",
+    "fr": "Top apps",
+    "it": "App principali",
+    "sv": "Toppappar",
+    "no": "Toppapper",
+    "es": "Apps principales",
+    "da": "Topapps",
+    "ru": "Топ приложений",
+    "pl": "Najlepsze aplikacje",
+    "ko": "인기 앱",
+    "ar": "أفضل التطبيقات"
+  },
+  "settings": [
+    {
+      "id": "count",
+      "type": "number",
+      "title": {
+        "en": "Number of apps",
+        "nl": "Aantal apps",
+        "de": "Anzahl der Apps",
+        "fr": "Nombre d'apps",
+        "it": "Numero di app",
+        "sv": "Antal appar",
+        "no": "Antall apper",
+        "es": "Número de apps",
+        "da": "Antal apps",
+        "ru": "Количество приложений",
+        "pl": "Liczba aplikacji",
+        "ko": "앱 수",
+        "ar": "عدد التطبيقات"
+      },
+      "value": 5,
+      "min": 1,
+      "max": 10
+    }
+  ],
+  "height": 260,
+  "transparent": false,
+  "api": {
+    "getData": {
+      "method": "GET",
+      "path": "/"
+    }
+  }
+}

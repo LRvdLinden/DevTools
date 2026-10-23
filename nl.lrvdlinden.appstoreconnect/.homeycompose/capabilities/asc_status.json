@@ -1,0 +1,22 @@
+{
+  "type": "string",
+  "title": {
+    "en": "App Store status",
+    "nl": "App Store-status",
+    "de": "App Store-Status",
+    "fr": "Statut App Store",
+    "it": "Stato App Store",
+    "sv": "App Store-status",
+    "no": "App Store-status",
+    "es": "Estado en el App Store",
+    "da": "App Store-status",
+    "ru": "Статус App Store",
+    "pl": "Status App Store",
+    "ko": "App Store 상태",
+    "ar": "حالة App Store"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capabilities/status.svg"
+}

@@ -1,0 +1,1568 @@
+{
+  "triggers": [
+    {
+      "id": "status_changed",
+      "title": {
+        "en": "App Store status changed",
+        "nl": "App Store-status is veranderd",
+        "de": "App Store-Status hat sich geändert",
+        "fr": "Le statut App Store a changé",
+        "it": "Lo stato App Store è cambiato",
+        "sv": "App Store-status har ändrats",
+        "no": "App Store-status endret",
+        "es": "El estado en el App Store ha cambiado",
+        "da": "App Store-status ændret",
+        "ru": "Статус App Store изменился",
+        "pl": "Status App Store się zmienił",
+        "ko": "App Store 상태가 변경됨",
+        "ar": "تغيّرت حالة App Store"
+      },
+      "tokens": [
+        {
+          "name": "status",
+          "type": "string",
+          "title": {
+            "en": "Status",
+            "nl": "Status",
+            "de": "Status",
+            "fr": "Statut",
+            "it": "Stato",
+            "sv": "Status",
+            "no": "Status",
+            "es": "Estado",
+            "da": "Status",
+            "ru": "Статус",
+            "pl": "Status",
+            "ko": "상태",
+            "ar": "الحالة"
+          },
+          "example": {
+            "en": "Status",
+            "nl": "Status",
+            "de": "Status",
+            "fr": "Statut",
+            "it": "Stato",
+            "sv": "Status",
+            "no": "Status",
+            "es": "Estado",
+            "da": "Status",
+            "ru": "Статус",
+            "pl": "Status",
+            "ko": "상태",
+            "ar": "الحالة"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "string",
+          "title": {
+            "en": "Previous status",
+            "nl": "Vorige status",
+            "de": "Vorheriger Status",
+            "fr": "Statut précédent",
+            "it": "Stato precedente",
+            "sv": "Tidigare status",
+            "no": "Forrige status",
+            "es": "Estado anterior",
+            "da": "Tidligere status",
+            "ru": "Предыдущий статус",
+            "pl": "Poprzedni status",
+            "ko": "이전 상태",
+            "ar": "الحالة السابقة"
+          },
+          "example": {
+            "en": "Previous status",
+            "nl": "Vorige status",
+            "de": "Vorheriger Status",
+            "fr": "Statut précédent",
+            "it": "Stato precedente",
+            "sv": "Tidigare status",
+            "no": "Forrige status",
+            "es": "Estado anterior",
+            "da": "Tidligere status",
+            "ru": "Предыдущий статус",
+            "pl": "Poprzedni status",
+            "ko": "이전 상태",
+            "ar": "الحالة السابقة"
+          }
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "title": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          },
+          "example": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "entered_review",
+      "title": {
+        "en": "Version entered App Review",
+        "nl": "Versie is in App Review gegaan",
+        "de": "Version ist im App Review",
+        "fr": "La version est entrée en App Review",
+        "it": "La versione è entrata in App Review",
+        "sv": "Versionen har skickats till App Review",
+        "no": "Versjon gikk inn i App Review",
+        "es": "La versión ha entrado en App Review",
+        "da": "Version er sendt til App Review",
+        "ru": "Версия отправлена на App Review",
+        "pl": "Wersja trafiła do App Review",
+        "ko": "버전이 App Review에 들어감",
+        "ar": "دخل الإصدار إلى App Review"
+      },
+      "tokens": [
+        {
+          "name": "version",
+          "type": "string",
+          "title": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          },
+          "example": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "review_rejected",
+      "title": {
+        "en": "Version was rejected",
+        "nl": "Versie is afgewezen",
+        "de": "Version wurde abgelehnt",
+        "fr": "La version a été refusée",
+        "it": "La versione è stata rifiutata",
+        "sv": "Versionen har avvisats",
+        "no": "Versjon ble avvist",
+        "es": "La versión ha sido rechazada",
+        "da": "Version blev afvist",
+        "ru": "Версия отклонена",
+        "pl": "Wersja została odrzucona",
+        "ko": "버전이 거부됨",
+        "ar": "تم رفض الإصدار"
+      },
+      "tokens": [
+        {
+          "name": "version",
+          "type": "string",
+          "title": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          },
+          "example": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ready_for_distribution",
+      "title": {
+        "en": "Version is ready for distribution",
+        "nl": "Versie is klaar voor distributie",
+        "de": "Version ist bereit für den Vertrieb",
+        "fr": "La version est prête à être distribuée",
+        "it": "La versione è pronta per la distribuzione",
+        "sv": "Versionen är klar för distribution",
+        "no": "Versjon er klar for distribusjon",
+        "es": "La versión está lista para distribución",
+        "da": "Version er klar til distribution",
+        "ru": "Версия готова к распространению",
+        "pl": "Wersja jest gotowa do dystrybucji",
+        "ko": "버전이 배포 준비 완료됨",
+        "ar": "الإصدار جاهز للتوزيع"
+      },
+      "tokens": [
+        {
+          "name": "version",
+          "type": "string",
+          "title": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          },
+          "example": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pending_release",
+      "title": {
+        "en": "Version is waiting for your release",
+        "nl": "Versie wacht op jouw vrijgave",
+        "de": "Version wartet auf deine Freigabe",
+        "fr": "La version attend votre publication",
+        "it": "La versione attende la tua pubblicazione",
+        "sv": "Versionen väntar på din publicering",
+        "no": "Versjon venter på din utgivelse",
+        "es": "La versión espera tu publicación",
+        "da": "Version venter på din frigivelse",
+        "ru": "Версия ожидает вашего выпуска",
+        "pl": "Wersja czeka na Twoją publikację",
+        "ko": "버전이 출시를 기다리는 중",
+        "ar": "الإصدار بانتظار نشرك له"
+      },
+      "tokens": [
+        {
+          "name": "version",
+          "type": "string",
+          "title": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          },
+          "example": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "new_live_version",
+      "title": {
+        "en": "New version is live (Ready for Sale)",
+        "nl": "Nieuwe versie is live (Ready for Sale)",
+        "de": "Neue Version ist live (Bereit für den Verkauf)",
+        "fr": "Nouvelle version en ligne (Prête pour la vente)",
+        "it": "La nuova versione è live (Pronta per la vendita)",
+        "sv": "Ny version är publicerad (Klar för försäljning)",
+        "no": "Ny versjon er live (Klar for salg)",
+        "es": "La nueva versión está publicada (Lista para la venta)",
+        "da": "Ny version er live (Klar til salg)",
+        "ru": "Новая версия в продаже (Готово к продаже)",
+        "pl": "Nowa wersja jest dostępna (Gotowa do sprzedaży)",
+        "ko": "새 버전이 라이브됨(판매 준비 완료)",
+        "ar": "الإصدار الجديد منشور (Ready for Sale)"
+      },
+      "tokens": [
+        {
+          "name": "version",
+          "type": "string",
+          "title": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          },
+          "example": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "new_build",
+      "title": {
+        "en": "New build uploaded",
+        "nl": "Nieuwe build geüpload",
+        "de": "Neuer Build hochgeladen",
+        "fr": "Nouveau build téléversé",
+        "it": "Nuova build caricata",
+        "sv": "Ny build uppladdad",
+        "no": "Ny build lastet opp",
+        "es": "Nueva build subida",
+        "da": "Nyt build uploadet",
+        "ru": "Загружена новая сборка",
+        "pl": "Przesłano nowy build",
+        "ko": "새 빌드가 업로드됨",
+        "ar": "تم رفع بنية جديدة"
+      },
+      "tokens": [
+        {
+          "name": "build",
+          "type": "string",
+          "title": {
+            "en": "Build",
+            "nl": "Build",
+            "de": "Build",
+            "fr": "Build",
+            "it": "Build",
+            "sv": "Build",
+            "no": "Build",
+            "es": "Build",
+            "da": "Build",
+            "ru": "Сборка",
+            "pl": "Build",
+            "ko": "빌드",
+            "ar": "البنية"
+          },
+          "example": {
+            "en": "Build",
+            "nl": "Build",
+            "de": "Build",
+            "fr": "Build",
+            "it": "Build",
+            "sv": "Build",
+            "no": "Build",
+            "es": "Build",
+            "da": "Build",
+            "ru": "Сборка",
+            "pl": "Build",
+            "ko": "빌드",
+            "ar": "البنية"
+          }
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "title": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          },
+          "example": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "build_processed",
+      "title": {
+        "en": "Build is processed and ready",
+        "nl": "Build is verwerkt en klaar",
+        "de": "Build ist verarbeitet und bereit",
+        "fr": "Le build est traité et prêt",
+        "it": "La build è stata elaborata ed è pronta",
+        "sv": "Build har bearbetats och är klar",
+        "no": "Build er behandlet og klar",
+        "es": "La build se ha procesado y está lista",
+        "da": "Build er behandlet og klar",
+        "ru": "Сборка обработана и готова",
+        "pl": "Build został przetworzony i jest gotowy",
+        "ko": "빌드 처리 완료",
+        "ar": "تمت معالجة البنية وهي جاهزة"
+      },
+      "tokens": [
+        {
+          "name": "build",
+          "type": "string",
+          "title": {
+            "en": "Build",
+            "nl": "Build",
+            "de": "Build",
+            "fr": "Build",
+            "it": "Build",
+            "sv": "Build",
+            "no": "Build",
+            "es": "Build",
+            "da": "Build",
+            "ru": "Сборка",
+            "pl": "Build",
+            "ko": "빌드",
+            "ar": "البنية"
+          },
+          "example": {
+            "en": "Build",
+            "nl": "Build",
+            "de": "Build",
+            "fr": "Build",
+            "it": "Build",
+            "sv": "Build",
+            "no": "Build",
+            "es": "Build",
+            "da": "Build",
+            "ru": "Сборка",
+            "pl": "Build",
+            "ko": "빌드",
+            "ar": "البنية"
+          }
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "title": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          },
+          "example": {
+            "en": "Version",
+            "nl": "Versie",
+            "de": "Version",
+            "fr": "Version",
+            "it": "Versione",
+            "sv": "Version",
+            "no": "Versjon",
+            "es": "Versión",
+            "da": "Version",
+            "ru": "Версия",
+            "pl": "Wersja",
+            "ko": "버전",
+            "ar": "الإصدار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "new_customer_review",
+      "title": {
+        "en": "New customer review",
+        "nl": "Nieuwe klantreview",
+        "de": "Neue Kundenrezension",
+        "fr": "Nouvel avis client",
+        "it": "Nuova recensione dei clienti",
+        "sv": "Ny kundrecension",
+        "no": "Ny kundeanmeldelse",
+        "es": "Nueva reseña de cliente",
+        "da": "Ny kundeanmeldelse",
+        "ru": "Новый отзыв клиента",
+        "pl": "Nowa recenzja klienta",
+        "ko": "새 고객 리뷰",
+        "ar": "مراجعة جديدة من عميل"
+      },
+      "tokens": [
+        {
+          "name": "rating",
+          "type": "number",
+          "title": {
+            "en": "Stars",
+            "nl": "Sterren",
+            "de": "Sterne",
+            "fr": "Étoiles",
+            "it": "Stelle",
+            "sv": "Stjärnor",
+            "no": "Stjerner",
+            "es": "Estrellas",
+            "da": "Stjerner",
+            "ru": "Звёзды",
+            "pl": "Gwiazdki",
+            "ko": "별점",
+            "ar": "النجوم"
+          },
+          "example": {
+            "en": "Stars",
+            "nl": "Sterren",
+            "de": "Sterne",
+            "fr": "Étoiles",
+            "it": "Stelle",
+            "sv": "Stjärnor",
+            "no": "Stjerner",
+            "es": "Estrellas",
+            "da": "Stjerner",
+            "ru": "Звёзды",
+            "pl": "Gwiazdki",
+            "ko": "별점",
+            "ar": "النجوم"
+          }
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "title": {
+            "en": "Title",
+            "nl": "Titel",
+            "de": "Titel",
+            "fr": "Titre",
+            "it": "Titolo",
+            "sv": "Rubrik",
+            "no": "Tittel",
+            "es": "Título",
+            "da": "Titel",
+            "ru": "Заголовок",
+            "pl": "Tytuł",
+            "ko": "제목",
+            "ar": "العنوان"
+          },
+          "example": {
+            "en": "Title",
+            "nl": "Titel",
+            "de": "Titel",
+            "fr": "Titre",
+            "it": "Titolo",
+            "sv": "Rubrik",
+            "no": "Tittel",
+            "es": "Título",
+            "da": "Titel",
+            "ru": "Заголовок",
+            "pl": "Tytuł",
+            "ko": "제목",
+            "ar": "العنوان"
+          }
+        },
+        {
+          "name": "body",
+          "type": "string",
+          "title": {
+            "en": "Review",
+            "nl": "Review",
+            "de": "Rezension",
+            "fr": "Avis",
+            "it": "Recensione",
+            "sv": "Recension",
+            "no": "Anmeldelse",
+            "es": "Reseña",
+            "da": "Anmeldelse",
+            "ru": "Отзыв",
+            "pl": "Recenzja",
+            "ko": "리뷰",
+            "ar": "المراجعة"
+          },
+          "example": {
+            "en": "Review",
+            "nl": "Review",
+            "de": "Rezension",
+            "fr": "Avis",
+            "it": "Recensione",
+            "sv": "Recension",
+            "no": "Anmeldelse",
+            "es": "Reseña",
+            "da": "Anmeldelse",
+            "ru": "Отзыв",
+            "pl": "Recenzja",
+            "ko": "리뷰",
+            "ar": "المراجعة"
+          }
+        },
+        {
+          "name": "author",
+          "type": "string",
+          "title": {
+            "en": "Reviewer",
+            "nl": "Reviewer",
+            "de": "Verfasser",
+            "fr": "Auteur de l'avis",
+            "it": "Autore recensione",
+            "sv": "Recensent",
+            "no": "Anmelder",
+            "es": "Autor de la reseña",
+            "da": "Anmelder",
+            "ru": "Автор отзыва",
+            "pl": "Recenzent",
+            "ko": "작성자",
+            "ar": "المراجِع"
+          },
+          "example": {
+            "en": "Reviewer",
+            "nl": "Reviewer",
+            "de": "Verfasser",
+            "fr": "Auteur de l'avis",
+            "it": "Autore recensione",
+            "sv": "Recensent",
+            "no": "Anmelder",
+            "es": "Autor de la reseña",
+            "da": "Anmelder",
+            "ru": "Автор отзыва",
+            "pl": "Recenzent",
+            "ko": "작성자",
+            "ar": "المراجِع"
+          }
+        },
+        {
+          "name": "territory",
+          "type": "string",
+          "title": {
+            "en": "Country",
+            "nl": "Land",
+            "de": "Land",
+            "fr": "Pays",
+            "it": "Paese",
+            "sv": "Land",
+            "no": "Land",
+            "es": "País",
+            "da": "Land",
+            "ru": "Страна",
+            "pl": "Kraj",
+            "ko": "국가",
+            "ar": "البلد"
+          },
+          "example": {
+            "en": "Country",
+            "nl": "Land",
+            "de": "Land",
+            "fr": "Pays",
+            "it": "Paese",
+            "sv": "Land",
+            "no": "Land",
+            "es": "País",
+            "da": "Land",
+            "ru": "Страна",
+            "pl": "Kraj",
+            "ko": "국가",
+            "ar": "البلد"
+          }
+        },
+        {
+          "name": "review_id",
+          "type": "string",
+          "title": {
+            "en": "Review ID",
+            "nl": "Review-ID",
+            "de": "Rezensions-ID",
+            "fr": "ID de l'avis",
+            "it": "ID recensione",
+            "sv": "Recensions-ID",
+            "no": "Anmeldelses-ID",
+            "es": "ID de la reseña",
+            "da": "Anmeldelses-ID",
+            "ru": "ID отзыва",
+            "pl": "ID recenzji",
+            "ko": "리뷰 ID",
+            "ar": "معرّف المراجعة"
+          },
+          "example": {
+            "en": "Review ID",
+            "nl": "Review-ID",
+            "de": "Rezensions-ID",
+            "fr": "ID de l'avis",
+            "it": "ID recensione",
+            "sv": "Recensions-ID",
+            "no": "Anmeldelses-ID",
+            "es": "ID de la reseña",
+            "da": "Anmeldelses-ID",
+            "ru": "ID отзыва",
+            "pl": "ID recenzji",
+            "ko": "리뷰 ID",
+            "ar": "معرّف المراجعة"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rating_changed",
+      "title": {
+        "en": "Rating changed",
+        "nl": "Beoordeling is veranderd",
+        "de": "Bewertung hat sich geändert",
+        "fr": "La note a changé",
+        "it": "La valutazione è cambiata",
+        "sv": "Betyget har ändrats",
+        "no": "Vurdering endret",
+        "es": "La valoración ha cambiado",
+        "da": "Bedømmelse ændret",
+        "ru": "Рейтинг изменился",
+        "pl": "Ocena się zmieniła",
+        "ko": "평점이 변경됨",
+        "ar": "تغيّر التقييم"
+      },
+      "tokens": [
+        {
+          "name": "rating",
+          "type": "number",
+          "title": {
+            "en": "Rating",
+            "nl": "Beoordeling",
+            "de": "Bewertung",
+            "fr": "Note",
+            "it": "Valutazione",
+            "sv": "Betyg",
+            "no": "Vurdering",
+            "es": "Valoración",
+            "da": "Bedømmelse",
+            "ru": "Рейтинг",
+            "pl": "Ocena",
+            "ko": "평점",
+            "ar": "التقييم"
+          },
+          "example": {
+            "en": "Rating",
+            "nl": "Beoordeling",
+            "de": "Bewertung",
+            "fr": "Note",
+            "it": "Valutazione",
+            "sv": "Betyg",
+            "no": "Vurdering",
+            "es": "Valoración",
+            "da": "Bedømmelse",
+            "ru": "Рейтинг",
+            "pl": "Ocena",
+            "ko": "평점",
+            "ar": "التقييم"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "number",
+          "title": {
+            "en": "Previous rating",
+            "nl": "Vorige beoordeling",
+            "de": "Vorherige Bewertung",
+            "fr": "Note précédente",
+            "it": "Valutazione precedente",
+            "sv": "Tidigare betyg",
+            "no": "Forrige vurdering",
+            "es": "Valoración anterior",
+            "da": "Tidligere bedømmelse",
+            "ru": "Предыдущий рейтинг",
+            "pl": "Poprzednia ocena",
+            "ko": "이전 평점",
+            "ar": "التقييم السابق"
+          },
+          "example": {
+            "en": "Previous rating",
+            "nl": "Vorige beoordeling",
+            "de": "Vorherige Bewertung",
+            "fr": "Note précédente",
+            "it": "Valutazione precedente",
+            "sv": "Tidigare betyg",
+            "no": "Forrige vurdering",
+            "es": "Valoración anterior",
+            "da": "Tidligere bedømmelse",
+            "ru": "Предыдущий рейтинг",
+            "pl": "Poprzednia ocena",
+            "ko": "이전 평점",
+            "ar": "التقييم السابق"
+          }
+        }
+      ]
+    },
+    {
+      "id": "downloads_updated",
+      "title": {
+        "en": "New download figures are available",
+        "nl": "Nieuwe downloadcijfers beschikbaar",
+        "de": "Neue Downloadzahlen sind verfügbar",
+        "fr": "De nouveaux chiffres de téléchargement sont disponibles",
+        "it": "Sono disponibili nuovi dati di download",
+        "sv": "Nya nedladdningssiffror finns tillgängliga",
+        "no": "Nye nedlastingstall er tilgjengelige",
+        "es": "Hay nuevas cifras de descargas disponibles",
+        "da": "Nye downloadtal er tilgængelige",
+        "ru": "Доступны новые данные о загрузках",
+        "pl": "Dostępne są nowe dane o pobraniach",
+        "ko": "새 다운로드 수치 제공됨",
+        "ar": "تتوفر أرقام تنزيل جديدة"
+      },
+      "tokens": [
+        {
+          "name": "yesterday",
+          "type": "number",
+          "title": {
+            "en": "Downloads yesterday",
+            "nl": "Downloads gisteren",
+            "de": "Downloads gestern",
+            "fr": "Téléchargements d'hier",
+            "it": "Download di ieri",
+            "sv": "Nedladdningar igår",
+            "no": "Nedlastinger i går",
+            "es": "Descargas de ayer",
+            "da": "Downloads i går",
+            "ru": "Загрузки вчера",
+            "pl": "Pobrania wczoraj",
+            "ko": "어제 다운로드",
+            "ar": "تنزيلات الأمس"
+          },
+          "example": {
+            "en": "Downloads yesterday",
+            "nl": "Downloads gisteren",
+            "de": "Downloads gestern",
+            "fr": "Téléchargements d'hier",
+            "it": "Download di ieri",
+            "sv": "Nedladdningar igår",
+            "no": "Nedlastinger i går",
+            "es": "Descargas de ayer",
+            "da": "Downloads i går",
+            "ru": "Загрузки вчера",
+            "pl": "Pobrania wczoraj",
+            "ko": "어제 다운로드",
+            "ar": "تنزيلات الأمس"
+          }
+        },
+        {
+          "name": "last7",
+          "type": "number",
+          "title": {
+            "en": "Downloads 7 days",
+            "nl": "Downloads 7 dagen",
+            "de": "Downloads 7 Tage",
+            "fr": "Téléchargements 7 jours",
+            "it": "Download 7 giorni",
+            "sv": "Nedladdningar 7 dagar",
+            "no": "Nedlastinger 7 dager",
+            "es": "Descargas 7 días",
+            "da": "Downloads 7 dage",
+            "ru": "Загрузки за 7 дней",
+            "pl": "Pobrania 7 dni",
+            "ko": "다운로드 7일",
+            "ar": "التنزيلات 7 أيام"
+          },
+          "example": {
+            "en": "Downloads 7 days",
+            "nl": "Downloads 7 dagen",
+            "de": "Downloads 7 Tage",
+            "fr": "Téléchargements 7 jours",
+            "it": "Download 7 giorni",
+            "sv": "Nedladdningar 7 dagar",
+            "no": "Nedlastinger 7 dager",
+            "es": "Descargas 7 días",
+            "da": "Downloads 7 dage",
+            "ru": "Загрузки за 7 дней",
+            "pl": "Pobrania 7 dni",
+            "ko": "다운로드 7일",
+            "ar": "التنزيلات 7 أيام"
+          }
+        },
+        {
+          "name": "total",
+          "type": "number",
+          "title": {
+            "en": "Downloads total",
+            "nl": "Downloads totaal",
+            "de": "Downloads gesamt",
+            "fr": "Téléchargements au total",
+            "it": "Download totali",
+            "sv": "Nedladdningar totalt",
+            "no": "Nedlastinger totalt",
+            "es": "Descargas totales",
+            "da": "Downloads i alt",
+            "ru": "Загрузки всего",
+            "pl": "Pobrania łącznie",
+            "ko": "총 다운로드",
+            "ar": "إجمالي التنزيلات"
+          },
+          "example": {
+            "en": "Downloads total",
+            "nl": "Downloads totaal",
+            "de": "Downloads gesamt",
+            "fr": "Téléchargements au total",
+            "it": "Download totali",
+            "sv": "Nedladdningar totalt",
+            "no": "Nedlastinger totalt",
+            "es": "Descargas totales",
+            "da": "Downloads i alt",
+            "ru": "Загрузки всего",
+            "pl": "Pobrania łącznie",
+            "ko": "총 다운로드",
+            "ar": "إجمالي التنزيلات"
+          }
+        }
+      ],
+      "hint": {
+        "en": "Apple publishes the figures of yesterday once a day.",
+        "nl": "Apple publiceert de cijfers van gisteren één keer per dag.",
+        "de": "Apple veröffentlicht die Zahlen von gestern einmal täglich.",
+        "fr": "Apple publie les chiffres de la veille une fois par jour.",
+        "it": "Apple pubblica i dati di ieri una volta al giorno.",
+        "sv": "Apple publicerar gårdagens siffror en gång om dagen.",
+        "no": "Apple publiserer gårsdagens tall én gang om dagen.",
+        "es": "Apple publica las cifras de ayer una vez al día.",
+        "da": "Apple offentliggør gårsdagens tal én gang om dagen.",
+        "ru": "Apple публикует данные за вчерашний день раз в сутки.",
+        "pl": "Apple publikuje dane z poprzedniego dnia raz dziennie.",
+        "ko": "Apple은 하루에 한 번 어제의 수치를 게시합니다.",
+        "ar": "تنشر Apple أرقام الأمس مرة واحدة يوميًا."
+      }
+    },
+    {
+      "id": "downloads_dropped",
+      "title": {
+        "en": "Downloads dropped compared to the day before",
+        "nl": "Downloads zijn gedaald t.o.v. de dag ervoor",
+        "de": "Downloads sind im Vergleich zum Vortag gesunken",
+        "fr": "Les téléchargements ont baissé par rapport à la veille",
+        "it": "I download sono calati rispetto al giorno prima",
+        "sv": "Nedladdningarna har minskat jämfört med dagen innan",
+        "no": "Nedlastinger falt sammenlignet med dagen før",
+        "es": "Las descargas han bajado respecto al día anterior",
+        "da": "Downloads er faldet i forhold til dagen før",
+        "ru": "Загрузки снизились по сравнению с позавчера",
+        "pl": "Pobrania spadły w porównaniu z dniem poprzednim",
+        "ko": "전날 대비 다운로드 감소",
+        "ar": "انخفضت التنزيلات مقارنةً باليوم السابق"
+      },
+      "tokens": [
+        {
+          "name": "yesterday",
+          "type": "number",
+          "title": {
+            "en": "Downloads yesterday",
+            "nl": "Downloads gisteren",
+            "de": "Downloads gestern",
+            "fr": "Téléchargements d'hier",
+            "it": "Download di ieri",
+            "sv": "Nedladdningar igår",
+            "no": "Nedlastinger i går",
+            "es": "Descargas de ayer",
+            "da": "Downloads i går",
+            "ru": "Загрузки вчера",
+            "pl": "Pobrania wczoraj",
+            "ko": "어제 다운로드",
+            "ar": "تنزيلات الأمس"
+          },
+          "example": {
+            "en": "Downloads yesterday",
+            "nl": "Downloads gisteren",
+            "de": "Downloads gestern",
+            "fr": "Téléchargements d'hier",
+            "it": "Download di ieri",
+            "sv": "Nedladdningar igår",
+            "no": "Nedlastinger i går",
+            "es": "Descargas de ayer",
+            "da": "Downloads i går",
+            "ru": "Загрузки вчера",
+            "pl": "Pobrania wczoraj",
+            "ko": "어제 다운로드",
+            "ar": "تنزيلات الأمس"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "number",
+          "title": {
+            "en": "Day before",
+            "nl": "Dag ervoor",
+            "de": "Vortag",
+            "fr": "Avant-veille",
+            "it": "Giorno prima",
+            "sv": "Dagen innan",
+            "no": "Dagen før",
+            "es": "Día anterior",
+            "da": "Dagen før",
+            "ru": "Позавчера",
+            "pl": "Dzień wcześniej",
+            "ko": "전날",
+            "ar": "اليوم السابق"
+          },
+          "example": {
+            "en": "Day before",
+            "nl": "Dag ervoor",
+            "de": "Vortag",
+            "fr": "Avant-veille",
+            "it": "Giorno prima",
+            "sv": "Dagen innan",
+            "no": "Dagen før",
+            "es": "Día anterior",
+            "da": "Dagen før",
+            "ru": "Позавчера",
+            "pl": "Dzień wcześniej",
+            "ko": "전날",
+            "ar": "اليوم السابق"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "is_live",
+      "title": {
+        "en": "App !{{is|is not}} live",
+        "nl": "App !{{is|is niet}} live",
+        "de": "App !{{ist|ist nicht}} live",
+        "fr": "L'app !{{est|n'est pas}} en ligne",
+        "it": "L'app !{{è|non è}} live",
+        "sv": "Appen !{{är|är inte}} publicerad",
+        "no": "App !{{er|er ikke}} live",
+        "es": "La app !{{está|no está}} publicada",
+        "da": "App !{{er|er ikke}} live",
+        "ru": "Приложение !{{в продаже|не в продаже}}",
+        "pl": "Aplikacja !{{jest|nie jest}} dostępna",
+        "ko": "앱이 라이브 !{{상태임|상태가 아님}}",
+        "ar": "التطبيق !{{منشور|غير منشور}}"
+      }
+    },
+    {
+      "id": "is_in_review",
+      "title": {
+        "en": "App !{{is|is not}} in App Review",
+        "nl": "App !{{is|is niet}} in App Review",
+        "de": "App !{{ist|ist nicht}} im App Review",
+        "fr": "L'app !{{est|n'est pas}} en App Review",
+        "it": "L'app !{{è|non è}} in App Review",
+        "sv": "Appen !{{är|är inte}} i App Review",
+        "no": "App !{{er|er ikke}} i App Review",
+        "es": "La app !{{está|no está}} en App Review",
+        "da": "App !{{er|er ikke}} i App Review",
+        "ru": "Приложение !{{находится|не находится}} на App Review",
+        "pl": "Aplikacja !{{jest|nie jest}} w App Review",
+        "ko": "앱이 App Review !{{중임|중이 아님}}",
+        "ar": "التطبيق !{{في|ليس في}} App Review"
+      }
+    },
+    {
+      "id": "has_pending_version",
+      "title": {
+        "en": "A new version !{{is|is not}} in progress",
+        "nl": "Er !{{is|is geen}} nieuwe versie in voorbereiding",
+        "de": "Eine neue Version !{{ist|ist nicht}} in Arbeit",
+        "fr": "Une nouvelle version !{{est|n'est pas}} en préparation",
+        "it": "Una nuova versione !{{è|non è}} in preparazione",
+        "sv": "En ny version !{{är|är inte}} under arbete",
+        "no": "En ny versjon !{{er|er ikke}} under arbeid",
+        "es": "Una nueva versión !{{está|no está}} en curso",
+        "da": "En ny version !{{er|er ikke}} i gang",
+        "ru": "Новая версия !{{готовится|не готовится}}",
+        "pl": "Nowa wersja !{{jest|nie jest}} w przygotowaniu",
+        "ko": "새 버전이 진행 !{{중임|중이 아님}}",
+        "ar": "إصدار جديد !{{قيد|ليس قيد}} الإعداد"
+      }
+    },
+    {
+      "id": "downloads_yesterday_above",
+      "title": {
+        "en": "Downloads yesterday !{{are|are not}} above…",
+        "nl": "Downloads gisteren !{{zijn|zijn niet}} hoger dan…",
+        "de": "Downloads gestern !{{liegen|liegen nicht}} über …",
+        "fr": "Les téléchargements d'hier !{{sont|ne sont pas}} supérieurs à…",
+        "it": "I download di ieri !{{sono|non sono}} oltre…",
+        "sv": "Nedladdningar igår !{{är|är inte}} över…",
+        "no": "Nedlastinger i går !{{er|er ikke}} over …",
+        "es": "Las descargas de ayer !{{están|no están}} por encima de…",
+        "da": "Downloads i går !{{er|er ikke}} over…",
+        "ru": "Загрузки вчера !{{выше|не выше}}…",
+        "pl": "Pobrania wczoraj !{{są|nie są}} powyżej…",
+        "ko": "어제 다운로드가 다음 값을 !{{초과함|초과하지 않음}}…",
+        "ar": "تنزيلات الأمس !{{أعلى|ليست أعلى}} من…"
+      },
+      "titleFormatted": {
+        "en": "Downloads yesterday !{{are|are not}} above [[number]]",
+        "nl": "Downloads gisteren !{{zijn|zijn niet}} hoger dan [[number]]",
+        "de": "Downloads gestern !{{liegen|liegen nicht}} über [[number]]",
+        "fr": "Les téléchargements d'hier !{{sont|ne sont pas}} supérieurs à [[number]]",
+        "it": "I download di ieri !{{sono|non sono}} oltre [[number]]",
+        "sv": "Nedladdningar igår !{{är|är inte}} över [[number]]",
+        "no": "Nedlastinger i går !{{er|er ikke}} over [[number]]",
+        "es": "Las descargas de ayer !{{están|no están}} por encima de [[number]]",
+        "da": "Downloads i går !{{er|er ikke}} over [[number]]",
+        "ru": "Загрузки вчера !{{выше|не выше}} [[number]]",
+        "pl": "Pobrania wczoraj !{{są|nie są}} powyżej [[number]]",
+        "ko": "어제 다운로드가 [[number]]을(를) !{{초과함|초과하지 않음}}",
+        "ar": "تنزيلات الأمس !{{أعلى|ليست أعلى}} من [[number]]"
+      },
+      "args": [
+        {
+          "name": "number",
+          "type": "number",
+          "min": 0,
+          "placeholder": {
+            "en": "100",
+            "nl": "100",
+            "de": "100",
+            "fr": "100",
+            "it": "100",
+            "sv": "100",
+            "no": "100",
+            "es": "100",
+            "da": "100",
+            "ru": "100",
+            "pl": "100",
+            "ko": "100",
+            "ar": "100"
+          }
+        }
+      ]
+    },
+    {
+      "id": "downloads_7d_above",
+      "title": {
+        "en": "Downloads 7 days !{{are|are not}} above…",
+        "nl": "Downloads 7 dagen !{{zijn|zijn niet}} hoger dan…",
+        "de": "Downloads 7 Tage !{{liegen|liegen nicht}} über …",
+        "fr": "Les téléchargements sur 7 jours !{{sont|ne sont pas}} supérieurs à…",
+        "it": "I download a 7 giorni !{{sono|non sono}} oltre…",
+        "sv": "Nedladdningar 7 dagar !{{är|är inte}} över…",
+        "no": "Nedlastinger 7 dager !{{er|er ikke}} over …",
+        "es": "Las descargas de 7 días !{{están|no están}} por encima de…",
+        "da": "Downloads 7 dage !{{er|er ikke}} over…",
+        "ru": "Загрузки за 7 дней !{{выше|не выше}}…",
+        "pl": "Pobrania 7 dni !{{są|nie są}} powyżej…",
+        "ko": "7일 다운로드가 다음 값을 !{{초과함|초과하지 않음}}…",
+        "ar": "تنزيلات 7 أيام !{{أعلى|ليست أعلى}} من…"
+      },
+      "titleFormatted": {
+        "en": "Downloads 7 days !{{are|are not}} above [[number]]",
+        "nl": "Downloads 7 dagen !{{zijn|zijn niet}} hoger dan [[number]]",
+        "de": "Downloads 7 Tage !{{liegen|liegen nicht}} über [[number]]",
+        "fr": "Les téléchargements sur 7 jours !{{sont|ne sont pas}} supérieurs à [[number]]",
+        "it": "I download a 7 giorni !{{sono|non sono}} oltre [[number]]",
+        "sv": "Nedladdningar 7 dagar !{{är|är inte}} över [[number]]",
+        "no": "Nedlastinger 7 dager !{{er|er ikke}} over [[number]]",
+        "es": "Las descargas de 7 días !{{están|no están}} por encima de [[number]]",
+        "da": "Downloads 7 dage !{{er|er ikke}} over [[number]]",
+        "ru": "Загрузки за 7 дней !{{выше|не выше}} [[number]]",
+        "pl": "Pobrania 7 dni !{{są|nie są}} powyżej [[number]]",
+        "ko": "7일 다운로드가 [[number]]을(를) !{{초과함|초과하지 않음}}",
+        "ar": "تنزيلات 7 أيام !{{أعلى|ليست أعلى}} من [[number]]"
+      },
+      "args": [
+        {
+          "name": "number",
+          "type": "number",
+          "min": 0,
+          "placeholder": {
+            "en": "500",
+            "nl": "500",
+            "de": "500",
+            "fr": "500",
+            "it": "500",
+            "sv": "500",
+            "no": "500",
+            "es": "500",
+            "da": "500",
+            "ru": "500",
+            "pl": "500",
+            "ko": "500",
+            "ar": "500"
+          }
+        }
+      ]
+    },
+    {
+      "id": "downloads_total_above",
+      "title": {
+        "en": "Total downloads !{{are|are not}} above…",
+        "nl": "Totaal downloads !{{zijn|zijn niet}} hoger dan…",
+        "de": "Downloads gesamt !{{liegen|liegen nicht}} über …",
+        "fr": "Le total des téléchargements !{{est|n'est pas}} supérieur à…",
+        "it": "I download totali !{{sono|non sono}} oltre…",
+        "sv": "Totala nedladdningar !{{är|är inte}} över…",
+        "no": "Totale nedlastinger !{{er|er ikke}} over …",
+        "es": "Las descargas totales !{{están|no están}} por encima de…",
+        "da": "Downloads i alt !{{er|er ikke}} over…",
+        "ru": "Всего загрузок !{{больше|не больше}}…",
+        "pl": "Łączne pobrania !{{są|nie są}} powyżej…",
+        "ko": "총 다운로드가 다음 값을 !{{초과함|초과하지 않음}}…",
+        "ar": "إجمالي التنزيلات !{{أعلى|ليس أعلى}} من…"
+      },
+      "titleFormatted": {
+        "en": "Total downloads !{{are|are not}} above [[number]]",
+        "nl": "Totaal downloads !{{zijn|zijn niet}} hoger dan [[number]]",
+        "de": "Downloads gesamt !{{liegen|liegen nicht}} über [[number]]",
+        "fr": "Le total des téléchargements !{{est|n'est pas}} supérieur à [[number]]",
+        "it": "I download totali !{{sono|non sono}} oltre [[number]]",
+        "sv": "Totala nedladdningar !{{är|är inte}} över [[number]]",
+        "no": "Totale nedlastinger !{{er|er ikke}} over [[number]]",
+        "es": "Las descargas totales !{{están|no están}} por encima de [[number]]",
+        "da": "Downloads i alt !{{er|er ikke}} over [[number]]",
+        "ru": "Всего загрузок !{{больше|не больше}} [[number]]",
+        "pl": "Łączne pobrania !{{są|nie są}} powyżej [[number]]",
+        "ko": "총 다운로드가 [[number]]을(를) !{{초과함|초과하지 않음}}",
+        "ar": "إجمالي التنزيلات !{{أعلى|ليس أعلى}} من [[number]]"
+      },
+      "args": [
+        {
+          "name": "number",
+          "type": "number",
+          "min": 0,
+          "placeholder": {
+            "en": "10000",
+            "nl": "10000",
+            "de": "10000",
+            "fr": "10000",
+            "it": "10000",
+            "sv": "10000",
+            "no": "10000",
+            "es": "10000",
+            "da": "10000",
+            "ru": "10000",
+            "pl": "10000",
+            "ko": "10000",
+            "ar": "10000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rating_above",
+      "title": {
+        "en": "Rating !{{is|is not}} above…",
+        "nl": "Beoordeling !{{is|is niet}} hoger dan…",
+        "de": "Bewertung !{{liegt|liegt nicht}} über …",
+        "fr": "La note !{{est|n'est pas}} supérieure à…",
+        "it": "La valutazione !{{è|non è}} oltre…",
+        "sv": "Betyget !{{är|är inte}} över…",
+        "no": "Vurdering !{{er|er ikke}} over …",
+        "es": "La valoración !{{está|no está}} por encima de…",
+        "da": "Bedømmelse !{{er|er ikke}} over…",
+        "ru": "Рейтинг !{{выше|не выше}}…",
+        "pl": "Ocena !{{jest|nie jest}} powyżej…",
+        "ko": "평점이 다음 값을 !{{초과함|초과하지 않음}}…",
+        "ar": "التقييم !{{أعلى|ليس أعلى}} من…"
+      },
+      "titleFormatted": {
+        "en": "Rating !{{is|is not}} above [[number]]",
+        "nl": "Beoordeling !{{is|is niet}} hoger dan [[number]]",
+        "de": "Bewertung !{{liegt|liegt nicht}} über [[number]]",
+        "fr": "La note !{{est|n'est pas}} supérieure à [[number]]",
+        "it": "La valutazione !{{è|non è}} oltre [[number]]",
+        "sv": "Betyget !{{är|är inte}} över [[number]]",
+        "no": "Vurdering !{{er|er ikke}} over [[number]]",
+        "es": "La valoración !{{está|no está}} por encima de [[number]]",
+        "da": "Bedømmelse !{{er|er ikke}} over [[number]]",
+        "ru": "Рейтинг !{{выше|не выше}} [[number]]",
+        "pl": "Ocena !{{jest|nie jest}} powyżej [[number]]",
+        "ko": "평점이 [[number]]을(를) !{{초과함|초과하지 않음}}",
+        "ar": "التقييم !{{أعلى|ليس أعلى}} من [[number]]"
+      },
+      "args": [
+        {
+          "name": "number",
+          "type": "number",
+          "min": 0,
+          "max": 5,
+          "step": 0.1,
+          "placeholder": {
+            "en": "4.5",
+            "nl": "4.5",
+            "de": "4,5",
+            "fr": "4,5",
+            "it": "4,5",
+            "sv": "4,5",
+            "no": "4,5",
+            "es": "4,5",
+            "da": "4,5",
+            "ru": "4.5",
+            "pl": "4,5",
+            "ko": "4.5",
+            "ar": "4.5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "live_older_than",
+      "title": {
+        "en": "Live version !{{is|is not}} older than…",
+        "nl": "Live versie !{{is|is niet}} ouder dan…",
+        "de": "Live-Version !{{ist|ist nicht}} älter als …",
+        "fr": "La version en ligne !{{date|ne date pas}} de plus de…",
+        "it": "La versione live !{{è|non è}} più vecchia di…",
+        "sv": "Publicerad version !{{är|är inte}} äldre än…",
+        "no": "Live-versjon !{{er|er ikke}} eldre enn …",
+        "es": "La versión publicada !{{tiene|no tiene}} más de…",
+        "da": "Live-version !{{er|er ikke}} ældre end…",
+        "ru": "Версия в продаже !{{старше|не старше}}…",
+        "pl": "Dostępna wersja !{{jest|nie jest}} starsza niż…",
+        "ko": "라이브 버전이 다음 기간보다 !{{오래됨|오래되지 않음}}…",
+        "ar": "الإصدار المنشور !{{أقدم|ليس أقدم}} من…"
+      },
+      "titleFormatted": {
+        "en": "Live version !{{is|is not}} older than [[days]] days",
+        "nl": "Live versie !{{is|is niet}} ouder dan [[days]] dagen",
+        "de": "Live-Version !{{ist|ist nicht}} älter als [[days]] Tage",
+        "fr": "La version en ligne !{{date|ne date pas}} de plus de [[days]] jours",
+        "it": "La versione live !{{è|non è}} più vecchia di [[days]] giorni",
+        "sv": "Publicerad version !{{är|är inte}} äldre än [[days]] dagar",
+        "no": "Live-versjon !{{er|er ikke}} eldre enn [[days]] dager",
+        "es": "La versión publicada !{{tiene|no tiene}} más de [[days]] días",
+        "da": "Live-version !{{er|er ikke}} ældre end [[days]] dage",
+        "ru": "Версия в продаже !{{старше|не старше}} [[days]] дн.",
+        "pl": "Dostępna wersja !{{jest|nie jest}} starsza niż [[days]] dni",
+        "ko": "라이브 버전이 [[days]]일보다 !{{오래됨|오래되지 않음}}",
+        "ar": "الإصدار المنشور !{{أقدم|ليس أقدم}} من [[days]] يومًا"
+      },
+      "args": [
+        {
+          "name": "days",
+          "type": "number",
+          "min": 1,
+          "placeholder": {
+            "en": "90",
+            "nl": "90",
+            "de": "90",
+            "fr": "90",
+            "it": "90",
+            "sv": "90",
+            "no": "90",
+            "es": "90",
+            "da": "90",
+            "ru": "90",
+            "pl": "90",
+            "ko": "90",
+            "ar": "90"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "refresh_app",
+      "title": {
+        "en": "Refresh App Store status",
+        "nl": "App Store-status verversen",
+        "de": "App Store-Status aktualisieren",
+        "fr": "Actualiser le statut App Store",
+        "it": "Aggiorna lo stato App Store",
+        "sv": "Uppdatera App Store-status",
+        "no": "Oppdater App Store-status",
+        "es": "Actualizar el estado en el App Store",
+        "da": "Opdater App Store-status",
+        "ru": "Обновить статус App Store",
+        "pl": "Odśwież status App Store",
+        "ko": "App Store 상태 새로 고침",
+        "ar": "تحديث حالة App Store"
+      }
+    },
+    {
+      "id": "release_version",
+      "title": {
+        "en": "Release the approved version",
+        "nl": "Goedgekeurde versie vrijgeven",
+        "de": "Genehmigte Version veröffentlichen",
+        "fr": "Publier la version approuvée",
+        "it": "Pubblica la versione approvata",
+        "sv": "Publicera den godkända versionen",
+        "no": "Gi ut den godkjente versjonen",
+        "es": "Publicar la versión aprobada",
+        "da": "Frigiv den godkendte version",
+        "ru": "Выпустить одобренную версию",
+        "pl": "Opublikuj zatwierdzoną wersję",
+        "ko": "승인된 버전 출시",
+        "ar": "نشر الإصدار المعتمد"
+      },
+      "hint": {
+        "en": "Only works when the version is 'Pending Developer Release'.",
+        "nl": "Werkt alleen als de versie 'Klaar voor release' is.",
+        "de": "Funktioniert nur, wenn die Version den Status „Ausstehende Freigabe durch Entwickler“ hat.",
+        "fr": "Fonctionne uniquement lorsque la version est « En attente de publication par le développeur ».",
+        "it": "Funziona solo se la versione è 'In attesa di pubblicazione da parte dello sviluppatore'.",
+        "sv": "Fungerar bara när versionen har statusen 'Väntar på utvecklarens publicering'.",
+        "no": "Fungerer bare når versjonen har statusen «Venter på utviklerutgivelse».",
+        "es": "Solo funciona cuando la versión está en 'Pendiente de publicación por el desarrollador'.",
+        "da": "Virker kun, når versionen har status 'Afventer frigivelse fra udvikler'.",
+        "ru": "Работает, только если версия имеет статус «Ожидает выпуска разработчиком».",
+        "pl": "Działa tylko, gdy wersja ma status „Oczekuje na publikację przez dewelopera”.",
+        "ko": "버전이 '개발자 출시 대기 중' 상태일 때만 작동합니다.",
+        "ar": "يعمل فقط عندما يكون الإصدار في حالة 'Pending Developer Release'."
+      }
+    },
+    {
+      "id": "reply_to_review",
+      "title": {
+        "en": "Reply to a customer review",
+        "nl": "Reageer op een klantreview",
+        "de": "Auf eine Kundenrezension antworten",
+        "fr": "Répondre à un avis client",
+        "it": "Rispondi a una recensione dei clienti",
+        "sv": "Svara på en kundrecension",
+        "no": "Svar på en kundeanmeldelse",
+        "es": "Responder a una reseña de cliente",
+        "da": "Svar på en kundeanmeldelse",
+        "ru": "Ответить на отзыв клиента",
+        "pl": "Odpowiedz na recenzję klienta",
+        "ko": "고객 리뷰에 답글 달기",
+        "ar": "الرد على مراجعة عميل"
+      },
+      "titleFormatted": {
+        "en": "Reply to review [[review_id]] with [[text]]",
+        "nl": "Reageer op review [[review_id]] met [[text]]",
+        "de": "Auf Rezension [[review_id]] antworten mit [[text]]",
+        "fr": "Répondre à l'avis [[review_id]] avec [[text]]",
+        "it": "Rispondi alla recensione [[review_id]] con [[text]]",
+        "sv": "Svara på recension [[review_id]] med [[text]]",
+        "no": "Svar på anmeldelse [[review_id]] med [[text]]",
+        "es": "Responder a la reseña [[review_id]] con [[text]]",
+        "da": "Svar på anmeldelse [[review_id]] med [[text]]",
+        "ru": "Ответить на отзыв [[review_id]] текстом [[text]]",
+        "pl": "Odpowiedz na recenzję [[review_id]] tekstem [[text]]",
+        "ko": "리뷰 [[review_id]]에 [[text]](으)로 답글 달기",
+        "ar": "الرد على المراجعة [[review_id]] بـ [[text]]"
+      },
+      "args": [
+        {
+          "name": "review_id",
+          "type": "text",
+          "placeholder": {
+            "en": "Review ID (token)",
+            "nl": "Review-ID (tag)",
+            "de": "Rezensions-ID (Token)",
+            "fr": "ID de l'avis (token)",
+            "it": "ID recensione (token)",
+            "sv": "Recensions-ID (token)",
+            "no": "Anmeldelses-ID (token)",
+            "es": "ID de la reseña (token)",
+            "da": "Anmeldelses-ID (token)",
+            "ru": "ID отзыва (токен)",
+            "pl": "ID recenzji (token)",
+            "ko": "리뷰 ID(토큰)",
+            "ar": "معرّف المراجعة (رمز)"
+          }
+        },
+        {
+          "name": "text",
+          "type": "text",
+          "placeholder": {
+            "en": "Thank you for your review!",
+            "nl": "Bedankt voor je review!",
+            "de": "Danke für deine Bewertung!",
+            "fr": "Merci pour votre avis !",
+            "it": "Grazie per la tua recensione!",
+            "sv": "Tack för din recension!",
+            "no": "Takk for anmeldelsen din!",
+            "es": "¡Gracias por tu reseña!",
+            "da": "Tak for din anmeldelse!",
+            "ru": "Спасибо за ваш отзыв!",
+            "pl": "Dziękujemy za recenzję!",
+            "ko": "리뷰를 남겨 주셔서 감사합니다!",
+            "ar": "شكرًا لك على مراجعتك!"
+          }
+        }
+      ]
+    }
+  ]
+}

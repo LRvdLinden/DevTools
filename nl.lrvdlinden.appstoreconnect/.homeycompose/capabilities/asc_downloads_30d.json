@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Downloads 30 days",
+    "nl": "Downloads 30 dagen",
+    "de": "Downloads 30 Tage",
+    "fr": "Téléchargements 30 jours",
+    "it": "Download 30 giorni",
+    "sv": "Nedladdningar 30 dagar",
+    "no": "Nedlastinger 30 dager",
+    "es": "Descargas 30 días",
+    "da": "Downloads 30 dage",
+    "ru": "Загрузки за 30 дней",
+    "pl": "Pobrania 30 dni",
+    "ko": "다운로드 30일",
+    "ar": "التنزيلات 30 يومًا"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "decimals": 0,
+  "icon": "/assets/capabilities/download.svg"
+}

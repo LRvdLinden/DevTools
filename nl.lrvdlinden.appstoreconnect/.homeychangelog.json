@@ -1,0 +1,20 @@
+{
+  "1.0.0": {
+    "en": "First release: App Store apps as devices with downloads, status, versions, builds and ratings; portfolio device; flows; dashboard widgets.",
+    "nl": "Eerste versie: App Store-apps als apparaten met downloads, status, versies, builds en beoordelingen; portfolio-apparaat; flows; dashboard-widgets.",
+    "de": "Erste Version: App Store-Apps als Geräte mit Downloads, Status, Versionen, Builds und Bewertungen; Portfolio-Gerät; Flows; Dashboard-Widgets.",
+    "fr": "Première version : apps de l'App Store comme appareils avec téléchargements, statut, versions, builds et notes ; appareil portefeuille ; Flows ; widgets de tableau de bord.",
+    "it": "Prima versione: app dell'App Store come dispositivi con download, stato, versioni, build e valutazioni; dispositivo portfolio; Flow; widget per la dashboard.",
+    "sv": "Första versionen: App Store-appar som enheter med nedladdningar, status, versioner, builds och betyg; portföljenhet; flows; dashboard-widgetar.",
+    "no": "Første utgivelse: App Store-apper som enheter med nedlastinger, status, versjoner, builds og vurderinger; porteføljeenhet; flows; dashbord-widgets.",
+    "es": "Primera versión: apps del App Store como dispositivos con descargas, estado, versiones, builds y valoraciones; dispositivo de portafolio; flows; widgets de panel.",
+    "da": "Første udgivelse: App Store-apps som enheder med downloads, status, versioner, builds og bedømmelser; porteføljeenhed; flows; dashboard-widgets.",
+    "ru": "Первый выпуск: приложения App Store как устройства с загрузками, статусом, версиями, сборками и оценками; устройство портфеля; потоки; виджеты панели.",
+    "pl": "Pierwsze wydanie: aplikacje App Store jako urządzenia z pobraniami, statusem, wersjami, buildami i ocenami; urządzenie portfolio; Flow; widżety dashboardu.",
+    "ko": "첫 출시: 다운로드, 상태, 버전, 빌드 및 평점을 갖춘 기기로서의 App Store 앱, 포트폴리오 기기, Flow, 대시보드 위젯.",
+    "ar": "الإصدار الأول: تطبيقات App Store كأجهزة مع التنزيلات والحالة والإصدارات والبنيات والتقييمات؛ جهاز المحفظة؛ التدفقات؛ أدوات لوحة المعلومات."
+  },
+  "1.0.1": {
+    "en": "New device images and rebrand settings page"
+  }
+}

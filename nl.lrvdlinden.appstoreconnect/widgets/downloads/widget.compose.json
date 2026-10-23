@@ -1,0 +1,140 @@
+{
+  "name": {
+    "en": "Downloads",
+    "nl": "Downloads",
+    "de": "Downloads",
+    "fr": "Téléchargements",
+    "it": "Download",
+    "sv": "Nedladdningar",
+    "no": "Nedlastinger",
+    "es": "Descargas",
+    "da": "Downloads",
+    "ru": "Загрузки",
+    "pl": "Pobrania",
+    "ko": "다운로드",
+    "ar": "التنزيلات"
+  },
+  "settings": [
+    {
+      "id": "app",
+      "type": "autocomplete",
+      "title": {
+        "en": "App (empty = all apps)",
+        "nl": "App (leeg = alle apps)",
+        "de": "App (leer = alle Apps)",
+        "fr": "App (vide = toutes les apps)",
+        "it": "App (vuoto = tutte le app)",
+        "sv": "App (tom = alla appar)",
+        "no": "App (tom = alle apper)",
+        "es": "App (vacío = todas las apps)",
+        "da": "App (tom = alle apps)",
+        "ru": "Приложение (пусто = все приложения)",
+        "pl": "Aplikacja (puste = wszystkie aplikacje)",
+        "ko": "앱(비워 두면 모든 앱)",
+        "ar": "التطبيق (فارغ = جميع التطبيقات)"
+      }
+    },
+    {
+      "id": "period",
+      "type": "dropdown",
+      "title": {
+        "en": "Number",
+        "nl": "Getal",
+        "de": "Zeitraum",
+        "fr": "Nombre",
+        "it": "Numero",
+        "sv": "Antal",
+        "no": "Antall",
+        "es": "Cifra",
+        "da": "Antal",
+        "ru": "Показатель",
+        "pl": "Liczba",
+        "ko": "수치",
+        "ar": "العدد"
+      },
+      "value": "last30",
+      "values": [
+        {
+          "id": "yesterday",
+          "title": {
+            "en": "Yesterday",
+            "nl": "Gisteren",
+            "de": "Gestern",
+            "fr": "Hier",
+            "it": "Ieri",
+            "sv": "Igår",
+            "no": "I går",
+            "es": "Ayer",
+            "da": "I går",
+            "ru": "Вчера",
+            "pl": "Wczoraj",
+            "ko": "어제",
+            "ar": "الأمس"
+          }
+        },
+        {
+          "id": "last7",
+          "title": {
+            "en": "Last 7 days",
+            "nl": "Afgelopen 7 dagen",
+            "de": "Letzte 7 Tage",
+            "fr": "7 derniers jours",
+            "it": "Ultimi 7 giorni",
+            "sv": "Senaste 7 dagarna",
+            "no": "Siste 7 dager",
+            "es": "Últimos 7 días",
+            "da": "Sidste 7 dage",
+            "ru": "Последние 7 дней",
+            "pl": "Ostatnie 7 dni",
+            "ko": "최근 7일",
+            "ar": "آخر 7 أيام"
+          }
+        },
+        {
+          "id": "last30",
+          "title": {
+            "en": "Last 30 days",
+            "nl": "Afgelopen 30 dagen",
+            "de": "Letzte 30 Tage",
+            "fr": "30 derniers jours",
+            "it": "Ultimi 30 giorni",
+            "sv": "Senaste 30 dagarna",
+            "no": "Siste 30 dager",
+            "es": "Últimos 30 días",
+            "da": "Sidste 30 dage",
+            "ru": "Последние 30 дней",
+            "pl": "Ostatnie 30 dni",
+            "ko": "최근 30일",
+            "ar": "آخر 30 يومًا"
+          }
+        },
+        {
+          "id": "total",
+          "title": {
+            "en": "All time",
+            "nl": "Totaal",
+            "de": "Gesamt",
+            "fr": "Depuis le début",
+            "it": "Da sempre",
+            "sv": "Totalt",
+            "no": "Totalt",
+            "es": "Desde siempre",
+            "da": "Altid",
+            "ru": "За всё время",
+            "pl": "Od początku",
+            "ko": "전체 기간",
+            "ar": "طوال الوقت"
+          }
+        }
+      ]
+    }
+  ],
+  "height": 200,
+  "transparent": false,
+  "api": {
+    "getData": {
+      "method": "GET",
+      "path": "/"
+    }
+  }
+}

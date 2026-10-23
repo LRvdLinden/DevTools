@@ -1,0 +1,39 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Rating",
+    "nl": "Beoordeling",
+    "de": "Bewertung",
+    "fr": "Note",
+    "it": "Valutazione",
+    "sv": "Betyg",
+    "no": "Vurdering",
+    "es": "Valoración",
+    "da": "Bedømmelse",
+    "ru": "Рейтинг",
+    "pl": "Ocena",
+    "ko": "평점",
+    "ar": "التقييم"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "decimals": 1,
+  "units": {
+    "en": "★",
+    "nl": "★",
+    "de": "★",
+    "fr": "★",
+    "it": "★",
+    "sv": "★",
+    "no": "★",
+    "es": "★",
+    "da": "★",
+    "ru": "★",
+    "pl": "★",
+    "ko": "★",
+    "ar": "★"
+  },
+  "icon": "/assets/capabilities/star.svg"
+}

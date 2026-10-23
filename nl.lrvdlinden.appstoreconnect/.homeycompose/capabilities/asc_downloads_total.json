@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Downloads total",
+    "nl": "Downloads totaal",
+    "de": "Downloads gesamt",
+    "fr": "Téléchargements au total",
+    "it": "Download totali",
+    "sv": "Nedladdningar totalt",
+    "no": "Nedlastinger totalt",
+    "es": "Descargas totales",
+    "da": "Downloads i alt",
+    "ru": "Загрузки всего",
+    "pl": "Pobrania łącznie",
+    "ko": "총 다운로드",
+    "ar": "إجمالي التنزيلات"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "decimals": 0,
+  "icon": "/assets/capabilities/total.svg"
+}

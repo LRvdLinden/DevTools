@@ -1,0 +1,120 @@
+{
+  "name": {
+    "en": "App Store app",
+    "nl": "App Store-app",
+    "de": "App Store-App",
+    "fr": "App de l'App Store",
+    "it": "App dell'App Store",
+    "sv": "App Store-app",
+    "no": "App Store-app",
+    "es": "App del App Store",
+    "da": "App Store-app",
+    "ru": "Приложение App Store",
+    "pl": "Aplikacja App Store",
+    "ko": "App Store 앱",
+    "ar": "تطبيق App Store"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "asc_downloads_yesterday",
+    "asc_downloads_7d",
+    "asc_downloads_30d",
+    "asc_downloads_total",
+    "asc_updates_30d",
+    "asc_proceeds_30d",
+    "asc_rating",
+    "asc_rating_count",
+    "asc_status",
+    "asc_in_review",
+    "asc_version_live",
+    "asc_version_next",
+    "asc_build",
+    "asc_build_state"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "cloud"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "settings": [
+    {
+      "id": "bundle_id",
+      "type": "label",
+      "label": {
+        "en": "Bundle ID",
+        "nl": "Bundle ID",
+        "de": "Bundle-ID",
+        "fr": "Bundle ID",
+        "it": "Bundle ID",
+        "sv": "Bundle-ID",
+        "no": "Bundle-ID",
+        "es": "Bundle ID",
+        "da": "Bundle-ID",
+        "ru": "Bundle ID",
+        "pl": "Bundle ID",
+        "ko": "번들 ID",
+        "ar": "Bundle ID"
+      },
+      "value": ""
+    },
+    {
+      "id": "account",
+      "type": "label",
+      "label": {
+        "en": "Account",
+        "nl": "Account",
+        "de": "Konto",
+        "fr": "Compte",
+        "it": "Account",
+        "sv": "Konto",
+        "no": "Konto",
+        "es": "Cuenta",
+        "da": "Konto",
+        "ru": "Учётная запись",
+        "pl": "Konto",
+        "ko": "계정",
+        "ar": "الحساب"
+      },
+      "value": ""
+    },
+    {
+      "id": "currency",
+      "type": "label",
+      "label": {
+        "en": "Proceeds currency",
+        "nl": "Valuta opbrengst",
+        "de": "Währung der Erlöse",
+        "fr": "Devise des recettes",
+        "it": "Valuta dei ricavi",
+        "sv": "Valuta för intäkter",
+        "no": "Valuta for inntekter",
+        "es": "Moneda de los ingresos",
+        "da": "Valuta for provenu",
+        "ru": "Валюта выручки",
+        "pl": "Waluta przychodów",
+        "ko": "수익 통화",
+        "ar": "عملة العائدات"
+      },
+      "value": ""
+    }
+  ]
+}

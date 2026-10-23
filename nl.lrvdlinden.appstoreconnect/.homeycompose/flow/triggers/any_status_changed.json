@@ -1,0 +1,155 @@
+{
+  "title": {
+    "en": "The status of an app changed",
+    "nl": "De status van een app is veranderd",
+    "de": "Der Status einer App hat sich geändert",
+    "fr": "Le statut d'une app a changé",
+    "it": "Lo stato di un'app è cambiato",
+    "sv": "Status för en app har ändrats",
+    "no": "Statusen til en app endret seg",
+    "es": "El estado de una app ha cambiado",
+    "da": "Status for en app er ændret",
+    "ru": "Статус приложения изменился",
+    "pl": "Status aplikacji się zmienił",
+    "ko": "앱 상태가 변경됨",
+    "ar": "تغيّرت حالة تطبيق"
+  },
+  "tokens": [
+    {
+      "name": "app",
+      "type": "string",
+      "title": {
+        "en": "App",
+        "nl": "App",
+        "de": "App",
+        "fr": "App",
+        "it": "App",
+        "sv": "App",
+        "no": "App",
+        "es": "App",
+        "da": "App",
+        "ru": "Приложение",
+        "pl": "Aplikacja",
+        "ko": "앱",
+        "ar": "التطبيق"
+      },
+      "example": {
+        "en": "App",
+        "nl": "App",
+        "de": "App",
+        "fr": "App",
+        "it": "App",
+        "sv": "App",
+        "no": "App",
+        "es": "App",
+        "da": "App",
+        "ru": "Приложение",
+        "pl": "Aplikacja",
+        "ko": "앱",
+        "ar": "التطبيق"
+      }
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "title": {
+        "en": "Status",
+        "nl": "Status",
+        "de": "Status",
+        "fr": "Statut",
+        "it": "Stato",
+        "sv": "Status",
+        "no": "Status",
+        "es": "Estado",
+        "da": "Status",
+        "ru": "Статус",
+        "pl": "Status",
+        "ko": "상태",
+        "ar": "الحالة"
+      },
+      "example": {
+        "en": "Status",
+        "nl": "Status",
+        "de": "Status",
+        "fr": "Statut",
+        "it": "Stato",
+        "sv": "Status",
+        "no": "Status",
+        "es": "Estado",
+        "da": "Status",
+        "ru": "Статус",
+        "pl": "Status",
+        "ko": "상태",
+        "ar": "الحالة"
+      }
+    },
+    {
+      "name": "previous",
+      "type": "string",
+      "title": {
+        "en": "Previous status",
+        "nl": "Vorige status",
+        "de": "Vorheriger Status",
+        "fr": "Statut précédent",
+        "it": "Stato precedente",
+        "sv": "Tidigare status",
+        "no": "Forrige status",
+        "es": "Estado anterior",
+        "da": "Tidligere status",
+        "ru": "Предыдущий статус",
+        "pl": "Poprzedni status",
+        "ko": "이전 상태",
+        "ar": "الحالة السابقة"
+      },
+      "example": {
+        "en": "Previous status",
+        "nl": "Vorige status",
+        "de": "Vorheriger Status",
+        "fr": "Statut précédent",
+        "it": "Stato precedente",
+        "sv": "Tidigare status",
+        "no": "Forrige status",
+        "es": "Estado anterior",
+        "da": "Tidligere status",
+        "ru": "Предыдущий статус",
+        "pl": "Poprzedni status",
+        "ko": "이전 상태",
+        "ar": "الحالة السابقة"
+      }
+    },
+    {
+      "name": "version",
+      "type": "string",
+      "title": {
+        "en": "Version",
+        "nl": "Versie",
+        "de": "Version",
+        "fr": "Version",
+        "it": "Versione",
+        "sv": "Version",
+        "no": "Versjon",
+        "es": "Versión",
+        "da": "Version",
+        "ru": "Версия",
+        "pl": "Wersja",
+        "ko": "버전",
+        "ar": "الإصدار"
+      },
+      "example": {
+        "en": "Version",
+        "nl": "Versie",
+        "de": "Version",
+        "fr": "Version",
+        "it": "Versione",
+        "sv": "Version",
+        "no": "Versjon",
+        "es": "Versión",
+        "da": "Version",
+        "ru": "Версия",
+        "pl": "Wersja",
+        "ko": "버전",
+        "ar": "الإصدار"
+      }
+    }
+  ]
+}

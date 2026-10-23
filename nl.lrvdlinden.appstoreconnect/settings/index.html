@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="/homey.js" data-origin="settings"></script>
+  <style>
+    /* Only layout for parts Homey has no class for; everything else uses the built-in Homey CSS. */
+    .asc-accounts { margin: 0 0 12px; }
+    .asc-account { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--homey-line-color, rgba(128,128,128,.2)); }
+    .asc-account:last-child { border-bottom: 0; }
+    .asc-avatar { flex: none; width: 36px; height: 36px; border-radius: 50%; background: #0484FD; color: #fff;
+                  font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .asc-account-info { flex: 1; min-width: 0; }
+    .asc-account-name { font-weight: 600; }
+    .asc-muted { font-size: 13px; opacity: .65; overflow-wrap: anywhere; }
+    .asc-ok { color: #1FA851; } .asc-err { color: #E5343A; }
+    .asc-hidden { display: none; }
+    .asc-row { display: flex; gap: 8px; align-items: center; }
+    .asc-row > * { flex: 1; }
+    .asc-result { margin-top: 10px; font-size: 14px; overflow-wrap: anywhere; }
+    .homey-form-textarea { min-height: 110px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; }
+    details { border-top: 1px solid var(--homey-line-color, rgba(128,128,128,.2)); padding: 10px 0; }
+    details:first-of-type { border-top: 0; }
+    summary { font-weight: 600; cursor: pointer; }
+    details ol { padding-inline-start: 20px; margin: 8px 0 0; line-height: 1.5; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header class="homey-header">
+    <h1 class="homey-title">App Store Connect</h1>
+    <p class="homey-subtitle" data-i18n="settings.subtitle">Downloads, App Review status, builds and reviews of your iOS apps.</p>
+  </header>
+
+  <form class="homey-form" onsubmit="return false">
+    <fieldset class="homey-form-fieldset">
+      <legend class="homey-form-legend" data-i18n="settings.accounts">Accounts</legend>
+      <div id="accounts" class="asc-accounts"><p class="asc-muted" data-i18n="settings.no_account">No account yet.</p></div>
+      <button type="button" class="homey-button-secondary-shadow-full" id="add-btn">+ <span data-i18n="settings.add_account">Add account</span></button>
+    </fieldset>
+
+    <fieldset class="homey-form-fieldset asc-hidden" id="form">
+      <legend class="homey-form-legend" data-i18n="settings.new_account">New account</legend>
+      <div class="homey-form-group">
+        <label class="homey-form-label" for="f-name" data-i18n="settings.name">Name</label>
+        <input class="homey-form-input" id="f-name" type="text" placeholder="PixelForges">
+      </div>
+      <div class="homey-form-group">
+        <label class="homey-form-label" for="f-issuer">Issuer ID</label>
+        <input class="homey-form-input" id="f-issuer" type="text" placeholder="69a6de7a-xxxx-xxxx-xxxx-xxxxxxxxxxxx" autocapitalize="off" autocomplete="off">
+      </div>
+      <div class="homey-form-group">
+        <label class="homey-form-label" for="f-key">Key ID</label>
+        <input class="homey-form-input" id="f-key" type="text" placeholder="2X9R4HXF34" autocapitalize="off" autocomplete="off">
+      </div>
+      <div class="homey-form-group">
+        <label class="homey-form-label" for="f-p8" data-i18n="settings.p8">Private key (.p8) – paste the full contents</label>
+        <textarea class="homey-form-textarea" id="f-p8" placeholder="-----BEGIN PRIVATE KEY-----&#10;MIGTAgEAMBMGByqGSM49...&#10;-----END PRIVATE KEY-----"></textarea>
+      </div>
+      <div class="homey-form-group">
+        <label class="homey-form-label" for="f-vendor" data-i18n="settings.vendor">Vendor number (for downloads)</label>
+        <input class="homey-form-input" id="f-vendor" type="text" inputmode="numeric" placeholder="85734756">
+      </div>
+      <div class="asc-row">
+        <button type="button" class="homey-button-transparent" id="cancel-btn" data-i18n="settings.cancel">Cancel</button>
+        <button type="button" class="homey-button-primary" id="save-btn" data-i18n="settings.test_save">Test &amp; save</button>
+      </div>
+      <p class="asc-result" id="result"></p>
+    </fieldset>
+
+    <fieldset class="homey-form-fieldset">
+      <legend class="homey-form-legend" data-i18n="settings.refresh_title">Refresh</legend>
+      <div class="homey-form-group">
+        <label class="homey-form-label" for="poll" data-i18n="settings.poll">Check status every (minutes)</label>
+        <input class="homey-form-input" id="poll" type="number" min="5" max="240" value="15">
+      </div>
+      <button type="button" class="homey-button-secondary-shadow-full" id="refresh-btn" data-i18n="settings.refresh_now">Refresh now</button>
+      <p class="asc-muted asc-result" id="state"></p>
+    </fieldset>
+
+    <fieldset class="homey-form-fieldset">
+      <legend class="homey-form-legend" data-i18n="settings.guide">Guide</legend>
+      <details open><summary data-i18n="settings.g1">1. Create an API key</summary><ol data-i18n="settings.g1l"></ol></details>
+      <details><summary data-i18n="settings.g2">2. Issuer ID and Key ID</summary><ol data-i18n="settings.g2l"></ol></details>
+      <details><summary data-i18n="settings.g3">3. The .p8 key</summary><ol data-i18n="settings.g3l"></ol></details>
+      <details><summary data-i18n="settings.g4">4. Vendor number</summary><ol data-i18n="settings.g4l"></ol></details>
+    </fieldset>
+  </form>
+
+<script type="text/javascript">
+function onHomeyReady(Homey) {
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.innerHTML = Homey.__(el.dataset.i18n); });
+  const S = key => Homey.__(`settings.${key}`);
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  let accounts = [];
+
+  function render() {
+    const box = $('accounts');
+    if (!accounts.length) { box.innerHTML = `<p class="asc-muted">${S('no_account')}</p>`; return; }
+    box.innerHTML = '';
+    accounts.forEach((a, i) => {
+      const row = document.createElement('div');
+      row.className = 'asc-account';
+      row.innerHTML = `<div class="asc-avatar">${esc((a.name || 'A').slice(0, 1).toUpperCase())}</div>
+        <div class="asc-account-info"><div class="asc-account-name">${esc(a.name || 'App Store Connect')}</div>
+        <div class="asc-muted">Key ${esc(a.keyId)}${a.vendorNumber ? ' · vendor ' + esc(a.vendorNumber) : ''}</div>
+        <div class="asc-muted ${a.ok ? 'asc-ok' : 'asc-err'}">${a.ok ? S('working') : esc(a.error || '')}</div></div>`;
+      const del = document.createElement('button');
+      del.type = 'button';
+      del.className = 'homey-button-danger-shadow-small';
+      del.textContent = S('remove');
+      del.onclick = () => Homey.confirm(S('remove_confirm'), 'warning', (err, ok) => {
+        if (!ok) return;
+        accounts.splice(i, 1);
+        Homey.set('accounts', accounts, render);
+      });
+      row.appendChild(del);
+      box.appendChild(row);
+    });
+  }
+
+  Homey.get('accounts', (err, value) => { accounts = Array.isArray(value) ? value : []; render(); });
+  Homey.get('pollMinutes', (err, value) => { if (value) $('poll').value = value; });
+  Homey.api('GET', '/status', null, (err, s) => {
+    if (!err && s) $('state').textContent = s.updated ? `${s.apps} apps · ${new Date(s.updated).toLocaleString()}` : '';
+  });
+
+  $('add-btn').onclick = () => { $('form').classList.remove('asc-hidden'); $('add-btn').classList.add('asc-hidden'); $('result').textContent = ''; };
+  $('cancel-btn').onclick = () => { $('form').classList.add('asc-hidden'); $('add-btn').classList.remove('asc-hidden'); };
+  $('poll').onchange = () => Homey.set('pollMinutes', Math.max(5, Number($('poll').value) || 15));
+  $('refresh-btn').onclick = () => {
+    const btn = $('refresh-btn');
+    btn.classList.add('is-loading');
+    $('state').textContent = S('refreshing');
+    Homey.api('POST', '/refresh', {}, (err, d) => {
+      btn.classList.remove('is-loading');
+      $('state').textContent = err ? err.message || String(err) : `${d.apps.length} apps · ${S('updated')}`;
+    });
+  };
+
+  $('save-btn').onclick = () => {
+    const account = {
+      id: `acc-${Date.now()}`,
+      name: $('f-name').value.trim() || 'App Store Connect',
+      issuerId: $('f-issuer').value.trim(),
+      keyId: $('f-key').value.trim(),
+      privateKey: $('f-p8').value.trim(),
+      vendorNumber: $('f-vendor').value.trim(),
+    };
+    if (!account.issuerId || !account.keyId || !account.privateKey) {
+      $('result').innerHTML = `<span class="asc-err">${S('fill_required')}</span>`;
+      return;
+    }
+    const btn = $('save-btn');
+    btn.classList.add('is-loading');
+    $('result').textContent = S('testing');
+    Homey.api('POST', '/test', account, (err, res) => {
+      btn.classList.remove('is-loading');
+      if (err) {
+        $('result').innerHTML = `<span class="asc-err">${esc(err.message || err)}</span>`;
+        return;
+      }
+      account.ok = true;
+      let msg = `✓ ${res.apps} apps: ${esc(res.names.join(', '))}`;
+      if (res.sales === true) msg += ` · ${S('downloads_ok')}`;
+      else if (typeof res.sales === 'string') msg += ` · ${S('downloads')}: ${esc(res.sales)}`;
+      accounts.push(account);
+      Homey.set('accounts', accounts, () => {
+        $('result').innerHTML = `<span class="asc-ok">${msg}</span>`;
+        ['f-name', 'f-issuer', 'f-key', 'f-p8', 'f-vendor'].forEach(id => { $(id).value = ''; });
+        render();
+      });
+    });
+  };
+
+  Homey.ready();
+}
+</script>
+</body>
+</html>

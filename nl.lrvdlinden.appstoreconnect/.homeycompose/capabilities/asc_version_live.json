@@ -1,0 +1,22 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Live version",
+    "nl": "Live versie",
+    "de": "Live-Version",
+    "fr": "Version en ligne",
+    "it": "Versione live",
+    "sv": "Publicerad version",
+    "no": "Live-versjon",
+    "es": "Versión publicada",
+    "da": "Live-version",
+    "ru": "Версия в продаже",
+    "pl": "Dostępna wersja",
+    "ko": "라이브 버전",
+    "ar": "الإصدار المنشور"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capabilities/version.svg"
+}

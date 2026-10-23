@@ -1,0 +1,87 @@
+{
+  "title": {
+    "en": "An app was rejected",
+    "nl": "Een app is afgewezen",
+    "de": "Eine App wurde abgelehnt",
+    "fr": "Une app a été refusée",
+    "it": "Un'app è stata rifiutata",
+    "sv": "En app har avvisats",
+    "no": "En app ble avvist",
+    "es": "Una app ha sido rechazada",
+    "da": "En app blev afvist",
+    "ru": "Приложение отклонено",
+    "pl": "Aplikacja została odrzucona",
+    "ko": "앱이 거부됨",
+    "ar": "تم رفض تطبيق"
+  },
+  "tokens": [
+    {
+      "name": "app",
+      "type": "string",
+      "title": {
+        "en": "App",
+        "nl": "App",
+        "de": "App",
+        "fr": "App",
+        "it": "App",
+        "sv": "App",
+        "no": "App",
+        "es": "App",
+        "da": "App",
+        "ru": "Приложение",
+        "pl": "Aplikacja",
+        "ko": "앱",
+        "ar": "التطبيق"
+      },
+      "example": {
+        "en": "App",
+        "nl": "App",
+        "de": "App",
+        "fr": "App",
+        "it": "App",
+        "sv": "App",
+        "no": "App",
+        "es": "App",
+        "da": "App",
+        "ru": "Приложение",
+        "pl": "Aplikacja",
+        "ko": "앱",
+        "ar": "التطبيق"
+      }
+    },
+    {
+      "name": "version",
+      "type": "string",
+      "title": {
+        "en": "Version",
+        "nl": "Versie",
+        "de": "Version",
+        "fr": "Version",
+        "it": "Versione",
+        "sv": "Version",
+        "no": "Versjon",
+        "es": "Versión",
+        "da": "Version",
+        "ru": "Версия",
+        "pl": "Wersja",
+        "ko": "버전",
+        "ar": "الإصدار"
+      },
+      "example": {
+        "en": "Version",
+        "nl": "Versie",
+        "de": "Version",
+        "fr": "Version",
+        "it": "Versione",
+        "sv": "Version",
+        "no": "Versjon",
+        "es": "Versión",
+        "da": "Version",
+        "ru": "Версия",
+        "pl": "Wersja",
+        "ko": "버전",
+        "ar": "الإصدار"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Live apps",
+    "nl": "Live apps",
+    "de": "Live-Apps",
+    "fr": "Apps en ligne",
+    "it": "App live",
+    "sv": "Publicerade appar",
+    "no": "Live-apper",
+    "es": "Apps publicadas",
+    "da": "Live-apps",
+    "ru": "Приложения в продаже",
+    "pl": "Aplikacje dostępne",
+    "ko": "라이브 앱",
+    "ar": "التطبيقات المنشورة"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "decimals": 0,
+  "icon": "/assets/capabilities/status.svg"
+}

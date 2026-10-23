@@ -1,0 +1,1144 @@
+{
+ ".homeycompose/app.json::/name": {
+  "en": "App Store Connect",
+  "nl": "App Store Connect"
+ },
+ ".homeycompose/app.json::/description": {
+  "en": "Downloads, App Review status, builds and reviews of your iOS apps in Homey",
+  "nl": "Downloads, App Review-status, builds en reviews van je iOS-apps in Homey"
+ },
+ ".homeycompose/app.json::/tags": {
+  "en": [
+   "app store",
+   "app store connect",
+   "apple",
+   "ios",
+   "ipados",
+   "iphone",
+   "ipad",
+   "macos",
+   "tvos",
+   "watchos",
+   "apple watch",
+   "developer",
+   "developers",
+   "app developer",
+   "indie developer",
+   "testflight",
+   "app review",
+   "downloads",
+   "installs",
+   "sales",
+   "proceeds",
+   "revenue",
+   "analytics",
+   "statistics",
+   "insights",
+   "ratings",
+   "reviews",
+   "customer reviews",
+   "builds",
+   "releases",
+   "versions",
+   "new version",
+   "dashboard",
+   "widgets",
+   "notifications",
+   "monitoring",
+   "xcode",
+   "swift",
+   "devtools",
+   "pixelforges"
+  ],
+  "nl": [
+   "app store",
+   "app store connect",
+   "apple",
+   "ios",
+   "ipados",
+   "iphone",
+   "ipad",
+   "macos",
+   "tvos",
+   "watchos",
+   "apple watch",
+   "ontwikkelaar",
+   "ontwikkelaars",
+   "app-ontwikkelaar",
+   "indie ontwikkelaar",
+   "testflight",
+   "app review",
+   "downloads",
+   "installaties",
+   "verkoop",
+   "opbrengst",
+   "omzet",
+   "analyse",
+   "statistieken",
+   "insights",
+   "beoordelingen",
+   "reviews",
+   "klantreviews",
+   "builds",
+   "releases",
+   "versies",
+   "nieuwe versie",
+   "dashboard",
+   "widgets",
+   "meldingen",
+   "monitoring",
+   "xcode",
+   "swift",
+   "devtools",
+   "pixelforges"
+  ]
+ },
+ ".homeycompose/capabilities/asc_apps_attention.json::/title": {
+  "en": "Needs attention",
+  "nl": "Aandacht nodig"
+ },
+ ".homeycompose/capabilities/asc_apps_live.json::/title": {
+  "en": "Live apps",
+  "nl": "Live apps"
+ },
+ ".homeycompose/capabilities/asc_apps_review.json::/title": {
+  "en": "Apps in review",
+  "nl": "Apps in review"
+ },
+ ".homeycompose/capabilities/asc_apps_total.json::/title": {
+  "en": "Apps",
+  "nl": "Apps"
+ },
+ ".homeycompose/capabilities/asc_build.json::/title": {
+  "en": "Latest build",
+  "nl": "Laatste build"
+ },
+ ".homeycompose/capabilities/asc_build_state.json::/title": {
+  "en": "Build status",
+  "nl": "Build-status"
+ },
+ ".homeycompose/capabilities/asc_downloads_30d.json::/title": {
+  "en": "Downloads 30 days",
+  "nl": "Downloads 30 dagen"
+ },
+ ".homeycompose/capabilities/asc_downloads_7d.json::/title": {
+  "en": "Downloads 7 days",
+  "nl": "Downloads 7 dagen"
+ },
+ ".homeycompose/capabilities/asc_downloads_total.json::/title": {
+  "en": "Downloads total",
+  "nl": "Downloads totaal"
+ },
+ ".homeycompose/capabilities/asc_downloads_yesterday.json::/title": {
+  "en": "Downloads yesterday",
+  "nl": "Downloads gisteren"
+ },
+ ".homeycompose/capabilities/asc_in_review.json::/title": {
+  "en": "In App Review",
+  "nl": "In App Review"
+ },
+ ".homeycompose/capabilities/asc_in_review.json::/insightsTitleTrue": {
+  "en": "In review",
+  "nl": "In review"
+ },
+ ".homeycompose/capabilities/asc_in_review.json::/insightsTitleFalse": {
+  "en": "Not in review",
+  "nl": "Niet in review"
+ },
+ ".homeycompose/capabilities/asc_proceeds_30d.json::/title": {
+  "en": "Proceeds 30 days",
+  "nl": "Opbrengst 30 dagen"
+ },
+ ".homeycompose/capabilities/asc_rating.json::/title": {
+  "en": "Rating",
+  "nl": "Beoordeling"
+ },
+ ".homeycompose/capabilities/asc_rating.json::/units": {
+  "en": "★",
+  "nl": "★"
+ },
+ ".homeycompose/capabilities/asc_rating_count.json::/title": {
+  "en": "Ratings",
+  "nl": "Aantal beoordelingen"
+ },
+ ".homeycompose/capabilities/asc_status.json::/title": {
+  "en": "App Store status",
+  "nl": "App Store-status"
+ },
+ ".homeycompose/capabilities/asc_updates_30d.json::/title": {
+  "en": "Updates 30 days",
+  "nl": "Updates 30 dagen"
+ },
+ ".homeycompose/capabilities/asc_version_live.json::/title": {
+  "en": "Live version",
+  "nl": "Live versie"
+ },
+ ".homeycompose/capabilities/asc_version_next.json::/title": {
+  "en": "Next version",
+  "nl": "Volgende versie"
+ },
+ ".homeycompose/flow/actions/refresh.json::/title": {
+  "en": "Refresh all App Store Connect data",
+  "nl": "Alle App Store Connect-gegevens verversen"
+ },
+ ".homeycompose/flow/triggers/any_entered_review.json::/title": {
+  "en": "An app entered App Review",
+  "nl": "Een app is in App Review gegaan"
+ },
+ ".homeycompose/flow/triggers/any_entered_review.json::/tokens/0/title": {
+  "en": "App",
+  "nl": "App"
+ },
+ ".homeycompose/flow/triggers/any_entered_review.json::/tokens/0/example": {
+  "en": "App",
+  "nl": "App"
+ },
+ ".homeycompose/flow/triggers/any_entered_review.json::/tokens/1/title": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ ".homeycompose/flow/triggers/any_entered_review.json::/tokens/1/example": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/title": {
+  "en": "A new customer review arrived",
+  "nl": "Er is een nieuwe klantreview"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/0/title": {
+  "en": "App",
+  "nl": "App"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/0/example": {
+  "en": "App",
+  "nl": "App"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/1/title": {
+  "en": "Stars",
+  "nl": "Sterren"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/1/example": {
+  "en": "Stars",
+  "nl": "Sterren"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/2/title": {
+  "en": "Title",
+  "nl": "Titel"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/2/example": {
+  "en": "Title",
+  "nl": "Titel"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/3/title": {
+  "en": "Review",
+  "nl": "Review"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/3/example": {
+  "en": "Review",
+  "nl": "Review"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/4/title": {
+  "en": "Reviewer",
+  "nl": "Reviewer"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/4/example": {
+  "en": "Reviewer",
+  "nl": "Reviewer"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/5/title": {
+  "en": "Country",
+  "nl": "Land"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/5/example": {
+  "en": "Country",
+  "nl": "Land"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/6/title": {
+  "en": "Review ID",
+  "nl": "Review-ID"
+ },
+ ".homeycompose/flow/triggers/any_new_customer_review.json::/tokens/6/example": {
+  "en": "Review ID",
+  "nl": "Review-ID"
+ },
+ ".homeycompose/flow/triggers/any_new_live_version.json::/title": {
+  "en": "A new version of an app is live",
+  "nl": "Een nieuwe versie van een app is live"
+ },
+ ".homeycompose/flow/triggers/any_new_live_version.json::/tokens/0/title": {
+  "en": "App",
+  "nl": "App"
+ },
+ ".homeycompose/flow/triggers/any_new_live_version.json::/tokens/0/example": {
+  "en": "App",
+  "nl": "App"
+ },
+ ".homeycompose/flow/triggers/any_new_live_version.json::/tokens/1/title": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ ".homeycompose/flow/triggers/any_new_live_version.json::/tokens/1/example": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ ".homeycompose/flow/triggers/any_review_rejected.json::/title": {
+  "en": "An app was rejected",
+  "nl": "Een app is afgewezen"
+ },
+ ".homeycompose/flow/triggers/any_review_rejected.json::/tokens/0/title": {
+  "en": "App",
+  "nl": "App"
+ },
+ ".homeycompose/flow/triggers/any_review_rejected.json::/tokens/0/example": {
+  "en": "App",
+  "nl": "App"
+ },
+ ".homeycompose/flow/triggers/any_review_rejected.json::/tokens/1/title": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ ".homeycompose/flow/triggers/any_review_rejected.json::/tokens/1/example": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ ".homeycompose/flow/triggers/any_status_changed.json::/title": {
+  "en": "The status of an app changed",
+  "nl": "De status van een app is veranderd"
+ },
+ ".homeycompose/flow/triggers/any_status_changed.json::/tokens/0/title": {
+  "en": "App",
+  "nl": "App"
+ },
+ ".homeycompose/flow/triggers/any_status_changed.json::/tokens/0/example": {
+  "en": "App",
+  "nl": "App"
+ },
+ ".homeycompose/flow/triggers/any_status_changed.json::/tokens/1/title": {
+  "en": "Status",
+  "nl": "Status"
+ },
+ ".homeycompose/flow/triggers/any_status_changed.json::/tokens/1/example": {
+  "en": "Status",
+  "nl": "Status"
+ },
+ ".homeycompose/flow/triggers/any_status_changed.json::/tokens/2/title": {
+  "en": "Previous status",
+  "nl": "Vorige status"
+ },
+ ".homeycompose/flow/triggers/any_status_changed.json::/tokens/2/example": {
+  "en": "Previous status",
+  "nl": "Vorige status"
+ },
+ ".homeycompose/flow/triggers/any_status_changed.json::/tokens/3/title": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ ".homeycompose/flow/triggers/any_status_changed.json::/tokens/3/example": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ ".homeycompose/flow/triggers/total_downloads_updated.json::/title": {
+  "en": "New download figures for all apps",
+  "nl": "Nieuwe downloadcijfers voor alle apps"
+ },
+ ".homeycompose/flow/triggers/total_downloads_updated.json::/tokens/0/title": {
+  "en": "Downloads yesterday",
+  "nl": "Downloads gisteren"
+ },
+ ".homeycompose/flow/triggers/total_downloads_updated.json::/tokens/0/example": {
+  "en": "Downloads yesterday",
+  "nl": "Downloads gisteren"
+ },
+ ".homeycompose/flow/triggers/total_downloads_updated.json::/tokens/1/title": {
+  "en": "Downloads 7 days",
+  "nl": "Downloads 7 dagen"
+ },
+ ".homeycompose/flow/triggers/total_downloads_updated.json::/tokens/1/example": {
+  "en": "Downloads 7 days",
+  "nl": "Downloads 7 dagen"
+ },
+ ".homeycompose/flow/triggers/total_downloads_updated.json::/tokens/2/title": {
+  "en": "Downloads total",
+  "nl": "Downloads totaal"
+ },
+ ".homeycompose/flow/triggers/total_downloads_updated.json::/tokens/2/example": {
+  "en": "Downloads total",
+  "nl": "Downloads totaal"
+ },
+ "drivers/asc_app/driver.compose.json::/name": {
+  "en": "App Store app",
+  "nl": "App Store-app"
+ },
+ "drivers/asc_app/driver.compose.json::/settings/0/label": {
+  "en": "Bundle ID",
+  "nl": "Bundle ID"
+ },
+ "drivers/asc_app/driver.compose.json::/settings/1/label": {
+  "en": "Account",
+  "nl": "Account"
+ },
+ "drivers/asc_app/driver.compose.json::/settings/2/label": {
+  "en": "Proceeds currency",
+  "nl": "Valuta opbrengst"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/0/title": {
+  "en": "App Store status changed",
+  "nl": "App Store-status is veranderd"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/0/tokens/0/title": {
+  "en": "Status",
+  "nl": "Status"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/0/tokens/0/example": {
+  "en": "Status",
+  "nl": "Status"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/0/tokens/1/title": {
+  "en": "Previous status",
+  "nl": "Vorige status"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/0/tokens/1/example": {
+  "en": "Previous status",
+  "nl": "Vorige status"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/0/tokens/2/title": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/0/tokens/2/example": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/1/title": {
+  "en": "Version entered App Review",
+  "nl": "Versie is in App Review gegaan"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/1/tokens/0/title": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/1/tokens/0/example": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/2/title": {
+  "en": "Version was rejected",
+  "nl": "Versie is afgewezen"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/2/tokens/0/title": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/2/tokens/0/example": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/3/title": {
+  "en": "Version is ready for distribution",
+  "nl": "Versie is klaar voor distributie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/3/tokens/0/title": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/3/tokens/0/example": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/4/title": {
+  "en": "Version is waiting for your release",
+  "nl": "Versie wacht op jouw vrijgave"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/4/tokens/0/title": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/4/tokens/0/example": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/5/title": {
+  "en": "New version is live (Ready for Sale)",
+  "nl": "Nieuwe versie is live (Ready for Sale)"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/5/tokens/0/title": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/5/tokens/0/example": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/6/title": {
+  "en": "New build uploaded",
+  "nl": "Nieuwe build geüpload"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/6/tokens/0/title": {
+  "en": "Build",
+  "nl": "Build"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/6/tokens/0/example": {
+  "en": "Build",
+  "nl": "Build"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/6/tokens/1/title": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/6/tokens/1/example": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/7/title": {
+  "en": "Build is processed and ready",
+  "nl": "Build is verwerkt en klaar"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/7/tokens/0/title": {
+  "en": "Build",
+  "nl": "Build"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/7/tokens/0/example": {
+  "en": "Build",
+  "nl": "Build"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/7/tokens/1/title": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/7/tokens/1/example": {
+  "en": "Version",
+  "nl": "Versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/title": {
+  "en": "New customer review",
+  "nl": "Nieuwe klantreview"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/tokens/0/title": {
+  "en": "Stars",
+  "nl": "Sterren"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/tokens/0/example": {
+  "en": "Stars",
+  "nl": "Sterren"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/tokens/1/title": {
+  "en": "Title",
+  "nl": "Titel"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/tokens/1/example": {
+  "en": "Title",
+  "nl": "Titel"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/tokens/2/title": {
+  "en": "Review",
+  "nl": "Review"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/tokens/2/example": {
+  "en": "Review",
+  "nl": "Review"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/tokens/3/title": {
+  "en": "Reviewer",
+  "nl": "Reviewer"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/tokens/3/example": {
+  "en": "Reviewer",
+  "nl": "Reviewer"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/tokens/4/title": {
+  "en": "Country",
+  "nl": "Land"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/tokens/4/example": {
+  "en": "Country",
+  "nl": "Land"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/tokens/5/title": {
+  "en": "Review ID",
+  "nl": "Review-ID"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/8/tokens/5/example": {
+  "en": "Review ID",
+  "nl": "Review-ID"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/9/title": {
+  "en": "Rating changed",
+  "nl": "Beoordeling is veranderd"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/9/tokens/0/title": {
+  "en": "Rating",
+  "nl": "Beoordeling"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/9/tokens/0/example": {
+  "en": "Rating",
+  "nl": "Beoordeling"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/9/tokens/1/title": {
+  "en": "Previous rating",
+  "nl": "Vorige beoordeling"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/9/tokens/1/example": {
+  "en": "Previous rating",
+  "nl": "Vorige beoordeling"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/10/title": {
+  "en": "New download figures are available",
+  "nl": "Nieuwe downloadcijfers beschikbaar"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/10/tokens/0/title": {
+  "en": "Downloads yesterday",
+  "nl": "Downloads gisteren"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/10/tokens/0/example": {
+  "en": "Downloads yesterday",
+  "nl": "Downloads gisteren"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/10/tokens/1/title": {
+  "en": "Downloads 7 days",
+  "nl": "Downloads 7 dagen"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/10/tokens/1/example": {
+  "en": "Downloads 7 days",
+  "nl": "Downloads 7 dagen"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/10/tokens/2/title": {
+  "en": "Downloads total",
+  "nl": "Downloads totaal"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/10/tokens/2/example": {
+  "en": "Downloads total",
+  "nl": "Downloads totaal"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/10/hint": {
+  "en": "Apple publishes the figures of yesterday once a day.",
+  "nl": "Apple publiceert de cijfers van gisteren één keer per dag."
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/11/title": {
+  "en": "Downloads dropped compared to the day before",
+  "nl": "Downloads zijn gedaald t.o.v. de dag ervoor"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/11/tokens/0/title": {
+  "en": "Downloads yesterday",
+  "nl": "Downloads gisteren"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/11/tokens/0/example": {
+  "en": "Downloads yesterday",
+  "nl": "Downloads gisteren"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/11/tokens/1/title": {
+  "en": "Day before",
+  "nl": "Dag ervoor"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/11/tokens/1/example": {
+  "en": "Day before",
+  "nl": "Dag ervoor"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/0/title": {
+  "en": "App !{{is|is not}} live",
+  "nl": "App !{{is|is niet}} live"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/1/title": {
+  "en": "App !{{is|is not}} in App Review",
+  "nl": "App !{{is|is niet}} in App Review"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/2/title": {
+  "en": "A new version !{{is|is not}} in progress",
+  "nl": "Er !{{is|is geen}} nieuwe versie in voorbereiding"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/3/title": {
+  "en": "Downloads yesterday !{{are|are not}} above…",
+  "nl": "Downloads gisteren !{{zijn|zijn niet}} hoger dan…"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/3/titleFormatted": {
+  "en": "Downloads yesterday !{{are|are not}} above [[number]]",
+  "nl": "Downloads gisteren !{{zijn|zijn niet}} hoger dan [[number]]"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/3/args/0/placeholder": {
+  "en": "100",
+  "nl": "100"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/4/title": {
+  "en": "Downloads 7 days !{{are|are not}} above…",
+  "nl": "Downloads 7 dagen !{{zijn|zijn niet}} hoger dan…"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/4/titleFormatted": {
+  "en": "Downloads 7 days !{{are|are not}} above [[number]]",
+  "nl": "Downloads 7 dagen !{{zijn|zijn niet}} hoger dan [[number]]"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/4/args/0/placeholder": {
+  "en": "500",
+  "nl": "500"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/5/title": {
+  "en": "Total downloads !{{are|are not}} above…",
+  "nl": "Totaal downloads !{{zijn|zijn niet}} hoger dan…"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/5/titleFormatted": {
+  "en": "Total downloads !{{are|are not}} above [[number]]",
+  "nl": "Totaal downloads !{{zijn|zijn niet}} hoger dan [[number]]"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/5/args/0/placeholder": {
+  "en": "10000",
+  "nl": "10000"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/6/title": {
+  "en": "Rating !{{is|is not}} above…",
+  "nl": "Beoordeling !{{is|is niet}} hoger dan…"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/6/titleFormatted": {
+  "en": "Rating !{{is|is not}} above [[number]]",
+  "nl": "Beoordeling !{{is|is niet}} hoger dan [[number]]"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/6/args/0/placeholder": {
+  "en": "4.5",
+  "nl": "4.5"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/7/title": {
+  "en": "Live version !{{is|is not}} older than…",
+  "nl": "Live versie !{{is|is niet}} ouder dan…"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/7/titleFormatted": {
+  "en": "Live version !{{is|is not}} older than [[days]] days",
+  "nl": "Live versie !{{is|is niet}} ouder dan [[days]] dagen"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/7/args/0/placeholder": {
+  "en": "90",
+  "nl": "90"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/0/title": {
+  "en": "Refresh App Store status",
+  "nl": "App Store-status verversen"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/1/title": {
+  "en": "Release the approved version",
+  "nl": "Goedgekeurde versie vrijgeven"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/1/hint": {
+  "en": "Only works when the version is 'Pending Developer Release'.",
+  "nl": "Werkt alleen als de versie 'Klaar voor release' is."
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/2/title": {
+  "en": "Reply to a customer review",
+  "nl": "Reageer op een klantreview"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/2/titleFormatted": {
+  "en": "Reply to review [[review_id]] with [[text]]",
+  "nl": "Reageer op review [[review_id]] met [[text]]"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/2/args/0/placeholder": {
+  "en": "Review ID (token)",
+  "nl": "Review-ID (tag)"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/2/args/1/placeholder": {
+  "en": "Thank you for your review!",
+  "nl": "Bedankt voor je review!"
+ },
+ "drivers/asc_portfolio/driver.compose.json::/name": {
+  "en": "All apps (portfolio)",
+  "nl": "Alle apps (portfolio)"
+ },
+ "drivers/asc_portfolio/driver.flow.compose.json::/triggers/0/title": {
+  "en": "New download figures for all apps",
+  "nl": "Nieuwe downloadcijfers voor alle apps"
+ },
+ "drivers/asc_portfolio/driver.flow.compose.json::/triggers/0/tokens/0/title": {
+  "en": "Downloads yesterday",
+  "nl": "Downloads gisteren"
+ },
+ "drivers/asc_portfolio/driver.flow.compose.json::/triggers/0/tokens/0/example": {
+  "en": "Downloads yesterday",
+  "nl": "Downloads gisteren"
+ },
+ "drivers/asc_portfolio/driver.flow.compose.json::/triggers/0/tokens/1/title": {
+  "en": "Downloads 7 days",
+  "nl": "Downloads 7 dagen"
+ },
+ "drivers/asc_portfolio/driver.flow.compose.json::/triggers/0/tokens/1/example": {
+  "en": "Downloads 7 days",
+  "nl": "Downloads 7 dagen"
+ },
+ "drivers/asc_portfolio/driver.flow.compose.json::/triggers/0/tokens/2/title": {
+  "en": "Downloads total",
+  "nl": "Downloads totaal"
+ },
+ "drivers/asc_portfolio/driver.flow.compose.json::/triggers/0/tokens/2/example": {
+  "en": "Downloads total",
+  "nl": "Downloads totaal"
+ },
+ "drivers/asc_portfolio/driver.flow.compose.json::/conditions/0/title": {
+  "en": "Downloads of all apps yesterday !{{are|are not}} above…",
+  "nl": "Downloads van alle apps gisteren !{{zijn|zijn niet}} hoger dan…"
+ },
+ "drivers/asc_portfolio/driver.flow.compose.json::/conditions/0/titleFormatted": {
+  "en": "Downloads of all apps yesterday !{{are|are not}} above [[number]]",
+  "nl": "Downloads van alle apps gisteren !{{zijn|zijn niet}} hoger dan [[number]]"
+ },
+ "drivers/asc_portfolio/driver.flow.compose.json::/conditions/1/title": {
+  "en": "An app !{{is|is not}} in App Review",
+  "nl": "Er !{{is|is geen}} app in App Review"
+ },
+ "widgets/downloads/widget.compose.json::/name": {
+  "en": "Downloads",
+  "nl": "Downloads"
+ },
+ "widgets/downloads/widget.compose.json::/settings/0/title": {
+  "en": "App (empty = all apps)",
+  "nl": "App (leeg = alle apps)"
+ },
+ "widgets/downloads/widget.compose.json::/settings/1/title": {
+  "en": "Number",
+  "nl": "Getal"
+ },
+ "widgets/downloads/widget.compose.json::/settings/1/values/0/title": {
+  "en": "Yesterday",
+  "nl": "Gisteren"
+ },
+ "widgets/downloads/widget.compose.json::/settings/1/values/1/title": {
+  "en": "Last 7 days",
+  "nl": "Afgelopen 7 dagen"
+ },
+ "widgets/downloads/widget.compose.json::/settings/1/values/2/title": {
+  "en": "Last 30 days",
+  "nl": "Afgelopen 30 dagen"
+ },
+ "widgets/downloads/widget.compose.json::/settings/1/values/3/title": {
+  "en": "All time",
+  "nl": "Totaal"
+ },
+ "widgets/status/widget.compose.json::/name": {
+  "en": "Review & status",
+  "nl": "Review & status"
+ },
+ "widgets/status/widget.compose.json::/settings/0/title": {
+  "en": "Show app lists",
+  "nl": "Toon lijsten met apps"
+ },
+ "widgets/top-apps/widget.compose.json::/name": {
+  "en": "Top apps",
+  "nl": "Top apps"
+ },
+ "widgets/top-apps/widget.compose.json::/settings/0/title": {
+  "en": "Number of apps",
+  "nl": "Aantal apps"
+ },
+ "locale::pair.no_account": {
+  "en": "Add your App Store Connect API key in the app settings first.",
+  "nl": "Voeg eerst je App Store Connect API-sleutel toe in de app-instellingen."
+ },
+ "locale::pair.portfolio_name": {
+  "en": "All apps",
+  "nl": "Alle apps"
+ },
+ "locale::errors.no_pending_release": {
+  "en": "There is no version waiting for release (Pending Developer Release).",
+  "nl": "Er staat geen versie klaar om vrij te geven (Klaar voor release)."
+ },
+ "locale::widget.all_apps": {
+  "en": "All apps",
+  "nl": "Alle apps"
+ },
+ "locale::widget.downloads": {
+  "en": "downloads",
+  "nl": "downloads"
+ },
+ "locale::widget.yesterday": {
+  "en": "yesterday",
+  "nl": "gisteren"
+ },
+ "locale::widget.live": {
+  "en": "Live",
+  "nl": "Live"
+ },
+ "locale::widget.in_review": {
+  "en": "In review",
+  "nl": "In review"
+ },
+ "locale::widget.attention": {
+  "en": "Attention",
+  "nl": "Aandacht"
+ },
+ "locale::widget.rejected": {
+  "en": "Rejected",
+  "nl": "Afgewezen"
+ },
+ "locale::widget.rating": {
+  "en": "Rating",
+  "nl": "Rating"
+ },
+ "locale::widget.top_apps": {
+  "en": "Top apps",
+  "nl": "Top apps"
+ },
+ "locale::widget.status": {
+  "en": "Status",
+  "nl": "Status"
+ },
+ "locale::widget.nothing_in_review": {
+  "en": "Nothing in review",
+  "nl": "Niets in review"
+ },
+ "locale::widget.all_good": {
+  "en": "All good",
+  "nl": "Alles in orde"
+ },
+ "locale::widget.needs_attention": {
+  "en": "Needs attention",
+  "nl": "Aandacht nodig"
+ },
+ "locale::widget.no_sales": {
+  "en": "Add your vendor number in the app settings to see downloads.",
+  "nl": "Vul je vendornummer in bij de app-instellingen om downloads te zien."
+ },
+ "locale::widget.no_data": {
+  "en": "Add your App Store Connect API key in the app settings.",
+  "nl": "Voeg je App Store Connect API-sleutel toe in de app-instellingen."
+ },
+ "locale::widget.updated": {
+  "en": "Updated",
+  "nl": "Bijgewerkt"
+ },
+ "locale::widget.total": {
+  "en": "total",
+  "nl": "totaal"
+ },
+ "locale::widget.proceeds": {
+  "en": "Proceeds",
+  "nl": "Opbrengst"
+ },
+ "locale::widget.updates": {
+  "en": "Updates",
+  "nl": "Updates"
+ },
+ "locale::status.READY_FOR_SALE": {
+  "en": "Live",
+  "nl": "Live"
+ },
+ "locale::status.READY_FOR_DISTRIBUTION": {
+  "en": "Ready for Distribution",
+  "nl": "Klaar voor distributie"
+ },
+ "locale::status.WAITING_FOR_REVIEW": {
+  "en": "Waiting for Review",
+  "nl": "Wacht op review"
+ },
+ "locale::status.IN_REVIEW": {
+  "en": "In Review",
+  "nl": "In review"
+ },
+ "locale::status.READY_FOR_REVIEW": {
+  "en": "Ready for Review",
+  "nl": "Klaar voor review"
+ },
+ "locale::status.PREPARE_FOR_SUBMISSION": {
+  "en": "Prepare for Submission",
+  "nl": "Voorbereiden"
+ },
+ "locale::status.PENDING_DEVELOPER_RELEASE": {
+  "en": "Pending Developer Release",
+  "nl": "Klaar voor release"
+ },
+ "locale::status.PENDING_APPLE_RELEASE": {
+  "en": "Pending Apple Release",
+  "nl": "Wacht op Apple"
+ },
+ "locale::status.PROCESSING_FOR_APP_STORE": {
+  "en": "Processing",
+  "nl": "Verwerken"
+ },
+ "locale::status.PROCESSING_FOR_DISTRIBUTION": {
+  "en": "Processing",
+  "nl": "Verwerken"
+ },
+ "locale::status.REJECTED": {
+  "en": "Rejected",
+  "nl": "Afgewezen"
+ },
+ "locale::status.METADATA_REJECTED": {
+  "en": "Metadata Rejected",
+  "nl": "Metadata afgewezen"
+ },
+ "locale::status.INVALID_BINARY": {
+  "en": "Invalid Binary",
+  "nl": "Ongeldige build"
+ },
+ "locale::status.DEVELOPER_REJECTED": {
+  "en": "Developer Rejected",
+  "nl": "Teruggetrokken"
+ },
+ "locale::status.REPLACED_WITH_NEW_VERSION": {
+  "en": "Replaced",
+  "nl": "Vervangen"
+ },
+ "locale::status.DEVELOPER_REMOVED_FROM_SALE": {
+  "en": "Removed from Sale",
+  "nl": "Niet beschikbaar"
+ },
+ "locale::status.REMOVED_FROM_SALE": {
+  "en": "Removed from Sale",
+  "nl": "Niet beschikbaar"
+ },
+ "locale::status.VALID": {
+  "en": "Ready",
+  "nl": "Gereed"
+ },
+ "locale::status.PROCESSING": {
+  "en": "Processing",
+  "nl": "Verwerken"
+ },
+ "locale::status.FAILED": {
+  "en": "Failed",
+  "nl": "Mislukt"
+ },
+ "locale::status.INVALID": {
+  "en": "Invalid",
+  "nl": "Ongeldig"
+ },
+ "locale::status.IN_BETA_TESTING": {
+  "en": "In Testing",
+  "nl": "In test"
+ },
+ "locale::status.READY_FOR_BETA_TESTING": {
+  "en": "Ready to Test",
+  "nl": "Klaar om te testen"
+ },
+ "locale::status.MISSING_EXPORT_COMPLIANCE": {
+  "en": "Export Compliance",
+  "nl": "Export compliance"
+ },
+ "locale::status.EXPIRED": {
+  "en": "Expired",
+  "nl": "Verlopen"
+ },
+ "locale::settings.subtitle": {
+  "en": "Downloads, App Review status, builds and reviews of your iOS apps.",
+  "nl": "Downloads, App Review-status, builds en reviews van je iOS-apps."
+ },
+ "locale::settings.accounts": {
+  "en": "Accounts",
+  "nl": "Accounts"
+ },
+ "locale::settings.no_account": {
+  "en": "No account yet.",
+  "nl": "Nog geen account."
+ },
+ "locale::settings.add_account": {
+  "en": "Add account",
+  "nl": "Account toevoegen"
+ },
+ "locale::settings.new_account": {
+  "en": "New account",
+  "nl": "Nieuw account"
+ },
+ "locale::settings.name": {
+  "en": "Name",
+  "nl": "Naam"
+ },
+ "locale::settings.p8": {
+  "en": "Private key (.p8) – paste the full contents",
+  "nl": "Privésleutel (.p8) – plak de volledige inhoud"
+ },
+ "locale::settings.vendor": {
+  "en": "Vendor number (for downloads)",
+  "nl": "Vendornummer (voor downloads)"
+ },
+ "locale::settings.test_save": {
+  "en": "Test & save",
+  "nl": "Test & bewaar"
+ },
+ "locale::settings.cancel": {
+  "en": "Cancel",
+  "nl": "Annuleer"
+ },
+ "locale::settings.refresh_title": {
+  "en": "Refresh",
+  "nl": "Verversen"
+ },
+ "locale::settings.poll": {
+  "en": "Check status every (minutes)",
+  "nl": "Status controleren elke (minuten)"
+ },
+ "locale::settings.refresh_now": {
+  "en": "Refresh now",
+  "nl": "Nu verversen"
+ },
+ "locale::settings.refreshing": {
+  "en": "Refreshing…",
+  "nl": "Verversen…"
+ },
+ "locale::settings.updated": {
+  "en": "updated",
+  "nl": "bijgewerkt"
+ },
+ "locale::settings.guide": {
+  "en": "Guide",
+  "nl": "Handleiding"
+ },
+ "locale::settings.working": {
+  "en": "✓ Working",
+  "nl": "✓ Werkt"
+ },
+ "locale::settings.remove": {
+  "en": "Remove",
+  "nl": "Verwijder"
+ },
+ "locale::settings.remove_confirm": {
+  "en": "Remove this account?",
+  "nl": "Dit account verwijderen?"
+ },
+ "locale::settings.fill_required": {
+  "en": "Fill in Issuer ID, Key ID and the .p8 key.",
+  "nl": "Vul Issuer ID, Key ID en de .p8-sleutel in."
+ },
+ "locale::settings.testing": {
+  "en": "Testing connection…",
+  "nl": "Verbinding testen…"
+ },
+ "locale::settings.downloads_ok": {
+  "en": "downloads OK",
+  "nl": "downloads OK"
+ },
+ "locale::settings.downloads": {
+  "en": "downloads",
+  "nl": "downloads"
+ },
+ "locale::settings.g1": {
+  "en": "1. Create an API key",
+  "nl": "1. API-sleutel aanmaken"
+ },
+ "locale::settings.g1l": {
+  "en": "<li>Open App Store Connect → Users and Access → Integrations.</li><li>Choose App Store Connect API → Team Keys and tap +.</li><li>Give it a name (e.g. “Homey”) and the role <b>Admin</b> (or App Manager + Sales).</li><li>Tap Generate.</li>",
+  "nl": "<li>Open App Store Connect → Gebruikers en toegang → Integraties.</li><li>Kies App Store Connect API → Teamsleutels en tik op +.</li><li>Geef een naam (bijv. “Homey”) en de rol <b>Admin</b> (of App Manager + Sales).</li><li>Tik op Genereer.</li>"
+ },
+ "locale::settings.g2": {
+  "en": "2. Issuer ID and Key ID",
+  "nl": "2. Issuer ID en Key ID"
+ },
+ "locale::settings.g2l": {
+  "en": "<li>The <b>Issuer ID</b> is shown above the list of keys. Copy it.</li><li>The <b>Key ID</b> is in the list and in the file name AuthKey_<b>KEYID</b>.p8.</li>",
+  "nl": "<li>De <b>Issuer ID</b> staat boven de lijst met sleutels. Kopieer hem.</li><li>De <b>Key ID</b> staat in de lijst en in de bestandsnaam AuthKey_<b>KEYID</b>.p8.</li>"
+ },
+ "locale::settings.g3": {
+  "en": "3. The .p8 key",
+  "nl": "3. De .p8-sleutel"
+ },
+ "locale::settings.g3l": {
+  "en": "<li>Tap “Download API Key” – Apple allows this only once.</li><li>Open the .p8 file in a text editor and paste the full contents above, including the BEGIN/END lines.</li><li>The key is stored only on your Homey.</li>",
+  "nl": "<li>Tik op “Download API-sleutel” – dat kan maar één keer.</li><li>Open het .p8-bestand in een teksteditor en plak de volledige inhoud hierboven, inclusief de BEGIN/END-regels.</li><li>De sleutel wordt alleen op je Homey bewaard.</li>"
+ },
+ "locale::settings.g4": {
+  "en": "4. Vendor number",
+  "nl": "4. Vendornummer"
+ },
+ "locale::settings.g4l": {
+  "en": "<li>App Store Connect → <b>Business</b>: the 8-digit number next to your address.</li><li>Needed for downloads, updates and proceeds (Sales Reports). Apple publishes the figures of yesterday once a day.</li>",
+  "nl": "<li>App Store Connect → <b>Business</b>: het getal van 8 cijfers naast je adres.</li><li>Nodig voor downloads, updates en opbrengst (Sales Reports). Apple publiceert de cijfers van gisteren één keer per dag.</li>"
+ },
+ "readme::text": {
+  "en": "App Store Connect brings your iOS, iPadOS, macOS and tvOS apps into Homey.\n\nAdd every app from your App Store Connect account as a device and follow:\n• Downloads yesterday, last 7 days, last 30 days and all-time\n• Updates and proceeds of the last 30 days\n• App Store status (Live, Waiting for Review, In Review, Ready for Distribution, Pending Release, Rejected)\n• Live version, next version and the latest TestFlight build\n• Rating and number of ratings\n\nThe \"All apps\" device shows the totals of your whole portfolio: total downloads, live apps, apps in review and apps that need attention.\n\nFlows\n• When: status changed, entered App Review, rejected, ready for distribution, waiting for your release, new live version, new build, build processed, new customer review, rating changed, new download figures, downloads dropped\n• And: app is live, in App Review, new version in progress, downloads above a number, rating above a number, live version older than X days\n• Then: refresh, release the approved version, reply to a customer review\n\nDashboard widgets\nDownloads (one app or all apps, with an Insights-style chart), Top apps and Review & status – the same design as the DevTools iPhone app.\n\nSetup: create an App Store Connect API team key (Admin role) and paste the Issuer ID, Key ID and the .p8 key in the app settings. Add your vendor number for downloads. A step-by-step guide is included in the settings.\n\nYour API key is stored only on your Homey. This app is not affiliated with Apple Inc.\n",
+  "nl": "App Store Connect brengt je iOS-, iPadOS-, macOS- en tvOS-apps naar Homey.\n\nVoeg elke app uit je App Store Connect-account toe als apparaat en volg:\n• Downloads gisteren, afgelopen 7 dagen, afgelopen 30 dagen en totaal\n• Updates en opbrengst van de afgelopen 30 dagen\n• App Store-status (Live, Wacht op review, In review, Klaar voor distributie, Klaar voor release, Afgewezen)\n• Live versie, volgende versie en de laatste TestFlight-build\n• Beoordeling en aantal beoordelingen\n\nHet apparaat \"Alle apps\" toont de totalen van je hele portfolio: totaal downloads, live apps, apps in review en apps die aandacht nodig hebben.\n\nFlows\n• Als: status veranderd, in App Review, afgewezen, klaar voor distributie, wacht op jouw vrijgave, nieuwe live versie, nieuwe build, build verwerkt, nieuwe klantreview, beoordeling veranderd, nieuwe downloadcijfers, downloads gedaald\n• En: app is live, in App Review, nieuwe versie in voorbereiding, downloads hoger dan, beoordeling hoger dan, live versie ouder dan X dagen\n• Dan: verversen, goedgekeurde versie vrijgeven, reageren op een klantreview\n\nDashboard-widgets\nDownloads (één app of alle apps, met Insights-grafiek), Top apps en Review & status – hetzelfde design als de DevTools iPhone-app.\n\nInstellen: maak een App Store Connect API-teamsleutel (rol Admin) en plak de Issuer ID, Key ID en de .p8-sleutel in de app-instellingen. Vul je vendornummer in voor downloads. Een stap-voor-stap-handleiding staat in de instellingen.\n\nJe API-sleutel wordt alleen op je Homey bewaard. Deze app is niet gelieerd aan Apple Inc.\n"
+ },
+ "changelog::1.0.0": {
+  "en": "First release: App Store apps as devices with downloads, status, versions, builds and ratings; portfolio device; flows; dashboard widgets.",
+  "nl": "Eerste versie: App Store-apps als apparaten met downloads, status, versies, builds en beoordelingen; portfolio-apparaat; flows; dashboard-widgets."
+ }
+}

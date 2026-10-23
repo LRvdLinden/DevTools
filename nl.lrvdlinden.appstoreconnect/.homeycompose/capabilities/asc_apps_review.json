@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Apps in review",
+    "nl": "Apps in review",
+    "de": "Apps in Prüfung",
+    "fr": "Apps en cours d'examen",
+    "it": "App in revisione",
+    "sv": "Appar under granskning",
+    "no": "Apper i gjennomgang",
+    "es": "Apps en revisión",
+    "da": "Apps under gennemgang",
+    "ru": "Приложения на проверке",
+    "pl": "Aplikacje w weryfikacji",
+    "ko": "심사 중인 앱",
+    "ar": "تطبيقات قيد المراجعة"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "decimals": 0,
+  "icon": "/assets/capabilities/review.svg"
+}

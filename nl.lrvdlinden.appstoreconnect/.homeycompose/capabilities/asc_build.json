@@ -1,0 +1,22 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Latest build",
+    "nl": "Laatste build",
+    "de": "Neuester Build",
+    "fr": "Dernier build",
+    "it": "Ultima build",
+    "sv": "Senaste build",
+    "no": "Siste build",
+    "es": "Última build",
+    "da": "Seneste build",
+    "ru": "Последняя сборка",
+    "pl": "Najnowszy build",
+    "ko": "최신 빌드",
+    "ar": "أحدث بنية"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capabilities/build.svg"
+}

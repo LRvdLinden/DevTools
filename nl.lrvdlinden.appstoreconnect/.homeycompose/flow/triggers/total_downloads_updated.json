@@ -1,0 +1,121 @@
+{
+  "title": {
+    "en": "New download figures for all apps",
+    "nl": "Nieuwe downloadcijfers voor alle apps",
+    "de": "Neue Downloadzahlen für alle Apps",
+    "fr": "Nouveaux chiffres de téléchargement pour toutes les apps",
+    "it": "Nuovi dati di download per tutte le app",
+    "sv": "Nya nedladdningssiffror för alla appar",
+    "no": "Nye nedlastingstall for alle apper",
+    "es": "Nuevas cifras de descargas de todas las apps",
+    "da": "Nye downloadtal for alle apps",
+    "ru": "Новые данные о загрузках всех приложений",
+    "pl": "Nowe dane o pobraniach wszystkich aplikacji",
+    "ko": "모든 앱의 새 다운로드 수치",
+    "ar": "أرقام تنزيل جديدة لجميع التطبيقات"
+  },
+  "tokens": [
+    {
+      "name": "yesterday",
+      "type": "number",
+      "title": {
+        "en": "Downloads yesterday",
+        "nl": "Downloads gisteren",
+        "de": "Downloads gestern",
+        "fr": "Téléchargements d'hier",
+        "it": "Download di ieri",
+        "sv": "Nedladdningar igår",
+        "no": "Nedlastinger i går",
+        "es": "Descargas de ayer",
+        "da": "Downloads i går",
+        "ru": "Загрузки вчера",
+        "pl": "Pobrania wczoraj",
+        "ko": "어제 다운로드",
+        "ar": "تنزيلات الأمس"
+      },
+      "example": {
+        "en": "Downloads yesterday",
+        "nl": "Downloads gisteren",
+        "de": "Downloads gestern",
+        "fr": "Téléchargements d'hier",
+        "it": "Download di ieri",
+        "sv": "Nedladdningar igår",
+        "no": "Nedlastinger i går",
+        "es": "Descargas de ayer",
+        "da": "Downloads i går",
+        "ru": "Загрузки вчера",
+        "pl": "Pobrania wczoraj",
+        "ko": "어제 다운로드",
+        "ar": "تنزيلات الأمس"
+      }
+    },
+    {
+      "name": "last7",
+      "type": "number",
+      "title": {
+        "en": "Downloads 7 days",
+        "nl": "Downloads 7 dagen",
+        "de": "Downloads 7 Tage",
+        "fr": "Téléchargements 7 jours",
+        "it": "Download 7 giorni",
+        "sv": "Nedladdningar 7 dagar",
+        "no": "Nedlastinger 7 dager",
+        "es": "Descargas 7 días",
+        "da": "Downloads 7 dage",
+        "ru": "Загрузки за 7 дней",
+        "pl": "Pobrania 7 dni",
+        "ko": "다운로드 7일",
+        "ar": "التنزيلات 7 أيام"
+      },
+      "example": {
+        "en": "Downloads 7 days",
+        "nl": "Downloads 7 dagen",
+        "de": "Downloads 7 Tage",
+        "fr": "Téléchargements 7 jours",
+        "it": "Download 7 giorni",
+        "sv": "Nedladdningar 7 dagar",
+        "no": "Nedlastinger 7 dager",
+        "es": "Descargas 7 días",
+        "da": "Downloads 7 dage",
+        "ru": "Загрузки за 7 дней",
+        "pl": "Pobrania 7 dni",
+        "ko": "다운로드 7일",
+        "ar": "التنزيلات 7 أيام"
+      }
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "title": {
+        "en": "Downloads total",
+        "nl": "Downloads totaal",
+        "de": "Downloads gesamt",
+        "fr": "Téléchargements au total",
+        "it": "Download totali",
+        "sv": "Nedladdningar totalt",
+        "no": "Nedlastinger totalt",
+        "es": "Descargas totales",
+        "da": "Downloads i alt",
+        "ru": "Загрузки всего",
+        "pl": "Pobrania łącznie",
+        "ko": "총 다운로드",
+        "ar": "إجمالي التنزيلات"
+      },
+      "example": {
+        "en": "Downloads total",
+        "nl": "Downloads totaal",
+        "de": "Downloads gesamt",
+        "fr": "Téléchargements au total",
+        "it": "Download totali",
+        "sv": "Nedladdningar totalt",
+        "no": "Nedlastinger totalt",
+        "es": "Descargas totales",
+        "da": "Downloads i alt",
+        "ru": "Загрузки всего",
+        "pl": "Pobrania łącznie",
+        "ko": "총 다운로드",
+        "ar": "إجمالي التنزيلات"
+      }
+    }
+  ]
+}

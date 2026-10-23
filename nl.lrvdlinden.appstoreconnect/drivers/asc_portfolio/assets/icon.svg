@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 960" width="960" height="960">
+  <!-- DevTools frame: window with title-bar dots and four panes, top-right pane with growth chart -->
+  <path fill="#0484FD" fill-rule="evenodd" d="
+    M230 140 H730 A110 110 0 0 1 840 250 V710 A110 110 0 0 1 730 820 H230 A110 110 0 0 1 120 710 V250 A110 110 0 0 1 230 140 Z
+    M200 300 V710 A40 40 0 0 0 240 750 H720 A40 40 0 0 0 760 710 V300 Z
+    M220 196 A26 26 0 1 1 220 248 A26 26 0 1 1 220 196 Z
+    M300 196 A26 26 0 1 1 300 248 A26 26 0 1 1 300 196 Z
+    M380 196 A26 26 0 1 1 380 248 A26 26 0 1 1 380 196 Z"/>
+  <!-- top-left pane with two text lines -->
+  <path fill="#0484FD" fill-rule="evenodd" d="
+    M262 340 H438 A30 30 0 0 1 468 370 V500 A30 30 0 0 1 438 530 H262 A30 30 0 0 1 232 500 V370 A30 30 0 0 1 262 340 Z
+    M282 395 H418 A18 18 0 0 1 418 431 H282 A18 18 0 0 1 282 395 Z
+    M282 452 H368 A18 18 0 0 1 368 488 H282 A18 18 0 0 1 282 452 Z"/>
+  <!-- top-right pane with bars and rising arrow -->
+  <path fill="#0484FD" fill-rule="evenodd" d="
+    M522 340 H698 A30 30 0 0 1 728 370 V500 A30 30 0 0 1 698 530 H522 A30 30 0 0 1 492 500 V370 A30 30 0 0 1 522 340 Z
+    M540 470 H566 V505 H540 Z
+    M584 448 H610 V505 H584 Z
+    M628 420 H654 V505 H628 Z
+    M536 444 L582 404 L606 422 L652 380 L640 368 L690 360 L682 410 L670 398 L606 452 L582 434 L548 464 Z"/>
+  <!-- bottom-left pane with dot and lines -->
+  <path fill="#0484FD" fill-rule="evenodd" d="
+    M262 560 H438 A30 30 0 0 1 468 590 V690 A30 30 0 0 1 438 720 H262 A30 30 0 0 1 232 690 V590 A30 30 0 0 1 262 560 Z
+    M300 612 A28 28 0 1 1 300 668 A28 28 0 1 1 300 612 Z
+    M350 610 H430 A15 15 0 0 1 430 640 H350 A15 15 0 0 1 350 610 Z
+    M350 652 H404 A15 15 0 0 1 404 682 H350 A15 15 0 0 1 350 652 Z"/>
+  <!-- bottom-right pane with two lines -->
+  <path fill="#0484FD" fill-rule="evenodd" d="
+    M522 560 H698 A30 30 0 0 1 728 590 V690 A30 30 0 0 1 698 720 H522 A30 30 0 0 1 492 690 V590 A30 30 0 0 1 522 560 Z
+    M542 607 H678 A16 16 0 0 1 678 639 H542 A16 16 0 0 1 542 607 Z
+    M542 653 H628 A16 16 0 0 1 628 685 H542 A16 16 0 0 1 542 653 Z"/>
+</svg>

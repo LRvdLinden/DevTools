@@ -1,0 +1,53 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "In App Review",
+    "nl": "In App Review",
+    "de": "Im App Review",
+    "fr": "En App Review",
+    "it": "In App Review",
+    "sv": "I App Review",
+    "no": "I App Review",
+    "es": "En App Review",
+    "da": "I App Review",
+    "ru": "На проверке App Review",
+    "pl": "W App Review",
+    "ko": "App Review 중",
+    "ar": "في App Review"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "In review",
+    "nl": "In review",
+    "de": "In Prüfung",
+    "fr": "En cours d'examen",
+    "it": "In revisione",
+    "sv": "Granskas",
+    "no": "I gjennomgang",
+    "es": "En revisión",
+    "da": "Under gennemgang",
+    "ru": "На проверке",
+    "pl": "W weryfikacji",
+    "ko": "심사 중",
+    "ar": "قيد المراجعة"
+  },
+  "insightsTitleFalse": {
+    "en": "Not in review",
+    "nl": "Niet in review",
+    "de": "Nicht in Prüfung",
+    "fr": "Pas en cours d'examen",
+    "it": "Non in revisione",
+    "sv": "Granskas inte",
+    "no": "Ikke i gjennomgang",
+    "es": "No está en revisión",
+    "da": "Ikke under gennemgang",
+    "ru": "Не на проверке",
+    "pl": "Nie w weryfikacji",
+    "ko": "심사 중 아님",
+    "ar": "ليس قيد المراجعة"
+  },
+  "icon": "/assets/capabilities/review.svg"
+}

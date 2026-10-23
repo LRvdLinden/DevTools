@@ -1,0 +1,87 @@
+{
+  "title": {
+    "en": "A new version of an app is live",
+    "nl": "Een nieuwe versie van een app is live",
+    "de": "Eine neue Version einer App ist live",
+    "fr": "Une nouvelle version d'une app est en ligne",
+    "it": "Una nuova versione di un'app è live",
+    "sv": "En ny version av en app är publicerad",
+    "no": "En ny versjon av en app er live",
+    "es": "Una nueva versión de una app está publicada",
+    "da": "En ny version af en app er live",
+    "ru": "Новая версия приложения в продаже",
+    "pl": "Nowa wersja aplikacji jest dostępna",
+    "ko": "앱의 새 버전이 라이브됨",
+    "ar": "أصبح إصدار جديد من تطبيق منشورًا"
+  },
+  "tokens": [
+    {
+      "name": "app",
+      "type": "string",
+      "title": {
+        "en": "App",
+        "nl": "App",
+        "de": "App",
+        "fr": "App",
+        "it": "App",
+        "sv": "App",
+        "no": "App",
+        "es": "App",
+        "da": "App",
+        "ru": "Приложение",
+        "pl": "Aplikacja",
+        "ko": "앱",
+        "ar": "التطبيق"
+      },
+      "example": {
+        "en": "App",
+        "nl": "App",
+        "de": "App",
+        "fr": "App",
+        "it": "App",
+        "sv": "App",
+        "no": "App",
+        "es": "App",
+        "da": "App",
+        "ru": "Приложение",
+        "pl": "Aplikacja",
+        "ko": "앱",
+        "ar": "التطبيق"
+      }
+    },
+    {
+      "name": "version",
+      "type": "string",
+      "title": {
+        "en": "Version",
+        "nl": "Versie",
+        "de": "Version",
+        "fr": "Version",
+        "it": "Versione",
+        "sv": "Version",
+        "no": "Versjon",
+        "es": "Versión",
+        "da": "Version",
+        "ru": "Версия",
+        "pl": "Wersja",
+        "ko": "버전",
+        "ar": "الإصدار"
+      },
+      "example": {
+        "en": "Version",
+        "nl": "Versie",
+        "de": "Version",
+        "fr": "Version",
+        "it": "Versione",
+        "sv": "Version",
+        "no": "Versjon",
+        "es": "Versión",
+        "da": "Version",
+        "ru": "Версия",
+        "pl": "Wersja",
+        "ko": "버전",
+        "ar": "الإصدار"
+      }
+    }
+  ]
+}

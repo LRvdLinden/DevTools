@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Updates 30 days",
+    "nl": "Updates 30 dagen",
+    "de": "Updates 30 Tage",
+    "fr": "Mises à jour 30 jours",
+    "it": "Aggiornamenti 30 giorni",
+    "sv": "Uppdateringar 30 dagar",
+    "no": "Oppdateringer 30 dager",
+    "es": "Actualizaciones 30 días",
+    "da": "Opdateringer 30 dage",
+    "ru": "Обновления за 30 дней",
+    "pl": "Aktualizacje 30 dni",
+    "ko": "업데이트 30일",
+    "ar": "التحديثات 30 يومًا"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "decimals": 0,
+  "icon": "/assets/capabilities/update.svg"
+}

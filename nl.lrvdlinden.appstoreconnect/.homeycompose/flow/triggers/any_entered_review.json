@@ -1,0 +1,87 @@
+{
+  "title": {
+    "en": "An app entered App Review",
+    "nl": "Een app is in App Review gegaan",
+    "de": "Eine App ist im App Review",
+    "fr": "Une app est entrée en App Review",
+    "it": "Un'app è entrata in App Review",
+    "sv": "En app har skickats till App Review",
+    "no": "En app gikk inn i App Review",
+    "es": "Una app ha entrado en App Review",
+    "da": "En app er sendt til App Review",
+    "ru": "Приложение отправлено на App Review",
+    "pl": "Aplikacja trafiła do App Review",
+    "ko": "앱이 App Review에 들어감",
+    "ar": "دخل تطبيق إلى App Review"
+  },
+  "tokens": [
+    {
+      "name": "app",
+      "type": "string",
+      "title": {
+        "en": "App",
+        "nl": "App",
+        "de": "App",
+        "fr": "App",
+        "it": "App",
+        "sv": "App",
+        "no": "App",
+        "es": "App",
+        "da": "App",
+        "ru": "Приложение",
+        "pl": "Aplikacja",
+        "ko": "앱",
+        "ar": "التطبيق"
+      },
+      "example": {
+        "en": "App",
+        "nl": "App",
+        "de": "App",
+        "fr": "App",
+        "it": "App",
+        "sv": "App",
+        "no": "App",
+        "es": "App",
+        "da": "App",
+        "ru": "Приложение",
+        "pl": "Aplikacja",
+        "ko": "앱",
+        "ar": "التطبيق"
+      }
+    },
+    {
+      "name": "version",
+      "type": "string",
+      "title": {
+        "en": "Version",
+        "nl": "Versie",
+        "de": "Version",
+        "fr": "Version",
+        "it": "Versione",
+        "sv": "Version",
+        "no": "Versjon",
+        "es": "Versión",
+        "da": "Version",
+        "ru": "Версия",
+        "pl": "Wersja",
+        "ko": "버전",
+        "ar": "الإصدار"
+      },
+      "example": {
+        "en": "Version",
+        "nl": "Versie",
+        "de": "Version",
+        "fr": "Version",
+        "it": "Versione",
+        "sv": "Version",
+        "no": "Versjon",
+        "es": "Versión",
+        "da": "Version",
+        "ru": "Версия",
+        "pl": "Wersja",
+        "ko": "버전",
+        "ar": "الإصدار"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Downloads yesterday",
+    "nl": "Downloads gisteren",
+    "de": "Downloads gestern",
+    "fr": "Téléchargements d'hier",
+    "it": "Download di ieri",
+    "sv": "Nedladdningar igår",
+    "no": "Nedlastinger i går",
+    "es": "Descargas de ayer",
+    "da": "Downloads i går",
+    "ru": "Загрузки вчера",
+    "pl": "Pobrania wczoraj",
+    "ko": "어제 다운로드",
+    "ar": "تنزيلات الأمس"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "decimals": 0,
+  "icon": "/assets/capabilities/download.svg"
+}

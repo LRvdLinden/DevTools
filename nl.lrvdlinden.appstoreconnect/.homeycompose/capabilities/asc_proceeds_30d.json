@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Proceeds 30 days",
+    "nl": "Opbrengst 30 dagen",
+    "de": "Erlöse 30 Tage",
+    "fr": "Recettes 30 jours",
+    "it": "Ricavi 30 giorni",
+    "sv": "Intäkter 30 dagar",
+    "no": "Inntekter 30 dager",
+    "es": "Ingresos 30 días",
+    "da": "Provenu 30 dage",
+    "ru": "Выручка за 30 дней",
+    "pl": "Przychody 30 dni",
+    "ko": "수익 30일",
+    "ar": "العائدات 30 يومًا"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "decimals": 2,
+  "icon": "/assets/capabilities/money.svg"
+}

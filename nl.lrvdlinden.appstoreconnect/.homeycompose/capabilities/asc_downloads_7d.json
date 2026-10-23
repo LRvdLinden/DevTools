@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Downloads 7 days",
+    "nl": "Downloads 7 dagen",
+    "de": "Downloads 7 Tage",
+    "fr": "Téléchargements 7 jours",
+    "it": "Download 7 giorni",
+    "sv": "Nedladdningar 7 dagar",
+    "no": "Nedlastinger 7 dager",
+    "es": "Descargas 7 días",
+    "da": "Downloads 7 dage",
+    "ru": "Загрузки за 7 дней",
+    "pl": "Pobrania 7 dni",
+    "ko": "다운로드 7일",
+    "ar": "التنزيلات 7 أيام"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "decimals": 0,
+  "icon": "/assets/capabilities/download.svg"
+}

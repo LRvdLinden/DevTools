@@ -1,0 +1,10 @@
+{
+  "name": "nl.lrvdlinden.appstoreconnect",
+  "version": "1.0.0",
+  "description": "App Store Connect for Homey: downloads, App Review status, builds and reviews of your iOS apps",
+  "main": "app.js",
+  "scripts": { "test": "node test/asc.test.js" },
+  "author": "Léon van der Linden",
+  "license": "GPL-3.0",
+  "engines": { "node": ">=16" }
+}

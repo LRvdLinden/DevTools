@@ -1,0 +1,55 @@
+{
+  "name": {
+    "en": "All apps (portfolio)",
+    "nl": "Alle apps (portfolio)",
+    "de": "Alle Apps (Portfolio)",
+    "fr": "Toutes les apps (portefeuille)",
+    "it": "Tutte le app (portfolio)",
+    "sv": "Alla appar (portfölj)",
+    "no": "Alle apper (portefølje)",
+    "es": "Todas las apps (portafolio)",
+    "da": "Alle apps (portefølje)",
+    "ru": "Все приложения (портфель)",
+    "pl": "Wszystkie aplikacje (portfolio)",
+    "ko": "모든 앱(포트폴리오)",
+    "ar": "جميع التطبيقات (المحفظة)"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "asc_downloads_yesterday",
+    "asc_downloads_7d",
+    "asc_downloads_30d",
+    "asc_downloads_total",
+    "asc_updates_30d",
+    "asc_proceeds_30d",
+    "asc_rating",
+    "asc_apps_total",
+    "asc_apps_live",
+    "asc_apps_review",
+    "asc_apps_attention"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "cloud"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

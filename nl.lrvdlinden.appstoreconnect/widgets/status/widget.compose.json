@@ -1,0 +1,47 @@
+{
+  "name": {
+    "en": "Review & status",
+    "nl": "Review & status",
+    "de": "Review & Status",
+    "fr": "Examen et statut",
+    "it": "Revisione e stato",
+    "sv": "Granskning & status",
+    "no": "Gjennomgang og status",
+    "es": "Revisión y estado",
+    "da": "Gennemgang & status",
+    "ru": "Проверка и статус",
+    "pl": "Weryfikacja i status",
+    "ko": "심사 및 상태",
+    "ar": "المراجعة والحالة"
+  },
+  "settings": [
+    {
+      "id": "lists",
+      "type": "checkbox",
+      "title": {
+        "en": "Show app lists",
+        "nl": "Toon lijsten met apps",
+        "de": "App-Listen anzeigen",
+        "fr": "Afficher les listes d'apps",
+        "it": "Mostra elenchi app",
+        "sv": "Visa applistor",
+        "no": "Vis applister",
+        "es": "Mostrar listas de apps",
+        "da": "Vis applister",
+        "ru": "Показывать списки приложений",
+        "pl": "Pokaż listy aplikacji",
+        "ko": "앱 목록 표시",
+        "ar": "عرض قوائم التطبيقات"
+      },
+      "value": true
+    }
+  ],
+  "height": 200,
+  "transparent": false,
+  "api": {
+    "getData": {
+      "method": "GET",
+      "path": "/"
+    }
+  }
+}

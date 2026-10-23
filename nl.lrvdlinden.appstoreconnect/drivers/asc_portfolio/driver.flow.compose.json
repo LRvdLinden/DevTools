@@ -1,0 +1,186 @@
+{
+  "triggers": [
+    {
+      "id": "portfolio_downloads_updated",
+      "title": {
+        "en": "New download figures for all apps",
+        "nl": "Nieuwe downloadcijfers voor alle apps",
+        "de": "Neue Downloadzahlen für alle Apps",
+        "fr": "Nouveaux chiffres de téléchargement pour toutes les apps",
+        "it": "Nuovi dati di download per tutte le app",
+        "sv": "Nya nedladdningssiffror för alla appar",
+        "no": "Nye nedlastingstall for alle apper",
+        "es": "Nuevas cifras de descargas de todas las apps",
+        "da": "Nye downloadtal for alle apps",
+        "ru": "Новые данные о загрузках всех приложений",
+        "pl": "Nowe dane o pobraniach wszystkich aplikacji",
+        "ko": "모든 앱의 새 다운로드 수치",
+        "ar": "أرقام تنزيل جديدة لجميع التطبيقات"
+      },
+      "tokens": [
+        {
+          "name": "yesterday",
+          "type": "number",
+          "title": {
+            "en": "Downloads yesterday",
+            "nl": "Downloads gisteren",
+            "de": "Downloads gestern",
+            "fr": "Téléchargements d'hier",
+            "it": "Download di ieri",
+            "sv": "Nedladdningar igår",
+            "no": "Nedlastinger i går",
+            "es": "Descargas de ayer",
+            "da": "Downloads i går",
+            "ru": "Загрузки вчера",
+            "pl": "Pobrania wczoraj",
+            "ko": "어제 다운로드",
+            "ar": "تنزيلات الأمس"
+          },
+          "example": {
+            "en": "Downloads yesterday",
+            "nl": "Downloads gisteren",
+            "de": "Downloads gestern",
+            "fr": "Téléchargements d'hier",
+            "it": "Download di ieri",
+            "sv": "Nedladdningar igår",
+            "no": "Nedlastinger i går",
+            "es": "Descargas de ayer",
+            "da": "Downloads i går",
+            "ru": "Загрузки вчера",
+            "pl": "Pobrania wczoraj",
+            "ko": "어제 다운로드",
+            "ar": "تنزيلات الأمس"
+          }
+        },
+        {
+          "name": "last7",
+          "type": "number",
+          "title": {
+            "en": "Downloads 7 days",
+            "nl": "Downloads 7 dagen",
+            "de": "Downloads 7 Tage",
+            "fr": "Téléchargements 7 jours",
+            "it": "Download 7 giorni",
+            "sv": "Nedladdningar 7 dagar",
+            "no": "Nedlastinger 7 dager",
+            "es": "Descargas 7 días",
+            "da": "Downloads 7 dage",
+            "ru": "Загрузки за 7 дней",
+            "pl": "Pobrania 7 dni",
+            "ko": "다운로드 7일",
+            "ar": "التنزيلات 7 أيام"
+          },
+          "example": {
+            "en": "Downloads 7 days",
+            "nl": "Downloads 7 dagen",
+            "de": "Downloads 7 Tage",
+            "fr": "Téléchargements 7 jours",
+            "it": "Download 7 giorni",
+            "sv": "Nedladdningar 7 dagar",
+            "no": "Nedlastinger 7 dager",
+            "es": "Descargas 7 días",
+            "da": "Downloads 7 dage",
+            "ru": "Загрузки за 7 дней",
+            "pl": "Pobrania 7 dni",
+            "ko": "다운로드 7일",
+            "ar": "التنزيلات 7 أيام"
+          }
+        },
+        {
+          "name": "total",
+          "type": "number",
+          "title": {
+            "en": "Downloads total",
+            "nl": "Downloads totaal",
+            "de": "Downloads gesamt",
+            "fr": "Téléchargements au total",
+            "it": "Download totali",
+            "sv": "Nedladdningar totalt",
+            "no": "Nedlastinger totalt",
+            "es": "Descargas totales",
+            "da": "Downloads i alt",
+            "ru": "Загрузки всего",
+            "pl": "Pobrania łącznie",
+            "ko": "총 다운로드",
+            "ar": "إجمالي التنزيلات"
+          },
+          "example": {
+            "en": "Downloads total",
+            "nl": "Downloads totaal",
+            "de": "Downloads gesamt",
+            "fr": "Téléchargements au total",
+            "it": "Download totali",
+            "sv": "Nedladdningar totalt",
+            "no": "Nedlastinger totalt",
+            "es": "Descargas totales",
+            "da": "Downloads i alt",
+            "ru": "Загрузки всего",
+            "pl": "Pobrania łącznie",
+            "ko": "총 다운로드",
+            "ar": "إجمالي التنزيلات"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "portfolio_downloads_yesterday_above",
+      "title": {
+        "en": "Downloads of all apps yesterday !{{are|are not}} above…",
+        "nl": "Downloads van alle apps gisteren !{{zijn|zijn niet}} hoger dan…",
+        "de": "Downloads aller Apps gestern !{{liegen|liegen nicht}} über …",
+        "fr": "Les téléchargements d'hier de toutes les apps !{{sont|ne sont pas}} supérieurs à…",
+        "it": "I download di ieri di tutte le app !{{sono|non sono}} oltre…",
+        "sv": "Nedladdningar av alla appar igår !{{är|är inte}} över…",
+        "no": "Nedlastinger av alle apper i går !{{er|er ikke}} over …",
+        "es": "Las descargas de todas las apps ayer !{{están|no están}} por encima de…",
+        "da": "Downloads af alle apps i går !{{er|er ikke}} over…",
+        "ru": "Загрузки всех приложений вчера !{{выше|не выше}}…",
+        "pl": "Pobrania wszystkich aplikacji wczoraj !{{są|nie są}} powyżej…",
+        "ko": "어제 모든 앱의 다운로드가 다음 값을 !{{초과함|초과하지 않음}}…",
+        "ar": "تنزيلات جميع التطبيقات بالأمس !{{أعلى|ليست أعلى}} من…"
+      },
+      "titleFormatted": {
+        "en": "Downloads of all apps yesterday !{{are|are not}} above [[number]]",
+        "nl": "Downloads van alle apps gisteren !{{zijn|zijn niet}} hoger dan [[number]]",
+        "de": "Downloads aller Apps gestern !{{liegen|liegen nicht}} über [[number]]",
+        "fr": "Les téléchargements d'hier de toutes les apps !{{sont|ne sont pas}} supérieurs à [[number]]",
+        "it": "I download di ieri di tutte le app !{{sono|non sono}} oltre [[number]]",
+        "sv": "Nedladdningar av alla appar igår !{{är|är inte}} över [[number]]",
+        "no": "Nedlastinger av alle apper i går !{{er|er ikke}} over [[number]]",
+        "es": "Las descargas de todas las apps ayer !{{están|no están}} por encima de [[number]]",
+        "da": "Downloads af alle apps i går !{{er|er ikke}} over [[number]]",
+        "ru": "Загрузки всех приложений вчера !{{выше|не выше}} [[number]]",
+        "pl": "Pobrania wszystkich aplikacji wczoraj !{{są|nie są}} powyżej [[number]]",
+        "ko": "어제 모든 앱의 다운로드가 [[number]]을(를) !{{초과함|초과하지 않음}}",
+        "ar": "تنزيلات جميع التطبيقات بالأمس !{{أعلى|ليست أعلى}} من [[number]]"
+      },
+      "args": [
+        {
+          "name": "number",
+          "type": "number",
+          "min": 0
+        }
+      ]
+    },
+    {
+      "id": "portfolio_any_in_review",
+      "title": {
+        "en": "An app !{{is|is not}} in App Review",
+        "nl": "Er !{{is|is geen}} app in App Review",
+        "de": "Eine App !{{ist|ist nicht}} im App Review",
+        "fr": "Une app !{{est|n'est pas}} en App Review",
+        "it": "Un'app !{{è|non è}} in App Review",
+        "sv": "En app !{{är|är inte}} i App Review",
+        "no": "En app !{{er|er ikke}} i App Review",
+        "es": "Una app !{{está|no está}} en App Review",
+        "da": "En app !{{er|er ikke}} i App Review",
+        "ru": "Приложение !{{находится|не находится}} на App Review",
+        "pl": "Jakaś aplikacja !{{jest|nie jest}} w App Review",
+        "ko": "앱이 App Review !{{중임|중이 아님}}",
+        "ar": "يوجد تطبيق !{{في|ليس في}} App Review"
+      }
+    }
+  ]
+}
