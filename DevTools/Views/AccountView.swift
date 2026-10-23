@@ -60,10 +60,27 @@ struct AccountView: View {
                 .cardRows()
             }
 
-            Section("Weergave") {
+            Section {
                 Picker(selection: $appearance) {
                     ForEach(AppearanceSetting.allCases) { Label(LS($0.label), systemImage: $0.icon).tag($0) }
                 } label: { Label("Thema", systemImage: "paintbrush") }
+                Picker(selection: Binding(
+                    get: { LanguageManager.selected },
+                    set: { newValue in
+                        LanguageManager.set(newValue)
+                        store.publishSnapshot()
+                    }
+                )) {
+                    ForEach(AppLanguage.allCases) { lang in
+                        Text("\(lang.flag)  \(lang.nativeName)").tag(lang)
+                    }
+                } label: { Label("Taal", systemImage: "globe") }
+                .pickerStyle(.navigationLink)
+                Button {
+                    if let url = URL(string: UIApplication.openSettingsURLString) { openURL(url) }
+                } label: { Label("Taal wijzigen in iOS-instellingen", systemImage: "gear") }
+            } header: { Text("Weergave") } footer: {
+                Text("Automatisch volgt de taal van je toestel (anders Engels). Widgets en Apple Watch gebruiken dezelfde taal.")
             }
             .cardRows()
 

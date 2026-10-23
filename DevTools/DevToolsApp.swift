@@ -6,13 +6,19 @@ import WatchConnectivity
 struct DevToolsApp: App {
     @State private var store = DevStore()
     @AppStorage("appearance") private var appearance: AppearanceSetting = .system
+    @AppStorage(LanguageManager.key, store: LanguageManager.defaults) private var language = ""
 
-    init() { PhoneWatchBridge.shared.activate() }
+    init() {
+        LanguageManager.apply()
+        PhoneWatchBridge.shared.activate()
+    }
 
     var body: some Scene {
         WindowGroup {
             RootView()
                 .environment(store)
+                .environment(\.locale, LanguageManager.locale)
+                .id(language)
                 .preferredColorScheme(appearance.colorScheme)
                 .tint(Theme.accent)
         }

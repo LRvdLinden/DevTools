@@ -348,7 +348,8 @@ final class DevStore {
                                       proceeds: hasSales ? sales.proceeds : nil,
                                       currency: sales.currency.isEmpty ? nil : sales.currency,
                                       history: total.isEmpty ? nil : total,
-                                      updates: hasSales ? sales.updates : nil)
+                                      updates: hasSales ? sales.updates : nil,
+                                      language: LanguageManager.selected.rawValue)
         snapshot.save()
         WidgetCenter.shared.reloadAllTimelines()
         PhoneWatchBridge.shared.send(snapshot)

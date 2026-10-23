@@ -8,6 +8,8 @@ import UIKit
 @main
 struct DevToolsWatchApp: App {
     @State private var store = WatchStore()
+
+    init() { LanguageManager.apply() }
     @State private var splash = !ProcessInfo.processInfo.arguments.contains("-noSplash")
 
     var body: some Scene {
@@ -17,6 +19,8 @@ struct DevToolsWatchApp: App {
                     WatchRootView()
                 }
                 .environment(store)
+                .environment(\.locale, LanguageManager.locale)
+                .id(store.languageVersion)
                 .tint(Watch.accent)
                 if splash {
                     WatchSplash()
@@ -42,6 +46,7 @@ final class WatchStore: NSObject {
     private(set) var refreshing = false
     private(set) var message: String?
     private(set) var iconVersion = 0
+    private(set) var languageVersion = 0
 
     private static let key = "watchSnapshot"
 
@@ -87,6 +92,10 @@ final class WatchStore: NSObject {
         guard let new = try? JSONDecoder().decode(SharedSnapshot.self, from: data) else { return }
         snapshot = new
         UserDefaults(suiteName: SharedSnapshot.watchSuite)?.set(data, forKey: Self.key)
+        if let lang = new.language, AppLanguage(rawValue: lang) != LanguageManager.selected {
+            LanguageManager.set(AppLanguage(rawValue: lang) ?? .system)
+            languageVersion += 1
+        }
         if let icons, !icons.isEmpty {
             for (id, png) in icons {
                 guard let url = SharedSnapshot.iconURL(for: id, suite: SharedSnapshot.watchSuite) else { continue }

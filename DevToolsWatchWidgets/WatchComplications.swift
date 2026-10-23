@@ -113,6 +113,8 @@ struct DownloadsComplication: Widget {
 
 @main
 struct DevWatchWidgets: WidgetBundle {
+    init() { LanguageManager.apply() }
+
     var body: some Widget {
         DownloadsComplication()
     }

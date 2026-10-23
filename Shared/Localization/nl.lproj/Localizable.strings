@@ -64,6 +64,7 @@
 "Automatisch (toestel)" = "Automatisch (toestel)";
 "Automatisch informeren uit" = "Automatisch informeren uit";
 "Automatisch na goedkeuring" = "Automatisch na goedkeuring";
+"Automatisch volgt de taal van je toestel (anders Engels). Widgets en Apple Watch gebruiken dezelfde taal." = "Automatisch volgt de taal van je toestel (anders Engels). Widgets en Apple Watch gebruiken dezelfde taal.";
 "Bekijk DevTools met voorbeeldgegevens, zonder API-sleutel." = "Bekijk DevTools met voorbeeldgegevens, zonder API-sleutel.";
 "Bekijk demo" = "Bekijk demo";
 "Bekijk in App Store" = "Bekijk in App Store";
@@ -305,7 +306,9 @@
 "Stap %lld · %@" = "Stap %lld · %@";
 "Status van je apps" = "Status van je apps";
 "Sterren" = "Sterren";
+"Taal" = "Taal";
 "Taal toevoegen" = "Taal toevoegen";
+"Taal wijzigen in iOS-instellingen" = "Taal wijzigen in iOS-instellingen";
 "Te veel verzoeken (429). Probeer het zo opnieuw." = "Te veel verzoeken (429). Probeer het zo opnieuw.";
 "Te vinden in App Store Connect → Business, naast je adres. Nodig voor Sales Reports." = "Te vinden in App Store Connect → Business, naast je adres. Nodig voor Sales Reports.";
 "Teksten per taal" = "Teksten per taal";

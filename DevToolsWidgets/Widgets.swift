@@ -8,6 +8,8 @@ import AppIntents
 
 @main
 struct DevWidgets: WidgetBundle {
+    init() { LanguageManager.apply() }
+
     var body: some Widget {
         DownloadsWidget()
         TopAppsWidget()

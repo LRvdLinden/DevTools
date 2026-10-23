@@ -1,6 +1,11 @@
 # Changelog
 
 ## 1.0.0 (build 14)
+- **English is the default.** If the device language is not supported, the app shows English.
+- **9 languages:** English, Dutch, German, French, Spanish, Polish, Norwegian, Danish and Swedish. They cover the app, widgets and Apple Watch, with 407 strings per language.
+- **Language picker in Account → Appearance:** choose *Automatic* (follows the device) or a fixed language. The change takes effect immediately. Widgets and the Apple Watch follow the same choice.
+- You can also change the language via iOS Settings → DevTools → Language.
+- Translations live in `Shared/Localization/i18n/*.json`. `translations.py` generates every `.lproj`.
 - Build for App Store submission, with demo mode for App Review and `ITSAppUsesNonExemptEncryption = NO`.
 - The App Store metadata from build 13 has been restored: review notes for the demo mode and links to GitHub Pages.
 

@@ -1,4 +1,5 @@
 import Foundation
+import ObjectiveC
 
 /// Snapshot shared with the widgets (App Group) and the Apple Watch (WatchConnectivity).
 /// The app writes it after every refresh; widgets and watch only read it, so they never
@@ -66,6 +67,8 @@ struct SharedSnapshot: Codable {
     var currency: String? = nil
     var history: [HistoryPoint]? = nil
     var updates: Int? = nil
+    /// Language chosen in the iPhone app (rawValue of AppLanguage), mirrored on the watch.
+    var language: String? = nil
 
     var inReviewApps: [WidgetAppSummary] { apps.filter(\.inReview) }
     var inReview: Int { inReviewApps.count }
@@ -128,13 +131,120 @@ struct SharedSnapshot: Codable {
     }
 }
 
-// MARK: - Localization helpers (English + Dutch; Dutch source strings are the keys)
+// MARK: - Localization (English default + nl, de, fr, es, pl, nb, da, sv; Dutch source strings are the keys)
+
+/// Languages the app ships with. `system` follows the device (falls back to English).
+enum AppLanguage: String, CaseIterable, Identifiable {
+    case system, en, nl, de, fr, es, pl, nb, da, sv
+    var id: String { rawValue }
+
+    /// Name in the language itself, so everyone can find their own language.
+    var nativeName: String {
+        switch self {
+        case .system: return LS("Automatisch (toestel)")
+        case .en: return "English"
+        case .nl: return "Nederlands"
+        case .de: return "Deutsch"
+        case .fr: return "Français"
+        case .es: return "Español"
+        case .pl: return "Polski"
+        case .nb: return "Norsk"
+        case .da: return "Dansk"
+        case .sv: return "Svenska"
+        }
+    }
+
+    var flag: String {
+        switch self {
+        case .system: return "🌐"
+        case .en: return "🇬🇧"
+        case .nl: return "🇳🇱"
+        case .de: return "🇩🇪"
+        case .fr: return "🇫🇷"
+        case .es: return "🇪🇸"
+        case .pl: return "🇵🇱"
+        case .nb: return "🇳🇴"
+        case .da: return "🇩🇰"
+        case .sv: return "🇸🇪"
+        }
+    }
+}
+
+/// In-app language switching. The choice is stored in the App Group so the widgets
+/// (and, via the snapshot, the Apple Watch) use the same language.
+enum LanguageManager {
+    static let key = "appLanguage"
+
+    static var defaults: UserDefaults {
+        #if os(watchOS)
+        return UserDefaults(suiteName: SharedSnapshot.watchSuite) ?? .standard
+        #else
+        return UserDefaults(suiteName: SharedSnapshot.suite) ?? .standard
+        #endif
+    }
+
+    static var selected: AppLanguage {
+        AppLanguage(rawValue: defaults.string(forKey: key) ?? "") ?? .system
+    }
+
+    /// Bundle used for lookups: the chosen .lproj, or the main bundle (device language, English fallback).
+    private(set) static var bundle: Bundle = Bundle.main
+
+    /// Locale for formatting (dates, numbers) that matches the chosen language.
+    static var locale: Locale {
+        selected == .system ? Locale.autoupdatingCurrent : Locale(identifier: selected.rawValue)
+    }
+
+    static func set(_ language: AppLanguage) {
+        defaults.set(language == .system ? nil : language.rawValue, forKey: key)
+        apply()
+    }
+
+    /// Applies the stored choice: overrides Bundle.main lookups (SwiftUI Text, NSLocalizedString)
+    /// and AppleLanguages (system texts after the next launch).
+    static func apply() {
+        let lang = selected
+        if lang == .system {
+            bundle = Bundle.main
+            UserDefaults.standard.removeObject(forKey: "AppleLanguages")
+        } else {
+            if let path = Bundle.main.path(forResource: lang.rawValue, ofType: "lproj"), let b = Bundle(path: path) {
+                bundle = b
+            } else {
+                bundle = Bundle.main
+            }
+            UserDefaults.standard.set([lang.rawValue], forKey: "AppleLanguages")
+        }
+        LocalizedBundle.install()
+    }
+}
+
+/// Bundle.main subclass that redirects string lookups to the selected language.
+private final class LocalizedBundle: Bundle {
+    private static var installed = false
+
+    static func install() {
+        guard !installed else { return }
+        installed = true
+        object_setClass(Bundle.main, LocalizedBundle.self)
+    }
+
+    override func localizedString(forKey key: String, value: String?, table tableName: String?) -> String {
+        let target = LanguageManager.bundle
+        if target !== self && target.bundlePath != self.bundlePath {
+            return target.localizedString(forKey: key, value: value, table: tableName)
+        }
+        return super.localizedString(forKey: key, value: value, table: tableName)
+    }
+}
 
 /// Localized string with interpolation support (keys get %@ / %lld specifiers).
-func L(_ value: String.LocalizationValue) -> String { String(localized: value) }
+func L(_ value: String.LocalizationValue) -> String {
+    String(localized: value, bundle: LanguageManager.bundle, locale: LanguageManager.locale)
+}
 
 /// Runtime lookup for a string that is already held in a variable.
-func LS(_ key: String) -> String { NSLocalizedString(key, comment: "") }
+func LS(_ key: String) -> String { LanguageManager.bundle.localizedString(forKey: key, value: nil, table: nil) }
 
 // MARK: - Sample data (widget gallery, watch demo, previews)
 
