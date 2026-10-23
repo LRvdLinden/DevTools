@@ -75,3 +75,15 @@ The pages are in `docs/`. Turn them on once:
 ## Extra mock-up screenshots
 
 The folders `iPhone-6.9in-1320x2868`, `iPhone-6.3in-1206x2622`, `iPad-13in-2064x2752`, `AppleWatch-*` and `Promo/` contain marketing mock-ups with captions (generator in `_generator/`). They are an alternative to the real simulator screenshots of the demo mode.
+
+## Product page: Header and Search Results (`ProductPage/`)
+App Store Connect → your app → Product Page Information → *Header and Search Results*. PNG files without an alpha channel.
+
+| File | Use for |
+|---|---|
+| `header-3840x1646.png` | **Header** (21:9). It has no title text, because the app icon and name appear directly below it. |
+| `search-results-3840x2560.png` | **Search Results** (3:2), at the highest resolution. |
+| `search-results-1920x1280.png` | **Search Results** (3:2), at the minimum size, as an alternative. |
+| `universal-5244x2950.png` | A single 16:9 image for both. Turn on *Use header asset in search results*. All important content sits inside the middle 84% × 76%, so it survives both crops. |
+
+Regenerate with `cd _generator && python3 product_page.py ../ProductPage`.
