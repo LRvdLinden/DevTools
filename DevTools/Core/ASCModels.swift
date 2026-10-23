@@ -145,8 +145,9 @@ struct VersionAttributes: Decodable {
     let copyright: String?
     let downloadable: Bool?
 
-    /// Prefer the newer appVersionState, fall back to the deprecated appStoreState.
-    var state: String { appVersionState ?? appStoreState ?? "" }
+    /// appStoreState reports READY_FOR_SALE only when the version is really live;
+    /// appVersionState says READY_FOR_DISTRIBUTION for both live and "about to go live".
+    var state: String { appStoreState ?? appVersionState ?? "" }
 }
 
 struct ImageAsset: Decodable, Hashable {

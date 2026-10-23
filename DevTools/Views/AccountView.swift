@@ -72,7 +72,7 @@ struct AccountView: View {
                 Button { openURL(URL(string: "https://appstoreconnect.apple.com/access/integrations/api")!) } label: {
                     Label("API-sleutels beheren", systemImage: "key")
                 }
-                Button { openURL(URL(string: "https://appstoreconnect.apple.com/itc/payments_and_financial_reports")!) } label: {
+                Button { openURL(URL(string: "https://appstoreconnect.apple.com/business")!) } label: {
                     Label("Vendornummer opzoeken", systemImage: "number.circle")
                 }
                 Button { openURL(URL(string: "https://developer.apple.com/documentation/appstoreconnectapi")!) } label: {
@@ -138,7 +138,7 @@ struct AccountEditorSheet: View {
                 Section {
                     TextField("Vendornummer (bijv. 8xxxxxxx)", text: $vendor).keyboardType(.numberPad)
                 } header: { Text("Downloads & opbrengst") } footer: {
-                    Text("Te vinden in App Store Connect → Betalingen en financiële rapporten, linksboven. Nodig voor Sales Reports.")
+                    Text("Te vinden in App Store Connect → Business, naast je adres. Nodig voor Sales Reports.")
                 }
                 if let error { Section { Text(error).foregroundStyle(Theme.rejected) } }
             }

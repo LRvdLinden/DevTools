@@ -139,7 +139,8 @@ struct WatchDashboard: View {
 
     private func color(for state: String) -> Color {
         switch state {
-        case "READY_FOR_SALE", "READY_FOR_DISTRIBUTION": return .green
+        case "READY_FOR_SALE": return .green
+        case "READY_FOR_DISTRIBUTION": return .cyan
         case "WAITING_FOR_REVIEW", "IN_REVIEW": return .orange
         case "REJECTED", "METADATA_REJECTED", "INVALID_BINARY": return .red
         default: return .secondary

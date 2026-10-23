@@ -275,17 +275,18 @@ struct StateBadge: View {
 enum AppState {
     struct Info { let label: String; let color: Color }
 
-    static let liveStates: Set<String> = ["READY_FOR_SALE", "READY_FOR_DISTRIBUTION"]
+    static let liveStates: Set<String> = ["READY_FOR_SALE"]
     static let reviewStates: Set<String> = ["WAITING_FOR_REVIEW", "IN_REVIEW", "READY_FOR_REVIEW", "WAITING_FOR_BETA_REVIEW", "IN_BETA_REVIEW"]
     static let editableStates: Set<String> = ["PREPARE_FOR_SUBMISSION", "DEVELOPER_REJECTED", "REJECTED", "METADATA_REJECTED", "INVALID_BINARY", "WAITING_FOR_REVIEW"]
-    static let closedStates: Set<String> = ["READY_FOR_SALE", "READY_FOR_DISTRIBUTION", "REPLACED_WITH_NEW_VERSION", "DEVELOPER_REMOVED_FROM_SALE", "REMOVED_FROM_SALE", "REMOVED_FROM_DISTRIBUTION"]
+    static let closedStates: Set<String> = ["READY_FOR_SALE", "REPLACED_WITH_NEW_VERSION", "DEVELOPER_REMOVED_FROM_SALE", "REMOVED_FROM_SALE", "REMOVED_FROM_DISTRIBUTION"]
 
     static func isLive(_ s: String) -> Bool { liveStates.contains(s) }
     static func isReview(_ s: String) -> Bool { reviewStates.contains(s) }
 
     static func info(for raw: String) -> Info {
         switch raw {
-        case "READY_FOR_SALE", "READY_FOR_DISTRIBUTION": return Info(label: "Live", color: Theme.live)
+        case "READY_FOR_SALE": return Info(label: "Live", color: Theme.live)
+        case "READY_FOR_DISTRIBUTION": return Info(label: "Klaar voor distributie", color: Theme.cyan)
         case "WAITING_FOR_REVIEW": return Info(label: "Wacht op review", color: Theme.review)
         case "IN_REVIEW": return Info(label: "In review", color: Theme.review)
         case "READY_FOR_REVIEW": return Info(label: "Klaar voor review", color: Theme.review)

@@ -123,7 +123,7 @@ extension ConnectAPI {
     func editableAppInfo(appID: String) async throws -> (id: String, state: String)? {
         let doc: ListDocument<AppInfoAttributes> = try await get("/v1/apps/\(appID)/appInfos")
         let infos = doc.data
-        let editable = infos.first { !["READY_FOR_DISTRIBUTION", "READY_FOR_SALE", "REPLACED_WITH_NEW_INFO"].contains($0.attributes.anyState) } ?? infos.first
+        let editable = infos.first { !["READY_FOR_SALE", "REPLACED_WITH_NEW_INFO"].contains($0.attributes.anyState) } ?? infos.first
         return editable.map { ($0.id, $0.attributes.anyState) }
     }
 

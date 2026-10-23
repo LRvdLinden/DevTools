@@ -13,9 +13,9 @@ struct WidgetAppSummary: Codable, Identifiable {
     var downloads: Int? = nil
     var build: String? = nil
 
-    var isLive: Bool { liveVersion != nil || state == "READY_FOR_SALE" || state == "READY_FOR_DISTRIBUTION" }
+    var isLive: Bool { liveVersion != nil || state == "READY_FOR_SALE" }
 
-    /// Human status: App Store "Ready for Sale/Distribution" is shown as Live.
+    /// Human status: only "Ready for Sale" is Live; "Ready for Distribution" is the step before.
     var statusLabel: String { SharedSnapshot.label(for: state) }
 }
 
@@ -45,7 +45,8 @@ struct SharedSnapshot: Codable {
 
     static func label(for state: String) -> String {
         switch state {
-        case "READY_FOR_SALE", "READY_FOR_DISTRIBUTION": return "Live"
+        case "READY_FOR_SALE": return "Live"
+        case "READY_FOR_DISTRIBUTION": return "Klaar voor distributie"
         case "WAITING_FOR_REVIEW": return "Wacht op review"
         case "IN_REVIEW": return "In review"
         case "READY_FOR_REVIEW": return "Klaar voor review"

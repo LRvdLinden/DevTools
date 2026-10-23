@@ -39,7 +39,8 @@ enum WidgetPalette {
 
     static func color(for state: String) -> Color {
         switch state {
-        case "READY_FOR_SALE", "READY_FOR_DISTRIBUTION": return live
+        case "READY_FOR_SALE": return live
+        case "READY_FOR_DISTRIBUTION": return cyan
         case "WAITING_FOR_REVIEW", "IN_REVIEW", "READY_FOR_REVIEW": return review
         case "REJECTED", "METADATA_REJECTED", "INVALID_BINARY": return .red
         case "PENDING_DEVELOPER_RELEASE": return .purple

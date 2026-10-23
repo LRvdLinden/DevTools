@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0 (build 11)
+- Only **Ready for Sale** now counts as **Live**. **Ready for Distribution** gets its own status, "Klaar voor distributie" (cyan): the step before going live. This applies in the app, the widgets and on the Watch.
+- Version status is now read from Apple's `appStoreState`, which is the only field that says READY_FOR_SALE once a version is actually live.
+- The help text and link for the vendor number now point to App Store Connect → **Business**.
+
 ## 1.0.0 (build 10)
 
 ### New

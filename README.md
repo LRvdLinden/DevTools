@@ -2,7 +2,7 @@
 
 Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch, in the style of HomeyDev (Homey Developer Tools). It is built on the official [App Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi).
 
-**Version 1.0.0 (build 10)** · Team `EU3UY476T6` · Bundle `nl.lrvdlinden.devtools`
+**Version 1.0.0 (build 11)** · Team `EU3UY476T6` · Bundle `nl.lrvdlinden.devtools`
 
 ## Features
 
@@ -10,7 +10,7 @@ Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch,
 |---|---|
 | **Splash** | Animated launch screen with aurora background, particles, the icon dropping in with a 3D tilt, orbit rings, a letter-by-letter title, an animated chart line, and a progress bar that follows the real data load. Respects Reduce Motion. |
 | **Home** | Greeting, KPI tiles (installs, proceeds, live, in review, updates, average rating), a Homey Insights-style trend chart with 7d/30d/90d/1y, downloads per app, an "Attention needed" card and app list with icons |
-| **Apps** | Real app icons (App Store artwork, or the icon from the latest build). Status badges: *Ready for Sale / Ready for Distribution* shows as **Live**. Filters (Live, In review, Preparing, Rejected), sorting and search |
+| **Apps** | Real app icons (App Store artwork, or the icon from the latest build). Status badges: only *Ready for Sale* shows as **Live**; *Ready for Distribution* shows as **Ready for distribution** (the step before going live). Filters (Live, In review, Preparing, Rejected), sorting and search |
 | **App detail** | Downloads trend, top countries, versions, latest builds, reviews, app info and test groups |
 | **Versions & texts** | Create a new App Store version, edit What's New, description, keywords, promotional text and URLs per language (copy What's New to all languages in one go), add languages, version settings (copyright, release type, scheduled date), attach a build, **submit for App Review**, cancel a review, release a version, delete a version |
 | **App info** | Name, subtitle and privacy policy URL per language |
@@ -27,7 +27,7 @@ Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch,
 1. Open `DevTools.xcodeproj` in Xcode 16 or newer (CI builds with Xcode 26.6).
 2. The team for all four targets is `EU3UY476T6`, with App Groups `group.nl.lrvdlinden.devtools` and `group.nl.lrvdlinden.devtools.watch`.
 3. In App Store Connect, go to **Users and Access → Integrations → App Store Connect API** and create a team key. Give it the **Admin** role, or **App Manager + Sales**, to use every feature.
-4. In the app, open **Link account**. Fill in the Issuer ID, choose the `AuthKey_XXXX.p8` file (the Key ID is filled in automatically) and enter your **vendor number**. You find the vendor number under **Payments and Financial Reports**, top left.
+4. In the app, open **Link account**. Fill in the Issuer ID, choose the `AuthKey_XXXX.p8` file (the Key ID is filled in automatically) and enter your **vendor number**. You find the vendor number on the **Business** page, next to your address.
 5. To archive, use the **DevTools** scheme with **Any iOS Device (arm64)**.
 
 ## How data is retrieved

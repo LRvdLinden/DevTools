@@ -138,7 +138,7 @@ struct VendorPromptCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Label("Downloads en opbrengst activeren", systemImage: "chart.bar.xaxis").font(.headline)
-            Text("Vul je vendornummer in bij je account om downloads, updates, in-app aankopen en opbrengst per app te zien. Je vindt het in App Store Connect onder Betalingen en financiële rapporten (linksboven). De API-sleutel heeft de rol Admin, Finance of Sales nodig.")
+            Text("Vul je vendornummer in bij je account om downloads, updates, in-app aankopen en opbrengst per app te zien. Je vindt het in App Store Connect onder Business, naast je adres. De API-sleutel heeft de rol Admin, Finance of Sales nodig.")
                 .font(.footnote)
                 .foregroundStyle(Theme.textSecondary)
             NavigationLink { AccountView() } label: {
