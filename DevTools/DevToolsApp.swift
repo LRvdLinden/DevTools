@@ -205,8 +205,8 @@ struct WelcomeView: View {
                                     .foregroundStyle(Theme.cyan)
                                     .frame(width: 34)
                                 VStack(alignment: .leading, spacing: 3) {
-                                    Text(item.element.1).font(.headline).foregroundStyle(.white)
-                                    Text(item.element.2).font(.subheadline).foregroundStyle(.white.opacity(0.7))
+                                    Text(LS(item.element.1)).font(.headline).foregroundStyle(.white)
+                                    Text(LS(item.element.2)).font(.subheadline).foregroundStyle(.white.opacity(0.7))
                                 }
                                 Spacer(minLength: 0)
                             }

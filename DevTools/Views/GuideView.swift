@@ -100,8 +100,8 @@ struct GuideView: View {
                     Label("Problemen oplossen", systemImage: "wrench.and.screwdriver.fill").font(.headline)
                     ForEach(Array(problems.enumerated()), id: \.offset) { item in
                         VStack(alignment: .leading, spacing: 2) {
-                            Text(item.element.0).font(.subheadline.weight(.semibold))
-                            Text(item.element.1).font(.footnote).foregroundStyle(Theme.textSecondary)
+                            Text(LS(item.element.0)).font(.subheadline.weight(.semibold))
+                            Text(LS(item.element.1)).font(.footnote).foregroundStyle(Theme.textSecondary)
                         }
                     }
                 }
@@ -151,8 +151,8 @@ struct GuideView: View {
                     }
                     .frame(width: 36, height: 36)
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("Stap \(step.id) · \(step.title)").font(.subheadline.weight(.semibold)).foregroundStyle(.primary)
-                        Text(step.summary).font(.caption).foregroundStyle(Theme.textSecondary)
+                        Text("Stap \(step.id) · \(LS(step.title))").font(.subheadline.weight(.semibold)).foregroundStyle(.primary)
+                        Text(LS(step.summary)).font(.caption).foregroundStyle(Theme.textSecondary)
                     }
                     Spacer()
                     Image(systemName: "chevron.down")
@@ -173,12 +173,12 @@ struct GuideView: View {
                                 .foregroundStyle(step.tint)
                                 .frame(width: 20, height: 20)
                                 .background(step.tint.opacity(0.15), in: Circle())
-                            Text(item.element).font(.callout).fixedSize(horizontal: false, vertical: true)
+                            Text(LS(item.element)).font(.callout).fixedSize(horizontal: false, vertical: true)
                         }
                     }
                     if let link = step.link, let url = URL(string: link.1) {
                         Button { openURL(url) } label: {
-                            Label(link.0, systemImage: "arrow.up.right.square")
+                            Label(LS(link.0), systemImage: "arrow.up.right.square")
                         }
                         .buttonStyle(.borderedProminent)
                         .controlSize(.small)

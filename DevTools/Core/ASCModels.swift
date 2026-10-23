@@ -212,7 +212,7 @@ struct BetaTesterAttributes: Decodable {
 
     var displayName: String {
         let n = [firstName, lastName].compactMap { $0 }.filter { !$0.isEmpty }.joined(separator: " ")
-        return n.isEmpty ? (email ?? "Anonieme tester") : n
+        return n.isEmpty ? (email ?? L("Anonieme tester")) : n
     }
 }
 
@@ -332,7 +332,7 @@ struct BuildInfo: Identifiable, Hashable, Codable {
         autoNotify = beta?.bool("autoNotifyEnabled") ?? true
     }
 
-    var title: String { marketingVersion.isEmpty ? "Build \(number)" : "\(marketingVersion) (\(number))" }
+    var title: String { marketingVersion.isEmpty ? L("Build \(number)") : "\(marketingVersion) (\(number))" }
     var isUsable: Bool { processingState == "VALID" && !expired }
     var displayState: String {
         if expired { return "EXPIRED" }
@@ -369,9 +369,9 @@ enum ReleaseType {
     static let all = ["AFTER_APPROVAL", "MANUAL", "SCHEDULED"]
     static func label(_ t: String) -> String {
         switch t {
-        case "MANUAL": return "Handmatig vrijgeven"
-        case "SCHEDULED": return "Op datum vrijgeven"
-        default: return "Automatisch na goedkeuring"
+        case "MANUAL": return L("Handmatig vrijgeven")
+        case "SCHEDULED": return L("Op datum vrijgeven")
+        default: return L("Automatisch na goedkeuring")
         }
     }
 }

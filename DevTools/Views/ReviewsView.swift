@@ -147,7 +147,7 @@ struct ReviewCell: View {
             }
             HStack {
                 Button(action: onReply) {
-                    Label(review.response == nil ? "Reageren" : "Reactie bewerken", systemImage: "arrowshape.turn.up.left")
+                    Label(LS(review.response == nil ? "Reageren" : "Reactie bewerken"), systemImage: "arrowshape.turn.up.left")
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.small)

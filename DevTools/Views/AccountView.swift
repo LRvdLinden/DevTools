@@ -53,7 +53,7 @@ struct AccountView: View {
 
             Section("Weergave") {
                 Picker(selection: $appearance) {
-                    ForEach(AppearanceSetting.allCases) { Label($0.label, systemImage: $0.icon).tag($0) }
+                    ForEach(AppearanceSetting.allCases) { Label(LS($0.label), systemImage: $0.icon).tag($0) }
                 } label: { Label("Thema", systemImage: "paintbrush") }
             }
             .cardRows()
@@ -128,7 +128,7 @@ struct AccountEditorSheet: View {
                         TextField("Issuer ID", text: $issuer).textInputAutocapitalization(.never).autocorrectionDisabled().font(.callout.monospaced())
                         TextField("Key ID", text: $keyID).textInputAutocapitalization(.never).autocorrectionDisabled().font(.callout.monospaced())
                         Button { showPicker = true } label: {
-                            Label(pem.isEmpty ? "Kies AuthKey_*.p8" : "Sleutel geïmporteerd ✓", systemImage: pem.isEmpty ? "doc.badge.plus" : "checkmark.seal.fill")
+                            Label(LS(pem.isEmpty ? "Kies AuthKey_*.p8" : "Sleutel geïmporteerd ✓"), systemImage: pem.isEmpty ? "doc.badge.plus" : "checkmark.seal.fill")
                         }
                         .tint(pem.isEmpty ? Theme.accent : Theme.live)
                     } else {
@@ -149,7 +149,7 @@ struct AccountEditorSheet: View {
                 }
                 if let error { Section { Text(error).foregroundStyle(Theme.rejected) } }
             }
-            .navigationTitle(existing == nil ? "Account koppelen" : "Account wijzigen")
+            .navigationTitle(LS(existing == nil ? "Account koppelen" : "Account wijzigen"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Annuleer") { dismiss() } }

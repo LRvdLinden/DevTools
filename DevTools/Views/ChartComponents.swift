@@ -7,19 +7,19 @@ enum TrendMetric: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .installs: return "Installaties"
-        case .downloads: return "Nieuwe downloads"
-        case .updates: return "Updates"
-        case .iap: return "In-app"
-        case .proceeds: return "Opbrengst"
+        case .installs: return L("Installaties")
+        case .downloads: return L("Nieuwe downloads")
+        case .updates: return L("Updates")
+        case .iap: return L("In-app")
+        case .proceeds: return L("Opbrengst")
         }
     }
 
     var short: String {
         switch self {
-        case .installs: return "Install."
-        case .downloads: return "Nieuw"
-        case .updates: return "Updates"
+        case .installs: return L("Install.")
+        case .downloads: return L("Nieuw")
+        case .updates: return L("Updates")
         case .iap: return "IAP"
         case .proceeds: return "€"
         }
@@ -115,7 +115,7 @@ struct SelectionBubble: View {
     var body: some View {
         VStack(spacing: 2) {
             Text(value).font(.callout.weight(.bold).monospacedDigit())
-            Text(weekly ? "week t/m \(Fmt.day(date))" : Fmt.day(date)).font(.caption2).foregroundStyle(Theme.textSecondary)
+            Text(weekly ? L("week t/m \(Fmt.day(date))") : Fmt.day(date)).font(.caption2).foregroundStyle(Theme.textSecondary)
         }
         .padding(.horizontal, 10).padding(.vertical, 6)
         .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
@@ -138,7 +138,7 @@ struct TrendCard: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .firstTextBaseline) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(title).font(.headline)
+                    Text(LS(title)).font(.headline)
                     Text(range.title).font(.caption).foregroundStyle(Theme.textSecondary)
                 }
                 Spacer()
@@ -152,7 +152,7 @@ struct TrendCard: View {
                 }
             }
             Picker("Periode", selection: $range) {
-                ForEach(SalesRange.allCases) { Text($0.label).tag($0) }
+                ForEach(SalesRange.allCases) { Text(LS($0.label)).tag($0) }
             }
             .pickerStyle(.segmented)
 
@@ -160,7 +160,7 @@ struct TrendCard: View {
                 HStack(spacing: 6) {
                     ForEach(metrics) { m in
                         Button { withAnimation(.snappy) { metric = m } } label: {
-                            Text(m.label)
+                            Text(LS(m.label))
                                 .font(.caption.weight(.semibold))
                                 .padding(.horizontal, 10).padding(.vertical, 6)
                                 .background(metric == m ? m.tint.opacity(0.18) : Theme.cardRaised, in: Capsule())
@@ -196,7 +196,7 @@ struct TrendCard: View {
     private func miniStat(_ label: String, _ value: String) -> some View {
         VStack(spacing: 2) {
             Text(value).font(.subheadline.weight(.semibold).monospacedDigit()).lineLimit(1).minimumScaleFactor(0.7)
-            Text(label).font(.caption2).foregroundStyle(Theme.textSecondary)
+            Text(LS(label)).font(.caption2).foregroundStyle(Theme.textSecondary)
         }
         .frame(maxWidth: .infinity)
     }
@@ -246,7 +246,7 @@ struct AppDownloadBars: View {
     private func legend(_ color: Color, _ title: String) -> some View {
         HStack(spacing: 6) {
             Circle().fill(color).frame(width: 9, height: 9)
-            Text(title)
+            Text(LS(title))
         }
     }
 }
@@ -294,7 +294,7 @@ struct ShareDonut: View {
                 ForEach(Array(all.enumerated()), id: \.element.id) { entry in
                     HStack(spacing: 8) {
                         Circle().fill(Theme.series[entry.offset % Theme.series.count]).frame(width: 9, height: 9)
-                        Text(entry.element.label).font(.caption).lineLimit(1)
+                        Text(LS(entry.element.label)).font(.caption).lineLimit(1)
                         Spacer(minLength: 4)
                         Text(Fmt.percent(Double(entry.element.value) / Double(total))).font(.caption.monospacedDigit()).foregroundStyle(Theme.textSecondary)
                     }

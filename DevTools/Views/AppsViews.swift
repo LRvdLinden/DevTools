@@ -42,7 +42,7 @@ struct AppsListView: View {
                     HStack(spacing: 8) {
                         ForEach(Filter.allCases) { f in
                             Button { withAnimation(.snappy) { filter = f } } label: {
-                                Text(f.rawValue)
+                                Text(LS(f.rawValue))
                                     .font(.subheadline.weight(.semibold))
                                     .padding(.horizontal, 12).padding(.vertical, 7)
                                     .background(filter == f ? Theme.accent : Theme.card, in: Capsule())
@@ -123,7 +123,7 @@ struct AppDetailView: View {
                         StatTile(title: "Updates", value: Fmt.number(summary.updates), systemImage: "arrow.triangle.2.circlepath", tint: Theme.pending)
                     }
                     StatTile(title: "Rating", value: app.rating.map { String(format: "%.1f ★", $0) } ?? "—", systemImage: "star.fill", tint: .yellow,
-                             footnote: app.ratingCount.map { "\(Fmt.number($0)) beoordelingen" })
+                             footnote: app.ratingCount.map { L("\(Fmt.number($0)) beoordelingen") })
                     StatTile(title: "Laatste build", value: app.latestBuild?.number ?? "—", systemImage: "hammer.fill", tint: Theme.cyan,
                              footnote: app.latestBuild.map { Fmt.relative($0.uploaded) })
                 }
@@ -200,7 +200,7 @@ struct AppDetailView: View {
     }
 
     private func pill(_ text: String, _ color: Color) -> some View {
-        Text(text)
+        Text(LS(text))
             .font(.caption2.weight(.semibold))
             .padding(.horizontal, 7).padding(.vertical, 3)
             .background(color.opacity(0.15), in: Capsule())
@@ -223,7 +223,7 @@ struct AppDetailView: View {
                         Image(systemName: Platform.icon(v.platform)).foregroundStyle(Theme.accent).frame(width: 22)
                         VStack(alignment: .leading, spacing: 2) {
                             Text("\(v.platformLabel) \(v.versionString)").font(.subheadline.weight(.semibold))
-                            Text(v.created.map { "Aangemaakt \(Fmt.day($0))" } ?? "").font(.caption2).foregroundStyle(Theme.textSecondary)
+                            Text(v.created.map { L("Aangemaakt \(Fmt.day($0))") } ?? "").font(.caption2).foregroundStyle(Theme.textSecondary)
                         }
                         Spacer()
                         StateBadge(state: v.state)
@@ -278,7 +278,7 @@ struct AppDetailView: View {
                     .foregroundStyle(.white)
                     .frame(width: 30, height: 30)
                     .background(color, in: RoundedRectangle(cornerRadius: 7, style: .continuous))
-                Text(title).font(.subheadline.weight(.medium)).foregroundStyle(.primary)
+                Text(LS(title)).font(.subheadline.weight(.medium)).foregroundStyle(.primary)
                 Spacer()
                 Image(systemName: "chevron.right").font(.caption).foregroundStyle(.tertiary)
             }

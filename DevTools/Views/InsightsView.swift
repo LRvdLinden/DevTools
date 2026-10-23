@@ -42,7 +42,7 @@ struct InsightsView: View {
                     let series = appSeries()
                     if !series.isEmpty {
                         VStack(alignment: .leading, spacing: 12) {
-                            SectionHeader(title: "Installaties per app", subtitle: "Top 5 · \(store.salesRange.title.lowercased())")
+                            SectionHeader(title: "Installaties per app", subtitle: L("Top 5 · \(store.salesRange.title.lowercased())"))
                             Chart(series) { p in
                                 LineMark(x: .value("Datum", p.date), y: .value("Installaties", p.value))
                                     .foregroundStyle(by: .value("App", p.app))
@@ -118,7 +118,7 @@ struct InsightsView: View {
     private var statusCard: some View {
         let counts = Dictionary(grouping: store.apps, by: { AppState.info(for: $0.headlineState).label }).map { ShareItem(id: $0.key, label: $0.key, value: $0.value.count) }.sorted { $0.value > $1.value }
         return VStack(alignment: .leading, spacing: 12) {
-            SectionHeader(title: "Status van je apps", subtitle: "\(store.apps.count) apps")
+            SectionHeader(title: "Status van je apps", subtitle: L("\(store.apps.count) apps"))
             if counts.isEmpty { Text("Geen apps").font(.footnote).foregroundStyle(Theme.textSecondary) }
             else { ShareDonut(items: counts, limit: 6) }
         }
@@ -126,7 +126,7 @@ struct InsightsView: View {
     }
 
     private func trendText(_ t: Int) -> String {
-        t == 0 ? "stabiel" : (t > 0 ? "▲ \(Fmt.number(t)) t.o.v. eerste helft" : "▼ \(Fmt.number(-t)) t.o.v. eerste helft")
+        t == 0 ? L("stabiel") : (t > 0 ? L("▲ \(Fmt.number(t)) t.o.v. eerste helft") : L("▼ \(Fmt.number(-t)) t.o.v. eerste helft"))
     }
 
     private func appSeries() -> [AppSeriesPoint] {

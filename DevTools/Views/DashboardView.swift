@@ -25,10 +25,10 @@ struct DashboardView: View {
                                  footnote: store.salesRange.title)
                         StatTile(title: "Opbrengst", value: sales.points.isEmpty ? "…" : Fmt.money(sales.proceeds, sales.currency),
                                  systemImage: "eurosign.circle.fill", tint: Theme.live,
-                                 footnote: sales.iap > 0 ? "\(Fmt.number(sales.iap)) in-app aankopen" : nil)
+                                 footnote: sales.iap > 0 ? L("\(Fmt.number(sales.iap)) in-app aankopen") : nil)
                     }
                     StatTile(title: "Live", value: "\(apps.filter(\.isLive).count)", systemImage: "checkmark.seal.fill", tint: Theme.live,
-                             footnote: "van \(apps.count) apps")
+                             footnote: L("van \(apps.count) apps"))
                     StatTile(title: "In review", value: "\(apps.filter(\.inReview).count)", systemImage: "hourglass",
                              tint: apps.contains(where: \.inReview) ? Theme.review : Theme.textSecondary)
                     if store.active?.hasVendor == true {
@@ -116,9 +116,9 @@ struct DashboardView: View {
     private var greeting: String {
         let h = Calendar.current.component(.hour, from: .now)
         switch h {
-        case 5..<12: return "Goedemorgen"
-        case 12..<18: return "Goedemiddag"
-        default: return "Goedenavond"
+        case 5..<12: return L("Goedemorgen")
+        case 12..<18: return L("Goedemiddag")
+        default: return L("Goedenavond")
         }
     }
 
@@ -167,7 +167,7 @@ struct ActionNeededCard: View {
                             AppIconView(url: entry.0.iconURL, size: 30, name: entry.0.name)
                             VStack(alignment: .leading, spacing: 1) {
                                 Text(entry.0.name).font(.subheadline.weight(.medium)).lineLimit(1)
-                                Text(entry.1).font(.caption).foregroundStyle(Theme.textSecondary).lineLimit(1)
+                                Text(LS(entry.1)).font(.caption).foregroundStyle(Theme.textSecondary).lineLimit(1)
                             }
                             Spacer()
                             StateBadge(state: entry.2)
@@ -188,16 +188,16 @@ struct ActionNeededCard: View {
             if let p = app.pendingVersion {
                 switch p.state {
                 case "REJECTED", "METADATA_REJECTED", "INVALID_BINARY":
-                    out.append((app, "Versie \(p.versionString) is afgewezen", p.state))
+                    out.append((app, L("Versie \(p.versionString) is afgewezen"), p.state))
                 case "WAITING_FOR_REVIEW", "IN_REVIEW":
-                    out.append((app, "Versie \(p.versionString) bij App Review", p.state))
+                    out.append((app, L("Versie \(p.versionString) bij App Review"), p.state))
                 case "PENDING_DEVELOPER_RELEASE":
-                    out.append((app, "Versie \(p.versionString) kan vrijgegeven worden", p.state))
+                    out.append((app, L("Versie \(p.versionString) kan vrijgegeven worden"), p.state))
                 default: break
                 }
             }
             if let b = app.latestBuild, b.needsCompliance {
-                out.append((app, "Build \(b.number): export compliance ontbreekt", "MISSING_EXPORT_COMPLIANCE"))
+                out.append((app, L("Build \(b.number): export compliance ontbreekt"), "MISSING_EXPORT_COMPLIANCE"))
             }
         }
         return out

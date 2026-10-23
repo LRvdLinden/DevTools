@@ -103,7 +103,7 @@ extension ConnectAPI {
             ("filter[platform]", platform),
             ("filter[state]", "WAITING_FOR_REVIEW,IN_REVIEW,UNRESOLVED_ISSUES,READY_FOR_REVIEW")
         ])
-        guard !active.data.isEmpty else { throw ConnectError(message: "Geen actieve review-inzending gevonden.") }
+        guard !active.data.isEmpty else { throw ConnectError(message: L("Geen actieve review-inzending gevonden.")) }
         for sub in active.data {
             try await patch("/v1/reviewSubmissions/\(sub.id)", type: "reviewSubmissions", id: sub.id, attributes: ["canceled": true])
         }

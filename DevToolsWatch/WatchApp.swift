@@ -61,7 +61,7 @@ final class WatchStore: NSObject {
     func refresh() {
         let session = WCSession.default
         guard session.activationState == .activated, session.isReachable else {
-            message = "iPhone niet bereikbaar. Open DevTools op je iPhone."
+            message = L("iPhone niet bereikbaar. Open DevTools op je iPhone.")
             return
         }
         refreshing = true
@@ -71,7 +71,7 @@ final class WatchStore: NSObject {
             let icons = reply["icons"] as? [String: Data]
             Task { @MainActor in
                 self.refreshing = false
-                if let data { self.apply(data, icons: icons) } else { self.message = "Open DevTools op je iPhone om gegevens te laden." }
+                if let data { self.apply(data, icons: icons) } else { self.message = L("Open DevTools op je iPhone om gegevens te laden.") }
             }
         }, errorHandler: { error in
             let text = error.localizedDescription
@@ -315,7 +315,7 @@ struct WatchStat: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
-            Label(title, systemImage: icon).font(.system(size: 11)).foregroundStyle(tint).lineLimit(1)
+            Label(LS(title), systemImage: icon).font(.system(size: 11)).foregroundStyle(tint).lineLimit(1)
             Text(value).font(.system(.title3, design: .rounded).weight(.semibold).monospacedDigit()).lineLimit(1).minimumScaleFactor(0.6)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -410,7 +410,7 @@ struct WatchAppDetailView: View {
 
     private func row(_ title: String, _ value: String, _ tint: Color) -> some View {
         HStack {
-            Text(title).foregroundStyle(.secondary)
+            Text(LS(title)).foregroundStyle(.secondary)
             Spacer()
             Text(value).foregroundStyle(tint).lineLimit(1).minimumScaleFactor(0.7)
         }

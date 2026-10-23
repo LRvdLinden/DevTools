@@ -33,11 +33,11 @@ enum SalesKind: String, CaseIterable {
 
     var label: String {
         switch self {
-        case .download: return "Downloads"
-        case .redownload: return "Herdownloads"
-        case .update: return "Updates"
-        case .iap: return "In-app aankopen"
-        case .other: return "Overig"
+        case .download: return L("Downloads")
+        case .redownload: return L("Herdownloads")
+        case .update: return L("Updates")
+        case .iap: return L("In-app aankopen")
+        case .other: return L("Overig")
         }
     }
 }
@@ -48,10 +48,10 @@ enum SalesRange: String, CaseIterable, Identifiable {
     var label: String { rawValue }
     var title: String {
         switch self {
-        case .week: return "Afgelopen 7 dagen"
-        case .month: return "Afgelopen 30 dagen"
-        case .quarter: return "Afgelopen 90 dagen"
-        case .year: return "Afgelopen jaar (per week)"
+        case .week: return L("Afgelopen 7 dagen")
+        case .month: return L("Afgelopen 30 dagen")
+        case .quarter: return L("Afgelopen 90 dagen")
+        case .year: return L("Afgelopen jaar (per week)")
         }
     }
     var weekly: Bool { self == .year }
@@ -226,7 +226,7 @@ enum SalesEngine {
 
     static func load(account: DeveloperAccount, range: SalesRange, progress: (@MainActor (Double) -> Void)? = nil) async -> Result {
         guard let vendor = account.vendorNumber?.trimmingCharacters(in: .whitespaces), !vendor.isEmpty else {
-            return Result(error: "Geen vendornummer ingesteld.")
+            return Result(error: L("Geen vendornummer ingesteld."))
         }
         let api = ConnectAPI(account: account)
         let dates = dates(for: range)

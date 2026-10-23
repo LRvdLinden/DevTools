@@ -85,10 +85,10 @@ struct VersionDetailView: View {
                 if let build {
                     BuildRow(build: build)
                 } else {
-                    Text(loading ? "Laden…" : "Nog geen build gekozen").foregroundStyle(Theme.textSecondary)
+                    Text(LS(loading ? "Laden…" : "Nog geen build gekozen")).foregroundStyle(Theme.textSecondary)
                 }
                 if version.isEditable {
-                    Button { showBuildPicker = true } label: { Label(build == nil ? "Kies build" : "Andere build kiezen", systemImage: "hammer") }
+                    Button { showBuildPicker = true } label: { Label(LS(build == nil ? "Kies build" : "Andere build kiezen"), systemImage: "hammer") }
                 }
             } header: { Text("Build") } footer: {
                 Text("Builds upload je vanuit Xcode of Transporter. Hier koppel je een verwerkte build aan deze versie.")
@@ -250,7 +250,7 @@ struct VersionDetailView: View {
 
     private func attach(_ b: BuildInfo) async {
         guard let api = store.api else { return }
-        await run("Build \(b.number) gekoppeld") { try await api.setVersionBuild(versionID: version.id, buildID: b.id) }
+        await run(L("Build \(b.number) gekoppeld")) { try await api.setVersionBuild(versionID: version.id, buildID: b.id) }
     }
 
     private func submit() async {
@@ -270,7 +270,7 @@ struct VersionDetailView: View {
 
     private func addLocale(_ code: String) async {
         guard let api = store.api else { return }
-        await run("\(Locales.name(code)) toegevoegd") { try await api.createVersionLocalization(versionID: version.id, locale: code, attributes: [:]) }
+        await run(L("\(Locales.name(code)) toegevoegd")) { try await api.createVersionLocalization(versionID: version.id, locale: code, attributes: [:]) }
     }
 
     private func deleteVersion() async {
@@ -394,8 +394,8 @@ struct LocalizationEditorView: View {
             do { try await api.updateVersionLocalization(loc.id, attributes: ["whatsNew": whatsNew]) }
             catch { failed.append(loc.attributes.locale ?? loc.id) }
         }
-        if failed.isEmpty { feedback = "What's New in \(all.count) talen gezet" }
-        else { error = "Niet gelukt voor: \(failed.joined(separator: ", "))" }
+        if failed.isEmpty { feedback = L("What's New in \(all.count) talen gezet") }
+        else { error = L("Niet gelukt voor: \(failed.joined(separator: ", "))") }
         await onSaved()
     }
 }

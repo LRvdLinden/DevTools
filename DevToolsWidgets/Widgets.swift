@@ -143,7 +143,7 @@ struct WidgetHeader: View {
     var body: some View {
         HStack(spacing: 5) {
             Image("DevLogo").resizable().scaledToFit().frame(width: 14, height: 14)
-            Text(title).font(.caption2.weight(.semibold)).foregroundStyle(.secondary).lineLimit(1)
+            Text(LS(title)).font(.caption2.weight(.semibold)).foregroundStyle(.secondary).lineLimit(1)
             Spacer(minLength: 0)
             if let trailing { Text(trailing).font(.caption2.monospacedDigit()).foregroundStyle(.tertiary).lineLimit(1) }
         }
@@ -356,7 +356,7 @@ struct DownloadsWidgetView: View {
                 HStack(spacing: 8) {
                     if let app { AppIcon(app: app, size: 30) } else { Image("DevLogo").resizable().frame(width: 26, height: 26) }
                     VStack(alignment: .leading, spacing: 0) {
-                        Text(title).font(.subheadline.weight(.semibold)).lineLimit(1)
+                        Text(LS(title)).font(.subheadline.weight(.semibold)).lineLimit(1)
                         if let app {
                             Text(app.statusLabel + (app.liveVersion.map { " · v\($0)" } ?? ""))
                                 .font(.caption2).foregroundStyle(W.color(for: app.state)).lineLimit(1)
@@ -407,7 +407,7 @@ struct DownloadsWidgetView: View {
             } else {
                 Image("DevLogo").resizable().frame(width: iconSize - 2, height: iconSize - 2)
             }
-            Text(title).font(.caption.weight(.semibold)).lineLimit(1)
+            Text(LS(title)).font(.caption.weight(.semibold)).lineLimit(1)
         }
     }
 }
@@ -606,7 +606,7 @@ struct StatusWidgetView: View {
                 .background(tint.opacity(0.15), in: Circle())
             VStack(alignment: .leading, spacing: -1) {
                 Text("\(value)").font(.subheadline.weight(.bold).monospacedDigit())
-                Text(label).font(.system(size: 9)).foregroundStyle(.secondary).lineLimit(1)
+                Text(LS(label)).font(.system(size: 9)).foregroundStyle(.secondary).lineLimit(1)
             }
         }
     }
@@ -615,7 +615,7 @@ struct StatusWidgetView: View {
         VStack(spacing: 2) {
             Image(systemName: icon).font(.caption.weight(.bold)).foregroundStyle(tint)
             Text(value).font(.headline.monospacedDigit()).lineLimit(1).minimumScaleFactor(0.6)
-            Text(label).font(.system(size: 9)).foregroundStyle(.secondary).lineLimit(1).minimumScaleFactor(0.7)
+            Text(LS(label)).font(.system(size: 9)).foregroundStyle(.secondary).lineLimit(1).minimumScaleFactor(0.7)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 6)

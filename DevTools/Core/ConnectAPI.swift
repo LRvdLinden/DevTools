@@ -32,7 +32,7 @@ enum Vault {
         add[kSecValueData as String] = Data(value.utf8)
         add[kSecAttrAccessible as String] = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
         let code = SecItemAdd(add as CFDictionary, nil)
-        if code != errSecSuccess { throw ConnectError(message: "Keychain-fout: \(code)") }
+        if code != errSecSuccess { throw ConnectError(message: L("Keychain-fout: \(code)")) }
     }
 
     static func read(_ key: String) -> String? {
@@ -63,10 +63,10 @@ struct ConnectAPI {
     // MARK: Auth
 
     func token() throws -> String {
-        guard let pem = Vault.read(account.id.uuidString) else { throw ConnectError(message: "Privésleutel (.p8) ontbreekt voor dit account. Voeg het account opnieuw toe.") }
+        guard let pem = Vault.read(account.id.uuidString) else { throw ConnectError(message: L("Privésleutel (.p8) ontbreekt voor dit account. Voeg het account opnieuw toe.")) }
         let key: P256.Signing.PrivateKey
         do { key = try P256.Signing.PrivateKey(pemRepresentation: pem) }
-        catch { throw ConnectError(message: "Ongeldige ES256 .p8-sleutel: \(error.localizedDescription)") }
+        catch { throw ConnectError(message: L("Ongeldige ES256 .p8-sleutel: \(error.localizedDescription)")) }
         let now = Int(Date().timeIntervalSince1970)
         let header: [String: Any] = ["alg": "ES256", "kid": account.keyID, "typ": "JWT"]
         let payload: [String: Any] = ["iss": account.issuerID, "iat": now - 10, "exp": now + 1100, "aud": "appstoreconnect-v1"]
@@ -122,7 +122,7 @@ struct ConnectAPI {
         }
         request.timeoutInterval = 30
         let (data, response) = try await URLSession.shared.data(for: request)
-        guard let http = response as? HTTPURLResponse else { throw ConnectError(message: "Geen HTTP-antwoord van Apple") }
+        guard let http = response as? HTTPURLResponse else { throw ConnectError(message: L("Geen HTTP-antwoord van Apple")) }
         guard (200..<300).contains(http.statusCode) else {
             throw Self.error(from: data, status: http.statusCode)
         }
@@ -145,12 +145,12 @@ struct ConnectAPI {
         }
         let prefix: String
         switch status {
-        case 401: prefix = "Authenticatie mislukt (401). Controleer Issuer ID, Key ID en de .p8-sleutel."
-        case 403: prefix = "Geen toegang (403). De API-sleutel heeft niet de juiste rol voor deze actie."
-        case 404: prefix = "Niet gevonden (404)."
-        case 409: prefix = "Apple weigert deze wijziging (409)."
-        case 429: prefix = "Te veel verzoeken (429). Probeer het zo opnieuw."
-        default: prefix = "Apple API-fout \(status)."
+        case 401: prefix = L("Authenticatie mislukt (401). Controleer Issuer ID, Key ID en de .p8-sleutel.")
+        case 403: prefix = L("Geen toegang (403). De API-sleutel heeft niet de juiste rol voor deze actie.")
+        case 404: prefix = L("Niet gevonden (404).")
+        case 409: prefix = L("Apple weigert deze wijziging (409).")
+        case 429: prefix = L("Te veel verzoeken (429). Probeer het zo opnieuw.")
+        default: prefix = L("Apple API-fout \(status).")
         }
         return ConnectError(message: detail.isEmpty ? prefix : prefix + "\n" + detail, status: status)
     }
@@ -160,7 +160,7 @@ struct ConnectAPI {
         do {
             return try JSONDecoder().decode(T.self, from: data)
         } catch {
-            throw ConnectError(message: "Antwoord van Apple kon niet gelezen worden: \(error.localizedDescription)")
+            throw ConnectError(message: L("Antwoord van Apple kon niet gelezen worden: \(error.localizedDescription)"))
         }
     }
 
@@ -175,7 +175,7 @@ struct ConnectAPI {
             let (data, _) = try await send("GET", u)
             let page: ListDocument<A>
             do { page = try JSONDecoder().decode(ListDocument<A>.self, from: data) }
-            catch { throw ConnectError(message: "Antwoord van Apple kon niet gelezen worden: \(error.localizedDescription)") }
+            catch { throw ConnectError(message: L("Antwoord van Apple kon niet gelezen worden: \(error.localizedDescription)")) }
             records.append(contentsOf: page.data)
             included.append(contentsOf: page.included ?? [])
             next = page.links?.next.flatMap { URL(string: $0) }
@@ -193,7 +193,7 @@ struct ConnectAPI {
     func create<A: Decodable>(_ path: String, _ body: [String: Any], as type: A.Type) async throws -> Resource<A> {
         let data = try await write("POST", path, body)
         do { return try JSONDecoder().decode(SingleDocument<A>.self, from: data).data }
-        catch { throw ConnectError(message: "Aangemaakt, maar het antwoord kon niet gelezen worden.") }
+        catch { throw ConnectError(message: L("Aangemaakt, maar het antwoord kon niet gelezen worden.")) }
     }
 
     func patch(_ path: String, type: String, id: String, attributes: [String: Any]) async throws {
@@ -232,12 +232,12 @@ enum Gzip {
         if flags & 0x08 != 0 { while offset < bytes.count && bytes[offset] != 0 { offset += 1 }; offset += 1 }
         if flags & 0x10 != 0 { while offset < bytes.count && bytes[offset] != 0 { offset += 1 }; offset += 1 }
         if flags & 0x02 != 0 { offset += 2 }
-        guard offset < bytes.count - 8 else { throw ConnectError(message: "Ongeldig rapportbestand") }
+        guard offset < bytes.count - 8 else { throw ConnectError(message: L("Ongeldig rapportbestand")) }
         let deflate = Data(bytes[offset..<(bytes.count - 8)])
         do {
             return try (deflate as NSData).decompressed(using: .zlib) as Data
         } catch {
-            throw ConnectError(message: "Rapport kon niet uitgepakt worden: \(error.localizedDescription)")
+            throw ConnectError(message: L("Rapport kon niet uitgepakt worden: \(error.localizedDescription)"))
         }
     }
 }

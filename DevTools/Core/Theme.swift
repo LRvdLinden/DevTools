@@ -58,9 +58,9 @@ enum AppearanceSetting: String, CaseIterable, Identifiable {
     var id: String { rawValue }
     var label: String {
         switch self {
-        case .system: return "Automatisch (toestel)"
-        case .light: return "Licht"
-        case .dark: return "Donker"
+        case .system: return L("Automatisch (toestel)")
+        case .light: return L("Licht")
+        case .dark: return L("Donker")
         }
     }
     var icon: String {
@@ -164,7 +164,7 @@ struct StatTile: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Label(title, systemImage: systemImage)
+            Label(LS(title), systemImage: systemImage)
                 .font(.caption.weight(.medium))
                 .foregroundStyle(Theme.textSecondary)
                 .lineLimit(1)
@@ -175,7 +175,7 @@ struct StatTile: View {
                 .minimumScaleFactor(0.6)
                 .contentTransition(.numericText())
             if let footnote {
-                Text(footnote)
+                Text(LS(footnote))
                     .font(.caption2.weight(.medium))
                     .foregroundStyle(footnoteColor)
                     .lineLimit(1)
@@ -285,39 +285,39 @@ enum AppState {
 
     static func info(for raw: String) -> Info {
         switch raw {
-        case "READY_FOR_SALE": return Info(label: "Live", color: Theme.live)
-        case "READY_FOR_DISTRIBUTION": return Info(label: "Klaar voor distributie", color: Theme.cyan)
-        case "WAITING_FOR_REVIEW": return Info(label: "Wacht op review", color: Theme.review)
-        case "IN_REVIEW": return Info(label: "In review", color: Theme.review)
-        case "READY_FOR_REVIEW": return Info(label: "Klaar voor review", color: Theme.review)
-        case "PREPARE_FOR_SUBMISSION": return Info(label: "Voorbereiden", color: Theme.accent)
-        case "PENDING_DEVELOPER_RELEASE": return Info(label: "Klaar voor release", color: Theme.pending)
-        case "PENDING_APPLE_RELEASE": return Info(label: "Wacht op Apple", color: Theme.pending)
-        case "ACCEPTED": return Info(label: "Goedgekeurd", color: Theme.live)
-        case "PROCESSING_FOR_APP_STORE", "PROCESSING_FOR_DISTRIBUTION", "PROCESSING": return Info(label: "Verwerken", color: Theme.review)
-        case "REJECTED", "METADATA_REJECTED", "INVALID_BINARY", "BETA_REJECTED": return Info(label: "Afgewezen", color: Theme.rejected)
-        case "DEVELOPER_REJECTED": return Info(label: "Teruggetrokken", color: Theme.textSecondary)
-        case "WAITING_FOR_EXPORT_COMPLIANCE", "MISSING_EXPORT_COMPLIANCE": return Info(label: "Export compliance", color: Theme.review)
-        case "REPLACED_WITH_NEW_VERSION": return Info(label: "Vervangen", color: Theme.textSecondary)
-        case "DEVELOPER_REMOVED_FROM_SALE", "REMOVED_FROM_SALE", "REMOVED_FROM_DISTRIBUTION": return Info(label: "Niet beschikbaar", color: Theme.textSecondary)
-        case "PENDING_CONTRACT": return Info(label: "Contract nodig", color: Theme.review)
+        case "READY_FOR_SALE": return Info(label: L("Live"), color: Theme.live)
+        case "READY_FOR_DISTRIBUTION": return Info(label: L("Klaar voor distributie"), color: Theme.cyan)
+        case "WAITING_FOR_REVIEW": return Info(label: L("Wacht op review"), color: Theme.review)
+        case "IN_REVIEW": return Info(label: L("In review"), color: Theme.review)
+        case "READY_FOR_REVIEW": return Info(label: L("Klaar voor review"), color: Theme.review)
+        case "PREPARE_FOR_SUBMISSION": return Info(label: L("Voorbereiden"), color: Theme.accent)
+        case "PENDING_DEVELOPER_RELEASE": return Info(label: L("Klaar voor release"), color: Theme.pending)
+        case "PENDING_APPLE_RELEASE": return Info(label: L("Wacht op Apple"), color: Theme.pending)
+        case "ACCEPTED": return Info(label: L("Goedgekeurd"), color: Theme.live)
+        case "PROCESSING_FOR_APP_STORE", "PROCESSING_FOR_DISTRIBUTION", "PROCESSING": return Info(label: L("Verwerken"), color: Theme.review)
+        case "REJECTED", "METADATA_REJECTED", "INVALID_BINARY", "BETA_REJECTED": return Info(label: L("Afgewezen"), color: Theme.rejected)
+        case "DEVELOPER_REJECTED": return Info(label: L("Teruggetrokken"), color: Theme.textSecondary)
+        case "WAITING_FOR_EXPORT_COMPLIANCE", "MISSING_EXPORT_COMPLIANCE": return Info(label: L("Export compliance"), color: Theme.review)
+        case "REPLACED_WITH_NEW_VERSION": return Info(label: L("Vervangen"), color: Theme.textSecondary)
+        case "DEVELOPER_REMOVED_FROM_SALE", "REMOVED_FROM_SALE", "REMOVED_FROM_DISTRIBUTION": return Info(label: L("Niet beschikbaar"), color: Theme.textSecondary)
+        case "PENDING_CONTRACT": return Info(label: L("Contract nodig"), color: Theme.review)
         // Builds / TestFlight
-        case "VALID": return Info(label: "Gereed", color: Theme.live)
-        case "FAILED", "INVALID": return Info(label: "Mislukt", color: Theme.rejected)
-        case "EXPIRED": return Info(label: "Verlopen", color: Theme.textSecondary)
-        case "READY_FOR_BETA_TESTING": return Info(label: "Klaar om te testen", color: Theme.accent)
-        case "IN_BETA_TESTING": return Info(label: "In test", color: Theme.live)
-        case "READY_FOR_BETA_SUBMISSION": return Info(label: "Klaar voor beta-review", color: Theme.accent)
-        case "WAITING_FOR_BETA_REVIEW": return Info(label: "Wacht op beta-review", color: Theme.review)
-        case "IN_BETA_REVIEW": return Info(label: "In beta-review", color: Theme.review)
-        case "BETA_APPROVED": return Info(label: "Beta goedgekeurd", color: Theme.live)
-        case "IN_EXPORT_COMPLIANCE_REVIEW": return Info(label: "Compliance review", color: Theme.review)
-        case "PROCESSING_EXCEPTION": return Info(label: "Fout bij verwerken", color: Theme.rejected)
-        case "NOT_IN_TESTING": return Info(label: "Niet in test", color: Theme.textSecondary)
+        case "VALID": return Info(label: L("Gereed"), color: Theme.live)
+        case "FAILED", "INVALID": return Info(label: L("Mislukt"), color: Theme.rejected)
+        case "EXPIRED": return Info(label: L("Verlopen"), color: Theme.textSecondary)
+        case "READY_FOR_BETA_TESTING": return Info(label: L("Klaar om te testen"), color: Theme.accent)
+        case "IN_BETA_TESTING": return Info(label: L("In test"), color: Theme.live)
+        case "READY_FOR_BETA_SUBMISSION": return Info(label: L("Klaar voor beta-review"), color: Theme.accent)
+        case "WAITING_FOR_BETA_REVIEW": return Info(label: L("Wacht op beta-review"), color: Theme.review)
+        case "IN_BETA_REVIEW": return Info(label: L("In beta-review"), color: Theme.review)
+        case "BETA_APPROVED": return Info(label: L("Beta goedgekeurd"), color: Theme.live)
+        case "IN_EXPORT_COMPLIANCE_REVIEW": return Info(label: L("Compliance review"), color: Theme.review)
+        case "PROCESSING_EXCEPTION": return Info(label: L("Fout bij verwerken"), color: Theme.rejected)
+        case "NOT_IN_TESTING": return Info(label: L("Niet in test"), color: Theme.textSecondary)
         // Review submissions
-        case "UNRESOLVED_ISSUES": return Info(label: "Problemen", color: Theme.rejected)
-        case "CANCELING": return Info(label: "Annuleren…", color: Theme.textSecondary)
-        case "COMPLETING", "COMPLETE": return Info(label: "Afgerond", color: Theme.live)
+        case "UNRESOLVED_ISSUES": return Info(label: L("Problemen"), color: Theme.rejected)
+        case "CANCELING": return Info(label: L("Annuleren…"), color: Theme.textSecondary)
+        case "COMPLETING", "COMPLETE": return Info(label: L("Afgerond"), color: Theme.live)
         default:
             return Info(label: raw.replacingOccurrences(of: "_", with: " ").capitalized, color: Theme.textSecondary)
         }
@@ -331,7 +331,7 @@ struct ErrorBanner: View {
     var body: some View {
         HStack(alignment: .top, spacing: 10) {
             Image(systemName: "exclamationmark.triangle.fill").foregroundStyle(Theme.review)
-            Text(message).font(.footnote).frame(maxWidth: .infinity, alignment: .leading).textSelection(.enabled)
+            Text(LS(message)).font(.footnote).frame(maxWidth: .infinity, alignment: .leading).textSelection(.enabled)
             if let retry { Button("Opnieuw", action: retry).font(.footnote.weight(.semibold)) }
         }
         .padding(12)
@@ -348,8 +348,8 @@ struct SectionHeader: View {
         HStack(alignment: .firstTextBaseline, spacing: 8) {
             if let systemImage { Image(systemName: systemImage).foregroundStyle(Theme.accent) }
             VStack(alignment: .leading, spacing: 2) {
-                Text(title).font(.headline)
-                if let subtitle { Text(subtitle).font(.caption).foregroundStyle(Theme.textSecondary) }
+                Text(LS(title)).font(.headline)
+                if let subtitle { Text(LS(subtitle)).font(.caption).foregroundStyle(Theme.textSecondary) }
             }
             Spacer(minLength: 0)
         }
@@ -363,7 +363,7 @@ struct ActionFeedback: ViewModifier {
     func body(content: Content) -> some View {
         content.overlay(alignment: .bottom) {
             if let message {
-                Text(message)
+                Text(LS(message))
                     .font(.footnote.weight(.medium))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 14).padding(.vertical, 10)
@@ -396,14 +396,14 @@ struct LimitedTextEditor: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack {
-                Text(title).font(.caption.weight(.semibold)).foregroundStyle(Theme.textSecondary)
+                Text(LS(title)).font(.caption.weight(.semibold)).foregroundStyle(Theme.textSecondary)
                 Spacer()
                 Text("\(text.count)/\(limit)")
                     .font(.caption2.monospacedDigit())
                     .foregroundStyle(text.count > limit ? Theme.rejected : Theme.textSecondary)
             }
             if singleLine {
-                TextField(title, text: $text, axis: .vertical)
+                TextField(LS(title), text: $text, axis: .vertical)
                     .lineLimit(1...3)
             } else {
                 TextEditor(text: $text)

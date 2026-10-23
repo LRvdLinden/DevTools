@@ -15,7 +15,7 @@ final class DevStore {
     var lastRefresh: Date?
 
     /// Shown on the splash screen while the first load runs.
-    var phase = "Opstarten…"
+    var phase = L("Opstarten…")
     var progress: Double = 0
 
     // Sales (portfolio)
@@ -42,7 +42,7 @@ final class DevStore {
     var api: ConnectAPI? { active.map { ConnectAPI(account: $0) } }
 
     func requireAPI() throws -> ConnectAPI {
-        guard let api else { throw ConnectError(message: "Geen account geselecteerd") }
+        guard let api else { throw ConnectError(message: L("Geen account geselecteerd")) }
         return api
     }
 
@@ -54,7 +54,7 @@ final class DevStore {
                                     keyID: key.trimmingCharacters(in: .whitespacesAndNewlines),
                                     vendorNumber: vendor.trimmingCharacters(in: .whitespacesAndNewlines))
         guard !item.issuerID.isEmpty, !item.keyID.isEmpty, pem.contains("PRIVATE KEY") else {
-            throw ConnectError(message: "Vul Issuer ID en Key ID in en kies een geldig .p8-bestand")
+            throw ConnectError(message: L("Vul Issuer ID en Key ID in en kies een geldig .p8-bestand"))
         }
         try Vault.save(pem, key: item.id.uuidString)
         accounts.append(item)
@@ -133,7 +133,7 @@ final class DevStore {
         loading = true
         error = nil
         defer { if gen == generation { loading = false } }
-        phase = "Verbinden met App Store Connect…"
+        phase = L("Verbinden met App Store Connect…")
         progress = 0.1
         do {
             let result: (data: [Resource<AppAttributes>], included: [AnyResource]) = try await api.all("/v1/apps", [
@@ -142,7 +142,7 @@ final class DevStore {
             ], max: 400)
             let items = result.data
             guard gen == generation else { return }
-            phase = "Versies en builds ophalen…"
+            phase = L("Versies en builds ophalen…")
             progress = 0.3
             var fresh: [AppSummary] = items.map { r in
                 var a = AppSummary(id: r.id, name: r.attributes.name ?? "App", bundleID: r.attributes.bundleId ?? "",
@@ -175,7 +175,7 @@ final class DevStore {
                 progress = 0.3 + 0.45 * Double(done) / Double(max(ids.count, 1))
             }
 
-            phase = "App-iconen en beoordelingen…"
+            phase = L("App-iconen en beoordelingen…")
             progress = 0.8
             let lookup = await StoreLookup.fetch(ids: ids)
             for i in fresh.indices {
@@ -193,7 +193,7 @@ final class DevStore {
             }
             lastRefresh = .now
             progress = 1
-            phase = "Klaar"
+            phase = L("Klaar")
             saveCachedApps()
             publishSnapshot()
         } catch {

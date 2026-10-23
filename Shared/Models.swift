@@ -103,18 +103,18 @@ struct SharedSnapshot: Codable {
 
     static func label(for state: String) -> String {
         switch state {
-        case "READY_FOR_SALE": return "Live"
-        case "READY_FOR_DISTRIBUTION": return "Klaar voor distributie"
-        case "WAITING_FOR_REVIEW": return "Wacht op review"
-        case "IN_REVIEW": return "In review"
-        case "READY_FOR_REVIEW": return "Klaar voor review"
-        case "PREPARE_FOR_SUBMISSION": return "Voorbereiden"
-        case "PENDING_DEVELOPER_RELEASE": return "Klaar voor release"
-        case "PENDING_APPLE_RELEASE": return "Wacht op Apple"
-        case "REJECTED", "METADATA_REJECTED", "INVALID_BINARY": return "Afgewezen"
-        case "DEVELOPER_REJECTED": return "Teruggetrokken"
-        case "PROCESSING_FOR_DISTRIBUTION", "PROCESSING_FOR_APP_STORE": return "Verwerken"
-        case "MISSING_EXPORT_COMPLIANCE": return "Export compliance"
+        case "READY_FOR_SALE": return L("Live")
+        case "READY_FOR_DISTRIBUTION": return L("Klaar voor distributie")
+        case "WAITING_FOR_REVIEW": return L("Wacht op review")
+        case "IN_REVIEW": return L("In review")
+        case "READY_FOR_REVIEW": return L("Klaar voor review")
+        case "PREPARE_FOR_SUBMISSION": return L("Voorbereiden")
+        case "PENDING_DEVELOPER_RELEASE": return L("Klaar voor release")
+        case "PENDING_APPLE_RELEASE": return L("Wacht op Apple")
+        case "REJECTED", "METADATA_REJECTED", "INVALID_BINARY": return L("Afgewezen")
+        case "DEVELOPER_REJECTED": return L("Teruggetrokken")
+        case "PROCESSING_FOR_DISTRIBUTION", "PROCESSING_FOR_APP_STORE": return L("Verwerken")
+        case "MISSING_EXPORT_COMPLIANCE": return L("Export compliance")
         case "", "—": return "—"
         default: return state.replacingOccurrences(of: "_", with: " ").capitalized
         }
@@ -127,3 +127,11 @@ struct SharedSnapshot: Codable {
             .appendingPathComponent("\(appID).png")
     }
 }
+
+// MARK: - Localization helpers (English + Dutch; Dutch source strings are the keys)
+
+/// Localized string with interpolation support (keys get %@ / %lld specifiers).
+func L(_ value: String.LocalizationValue) -> String { String(localized: value) }
+
+/// Runtime lookup for a string that is already held in a variable.
+func LS(_ key: String) -> String { NSLocalizedString(key, comment: "") }

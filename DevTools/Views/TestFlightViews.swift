@@ -71,7 +71,7 @@ struct AppBuildsView: View {
         let list = builds.filter { showExpired || !$0.expired }
         var out: [BuildGroup] = []
         for b in list {
-            let key = b.marketingVersion.isEmpty ? "Overig" : "\(Platform.label(b.platform)) \(b.marketingVersion)"
+            let key = b.marketingVersion.isEmpty ? L("Overig") : "\(Platform.label(b.platform)) \(b.marketingVersion)"
             if let i = out.firstIndex(where: { $0.id == key }) { out[i].builds.append(b) }
             else { out.append(BuildGroup(id: key, builds: [b])) }
         }
@@ -124,7 +124,7 @@ struct AppBuildsView: View {
 
     private func expire(_ b: BuildInfo) async {
         guard let api = store.api else { return }
-        do { try await api.expireBuild(b.id); feedback = "Build \(b.number) is verlopen"; await load() }
+        do { try await api.expireBuild(b.id); feedback = L("Build \(b.number) is verlopen"); await load() }
         catch { self.error = error.localizedDescription }
     }
 }
@@ -317,13 +317,13 @@ struct BuildDetailView: View {
 
     private func addWhatToTest(_ code: String) async {
         guard let api = store.api else { return }
-        await perform("\(Locales.name(code)) toegevoegd") { try await api.saveWhatToTest(buildID: buildID, localizationID: nil, locale: code, text: "") }
+        await perform(L("\(Locales.name(code)) toegevoegd")) { try await api.saveWhatToTest(buildID: buildID, localizationID: nil, locale: code, text: "") }
     }
 
     private func toggleGroup(_ g: Resource<BetaGroupAttributes>, _ on: Bool) async {
         guard let api = store.api else { return }
         let name = g.attributes.name ?? "groep"
-        await perform(on ? "Toegevoegd aan \(name)" : "Verwijderd uit \(name)") {
+        await perform(on ? L("Toegevoegd aan \(name)") : L("Verwijderd uit \(name)")) {
             if on { try await api.addBuild(buildID, toGroup: g.id) } else { try await api.removeBuild(buildID, fromGroup: g.id) }
         }
     }
@@ -511,7 +511,7 @@ struct BetaGroupDetailView: View {
         do {
             try await api.addTester(groupID: group.id, email: email, firstName: first, lastName: last)
             showAdd = false
-            feedback = "Uitnodiging verstuurd naar \(email)"
+            feedback = L("Uitnodiging verstuurd naar \(email)")
             email = ""; first = ""; last = ""
             await load()
         } catch { self.error = error.localizedDescription; showAdd = false }
