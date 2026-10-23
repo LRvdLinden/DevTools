@@ -15,6 +15,18 @@
     "ar": "الإصدار الأول: تطبيقات App Store كأجهزة مع التنزيلات والحالة والإصدارات والبنيات والتقييمات؛ جهاز المحفظة؛ التدفقات؛ أدوات لوحة المعلومات."
   },
   "1.0.1": {
-    "en": "New device images and rebrand settings page"
+    "en": "New app and device images, settings page in Homey style and neutral example values in the account fields.",
+    "nl": "Nieuwe app- en apparaatafbeeldingen, instellingenpagina in Homey-stijl en neutrale voorbeeldwaarden in de accountvelden.",
+    "de": "Neue App- und Gerätebilder, Einstellungsseite im Homey-Stil und neutrale Beispielwerte in den Kontofeldern.",
+    "fr": "Nouvelles images de l'app et des appareils, page de paramètres au style Homey et valeurs d'exemple neutres dans les champs du compte.",
+    "it": "Nuove immagini dell'app e dei dispositivi, pagina delle impostazioni in stile Homey e valori di esempio neutri nei campi dell'account.",
+    "sv": "Nya app- och enhetsbilder, inställningssida i Homey-stil och neutrala exempelvärden i kontofälten.",
+    "no": "Nye app- og enhetsbilder, innstillingsside i Homey-stil og nøytrale eksempelverdier i kontofeltene.",
+    "es": "Nuevas imágenes de la app y de los dispositivos, página de ajustes con estilo Homey y valores de ejemplo neutros en los campos de la cuenta.",
+    "da": "Nye app- og enhedsbilleder, indstillingsside i Homey-stil og neutrale eksempelværdier i kontofelterne.",
+    "ru": "Новые изображения приложения и устройств, страница настроек в стиле Homey и нейтральные примеры значений в полях учётной записи.",
+    "pl": "Nowe obrazy aplikacji i urządzeń, strona ustawień w stylu Homey oraz neutralne przykładowe wartości w polach konta.",
+    "ko": "새 앱 및 기기 이미지, Homey 스타일의 설정 페이지, 계정 필드의 중립적인 예시 값.",
+    "ar": "صور جديدة للتطبيق والأجهزة، وصفحة إعدادات بنمط Homey، وقيم أمثلة محايدة في حقول الحساب."
   }
 }

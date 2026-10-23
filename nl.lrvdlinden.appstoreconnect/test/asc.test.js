@@ -48,7 +48,7 @@ console.log('✓ aggregation (per app, portfolio, IAP → parent)');
 // ---- 4. Full app run with mocked Homey ----
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'asc-'));
 const triggered = [];
-const settingsStore = { accounts: [{ id: 'a1', name: 'PixelForges', issuerId: 'iss', keyId: 'KEY123', privateKey: pem, vendorNumber: '85734756' }] };
+const settingsStore = { accounts: [{ id: 'a1', name: 'Test', issuerId: 'iss', keyId: 'KEY123', privateKey: pem, vendorNumber: '12345678' }] };
 const card = id => ({ trigger: async (...args) => { triggered.push(id); }, registerRunListener: fn => { cards[id] = fn; } });
 const cards = {};
 const devices = { asc_app: [], asc_portfolio: [] };
