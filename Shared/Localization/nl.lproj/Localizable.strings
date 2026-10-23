@@ -10,6 +10,7 @@
 "%lld van %lld apps" = "%lld van %lld apps";
 ".p8-bestand downloaden" = ".p8-bestand downloaden";
 "10 tekens, staat in de lijst én in de bestandsnaam" = "10 tekens, staat in de lijst én in de bestandsnaam";
+"1j" = "1j";
 "401 – Authenticatie mislukt" = "401 – Authenticatie mislukt";
 "403 – Geen toegang" = "403 – Geen toegang";
 "API-sleutel aanmaken" = "API-sleutel aanmaken";
@@ -35,6 +36,7 @@
 "Alle apps" = "Alle apps";
 "Alleen zonder reactie" = "Alleen zonder reactie";
 "Alles" = "Alles";
+"Alles " = "Alles ";
 "Alles in orde" = "Alles in orde";
 "Andere build kiezen" = "Andere build kiezen";
 "Annuleer" = "Annuleer";

@@ -404,6 +404,8 @@ EN = {
 "Bekijk DevTools met voorbeeldgegevens, zonder API-sleutel.": "Explore DevTools with sample data, no API key needed.",
 "Dit is de demo-modus. Koppel je eigen App Store Connect-account om echte gegevens te zien.": "This is demo mode. Connect your own App Store Connect account to see real data.",
 "Niet beschikbaar in de demo-modus": "Not available in demo mode",
+"1j": "1y",
+"Alles ": "All",
 }
 
 if __name__ == "__main__":
