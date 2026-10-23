@@ -1,0 +1,491 @@
+$ xcrun simctl list devicetypes -j
+,
+      "bundlePath" : "\/Library\/Developer\/CoreSimulator\/Profiles\/DeviceTypes\/Apple Watch Series 2 (38mm).simdevicetype",
+      "maxRuntimeVersion" : 458751,
+      "maxRuntimeVersionString" : "6.255.255",
+      "identifier" : "com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-2-38mm",
+      "modelIdentifier" : "Watch2,3",
+      "minRuntimeVersionString" : "3.0.0",
+      "minRuntimeVersion" : 196608,
+      "name" : "Apple Watch Series 2 (38mm)"
+    },
+    {
+      "productFamily" : "Apple Vision",
+      "bundlePath" : "\/Library\/Developer\/CoreSimulator\/Profiles\/DeviceTypes\/Apple Vision Pro.simdevicetype",
+      "maxRuntimeVersion" : 4294967295,
+      "maxRuntimeVersionString" : "65535.255.255",
+      "identifier" : "com.apple.CoreSimulator.SimDeviceType.Apple-Vision-Pro-4K",
+      "modelIdentifier" : "RealityDevice14,1",
+      "minRuntimeVersionString" : "3.0.0",
+      "minRuntimeVersion" : 196608,
+      "name" : "Apple Vision Pro"
+    },
+    {
+      "productFamily" : "Apple Vision",
+      "bundlePath" : "\/Library\/Developer\/CoreSimulator\/Profiles\/DeviceTypes\/Apple Vision Pro (at 2732x2048).simdevicetype",
+      "maxRuntimeVersion" : 156416,
+      "maxRuntimeVersionString" : "2.99.0",
+      "identifier" : "com.apple.CoreSimulator.SimDeviceType.Apple-Vision-Pro",
+      "modelIdentifier" : "RealityDevice14,1",
+      "minRuntimeVersionString" : "1.0.0",
+      "minRuntimeVersion" : 65536,
+      "name" : "Apple Vision Pro (at 2732x2048)"
+    },
+    {
+      "productFamily" : "iPhone",
+      "bundlePath" : "\/Library\/Developer\/CoreSimulator\/Profiles\/DeviceTypes\/iPod touch (7th generation).simdevicetype",
+      "maxRuntimeVersion" : 1048575,
+      "maxRuntimeVersionString" : "15.255.255",
+      "identifier" : "com.apple.CoreSimulator.SimDeviceType.iPod-touch--7th-generation-",
+      "modelIdentifier" : "iPod9,1",
+      "minRuntimeVersionString" : "12.3.1",
+      "minRuntimeVersion" : 787201,
+      "name" : "iPod touch (7th generation)"
+    }
+  ]
+}
+
+$ xcrun simctl list runtimes -j
+  "supportedDeviceTypes" : [
+        {
+          "bundlePath" : "\/Library\/Developer\/CoreSimulator\/Profiles\/DeviceTypes\/Apple Vision Pro.simdevicetype",
+          "name" : "Apple Vision Pro",
+          "identifier" : "com.apple.CoreSimulator.SimDeviceType.Apple-Vision-Pro-4K",
+          "productFamily" : "Apple Vision"
+        }
+      ],
+      "identifier" : "com.apple.CoreSimulator.SimRuntime.xrOS-26-4",
+      "platform" : "xrOS",
+      "bundlePath" : "\/Library\/Developer\/CoreSimulator\/Volumes\/xrOS_23O249a\/Library\/Developer\/CoreSimulator\/Profiles\/Runtimes\/xrOS 26.4.simruntime",
+      "runtimeRoot" : "\/Library\/Developer\/CoreSimulator\/Volumes\/xrOS_23O249a\/Library\/Developer\/CoreSimulator\/Profiles\/Runtimes\/xrOS 26.4.simruntime\/Contents\/Resources\/RuntimeRoot",
+      "lastUsage" : {
+        "arm64" : "0001-01-01T00:00:00Z"
+      },
+      "name" : "visionOS 26.4"
+    },
+    {
+      "isAvailable" : true,
+      "version" : "26.5",
+      "isInternal" : false,
+      "buildversion" : "23O470",
+      "supportedArchitectures" : [
+        "arm64"
+      ],
+      "supportedDeviceTypes" : [
+        {
+          "bundlePath" : "\/Library\/Developer\/CoreSimulator\/Profiles\/DeviceTypes\/Apple Vision Pro.simdevicetype",
+          "name" : "Apple Vision Pro",
+          "identifier" : "com.apple.CoreSimulator.SimDeviceType.Apple-Vision-Pro-4K",
+          "productFamily" : "Apple Vision"
+        }
+      ],
+      "identifier" : "com.apple.CoreSimulator.SimRuntime.xrOS-26-5",
+      "platform" : "xrOS",
+      "bundlePath" : "\/Library\/Developer\/CoreSimulator\/Volumes\/xrOS_23O470\/Library\/Developer\/CoreSimulator\/Profiles\/Runtimes\/xrOS 26.5.simruntime",
+      "runtimeRoot" : "\/Library\/Developer\/CoreSimulator\/Volumes\/xrOS_23O470\/Library\/Developer\/CoreSimulator\/Profiles\/Runtimes\/xrOS 26.5.simruntime\/Contents\/Resources\/RuntimeRoot",
+      "lastUsage" : {
+        "arm64" : "0001-01-01T00:00:00Z"
+      },
+      "name" : "visionOS 26.5"
+    }
+  ]
+}
+
+TYPES: iPhone 17 Pro, iPhone 17 Pro Max, iPhone 17e, iPhone Air, iPhone 17, iPhone 16 Pro, iPhone 16 Pro Max, iPhone 16e, iPhone 16, iPhone 16 Plus, iPhone 15 Pro, iPhone 15 Pro Max, iPhone 15, iPhone 15 Plus, iPhone 14 Pro, iPhone 14 Pro Max, iPhone 14, iPhone 14 Plus, iPhone SE (3rd generation), iPhone 13 Pro, iPhone 13 Pro Max, iPhone 13, iPhone 13 mini, iPhone 12 Pro, iPhone 12 Pro Max, iPhone 12, iPhone 12 mini, iPhone SE (2nd generation), iPhone 11 Pro, iPhone 11 Pro Max, iPhone 11, iPhone Xʀ, iPhone Xs, iPhone Xs Max, iPhone X, iPhone 8, iPhone 8 Plus, iPhone 7, iPhone 7 Plus, iPhone SE (1st generation), iPhone 6s, iPhone 6s Plus, iPad Pro 13-inch (M5) (16GB), iPad Pro 13-inch (M5), iPad Pro 11-inch (M5) (16GB), iPad Pro 11-inch (M5), iPad Pro 11-inch (M4) (16GB), iPad Pro 11-inch (M4), iPad Pro 13-inch (M4) (16GB), iPad Pro 13-inch (M4), iPad Air 13-inch (M4), iPad Air 11-inch (M4), iPad (A16), iPad Air 13-inch (M3), iPad Air 11-inch (M3), iPad Air 11-inch (M2), iPad Air 13-inch (M2), iPad mini (A17 Pro), iPad Pro (11-inch) (4th generation) (16GB), iPad Pro (11-inch) (4th generation), iPad Pro (12.9-inch) (6th generation) (16GB), iPad Pro (12.9-inch) (6th generation), iPad (10th generation), iPad Air (5th generation), iPad mini (6th generation), iPad Pro (11-inch) (3rd generation), iPad Pro (12.9-inch) (5th generation), iPad (9th generation), iPad Air (4th generation), iPad (8th generation), iPad Air (3rd generation), iPad mini (5th generation), iPad Pro (11-inch) (2nd generation), iPad Pro (12.9-inch) (4th generation), iPad Pro (11-inch) (1st generation), iPad Pro (12.9-inch) (3rd generation), iPad (7th generation), iPad Pro (10.5-inch), iPad Pro (12.9-inch) (2nd generation), iPad (6th generation), iPad Pro (9.7-inch), iPad Pro (12.9-inch) (1st generation), iPad (5th generation), iPad Air 2, iPad mini 4, Apple TV 4K (3rd generation), Apple TV 4K (3rd generation) (at 1080p), Apple TV 4K (2nd generation), Apple TV 4K (2nd generation) (at 1080p), Apple TV 4K, Apple TV 4K (at 1080p), Apple TV, Apple Watch Series 11 (46mm), Apple Watch Series 11 (42mm), Apple Watch Series 10 (46mm), Apple Watch Series 10 (42mm), Apple Watch Series 9 (45mm), Apple Watch Series 9 (41mm), Apple Watch Ultra 3 (49mm), Apple Watch Ultra 2 (49mm), Apple Watch SE 3 (44mm), Apple Watch SE 3 (40mm), Apple Watch Series 8 (45mm), Apple Watch Series 8 (41mm), Apple Watch Ultra (49mm), Apple Watch SE (44mm) (2nd generation), Apple Watch SE (40mm) (2nd generation), Apple Watch Series 7 (45mm), Apple Watch Series 7 (41mm), Apple Watch Series 6 (44mm), Apple Watch Series 6 (40mm), Apple Watch SE (44mm), Apple Watch SE (40mm), Apple Watch Series 5 (44mm), Apple Watch Series 5 (40mm), Apple Watch Series 4 (44mm), Apple Watch Series 4 (40mm), Apple Watch Series 3 (42mm), Apple Watch Series 3 (38mm), Apple Watch Series 2 (42mm), Apple Watch Series 2 (38mm), Apple Vision Pro, Apple Vision Pro (at 2732x2048), iPod touch (7th generation)
+RUNTIMES: iOS 26.2, iOS 26.4, iOS 26.5, tvOS 26.2, tvOS 26.4, tvOS 26.5, watchOS 26.2, watchOS 26.4, watchOS 26.5, visionOS 26.2, visionOS 26.4, visionOS 26.5
+$ xcrun simctl create shot-iphone com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro-Max com.apple.CoreSimulator.SimRuntime.iOS-26-5
+749C724A-1B94-4D5A-834E-8CAE86BF27FE
+
+$ xcrun simctl boot 749C724A-1B94-4D5A-834E-8CAE86BF27FE
+
+$ xcrun simctl bootstatus 749C724A-1B94-4D5A-834E-8CAE86BF27FE -b
+tus=2, isTerminal=NO, Elapsed=03:46.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.locationd.migrator (CoreLocationMigrator.migrator)
+		Migration Elapsed:03:30 seconds
+
+[2026-10-23 10:15:14 +0000] Status=2, isTerminal=NO, Elapsed=03:47.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.locationd.migrator (CoreLocationMigrator.migrator)
+		Migration Elapsed:03:31 seconds
+
+[2026-10-23 10:15:15 +0000] Status=2, isTerminal=NO, Elapsed=03:49.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.locationd.migrator (CoreLocationMigrator.migrator)
+		Migration Elapsed:03:32 seconds
+
+[2026-10-23 10:15:16 +0000] Status=2, isTerminal=NO, Elapsed=03:49.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.cloudrecents.migrator (CloudRecentsMigrator.migrator)
+		Migration Elapsed:03:33 seconds
+
+[2026-10-23 10:15:17 +0000] Status=2, isTerminal=NO, Elapsed=03:50.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.CloudTabsMigrator.migrator (CloudTabsMigrator.migrator)
+		Migration Elapsed:03:34 seconds
+
+[2026-10-23 10:15:18 +0000] Status=2, isTerminal=NO, Elapsed=03:51.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.PreferencesMigrator (PreferencesMigrator.migrator)
+		Migration Elapsed:03:35 seconds
+
+[2026-10-23 10:15:19 +0000] Status=4, isTerminal=NO, Elapsed=03:53.
+	Waiting on System App
+
+[2026-10-23 10:15:20 +0000] Status=4, isTerminal=NO, Elapsed=03:54.
+	Waiting on System App
+
+[2026-10-23 10:15:21 +0000] Status=4, isTerminal=NO, Elapsed=03:55.
+	Waiting on System App
+
+[2026-10-23 10:15:22 +0000] Status=4, isTerminal=NO, Elapsed=03:56.
+	Waiting on System App
+
+[2026-10-23 10:15:23 +0000] Status=4, isTerminal=NO, Elapsed=03:56.
+	Waiting on System App
+
+[2026-10-23 10:15:24 +0000] Status=4, isTerminal=NO, Elapsed=03:57.
+	Waiting on System App
+
+[2026-10-23 10:15:25 +0000] Status=4, isTerminal=NO, Elapsed=03:59.
+	Waiting on System App
+
+[2026-10-23 10:15:32 +0000] Status=4294967295, isTerminal=YES, Elapsed=04:06.
+	Finished
+
+
+$ xcrun simctl ui 749C724A-1B94-4D5A-834E-8CAE86BF27FE appearance dark
+
+$ xcrun simctl status_bar 749C724A-1B94-4D5A-834E-8CAE86BF27FE override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --cellularMode active --cellularBars 4 --batteryState charged --batteryLevel 100
+
+$ xcrun simctl install 749C724A-1B94-4D5A-834E-8CAE86BF27FE dd/Build/Products/Debug-iphonesimulator/DevTools.app
+
+$ xcrun simctl terminate 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools
+An error was encountered processing the command (domain=NSPOSIXErrorDomain, code=3):
+Simulator device failed to terminate nl.lrvdlinden.devtools.
+found nothing to terminate
+Underlying error (domain=NSPOSIXErrorDomain, code=3):
+	The request to terminate "nl.lrvdlinden.devtools" failed. found nothing to terminate
+	found nothing to terminate
+
+$ xcrun simctl launch 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen home
+nl.lrvdlinden.devtools: 17200
+
+$ xcrun simctl io 749C724A-1B94-4D5A-834E-8CAE86BF27FE screenshot --type=png shots/iphone-01-home.png
+Note: No display specified. Defaulting to display: 74A67E66-0DA0-4DD0-BDC0-AC0BE804C1E8 (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/iphone-01-home.png
+
+$ xcrun simctl terminate 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools
+
+$ xcrun simctl launch 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen insights
+nl.lrvdlinden.devtools: 18102
+
+$ xcrun simctl io 749C724A-1B94-4D5A-834E-8CAE86BF27FE screenshot --type=png shots/iphone-02-insights.png
+Note: No display specified. Defaulting to display: 74A67E66-0DA0-4DD0-BDC0-AC0BE804C1E8 (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/iphone-02-insights.png
+
+$ xcrun simctl terminate 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools
+
+$ xcrun simctl launch 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen app
+nl.lrvdlinden.devtools: 18633
+
+$ xcrun simctl io 749C724A-1B94-4D5A-834E-8CAE86BF27FE screenshot --type=png shots/iphone-03-app.png
+Note: No display specified. Defaulting to display: 74A67E66-0DA0-4DD0-BDC0-AC0BE804C1E8 (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/iphone-03-app.png
+
+$ xcrun simctl terminate 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools
+
+$ xcrun simctl launch 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen version
+nl.lrvdlinden.devtools: 18837
+
+$ xcrun simctl io 749C724A-1B94-4D5A-834E-8CAE86BF27FE screenshot --type=png shots/iphone-04-version.png
+Note: No display specified. Defaulting to display: 74A67E66-0DA0-4DD0-BDC0-AC0BE804C1E8 (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/iphone-04-version.png
+
+$ xcrun simctl terminate 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools
+
+$ xcrun simctl launch 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen build
+nl.lrvdlinden.devtools: 19542
+
+$ xcrun simctl io 749C724A-1B94-4D5A-834E-8CAE86BF27FE screenshot --type=png shots/iphone-05-build.png
+Note: No display specified. Defaulting to display: 74A67E66-0DA0-4DD0-BDC0-AC0BE804C1E8 (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/iphone-05-build.png
+
+$ xcrun simctl terminate 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools
+
+$ xcrun simctl launch 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen reviews
+nl.lrvdlinden.devtools: 19635
+
+$ xcrun simctl io 749C724A-1B94-4D5A-834E-8CAE86BF27FE screenshot --type=png shots/iphone-06-reviews.png
+Note: No display specified. Defaulting to display: 74A67E66-0DA0-4DD0-BDC0-AC0BE804C1E8 (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/iphone-06-reviews.png
+
+$ xcrun simctl terminate 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools
+
+$ xcrun simctl launch 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen apps
+nl.lrvdlinden.devtools: 20279
+
+$ xcrun simctl io 749C724A-1B94-4D5A-834E-8CAE86BF27FE screenshot --type=png shots/iphone-07-apps.png
+Note: No display specified. Defaulting to display: 74A67E66-0DA0-4DD0-BDC0-AC0BE804C1E8 (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/iphone-07-apps.png
+
+$ xcrun simctl terminate 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools
+
+$ xcrun simctl launch 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen guide
+nl.lrvdlinden.devtools: 20881
+
+$ xcrun simctl io 749C724A-1B94-4D5A-834E-8CAE86BF27FE screenshot --type=png shots/iphone-08-guide.png
+Note: No display specified. Defaulting to display: 74A67E66-0DA0-4DD0-BDC0-AC0BE804C1E8 (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/iphone-08-guide.png
+
+$ xcrun simctl terminate 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools
+
+$ xcrun simctl launch 749C724A-1B94-4D5A-834E-8CAE86BF27FE nl.lrvdlinden.devtools -demo -holdSplash -AppleLanguages (en) -AppleLocale en_US
+nl.lrvdlinden.devtools: 21430
+
+$ xcrun simctl io 749C724A-1B94-4D5A-834E-8CAE86BF27FE screenshot --type=png shots/iphone-00-splash.png
+Note: No display specified. Defaulting to display: 74A67E66-0DA0-4DD0-BDC0-AC0BE804C1E8 (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/iphone-00-splash.png
+
+$ xcrun simctl shutdown 749C724A-1B94-4D5A-834E-8CAE86BF27FE
+
+iPhone: iPhone 17 Pro Max
+$ xcrun simctl create shot-ipad com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M5-16GB com.apple.CoreSimulator.SimRuntime.iOS-26-5
+2F99BD1F-9470-49A1-9029-C5E17575C1AF
+
+$ xcrun simctl boot 2F99BD1F-9470-49A1-9029-C5E17575C1AF
+
+$ xcrun simctl bootstatus 2F99BD1F-9470-49A1-9029-C5E17575C1AF -b
+igrator, user-agnostic)
+		Migration Elapsed:00:40 seconds
+
+[2026-10-23 10:21:20 +0000] Status=2, isTerminal=NO, Elapsed=00:47.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.securityd.KeychainMigrator (KeychainMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:42 seconds
+
+[2026-10-23 10:21:23 +0000] Status=2, isTerminal=NO, Elapsed=00:49.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.managedconfiguration.migrator (MCProfile.migrator, user-agnostic)
+		Migration Elapsed:00:44 seconds
+
+[2026-10-23 10:21:23 +0000] Status=2, isTerminal=NO, Elapsed=00:50.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.appleaccount.migrator (AppleAccountMigrator.migrator)
+		Migration Elapsed:00:46 seconds
+
+[2026-10-23 10:21:24 +0000] Status=2, isTerminal=NO, Elapsed=00:51.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.managedconfiguration.mdm.migrator (MCMDM.migrator)
+		Migration Elapsed:00:47 seconds
+
+[2026-10-23 10:21:25 +0000] Status=2, isTerminal=NO, Elapsed=00:52.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.coreaudio.HAENDataMigrator (HAENDataMigrator.migrator)
+		Migration Elapsed:00:48 seconds
+
+[2026-10-23 10:21:27 +0000] Status=4, isTerminal=NO, Elapsed=00:54.
+	Waiting on System App
+
+[2026-10-23 10:21:28 +0000] Status=4, isTerminal=NO, Elapsed=00:55.
+	Waiting on System App
+
+[2026-10-23 10:21:28 +0000] Status=4, isTerminal=NO, Elapsed=00:55.
+	Waiting on System App
+
+[2026-10-23 10:21:29 +0000] Status=4, isTerminal=NO, Elapsed=00:56.
+	Waiting on System App
+
+[2026-10-23 10:21:30 +0000] Status=4, isTerminal=NO, Elapsed=00:57.
+	Waiting on System App
+
+[2026-10-23 10:21:31 +0000] Status=4, isTerminal=NO, Elapsed=00:58.
+	Waiting on System App
+
+[2026-10-23 10:21:32 +0000] Status=4, isTerminal=NO, Elapsed=00:59.
+	Waiting on System App
+
+[2026-10-23 10:21:34 +0000] Status=4, isTerminal=NO, Elapsed=01:01.
+	Waiting on System App
+
+[2026-10-23 10:21:40 +0000] Status=4294967295, isTerminal=YES, Elapsed=01:07.
+	Finished
+
+
+$ xcrun simctl ui 2F99BD1F-9470-49A1-9029-C5E17575C1AF appearance dark
+
+$ xcrun simctl status_bar 2F99BD1F-9470-49A1-9029-C5E17575C1AF override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --cellularMode active --cellularBars 4 --batteryState charged --batteryLevel 100
+
+$ xcrun simctl install 2F99BD1F-9470-49A1-9029-C5E17575C1AF dd/Build/Products/Debug-iphonesimulator/DevTools.app
+
+$ xcrun simctl terminate 2F99BD1F-9470-49A1-9029-C5E17575C1AF nl.lrvdlinden.devtools
+An error was encountered processing the command (domain=NSPOSIXErrorDomain, code=3):
+Simulator device failed to terminate nl.lrvdlinden.devtools.
+found nothing to terminate
+Underlying error (domain=NSPOSIXErrorDomain, code=3):
+	The request to terminate "nl.lrvdlinden.devtools" failed. found nothing to terminate
+	found nothing to terminate
+
+$ xcrun simctl launch 2F99BD1F-9470-49A1-9029-C5E17575C1AF nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen home
+nl.lrvdlinden.devtools: 25953
+
+$ xcrun simctl io 2F99BD1F-9470-49A1-9029-C5E17575C1AF screenshot --type=png shots/ipad-01-home.png
+Note: No display specified. Defaulting to display: 34EA0246-0C71-482E-8A5A-DAE830E5B8EE (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/ipad-01-home.png
+
+$ xcrun simctl terminate 2F99BD1F-9470-49A1-9029-C5E17575C1AF nl.lrvdlinden.devtools
+
+$ xcrun simctl launch 2F99BD1F-9470-49A1-9029-C5E17575C1AF nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen insights
+nl.lrvdlinden.devtools: 26300
+
+$ xcrun simctl io 2F99BD1F-9470-49A1-9029-C5E17575C1AF screenshot --type=png shots/ipad-02-insights.png
+Note: No display specified. Defaulting to display: 34EA0246-0C71-482E-8A5A-DAE830E5B8EE (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/ipad-02-insights.png
+
+$ xcrun simctl terminate 2F99BD1F-9470-49A1-9029-C5E17575C1AF nl.lrvdlinden.devtools
+
+$ xcrun simctl launch 2F99BD1F-9470-49A1-9029-C5E17575C1AF nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen app
+nl.lrvdlinden.devtools: 27182
+
+$ xcrun simctl io 2F99BD1F-9470-49A1-9029-C5E17575C1AF screenshot --type=png shots/ipad-03-app.png
+Note: No display specified. Defaulting to display: 34EA0246-0C71-482E-8A5A-DAE830E5B8EE (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/ipad-03-app.png
+
+$ xcrun simctl terminate 2F99BD1F-9470-49A1-9029-C5E17575C1AF nl.lrvdlinden.devtools
+
+$ xcrun simctl launch 2F99BD1F-9470-49A1-9029-C5E17575C1AF nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen build
+nl.lrvdlinden.devtools: 27776
+
+$ xcrun simctl io 2F99BD1F-9470-49A1-9029-C5E17575C1AF screenshot --type=png shots/ipad-04-build.png
+Note: No display specified. Defaulting to display: 34EA0246-0C71-482E-8A5A-DAE830E5B8EE (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/ipad-04-build.png
+
+$ xcrun simctl terminate 2F99BD1F-9470-49A1-9029-C5E17575C1AF nl.lrvdlinden.devtools
+
+$ xcrun simctl launch 2F99BD1F-9470-49A1-9029-C5E17575C1AF nl.lrvdlinden.devtools -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -screen reviews
+nl.lrvdlinden.devtools: 28472
+
+$ xcrun simctl io 2F99BD1F-9470-49A1-9029-C5E17575C1AF screenshot --type=png shots/ipad-05-reviews.png
+Note: No display specified. Defaulting to display: 34EA0246-0C71-482E-8A5A-DAE830E5B8EE (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/ipad-05-reviews.png
+
+$ xcrun simctl shutdown 2F99BD1F-9470-49A1-9029-C5E17575C1AF
+
+iPad: iPad Pro 13-inch (M5) (16GB)
+$ xcrun simctl create shot-watch com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Ultra-3-49mm com.apple.CoreSimulator.SimRuntime.watchOS-26-5
+B18D16E5-83F2-4DD5-B52B-646889C21E1A
+
+$ xcrun simctl boot B18D16E5-83F2-4DD5-B52B-646889C21E1A
+
+$ xcrun simctl bootstatus B18D16E5-83F2-4DD5-B52B-646889C21E1A -b
+after com.apple.accounts.migrator))
+		Migration Elapsed:00:31 seconds
+
+[2026-10-23 10:26:46 +0000] Status=4, isTerminal=NO, Elapsed=00:38.
+	Waiting on System App
+
+[2026-10-23 10:26:47 +0000] Status=4, isTerminal=NO, Elapsed=00:39.
+	Waiting on System App
+
+[2026-10-23 10:26:49 +0000] Status=4, isTerminal=NO, Elapsed=00:40.
+	Waiting on System App
+
+[2026-10-23 10:26:49 +0000] Status=4, isTerminal=NO, Elapsed=00:41.
+	Waiting on System App
+
+[2026-10-23 10:26:52 +0000] Status=4, isTerminal=NO, Elapsed=00:43.
+	Waiting on System App
+
+[2026-10-23 10:26:53 +0000] Status=4, isTerminal=NO, Elapsed=00:44.
+	Waiting on System App
+
+[2026-10-23 10:26:53 +0000] Status=4, isTerminal=NO, Elapsed=00:44.
+	Waiting on System App
+
+[2026-10-23 10:26:55 +0000] Status=4, isTerminal=NO, Elapsed=00:47.
+	Waiting on System App
+
+[2026-10-23 10:26:56 +0000] Status=4, isTerminal=NO, Elapsed=00:47.
+	Waiting on System App
+
+[2026-10-23 10:26:58 +0000] Status=4, isTerminal=NO, Elapsed=00:49.
+	Waiting on System App
+
+[2026-10-23 10:26:59 +0000] Status=4, isTerminal=NO, Elapsed=00:50.
+	Waiting on System App
+
+[2026-10-23 10:26:59 +0000] Status=4, isTerminal=NO, Elapsed=00:51.
+	Waiting on System App
+
+[2026-10-23 10:27:01 +0000] Status=4, isTerminal=NO, Elapsed=00:53.
+	Waiting on System App
+
+[2026-10-23 10:27:03 +0000] Status=4, isTerminal=NO, Elapsed=00:55.
+	Waiting on System App
+
+[2026-10-23 10:27:05 +0000] Status=4, isTerminal=NO, Elapsed=00:57.
+	Waiting on System App
+
+[2026-10-23 10:27:06 +0000] Status=4, isTerminal=NO, Elapsed=00:58.
+	Waiting on System App
+
+[2026-10-23 10:27:08 +0000] Status=4, isTerminal=NO, Elapsed=01:00.
+	Waiting on System App
+
+[2026-10-23 10:27:09 +0000] Status=4, isTerminal=NO, Elapsed=01:00.
+	Waiting on System App
+
+[2026-10-23 10:27:10 +0000] Status=4, isTerminal=NO, Elapsed=01:01.
+	Waiting on System App
+
+[2026-10-23 10:27:10 +0000] Status=4, isTerminal=NO, Elapsed=01:02.
+	Waiting on System App
+
+[2026-10-23 10:27:12 +0000] Status=4294967295, isTerminal=YES, Elapsed=01:03.
+	Finished
+
+
+$ xcrun simctl ui B18D16E5-83F2-4DD5-B52B-646889C21E1A appearance dark
+An error was encountered processing the command (domain=NSPOSIXErrorDomain, code=45):
+Simulator device failed to complete the requested operation.
+Operation not supported
+Underlying error (domain=NSPOSIXErrorDomain, code=45):
+	Runtime does not support userInterfaceStyle
+	Operation not supported
+
+$ xcrun simctl install B18D16E5-83F2-4DD5-B52B-646889C21E1A dd/Build/Products/Debug-watchsimulator/DevToolsWatch.app
+
+$ xcrun simctl terminate B18D16E5-83F2-4DD5-B52B-646889C21E1A nl.lrvdlinden.devtools.watchkitapp
+An error was encountered processing the command (domain=NSPOSIXErrorDomain, code=3):
+Simulator device failed to terminate nl.lrvdlinden.devtools.watchkitapp.
+found nothing to terminate
+Underlying error (domain=NSPOSIXErrorDomain, code=3):
+	The request to terminate "nl.lrvdlinden.devtools.watchkitapp" failed. found nothing to terminate
+	found nothing to terminate
+
+$ xcrun simctl launch B18D16E5-83F2-4DD5-B52B-646889C21E1A nl.lrvdlinden.devtools.watchkitapp -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -page 0
+nl.lrvdlinden.devtools.watchkitapp: 31372
+
+$ xcrun simctl io B18D16E5-83F2-4DD5-B52B-646889C21E1A screenshot --type=png shots/watch-01.png
+Note: No display specified. Defaulting to display: 6754A734-F393-42F2-B24B-77955BB51F6D (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/watch-01.png
+
+$ xcrun simctl terminate B18D16E5-83F2-4DD5-B52B-646889C21E1A nl.lrvdlinden.devtools.watchkitapp
+
+$ xcrun simctl launch B18D16E5-83F2-4DD5-B52B-646889C21E1A nl.lrvdlinden.devtools.watchkitapp -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -page 1
+nl.lrvdlinden.devtools.watchkitapp: 31583
+
+$ xcrun simctl io B18D16E5-83F2-4DD5-B52B-646889C21E1A screenshot --type=png shots/watch-02.png
+Note: No display specified. Defaulting to display: 6754A734-F393-42F2-B24B-77955BB51F6D (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/watch-02.png
+
+$ xcrun simctl terminate B18D16E5-83F2-4DD5-B52B-646889C21E1A nl.lrvdlinden.devtools.watchkitapp
+
+$ xcrun simctl launch B18D16E5-83F2-4DD5-B52B-646889C21E1A nl.lrvdlinden.devtools.watchkitapp -demo -noSplash -AppleLanguages (en) -AppleLocale en_US -page 2
+nl.lrvdlinden.devtools.watchkitapp: 32049
+
+$ xcrun simctl io B18D16E5-83F2-4DD5-B52B-646889C21E1A screenshot --type=png shots/watch-03.png
+Note: No display specified. Defaulting to display: 6754A734-F393-42F2-B24B-77955BB51F6D (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/DevTools/DevTools/shots/watch-03.png
+
+Watch: Apple Watch Ultra 3 (49mm)

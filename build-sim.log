@@ -1,0 +1,42 @@
+ExtractAppIntentsMetadata (in target 'DevTools' from project 'DevTools')
+    cd /Users/runner/work/DevTools/DevTools
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.n5ZULG/Metal.xctoolchain --module-name DevTools --sdk-root /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk --xcode-version 17F113 --platform-family iOS --deployment-target 17.0 --bundle-identifier nl.lrvdlinden.devtools --output /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app --target-triple arm64-apple-ios17.0-simulator --target-triple x86_64-apple-ios17.0-simulator --binary-file /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/DevTools --dependency-file /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/Objects-normal/arm64/DevTools_dependency_info.dat --dependency-file /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/Objects-normal/x86_64/DevTools_dependency_info.dat --stringsdata-file /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --stringsdata-file /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/Objects-normal/x86_64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/Objects-normal/arm64/DevTools.SwiftFileList --source-file-list /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/Objects-normal/x86_64/DevTools.SwiftFileList --metadata-file-list /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/DevTools.DependencyMetadataFileList --static-metadata-file-list /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/DevTools.DependencyStaticMetadataFileList --swift-const-vals-list /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/Objects-normal/arm64/DevTools.SwiftConstValuesFileList --swift-const-vals-list /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/Objects-normal/x86_64/DevTools.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-10-23 10:11:19.672 appintentsmetadataprocessor[5101:18108] Starting appintentsmetadataprocessor export
+2026-10-23 10:11:19.693 appintentsmetadataprocessor[5101:18108] Extracted no relevant App Intents symbols, skipping writing output
+
+CopySwiftLibs /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app (in target 'DevTools' from project 'DevTools')
+    cd /Users/runner/work/DevTools/DevTools
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/DevTools.debug.dylib --scan-folder /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/Frameworks --scan-folder /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/PlugIns --scan-folder /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/SystemExtensions --scan-folder /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.n5ZULG/Metal.xctoolchain --toolchain /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+ValidateEmbeddedBinary /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevToolsWatch.app (in target 'DevTools' from project 'DevTools')
+    cd /Users/runner/work/DevTools/DevTools
+    /Applications/Xcode_26.6.app/Contents/Developer/usr/bin/embeddedBinaryValidationUtility /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevToolsWatch.app -info-plist-path /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/Info.plist
+
+ValidateEmbeddedBinary /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/PlugIns/DevToolsWidgets.appex (in target 'DevTools' from project 'DevTools')
+    cd /Users/runner/work/DevTools/DevTools
+    /Applications/Xcode_26.6.app/Contents/Developer/usr/bin/embeddedBinaryValidationUtility /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/PlugIns/DevToolsWidgets.appex -info-plist-path /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/Info.plist
+
+AppIntentsSSUTraining (in target 'DevTools' from project 'DevTools')
+    cd /Users/runner/work/DevTools/DevTools
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/Info.plist --temp-dir-path /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/ssu --bundle-id nl.lrvdlinden.devtools --product-path /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app --extracted-metadata-path /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/Metadata.appintents --metadata-file-list /Users/runner/work/DevTools/DevTools/dd/Build/Intermediates.noindex/DevTools.build/Debug-iphonesimulator/DevTools.build/DevTools.DependencyMetadataFileList --source-file /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app/Info.plist --archive-ssu-assets
+2026-10-23 10:11:19.726 appintentsnltrainingprocessor[5104:18113] Parsing options for appintentsnltrainingprocessor
+2026-10-23 10:11:19.726 appintentsnltrainingprocessor[5104:18113] Starting AppIntents SSU YAML Generation
+2026-10-23 10:11:19.727 appintentsnltrainingprocessor[5104:18113] No AppShortcuts found - Skipping.
+
+RegisterExecutionPolicyException /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app (in target 'DevTools' from project 'DevTools')
+    cd /Users/runner/work/DevTools/DevTools
+    builtin-RegisterExecutionPolicyException /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app
+
+Validate /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app (in target 'DevTools' from project 'DevTools')
+    cd /Users/runner/work/DevTools/DevTools
+    builtin-validationUtility /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app -shallow-bundle -infoplist-subpath Info.plist
+
+Touch /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app (in target 'DevTools' from project 'DevTools')
+    cd /Users/runner/work/DevTools/DevTools
+    /usr/bin/touch -c /Users/runner/work/DevTools/DevTools/dd/Build/Products/Debug-iphonesimulator/DevTools.app
+
+** BUILD SUCCEEDED **
+
+Debug-iphonesimulator
+Debug-watchsimulator
