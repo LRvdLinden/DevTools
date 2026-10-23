@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0 (build 14)
+- Build for App Store submission, with demo mode for App Review and `ITSAppUsesNonExemptEncryption = NO`.
+- The App Store metadata from build 13 has been restored: review notes for the demo mode and links to GitHub Pages.
+
 ## 1.0.0 (build 13)
 - **The app is now in English and Dutch.** It follows the device language, using 400+ translated strings, and covers the app, widgets and Watch.
 - **Demo mode** ("Try the demo" on the welcome screen) shows sample data with no API key needed. App Review uses it, and it also produces the App Store screenshots. You can exit the demo under Account.
