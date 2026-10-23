@@ -2,7 +2,7 @@
 
 Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch, in the style of HomeyDev (Homey Developer Tools). It is built on the official [App Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi).
 
-**Version 1.0.0 (build 12)** · Team `EU3UY476T6` · Bundle `nl.lrvdlinden.devtools`
+**Version 1.0.0 (build 13)** · English + Dutch · Team `EU3UY476T6` · Bundle `nl.lrvdlinden.devtools`
 
 ## Features
 
@@ -22,6 +22,10 @@ Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch,
 | **Apple Watch** | Same layout as HomeyDev: vertical pages *Overview*, *My apps* (with icons) and *Attention*, a Fetch button and an app detail screen. Complications show downloads, change, live and in review |
 | **Guide** | Account → Guide: how to get the API key, Issuer ID, Key ID, .p8 and vendor number, which roles you need, and troubleshooting |
 | **Accounts** | Multiple API keys, account switcher, vendor number per account, light/dark/system theme |
+
+## Publishing
+
+Everything for the App Store listing is in [`AppStore/`](AppStore/README.md): screenshots, promo images and all texts. The support and privacy pages are in `docs/` (GitHub Pages).
 
 ## Setup
 
@@ -52,3 +56,7 @@ Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch,
 See [CHANGELOG.md](CHANGELOG.md) for all changes.
 
 © DevTools - PixelForges · Independent app, not affiliated with Apple.
+
+## App Store
+
+Screenshots (EN), promo images and all listing texts are in [`AppStore/`](AppStore/README.md). See also the [Privacy Policy](PRIVACY.md) and [Support](SUPPORT.md).

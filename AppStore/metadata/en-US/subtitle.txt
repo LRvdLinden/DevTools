@@ -1,1 +1,1 @@
-Releases, TestFlight & Sales
+Sales, builds, reviews & beta

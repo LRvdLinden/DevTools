@@ -1,49 +1,48 @@
-DevTools puts App Store Connect in your pocket. Check the status of every app, follow your downloads and proceeds in beautiful charts, prepare new versions and manage TestFlight – wherever you are, on iPhone, iPad and Apple Watch.
+DevTools is the companion app for iOS, iPadOS and Apple Watch developers who want to keep an eye on their apps without opening a laptop. Connect your App Store Connect API key once and see every app, every build and every number in one fast, native app.
 
-Built by an indie developer for indie developers and small teams who want a fast, native and private companion for their apps.
-
-ALL YOUR APPS AT A GLANCE
-• Real app icons, version numbers and status for every platform (iOS, macOS, tvOS, visionOS)
-• Clear status badges: Live, Ready for Distribution, Waiting for Review, In Review, Pending Release, Rejected
-• "Needs attention" card for rejected versions, versions ready to release and builds missing export compliance
-• Search, filter and sort your whole portfolio
+YOUR APPS AT A GLANCE
+• All your apps with their real icons, versions and status
+• Clear status badges: Live, Waiting for Review, In Review, Ready for Distribution, Pending Release, Rejected
+• "Attention needed" card for rejected versions, apps ready to release and builds missing export compliance
+• Instant start with locally cached data, pull to refresh
 
 DOWNLOADS & PROCEEDS
-• New downloads, re-downloads, updates, in-app purchases and proceeds
-• Interactive trend charts for 7 days, 30 days, 90 days or a full year – scrub to see any day
-• Downloads per app, top countries and devices
-• Data comes straight from Apple's Sales and Trends reports
+• Installs, new downloads, re-downloads, updates and in-app purchases
+• Proceeds per app and for your whole portfolio
+• Beautiful interactive charts: scrub through 7 days, 30 days, 90 days or a full year
+• Installs per app over time, top countries and devices
+• Based on the official Sales and Trends reports from Apple
 
-RELEASE FROM YOUR PHONE
+SHIP NEW VERSIONS FROM ANYWHERE
 • Create a new App Store version
-• Edit What's New, description, keywords, promotional text and URLs for every language – or copy What's New to all languages at once
-• Change app name, subtitle and privacy policy URL
-• Choose the build, set the release type and submit for App Review
+• Write What's New, description, keywords, promotional text, support and marketing URLs for every language
+• Copy What's New to all languages in one tap
+• Edit app name, subtitle and privacy policy URL
+• Choose a build, set the release type and submit for App Review
 • Cancel a review or release an approved version with one tap
 
-TESTFLIGHT
+TESTFLIGHT UNDER CONTROL
 • All builds grouped by version, with processing and beta status
-• Edit What to Test, answer export compliance and submit for beta review
-• Add builds to test groups, create internal and external groups, enable public links
-• Invite and remove testers
-• Expire old builds
+• Edit What to Test, answer export compliance and expire old builds
+• Add builds to test groups, toggle automatic tester notifications and submit for beta review
+• Create internal and external groups, enable public links, invite or remove testers
 
-REVIEWS
-• Rating distribution and filters (stars, unanswered)
-• Reply to customer reviews, edit or delete your reply
+CUSTOMER REVIEWS
+• Rating distribution and all reviews with country and date
+• Filter by stars or unanswered reviews
+• Reply to reviews, edit or delete your replies
 
 WIDGETS & APPLE WATCH
-• Home Screen widgets: Downloads (choose an app), Top Apps and Review & Status
-• Apple Watch app with overview, apps and attention pages
-• Watch face complications with your downloads and apps in review
+• Downloads widget for one app or all apps, Top apps widget and Review & status widget
+• Apple Watch app with overview, your apps and what needs attention
+• Watch face complications with downloads, weekly change and apps in review
 
-PRIVATE BY DESIGN
-• Connects directly to Apple's official App Store Connect API with your own API key
+MULTIPLE ACCOUNTS, PRIVATE BY DESIGN
+• Add several App Store Connect teams and switch in a tap
 • Your private key (.p8) is stored only in the Keychain of your device
-• No accounts, no servers in between, no tracking and no data collection
-• Multiple teams/accounts supported
+• DevTools talks directly to Apple's App Store Connect API — there is no server in between and no data is collected
+• Built-in step-by-step guide to create your API key, find your Issuer ID, Key ID and vendor number
 
-EASY SETUP
-A built-in step-by-step guide shows where to find your Issuer ID, Key ID, .p8 key and vendor number. Want to look around first? Tap "Try the demo" to explore DevTools with sample data.
+Requirements: an Apple Developer Program membership and an App Store Connect API team key. Sales data requires the Admin, Finance or Sales role and your vendor number.
 
-DevTools is an independent app and is not affiliated with or endorsed by Apple Inc. App Store Connect and TestFlight are trademarks of Apple Inc.
+DevTools is an independent app and is not affiliated with or endorsed by Apple Inc. App Store, App Store Connect, TestFlight, iPhone, iPad and Apple Watch are trademarks of Apple Inc.

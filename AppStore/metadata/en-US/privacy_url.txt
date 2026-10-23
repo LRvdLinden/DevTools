@@ -1,1 +1,1 @@
-https://lrvdlinden.github.io/DevTools/privacy.html
+https://github.com/LRvdLinden/DevTools/blob/main/PRIVACY.md

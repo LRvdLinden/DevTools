@@ -1,73 +1,78 @@
-# DevTools – App Store listing (English, en-US)
+# DevTools — App Store listing (English, en-US)
 
-Everything you need to publish DevTools 1.0.0 in App Store Connect. The texts are also in `metadata/` (fastlane `deliver` layout). The images are in `screenshots/` and `promo/`.
+Everything you need to fill in App Store Connect for version **1.0.0**. All texts are also available as separate `.txt` files in `metadata/en-US/`, so you can copy them directly.
 
 ## App information
 
 | Field | Value |
 |---|---|
-| Name (max 30) | `DevTools – Developer Dashboard` |
-| Subtitle (max 30) | `Releases, TestFlight & Sales` |
-| Bundle ID | `nl.lrvdlinden.devtools` |
-| SKU | `DEVTOOLS` |
-| Primary language | English (U.S.) |
+| Name (30) | `DevTools: Developer Dashboard` (29) |
+| Subtitle (30) | `Sales, builds, reviews & beta` (29) |
 | Primary category | **Developer Tools** |
 | Secondary category | **Business** |
-| Content rights | Does not contain third-party content |
-| Age rating | **4+**: answer "None" to every question; no unrestricted web access |
+| Bundle ID | `nl.lrvdlinden.devtools` |
+| SKU | `devtools-ios` (your choice) |
+| Primary language | English (U.S.) |
 | Copyright | `2026 PixelForges` |
-| Price | Your choice (for example Free, or a paid tier) |
+| Content rights | Does not contain, show or access third-party content |
+| Price | Free, or your choice |
 
-If "DevTools – Developer Dashboard" is already taken, use one of these alternatives: `DevTools: Dev Dashboard`, `DevTools – App Dashboard` or `DevTools by PixelForges`.
+If the name is already taken, try one of these: `DevTools – Dev Dashboard` · `DevTools for Developers` · `DevTools by PixelForges`.
 
-## Version 1.0.0
+## Version texts
 
-| Field | File |
-|---|---|
-| Promotional text (170) | `metadata/en-US/promotional_text.txt` |
-| Description (4000) | `metadata/en-US/description.txt` |
-| Keywords (100) | `metadata/en-US/keywords.txt` |
-| What's New | `metadata/en-US/release_notes.txt` (not shown for the first version) |
-| Support URL | https://lrvdlinden.github.io/DevTools/support.html |
-| Marketing URL | https://lrvdlinden.github.io/DevTools/ |
-| Privacy Policy URL | https://lrvdlinden.github.io/DevTools/privacy.html |
+- **Promotional text (170):** see `promotional_text.txt` (156 characters)
+- **Description (4000):** see `description.txt` (about 2,850 characters)
+- **Keywords (100):** `asc,connect,downloads,analytics,indie,ios,release,proceeds,revenue,metrics,stats,testers,charts` (95)
+  - These avoid words that already appear in the name and subtitle, because Apple indexes those already.
+  - Apple trademarks such as "App Store Connect", "TestFlight" and "Xcode" are left out on purpose. Guideline 2.3.7 does not allow other parties' trademarks in keywords.
+- **What's New:** see `release_notes.txt`. Apple does not show this for version 1.0, but it is ready for the next version.
+- **Support URL:** https://github.com/LRvdLinden/DevTools/blob/main/SUPPORT.md
+- **Marketing URL:** https://github.com/LRvdLinden/DevTools
+- **Privacy Policy URL:** https://github.com/LRvdLinden/DevTools/blob/main/PRIVACY.md
 
-## App Review information
+## Screenshots
 
-- **Sign-in required:** No. Choose "Sign-in not required". The app uses the user's own API key and has a built-in **demo mode**.
-- **Notes:** paste `metadata/review_information/notes.txt`.
-- **Contact:** your name, phone number and email.
-
-## App Privacy (nutrition label)
-
-- Select **Data Not Collected**. DevTools has no analytics or tracking, and no servers of its own.
-- Privacy Policy URL: see above.
-
-## Export compliance
-
-`ITSAppUsesNonExemptEncryption = NO` is set in `Info.plist`. The app only uses HTTPS and CryptoKit signing, which is exempt, so App Store Connect will not ask about encryption.
-
-## Screenshots (upload per device size)
-
-| App Store Connect slot | Folder | Size |
+| Device | Size | Files |
 |---|---|---|
-| iPhone 6.9" Display (required) | `screenshots/iPhone-6.9in_1320x2868` | 1320 × 2868 |
-| iPhone 6.5" Display (optional) | `screenshots/iPhone-6.5in_1284x2778` | 1284 × 2778 |
-| iPad 13" Display (required, the app supports iPad) | `screenshots/iPad-13in_2064x2752` | 2064 × 2752 |
-| Apple Watch (required, the app has a Watch app) | `screenshots/AppleWatch-Ultra_422x514` | 422 × 514 |
+| iPhone 6.9" | 1320 × 2868 | 7 (dashboard, app detail, new version, TestFlight, insights, reviews, widgets) |
+| iPhone 6.3" | 1206 × 2622 | 7 (same) |
+| iPad 13" | 2064 × 2752 | 4 |
+| Apple Watch Ultra 3 | 422 × 514 | 4. Upload **one** Watch size. |
+| Apple Watch Series 11/10 (alternative) | 416 × 496 | 4 |
 
-The order is the file name order (01, 02, …). The screenshots were taken in the iOS 26 simulator with the app's demo mode, so they show real app screens.
+- All files are PNG, RGB, without alpha.
+- The sample apps in the screenshots (Trailhead, Lumen Notes, …) are fictional demo data.
 
-## Promo
+Promo images (not required, but useful for featuring nominations and socials): `Promo/promo-1920x1080.png` and `Promo/social-1200x630.png`.
 
-- `promo/AppIcon-1024.png`: the App Store icon. Xcode supplies it automatically from the asset catalog.
-- `promo/Promo-1920x1080.png`: banner for your website or social media.
-- `promo/Promo-Square-1080.png`: square image for social media.
+## App Privacy ("nutrition label")
 
-## GitHub Pages (support and privacy URLs)
+- **Data collection:** choose **No, we do not collect data from this app**. The result is **Data Not Collected**.
+  - The app has no server, analytics, advertising or tracking.
+  - API requests go directly from the device to Apple.
+  - Icon and rating lookups go to Apple's public iTunes Search API.
+- **Tracking (ATT):** No.
 
-The pages are in `docs/`. Turn them on once:
+## Age rating
 
-1. Open **GitHub → LRvdLinden/DevTools → Settings → Pages**.
-2. Under Source, choose **Deploy from a branch**, then branch **main** and folder **/docs**, and save.
-3. After about one minute the pages are live at https://lrvdlinden.github.io/DevTools/.
+- Answer **None / No** to every question. There is no user-generated content, no web browser, no gambling and no medical information.
+- The expected result is **4+**.
+
+## Export compliance (encryption)
+
+- The app uses encryption only via standard HTTPS and Apple CryptoKit, to sign the JWT. This is **exempt**.
+- In App Store Connect, answer: "Does your app use encryption?" **Yes**. Does it qualify for any exemptions? **Yes**, standard encryption only.
+- Tip: add `ITSAppUsesNonExemptEncryption = NO` to `Info.plist`. Then you no longer get this question for every build.
+
+## App Review: important
+
+- Apple's reviewer needs access, otherwise the app gets rejected under guideline 2.1 (App Completeness / no demo access).
+- Choose one of these options:
+  1. **Temporary API key** with the role *Developer* (read only, no sales data). Fill in `review_notes.txt` with the Issuer ID, Key ID and a link to the .p8, and revoke the key after approval.
+  2. **Demo mode** in the app, so it can be tried with sample data and without a key. This is the most robust option, and can be built in a later build.
+- Sign-in required: **No** (there is no username/password). Explain the API key in the Notes instead.
+
+## Localization
+
+The app UI is currently **Dutch**, while this listing is English. Apple allows that, but for an English listing an English UI is clearer for users and reviewers, and the screenshots show the English UI. Recommendation: add an English localization (String Catalog, Dutch + English) before you submit.

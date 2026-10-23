@@ -1,10 +1,6 @@
 Welcome to DevTools 1.0!
-
-• Every app with its real icon and live status at a glance
-• Downloads, re-downloads, updates and proceeds in interactive charts
-• Create new App Store versions, edit What's New, descriptions and keywords per language
-• Attach builds, submit for App Review and release with one tap
-• Manage TestFlight builds, test groups, testers and What to Test
-• Read and reply to customer reviews
-• Home Screen widgets, Apple Watch app and complications
-• Step-by-step guide to create your API key
+• Dashboard with downloads, proceeds and app status
+• Create versions, edit texts in every language and submit for review
+• Manage TestFlight builds, test groups and testers
+• Interactive charts, reviews with replies
+• Widgets, Apple Watch app and complications

@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.0 (build 13)
+- **The app is now in English and Dutch.** It follows the device language, using 400+ translated strings, and covers the app, widgets and Watch.
+- **Demo mode** ("Try the demo" on the welcome screen) shows sample data with no API key needed. App Review uses it, and it also produces the App Store screenshots. You can exit the demo under Account.
+- **App Store listing** in `AppStore/`: English screenshots for iPhone 6.9" and 6.5", iPad 13" and Apple Watch Ultra, promo images, and the name, subtitle, description, keywords, promotional text, review notes and privacy answers.
+- A **support, privacy and landing page** is in `docs/`, ready for GitHub Pages.
+- `ITSAppUsesNonExemptEncryption = NO` is now in Info.plist, so App Store Connect no longer asks the export compliance question.
+- The splash screen background is now fully opaque.
+- The Apple Watch Fetch button has moved onto the overview page.
+- A GitHub Actions workflow takes screenshots automatically in the iOS, iPad and watchOS simulators. Add `[shots]` to the commit message to run it.
+
 ## 1.0.0 (build 12)
 - **Apple Watch app rebuilt in the HomeyDev style.** It has three vertical pages:
   - *Overview:* downloads with the 7-day change, a chart, and Live / In review / Proceeds / Rating.

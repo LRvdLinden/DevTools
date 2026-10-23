@@ -1,1 +1,1 @@
-https://lrvdlinden.github.io/DevTools/support.html
+https://github.com/LRvdLinden/DevTools/blob/main/SUPPORT.md
