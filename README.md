@@ -1,52 +1,53 @@
-# DevTools 1.0.0 (Build 1)
+# DevTools
 
-Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch. Inspired by the architecture (not assets/branding) of `LRvdLinden/Athom-Homey-dev-ios`.
+Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch, in the style of HomeyDev (Homey Developer Tools). It is built on the official [App Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi).
 
-## Implemented now
+**Version 1.0.0 (build 10)** · Team `EU3UY476T6` · Bundle `nl.lrvdlinden.devtools`
 
-- Multiple API accounts with `.p8` imported into local iOS Keychain
-- Official ES256 JWT authentication and App Store Connect `/v1/apps` API
-- Live apps, per-app versions/builds, review-state, and customer reviews
-- Responsive iPhone tab navigation and iPad sidebar, system/light/dark appearance
-- Home screen widgets (portfolio, review), paired Apple Watch overview and complications
-- Refresh on launch/manual pull, explicit network errors; no fictitious analytics
+## Features
 
-## Not yet live in this build
-
-- Sales/downloads/proceeds/subscriptions: require Apple's reports API, scheduling, parsing and refresh pipeline. The Insights screen explains the limitation.
-- Real push: requires server/webhook subscriber and APNs/OneSignal credentials; no push claim is made in UI.
-- AI: interface and local release-note draft/export only; requires explicit choice of model/backend and secure key management.
-- Review reply actions and editable release metadata: read-only until write scopes, validation and safe confirmation UI are implemented.
-- Watch receives latest data from paired phone via WatchConnectivity, not direct Apple login.
-- Localization: native source strings prepared; English text currently used. Dutch/German/French catalogs are future work.
+| Area | What you can do |
+|---|---|
+| **Splash** | Animated launch screen with aurora background, particles, the icon dropping in with a 3D tilt, orbit rings, a letter-by-letter title, an animated chart line, and a progress bar that follows the real data load. Respects Reduce Motion. |
+| **Home** | Greeting, KPI tiles (installs, proceeds, live, in review, updates, average rating), a Homey Insights-style trend chart with 7d/30d/90d/1y, downloads per app, an "Attention needed" card and app list with icons |
+| **Apps** | Real app icons (App Store artwork, or the icon from the latest build). Status badges: *Ready for Sale / Ready for Distribution* shows as **Live**. Filters (Live, In review, Preparing, Rejected), sorting and search |
+| **App detail** | Downloads trend, top countries, versions, latest builds, reviews, app info and test groups |
+| **Versions & texts** | Create a new App Store version, edit What's New, description, keywords, promotional text and URLs per language (copy What's New to all languages in one go), add languages, version settings (copyright, release type, scheduled date), attach a build, **submit for App Review**, cancel a review, release a version, delete a version |
+| **App info** | Name, subtitle and privacy policy URL per language |
+| **TestFlight** | All builds per version, expire a build (swipe), export compliance, What to Test per language, add builds to or remove them from test groups, auto-notify, submit for beta review |
+| **Test groups** | Create internal/external groups, enable public link and share it, add testers (email invite) and remove them, delete groups |
+| **Reviews** | Rating distribution chart, filter by stars or unanswered, reply to reviews and edit or delete replies |
+| **Insights** | Installs, new downloads, re-downloads, updates, in-app purchases and proceeds. Trend chart with scrubbing, installs per app over time (top 5), proceeds per app, countries with flags, devices donut, status of all apps |
+| **Widgets** | Overview (S/M/L with app icons), Downloads with sparkline and proceeds, App Review |
+| **Apple Watch** | Animated splash, downloads, live/review counts, apps with status. Complications show downloads |
+| **Accounts** | Multiple API keys, account switcher, vendor number per account, light/dark/system theme |
 
 ## Setup
 
-1. Open `DevTools.xcodeproj` in Xcode 16+.
-2. Select your Apple signing Team for **all four targets** (iPhone, widget, Watch app, Watch complication).
-3. Adjust bundle identifiers if already taken and configure App Groups `group.nl.lrvdlinden.devtools` where appropriate.
-4. Create an App Store Connect API key with appropriate **read** access in Users and Access. Import its downloaded `.p8` file in Account > Add Apple Developer Account.
-5. Run the iPhone app and pair Apple Watch. Watch updates via WatchConnectivity when the phone sends its snapshot.
+1. Open `DevTools.xcodeproj` in Xcode 16 or newer (CI builds with Xcode 26.6).
+2. The team for all four targets is `EU3UY476T6`, with App Groups `group.nl.lrvdlinden.devtools` and `group.nl.lrvdlinden.devtools.watch`.
+3. In App Store Connect, go to **Users and Access → Integrations → App Store Connect API** and create a team key. Give it the **Admin** role, or **App Manager + Sales**, to use every feature.
+4. In the app, open **Link account**. Fill in the Issuer ID, choose the `AuthKey_XXXX.p8` file (the Key ID is filled in automatically) and enter your **vendor number**. You find the vendor number under **Payments and Financial Reports**, top left.
+5. To archive, use the **DevTools** scheme with **Any iOS Device (arm64)**.
 
-**Important:** Never commit API keys, login credentials, or `.p8` files. Private key is stored as device-only Keychain data. Server-side token storage is not implemented in this starter.
+## How data is retrieved
+
+- **Apps, versions, builds, TestFlight, reviews** come from `api.appstoreconnect.apple.com/v1/...` with an ES256 JWT (valid for at most 20 minutes, signed with CryptoKit).
+- **Downloads and proceeds** come from `GET /v1/salesReports` (SALES · SUMMARY · DAILY/WEEKLY, version 1_0). The reports are gzip-decompressed and parsed as TSV, then cached per day in the app's Caches folder. Apple's data runs about one day behind.
+  - Downloads are product types `1, 1F, 1T, F1`. Re-downloads are `3*`, updates `7*` and in-app purchases `IA*`.
+- **Icons and ratings** come from App Store artwork via the iTunes Lookup API for live apps, or from the `iconAssetToken` of the latest build.
+
+> Builds themselves are still uploaded from Xcode or Transporter. Apple's API has no endpoint for uploading binaries. DevTools takes over everything after the upload.
 
 ## Security
 
-JWT expires after 15 minutes and is generated on demand using CryptoKit P256 ECDSA. Network requests use HTTPS. Use least-privilege API keys. A public multi-tenant production release needs threat modelling, privacy policy, audit of API key handling, backend availability/retention rules, and API endpoint coverage tests.
+- The `.p8` private key is stored only in the Keychain (`ThisDeviceOnly`) and is never synced or committed.
+- Never commit API keys or `.p8` files (`.gitignore` excludes `*.p8`).
 
+## CI
 
-## Build 2 — iPhone and Apple Watch scheme fix
+`.github/workflows/build-check.yml` builds the project unsigned on every push, using `macos-latest`, the DevTools scheme and a generic iOS device, so the watch app and widgets are built too. The result is written to the `ci-logs` branch.
 
-In Xcode choose the **DevTools** scheme and an **iPhone simulator or connected iPhone** (not My Mac). For the watch app choose **DevToolsWatch** and a **paired Apple Watch simulator**. If no iPhone devices appear, install the iOS Simulator runtime under Xcode > Settings > Platforms. If no Apple Watch device appears, install the watchOS Simulator runtime and pair one to an iPhone simulator. This release adds shared Xcode schemes, explicit iOS/watchOS supported platforms, and shared Watch widget storage. On physical devices set a valid Apple Developer Team for every target and configure both App Groups. macOS is not a target.
+See [CHANGELOG.md](CHANGELOG.md) for all changes.
 
-## Build 6 changes
-- Fix SwiftUI `foregroundStyle` ternary type mismatch in `Screens.swift` line 211 (`Color.secondary` / `Color.green`).
-- Keep automatic signing team `EU3UY476T6` for all four targets.
-- This source was syntax-checked with Swift parser and plist-validated on Linux. Full Xcode compilation needs macOS.
-
-## Build 8 fixes
-- Full-bleed Concept A 1024px icon installed for iOS and watchOS; Apple masks the app icon corners.
-- Main iOS target `SKIP_INSTALL=NO`; Watch and both WidgetKit extensions `SKIP_INSTALL=YES` in Debug and Release to avoid generic archives.
-- Archive using the **DevTools** scheme and **Any iOS Device (arm64)**, not the Watch scheme.
-- Apple Developer Team: EU3UY476T6.
-- This was statically validated; the Xcode archive must be verified on macOS.
+© DevTools - PixelForges · Independent app, not affiliated with Apple.

@@ -133,7 +133,7 @@ struct InsightsView: View {
         let top = store.sales.perApp.filter { $0.installs > 0 }.prefix(5)
         guard !top.isEmpty else { return [] }
         let ids = Set(top.map(\.id))
-        let names = Dictionary(top.map { ($0.id, store.apps.first(where: { a in a.id == $0.id })?.name ?? $0.name) }, uniquingKeysWith: { a, _ in a })
+        let names = Dictionary(top.map { item in (item.id, store.apps.first(where: { a in a.id == item.id })?.name ?? item.name) }, uniquingKeysWith: { a, _ in a })
         var out: [AppSeriesPoint] = []
         for period in store.salesPeriods {
             var perApp: [String: Int] = [:]

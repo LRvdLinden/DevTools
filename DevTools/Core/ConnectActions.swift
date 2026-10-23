@@ -215,9 +215,9 @@ extension ConnectAPI {
         _ = try await write("POST", "/v1/betaAppReviewSubmissions", body)
     }
 
-    func createBetaGroup(appID: String, name: String, internal: Bool) async throws {
+    func createBetaGroup(appID: String, name: String, isInternal: Bool) async throws {
         var attrs: [String: Any] = ["name": name]
-        if internal { attrs["isInternalGroup"] = true; attrs["hasAccessToAllBuilds"] = true }
+        if isInternal { attrs["isInternalGroup"] = true; attrs["hasAccessToAllBuilds"] = true }
         let body: [String: Any] = ["data": [
             "type": "betaGroups",
             "attributes": attrs,

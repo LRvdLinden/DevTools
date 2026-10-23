@@ -402,7 +402,7 @@ struct BetaGroupsView: View {
     private func create() async {
         guard let api = store.api, !newName.trimmingCharacters(in: .whitespaces).isEmpty else { return }
         do {
-            try await api.createBetaGroup(appID: app.id, name: newName, internal: newInternal)
+            try await api.createBetaGroup(appID: app.id, name: newName, isInternal: newInternal)
             newName = ""
             await load()
         } catch { self.error = error.localizedDescription }
