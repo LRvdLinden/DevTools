@@ -206,8 +206,7 @@ final class DevStore {
 
     nonisolated private static func loadDetails(api: ConnectAPI, appID: String) async -> (String, [VersionInfo]?, BuildInfo?) {
         async let versionsDoc: ListDocument<VersionAttributes> = api.get("/v1/apps/\(appID)/appStoreVersions", [
-            ("limit", "12"),
-            ("fields[appStoreVersions]", "platform,versionString,appStoreState,appVersionState,createdDate,releaseType,earliestReleaseDate,copyright,downloadable")
+            ("limit", "12")
         ])
         async let buildsDoc: ListDocument<BuildAttributes> = api.get("/v1/builds", [
             ("filter[app]", appID),
