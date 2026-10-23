@@ -40,6 +40,7 @@ final class PhoneWatchBridge:NSObject, WCSessionDelegate {
     func sessionDidDeactivate(_ session:WCSession){session.activate()}
 }
 
+// DevTools-branded splash presented on every cold launch.
 private struct DevToolsSplashView: View {
     @State private var appeared = false
     var body: some View {

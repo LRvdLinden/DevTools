@@ -1,0 +1,1 @@
+Build 8: archive target fix; main SKIP_INSTALL=NO, extensions/watch SKIP_INSTALL=YES; app icon full bleed; team EU3UY476T6.
