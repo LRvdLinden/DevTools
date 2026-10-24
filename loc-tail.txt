@@ -1,0 +1,30 @@
+2026-10-24 13:44:27 --- WARNING: Key "Naam" used with multiple values. Value "Name" kept. Value "Naam" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Klaar" used with multiple values. Value "Done" kept. Value "Klaar" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Certificaten" used with multiple values. Value "Certificates" kept. Value "Certificaten" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Uitschakelen" used with multiple values. Value "Disable" kept. Value "Uitschakelen" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "%@ unieke bezoekers" used with multiple values. Value "%@ unique visitors" kept. Value "%@ unieke bezoekers" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Geen apps" used with multiple values. Value "No apps" kept. Value "Geen apps" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "herhaalbaar" used with multiple values. Value "repeatable" kept. Value "herhaalbaar" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Afgelopen 30 dagen" used with multiple values. Value "Last 30 days" kept. Value "Afgelopen 30 dagen" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Build laten verlopen" used with multiple values. Value "Expire build" kept. Value "Build laten verlopen" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Codes worden aangemaakt" used with multiple values. Value "Creating codes" kept. Value "Codes worden aangemaakt" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Licht" used with multiple values. Value "Light" kept. Value "Licht" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Fout" used with multiple values. Value "Error" kept. Value "Fout" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Verwijder" used with multiple values. Value "Delete" kept. Value "Verwijder" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Nieuwe landen automatisch" used with multiple values. Value "New countries automatically" kept. Value "Nieuwe landen automatisch" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "%@ uitnodigingen" used with multiple values. Value "%@ invites" kept. Value "%@ uitnodigingen" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Donker" used with multiple values. Value "Dark" kept. Value "Donker" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Nog geen talen. Voeg ze toe in App Store Connect." used with multiple values. Value "No languages yet. Add them in App Store Connect." kept. Value "Nog geen talen. Voeg ze toe in App Store Connect." ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Versienummer" used with multiple values. Value "Version number" kept. Value "Versienummer" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Koppel App Store Connect" used with multiple values. Value "Connect App Store Connect" kept. Value "Koppel App Store Connect" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "tot %@" used with multiple values. Value "until %@" kept. Value "tot %@" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Geregistreerde testtoestellen" used with multiple values. Value "Registered test devices" kept. Value "Geregistreerde testtoestellen" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Profiel verwijderd" used with multiple values. Value "Profile deleted" kept. Value "Profiel verwijderd" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Kies build" used with multiple values. Value "Choose build" kept. Value "Kies build" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Nu aan iedereen uitbrengen?" used with multiple values. Value "Release to everyone now?" kept. Value "Nu aan iedereen uitbrengen?" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Build %@ laten verlopen" used with multiple values. Value "Expire build %@" kept. Value "Build %@ laten verlopen" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Verlopen builds tonen" used with multiple values. Value "Show expired builds" kept. Value "Verlopen builds tonen" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Deel crashlog" used with multiple values. Value "Share crash log" kept. Value "Deel crashlog" ignored.
+2026-10-24 13:44:27 --- WARNING: Key "Pushmeldingen instellen" used with multiple values. Value "Set up push notifications" kept. Value "Pushmeldingen instellen" ignored.
+2026-10-24 13:44:27 Writing
+2026-10-24 13:44:27 An xcloc was created at /Users/runner/work/DevTools/DevTools/loc/en.xcloc
