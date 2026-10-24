@@ -35,6 +35,11 @@ struct DashboardView: View {
                         StatTile(title: "Updates", value: sales.points.isEmpty ? "…" : Fmt.number(sales.updates), systemImage: "arrow.triangle.2.circlepath", tint: Theme.pending)
                     }
                     StatTile(title: "Gem. rating", value: averageRating(apps), systemImage: "star.fill", tint: .yellow)
+                    if !store.betaUsage.isEmpty {
+                        let beta = store.betaTotal
+                        StatTile(title: "TestFlight-installaties", value: Fmt.number(beta.installs), systemImage: "airplane.circle.fill", tint: Theme.cyan,
+                                 footnote: beta.testers.map { L("\(Fmt.number($0)) testers") })
+                    }
                 }
 
                 if store.active?.hasVendor != true {

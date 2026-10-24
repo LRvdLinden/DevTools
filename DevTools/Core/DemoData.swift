@@ -153,6 +153,15 @@ enum DemoData {
                     doc = ["data": b, "included": full["included"] ?? []]
                 }
             }
+        case parts.count == 5 && parts[1] == "builds" && parts[4] == "betaBuildUsages":
+            let seed = parts[2].unicodeScalars.reduce(7) { ($0 &* 31 &+ Int($1.value)) % 9973 }
+            let installs = 40 + seed % 260
+            doc = ["data": [["dataPoints": [["start": ago(30), "end": ago(0), "values": [
+                "installCount": installs, "sessionCount": installs * (6 + seed % 9), "crashCount": seed % 5,
+                "feedbackCount": seed % 7, "inviteCount": installs + 10 + seed % 40]]]]]]
+        case parts == ["v1", "betaTesters"]:
+            let seed = (q("filter[apps]") ?? "").unicodeScalars.reduce(3) { ($0 &* 17 &+ Int($1.value)) % 997 }
+            doc = ["data": [Any](), "meta": ["paging": ["total": 25 + seed % 180, "limit": 1]]]
         case parts.count == 4 && parts[1] == "builds" && parts[3] == "betaBuildLocalizations":
             doc = ["data": [res("betaBuildLocalizations", parts[2] + "-l", ["locale": "en-US", "whatsNew": "Please test the new home screen, widgets and the Apple Watch app. Report anything odd via TestFlight feedback."])]]
         case parts.count == 4 && parts[1] == "apps" && parts[3] == "betaGroups":

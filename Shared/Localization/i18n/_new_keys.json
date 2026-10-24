@@ -1,5 +1,152 @@
 {
- "Taal": {"en":"Language","de":"Sprache","fr":"Langue","es":"Idioma","pl":"Język","nb":"Språk","da":"Sprog","sv":"Språk"},
- "Taal wijzigen in iOS-instellingen": {"en":"Change language in iOS Settings","de":"Sprache in den iOS-Einstellungen ändern","fr":"Changer la langue dans les Réglages iOS","es":"Cambiar idioma en Ajustes de iOS","pl":"Zmień język w Ustawieniach iOS","nb":"Endre språk i iOS-innstillinger","da":"Skift sprog i iOS-indstillinger","sv":"Ändra språk i iOS-inställningar"},
- "Automatisch volgt de taal van je toestel (anders Engels). Widgets en Apple Watch gebruiken dezelfde taal.": {"en":"Automatic follows your device language (otherwise English). Widgets and Apple Watch use the same language.","de":"Automatisch folgt der Sprache deines Geräts (sonst Englisch). Widgets und Apple Watch verwenden dieselbe Sprache.","fr":"Automatique suit la langue de votre appareil (sinon l’anglais). Les widgets et l’Apple Watch utilisent la même langue.","es":"Automático sigue el idioma de tu dispositivo (si no, inglés). Los widgets y el Apple Watch usan el mismo idioma.","pl":"Automatycznie: język urządzenia (w przeciwnym razie angielski). Widżety i Apple Watch używają tego samego języka.","nb":"Automatisk følger språket på enheten (ellers engelsk). Widgeter og Apple Watch bruker samme språk.","da":"Automatisk følger enhedens sprog (ellers engelsk). Widgets og Apple Watch bruger samme sprog.","sv":"Automatiskt följer enhetens språk (annars engelska). Widgetar och Apple Watch använder samma språk."}
+ "Taal": {
+  "en": "Language",
+  "de": "Sprache",
+  "fr": "Langue",
+  "es": "Idioma",
+  "pl": "Język",
+  "nb": "Språk",
+  "da": "Sprog",
+  "sv": "Språk"
+ },
+ "Taal wijzigen in iOS-instellingen": {
+  "en": "Change language in iOS Settings",
+  "de": "Sprache in den iOS-Einstellungen ändern",
+  "fr": "Changer la langue dans les Réglages iOS",
+  "es": "Cambiar idioma en Ajustes de iOS",
+  "pl": "Zmień język w Ustawieniach iOS",
+  "nb": "Endre språk i iOS-innstillinger",
+  "da": "Skift sprog i iOS-indstillinger",
+  "sv": "Ändra språk i iOS-inställningar"
+ },
+ "Automatisch volgt de taal van je toestel (anders Engels). Widgets en Apple Watch gebruiken dezelfde taal.": {
+  "en": "Automatic follows your device language (otherwise English). Widgets and Apple Watch use the same language.",
+  "de": "Automatisch folgt der Sprache deines Geräts (sonst Englisch). Widgets und Apple Watch verwenden dieselbe Sprache.",
+  "fr": "Automatique suit la langue de votre appareil (sinon l’anglais). Les widgets et l’Apple Watch utilisent la même langue.",
+  "es": "Automático sigue el idioma de tu dispositivo (si no, inglés). Los widgets y el Apple Watch usan el mismo idioma.",
+  "pl": "Automatycznie: język urządzenia (w przeciwnym razie angielski). Widżety i Apple Watch używają tego samego języka.",
+  "nb": "Automatisk følger språket på enheten (ellers engelsk). Widgeter og Apple Watch bruker samme språk.",
+  "da": "Automatisk følger enhedens sprog (ellers engelsk). Widgets og Apple Watch bruger samme sprog.",
+  "sv": "Automatiskt följer enhetens språk (annars engelska). Widgetar och Apple Watch använder samma språk."
+ },
+ "TestFlight-gebruik": {
+  "en": "TestFlight usage",
+  "de": "TestFlight-Nutzung",
+  "fr": "Utilisation TestFlight",
+  "es": "Uso de TestFlight",
+  "pl": "Użycie TestFlight",
+  "nb": "TestFlight-bruk",
+  "da": "TestFlight-brug",
+  "sv": "TestFlight-användning"
+ },
+ "Totaal van alle builds van al je apps, volgens TestFlight.": {
+  "en": "Total of all builds of all your apps, as reported by TestFlight.",
+  "de": "Summe aller Builds aller deiner Apps laut TestFlight.",
+  "fr": "Total de tous les builds de toutes vos apps, selon TestFlight.",
+  "es": "Total de todas las builds de todas tus apps, según TestFlight.",
+  "pl": "Suma wszystkich buildów wszystkich Twoich aplikacji według TestFlight.",
+  "nb": "Totalt for alle builds av alle appene dine, ifølge TestFlight.",
+  "da": "Total for alle builds af alle dine apps ifølge TestFlight.",
+  "sv": "Totalt för alla builds av alla dina appar enligt TestFlight."
+ },
+ "TestFlight-installaties": {
+  "en": "TestFlight installs",
+  "de": "TestFlight-Installationen",
+  "fr": "Installations TestFlight",
+  "es": "Instalaciones de TestFlight",
+  "pl": "Instalacje TestFlight",
+  "nb": "TestFlight-installasjoner",
+  "da": "TestFlight-installationer",
+  "sv": "TestFlight-installationer"
+ },
+ "Testers": {
+  "en": "Testers",
+  "de": "Tester",
+  "fr": "Testeurs",
+  "es": "Testers",
+  "pl": "Testerzy",
+  "nb": "Testere",
+  "da": "Testere",
+  "sv": "Testare"
+ },
+ "Sessies": {
+  "en": "Sessions",
+  "de": "Sitzungen",
+  "fr": "Sessions",
+  "es": "Sesiones",
+  "pl": "Sesje",
+  "nb": "Økter",
+  "da": "Sessioner",
+  "sv": "Sessioner"
+ },
+ "Crashes": {
+  "en": "Crashes",
+  "de": "Abstürze",
+  "fr": "Plantages",
+  "es": "Fallos",
+  "pl": "Awarie",
+  "nb": "Krasj",
+  "da": "Nedbrud",
+  "sv": "Krascher"
+ },
+ "Feedback": {
+  "en": "Feedback",
+  "de": "Feedback",
+  "fr": "Retours",
+  "es": "Comentarios",
+  "pl": "Opinie",
+  "nb": "Tilbakemelding",
+  "da": "Feedback",
+  "sv": "Feedback"
+ },
+ "Uitnodigingen": {
+  "en": "Invites",
+  "de": "Einladungen",
+  "fr": "Invitations",
+  "es": "Invitaciones",
+  "pl": "Zaproszenia",
+  "nb": "Invitasjoner",
+  "da": "Invitationer",
+  "sv": "Inbjudningar"
+ },
+ "%@ uitnodigingen": {
+  "en": "%@ invites",
+  "de": "%@ Einladungen",
+  "fr": "%@ invitations",
+  "es": "%@ invitaciones",
+  "pl": "%@ zaproszeń",
+  "nb": "%@ invitasjoner",
+  "da": "%@ invitationer",
+  "sv": "%@ inbjudningar"
+ },
+ "%@ feedback": {
+  "en": "%@ feedback",
+  "de": "%@ Feedback",
+  "fr": "%@ retours",
+  "es": "%@ comentarios",
+  "pl": "%@ opinii",
+  "nb": "%@ tilbakemeldinger",
+  "da": "%@ feedback",
+  "sv": "%@ feedback"
+ },
+ "%@ testers": {
+  "en": "%@ testers",
+  "de": "%@ Tester",
+  "fr": "%@ testeurs",
+  "es": "%@ testers",
+  "pl": "%@ testerów",
+  "nb": "%@ testere",
+  "da": "%@ testere",
+  "sv": "%@ testare"
+ },
+ "%@ TestFlight-installaties": {
+  "en": "%@ TestFlight installs",
+  "de": "%@ TestFlight-Installationen",
+  "fr": "%@ installations TestFlight",
+  "es": "%@ instalaciones de TestFlight",
+  "pl": "%@ instalacji TestFlight",
+  "nb": "%@ TestFlight-installasjoner",
+  "da": "%@ TestFlight-installationer",
+  "sv": "%@ TestFlight-installationer"
+ }
 }

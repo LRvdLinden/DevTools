@@ -413,3 +413,48 @@ struct AppSummary: Identifiable, Hashable, Codable {
     var appStoreConnectURL: URL? { URL(string: "https://appstoreconnect.apple.com/apps/\(id)/distribution") }
     var publicStoreURL: URL? { storeURL ?? URL(string: "https://apps.apple.com/app/id\(id)") }
 }
+
+/// TestFlight usage of a build or (summed) an app: from /v1/builds/{id}/metrics/betaBuildUsages.
+struct BetaUsage: Codable, Hashable {
+    var installs = 0
+    var sessions = 0
+    var crashes = 0
+    var feedback = 0
+    var invites = 0
+    /// Number of beta testers of the app (only on app totals).
+    var testers: Int?
+
+    static func + (a: BetaUsage, b: BetaUsage) -> BetaUsage {
+        var r = BetaUsage(installs: a.installs + b.installs, sessions: a.sessions + b.sessions, crashes: a.crashes + b.crashes,
+                          feedback: a.feedback + b.feedback, invites: a.invites + b.invites)
+        if a.testers != nil || b.testers != nil { r.testers = (a.testers ?? 0) + (b.testers ?? 0) }
+        return r
+    }
+
+    /// Sums every `values` object in an App Store Connect metrics response (one or more data points).
+    static func parse(_ data: Data) -> BetaUsage {
+        var u = BetaUsage()
+        guard let json = try? JSONSerialization.jsonObject(with: data) else { return u }
+        func int(_ v: Any?) -> Int {
+            if let n = v as? NSNumber { return n.intValue }
+            if let s = v as? String, let d = Double(s) { return Int(d) }
+            return 0
+        }
+        func walk(_ node: Any) {
+            if let dict = node as? [String: Any] {
+                if let values = dict["values"] as? [String: Any] {
+                    u.installs += int(values["installCount"])
+                    u.sessions += int(values["sessionCount"])
+                    u.crashes += int(values["crashCount"])
+                    u.feedback += int(values["feedbackCount"])
+                    u.invites += int(values["inviteCount"])
+                }
+                for (k, v) in dict where k != "values" { walk(v) }
+            } else if let list = node as? [Any] {
+                list.forEach(walk)
+            }
+        }
+        walk(json)
+        return u
+    }
+}

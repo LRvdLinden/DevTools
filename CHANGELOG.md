@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.0 (build 15)
+- **TestFlight installs:** DevTools now shows how often your TestFlight builds are installed.
+  - *TestFlight tab:* totals across all apps (installs, testers, sessions, crashes), plus the install count next to each app.
+  - *Builds of an app:* totals for that app, plus the installs per build in the list.
+  - *Build detail:* new section *TestFlight usage* with installs, sessions, crashes, feedback and invites.
+  - *App detail and dashboard:* new tile *TestFlight installs* with the number of testers.
+- Figures come from Apple's `betaBuildUsages` metrics per build; app totals are the sum of all builds. They refresh at most every 15 minutes (pull to refresh forces it). Expired builds are cached, because their figures no longer change.
+- The demo mode shows sample TestFlight figures.
+
 ## 1.0.0 (build 14)
 - **English is the default.** If the device language is not supported, the app shows English.
 - **9 languages:** English, Dutch, German, French, Spanish, Polish, Norwegian, Danish and Swedish. They cover the app, widgets and Apple Watch, with 407 strings per language.

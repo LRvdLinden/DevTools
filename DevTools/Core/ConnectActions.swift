@@ -316,3 +316,24 @@ enum Territory {
         "TH": "THA", "MY": "MYS", "ID": "IDN", "PH": "PHL", "VN": "VNM", "EE": "EST", "LV": "LVA", "LT": "LTU"
     ]
 }
+
+// MARK: - TestFlight usage
+
+extension ConnectAPI {
+    /// Installs, sessions, crashes, feedback and invites of one build.
+    func betaUsage(buildID: String) async throws -> BetaUsage {
+        // Apple accepts no query parameters here (limit only works together with groupBy/filter).
+        let (data, _) = try await send("GET", url("/v1/builds/\(buildID)/metrics/betaBuildUsages"))
+        return BetaUsage.parse(data)
+    }
+
+    /// Total number of beta testers of an app (meta.paging.total).
+    func betaTesterCount(appID: String) async throws -> Int {
+        let (data, _) = try await send("GET", url("/v1/betaTesters", [("filter[apps]", appID), ("limit", "1"), ("fields[betaTesters]", "state")]))
+        guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else { return 0 }
+        if let meta = json["meta"] as? [String: Any], let paging = meta["paging"] as? [String: Any], let total = paging["total"] as? NSNumber {
+            return total.intValue
+        }
+        return (json["data"] as? [Any])?.count ?? 0
+    }
+}

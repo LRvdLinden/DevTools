@@ -10,6 +10,13 @@ struct TestFlightView: View {
             .filter { query.isEmpty || $0.name.localizedCaseInsensitiveContains(query) }
             .sorted { ($0.latestBuild?.uploaded ?? .distantPast) > ($1.latestBuild?.uploaded ?? .distantPast) }
         List {
+            Section {
+                BetaUsageTiles(usage: store.betaTotal, loading: store.betaLoading && store.betaUsage.isEmpty)
+            } header: { Text("TestFlight-gebruik") } footer: {
+                Text("Totaal van alle builds van al je apps, volgens TestFlight.")
+            }
+            .listRowBackground(Color.clear)
+            .listRowInsets(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
             let attention = apps.filter { $0.latestBuild?.needsCompliance == true }
             if !attention.isEmpty {
                 Section {
@@ -36,6 +43,7 @@ struct TestFlightView: View {
                                 }
                             }
                             Spacer()
+                            if let u = store.betaUsage[app.id] { InstallCount(value: u.installs) }
                             if let b = app.latestBuild { StateBadge(state: b.displayState, compact: true) }
                         }
                     }
@@ -46,7 +54,8 @@ struct TestFlightView: View {
         .themedList()
         .searchable(text: $query, prompt: "Zoek app")
         .navigationTitle("TestFlight")
-        .refreshable { await store.refresh() }
+        .task { await store.refreshBetaUsage() }
+        .refreshable { await store.refresh(); await store.refreshBetaUsage(force: true) }
         .overlay { if store.apps.isEmpty && store.loading { ProgressView() } }
     }
 }
@@ -81,6 +90,13 @@ struct AppBuildsView: View {
     var body: some View {
         List {
             if let error { ErrorBanner(message: error).listRowBackground(Color.clear) }
+            if let u = store.betaUsage[app.id] {
+                Section {
+                    BetaUsageTiles(usage: u, loading: false)
+                } header: { Text("TestFlight-gebruik") }
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
+            }
             Section {
                 Toggle("Verlopen builds tonen", isOn: $showExpired)
                 NavigationLink { BetaGroupsView(app: app) } label: { Label("Testgroepen & testers", systemImage: "person.3.fill") }
@@ -89,7 +105,7 @@ struct AppBuildsView: View {
             ForEach(groups) { group in
                 Section(group.id) {
                     ForEach(group.builds) { b in
-                        NavigationLink { BuildDetailView(app: app, buildID: b.id) } label: { BuildRow(build: b) }
+                        NavigationLink { BuildDetailView(app: app, buildID: b.id) } label: { BuildRow(build: b, installs: store.buildUsage[b.id]?.installs) }
                             .swipeActions(edge: .trailing) {
                                 if !b.expired {
                                     Button(role: .destructive) { expireTarget = b } label: { Label("Laat verlopen", systemImage: "clock.badge.xmark") }
@@ -146,6 +162,7 @@ struct BuildDetailView: View {
     @State private var feedback: String?
     @State private var confirmExpire = false
     @State private var newLocale = ""
+    @State private var usage: BetaUsage?
 
     var body: some View {
         List {
@@ -173,6 +190,17 @@ struct BuildDetailView: View {
                     if let betaReview { LabeledContent("Beta-review") { StateBadge(state: betaReview) } }
                 }
                 .cardRows()
+
+                if let u = usage ?? store.buildUsage[b.id] {
+                    Section {
+                        LabeledContent { Text(Fmt.number(u.installs)).monospacedDigit() } label: { Label("Installaties", systemImage: "arrow.down.circle.fill") }
+                        LabeledContent { Text(Fmt.number(u.sessions)).monospacedDigit() } label: { Label("Sessies", systemImage: "play.circle.fill") }
+                        LabeledContent { Text(Fmt.number(u.crashes)).monospacedDigit().foregroundStyle(u.crashes > 0 ? Theme.rejected : Theme.textSecondary) } label: { Label("Crashes", systemImage: "exclamationmark.triangle.fill") }
+                        LabeledContent { Text(Fmt.number(u.feedback)).monospacedDigit() } label: { Label("Feedback", systemImage: "bubble.left.fill") }
+                        LabeledContent { Text(Fmt.number(u.invites)).monospacedDigit() } label: { Label("Uitnodigingen", systemImage: "envelope.fill") }
+                    } header: { Text("TestFlight-gebruik") }
+                    .cardRows()
+                }
 
                 if b.needsCompliance || b.usesNonExemptEncryption == nil {
                     Section {
@@ -272,11 +300,13 @@ struct BuildDetailView: View {
             async let g = api.betaGroups(appID: app.id)
             async let m = api.groupIDs(forBuild: buildID)
             async let r = api.betaReviewState(buildID: buildID)
+            async let u = api.betaUsage(buildID: buildID)
             build = try await b
             locs = (try? await l) ?? []
             groups = (try? await g) ?? []
             memberOf = (try? await m) ?? []
             betaReview = (try? await r) ?? nil
+            usage = try? await u
             for loc in locs { whatToTest[loc.id] = loc.attributes.whatsNew ?? "" }
             error = nil
         } catch { self.error = error.localizedDescription }
@@ -537,5 +567,38 @@ struct BetaGroupDetailView: View {
         guard let api = store.api else { return }
         do { try await api.deleteBetaGroup(group.id); await onChange(); dismiss() }
         catch { self.error = error.localizedDescription }
+    }
+}
+
+// MARK: - TestFlight usage components
+
+/// Four tiles: installs, testers, sessions and crashes.
+struct BetaUsageTiles: View {
+    let usage: BetaUsage
+    var loading = false
+    private let columns = [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)]
+
+    var body: some View {
+        LazyVGrid(columns: columns, spacing: 10) {
+            StatTile(title: "TestFlight-installaties", value: loading ? "…" : Fmt.number(usage.installs), systemImage: "arrow.down.circle.fill", tint: Theme.cyan)
+            StatTile(title: "Testers", value: loading ? "…" : usage.testers.map { Fmt.number($0) } ?? "—", systemImage: "person.2.fill", tint: Theme.accent,
+                     footnote: loading ? nil : L("\(Fmt.number(usage.invites)) uitnodigingen"))
+            StatTile(title: "Sessies", value: loading ? "…" : Fmt.number(usage.sessions), systemImage: "play.circle.fill", tint: Theme.live)
+            StatTile(title: "Crashes", value: loading ? "…" : Fmt.number(usage.crashes), systemImage: "exclamationmark.triangle.fill",
+                     tint: usage.crashes > 0 ? Theme.rejected : Theme.textSecondary,
+                     footnote: loading ? nil : L("\(Fmt.number(usage.feedback)) feedback"))
+        }
+    }
+}
+
+/// Small "↓ 123" capsule for lists.
+struct InstallCount: View {
+    let value: Int
+    var body: some View {
+        Label(Fmt.number(value), systemImage: "arrow.down.circle.fill")
+            .font(.caption2.weight(.semibold).monospacedDigit())
+            .foregroundStyle(Theme.cyan)
+            .labelStyle(.titleAndIcon)
+            .accessibilityLabel(L("\(Fmt.number(value)) TestFlight-installaties"))
     }
 }

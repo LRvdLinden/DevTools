@@ -126,6 +126,10 @@ struct AppDetailView: View {
                              footnote: app.ratingCount.map { L("\(Fmt.number($0)) beoordelingen") })
                     StatTile(title: "Laatste build", value: app.latestBuild?.number ?? "—", systemImage: "hammer.fill", tint: Theme.cyan,
                              footnote: app.latestBuild.map { Fmt.relative($0.uploaded) })
+                    if let u = store.betaUsage[app.id] {
+                        StatTile(title: "TestFlight-installaties", value: Fmt.number(u.installs), systemImage: "airplane.circle.fill", tint: Theme.cyan,
+                                 footnote: u.testers.map { L("\(Fmt.number($0)) testers") })
+                    }
                 }
 
                 if store.active?.hasVendor == true {
@@ -301,6 +305,7 @@ struct AppDetailView: View {
 
 struct BuildRow: View {
     let build: BuildInfo
+    var installs: Int? = nil
 
     var body: some View {
         HStack(spacing: 12) {
@@ -318,6 +323,7 @@ struct BuildRow: View {
                     Text(Platform.label(build.platform)).font(.caption2).foregroundStyle(Theme.textSecondary)
                 }
                 HStack(spacing: 6) {
+                    if let installs { InstallCount(value: installs) }
                     Text(Fmt.relative(build.uploaded))
                     if let exp = build.expires, !build.expired {
                         let days = Calendar.current.dateComponents([.day], from: .now, to: exp).day ?? 0

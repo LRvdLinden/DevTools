@@ -27,6 +27,13 @@ final class DevStore {
     var salesProgress: Double = 0
     var salesUpdated: Date?
 
+    // TestFlight usage (installs per app and per build)
+    var betaUsage: [String: BetaUsage] = [:]
+    var buildUsage: [String: BetaUsage] = [:]
+    var betaLoading = false
+    var betaUpdated: Date?
+    var betaTotal: BetaUsage { betaUsage.values.reduce(BetaUsage(), +) }
+
     @ObservationIgnored private var generation = 0
 
     init() {
@@ -52,6 +59,7 @@ final class DevStore {
         error = nil
         lastRefresh = .now
         Task { await refreshSales(force: true) }
+        Task { await refreshBetaUsage(force: true) }
     }
 
     func endDemo() {
@@ -124,6 +132,10 @@ final class DevStore {
         salesError = nil
         error = nil
         lastRefresh = nil
+        betaUsage = [:]
+        buildUsage = [:]
+        betaUpdated = nil
+        betaLoading = false
     }
 
     private func persist() {
@@ -142,6 +154,7 @@ final class DevStore {
         guard let url = appsCacheURL, let data = try? Data(contentsOf: url),
               let cached = try? JSONDecoder().decode([AppSummary].self, from: data) else { return }
         apps = cached
+        loadCachedBeta()
     }
 
     private func saveCachedApps() {
@@ -158,6 +171,7 @@ final class DevStore {
             progress = 1
             phase = L("Klaar")
             await refreshSales(force: true)
+            await refreshBetaUsage(force: true)
             return
         }
         guard let account = active, !loading else { return }
@@ -235,6 +249,7 @@ final class DevStore {
             progress = 1
         }
         Task { await refreshSales() }
+        Task { await refreshBetaUsage() }
     }
 
     nonisolated private static func loadDetails(api: ConnectAPI, appID: String) async -> (String, [VersionInfo]?, BuildInfo?) {
@@ -270,6 +285,85 @@ final class DevStore {
             saveCachedApps()
             publishSnapshot()
         }
+    }
+
+    // MARK: TestFlight usage
+
+    private struct BetaCache: Codable { var apps: [String: BetaUsage]; var builds: [String: BetaUsage]; var updated: Date? }
+
+    private var betaCacheURL: URL? {
+        guard let id = selectedID, !isDemo else { return nil }
+        return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent("beta-\(id.uuidString).json")
+    }
+
+    private func loadCachedBeta() {
+        guard let url = betaCacheURL, let data = try? Data(contentsOf: url),
+              let cached = try? JSONDecoder().decode(BetaCache.self, from: data) else { return }
+        betaUsage = cached.apps
+        buildUsage = cached.builds
+        betaUpdated = cached.updated
+    }
+
+    private func saveCachedBeta() {
+        guard let url = betaCacheURL, let data = try? JSONEncoder().encode(BetaCache(apps: betaUsage, builds: buildUsage, updated: betaUpdated)) else { return }
+        try? data.write(to: url)
+    }
+
+    /// TestFlight installs per build and per app (sum of all builds) plus the number of testers.
+    /// Expired builds no longer change, so their figures come from the cache once known.
+    func refreshBetaUsage(force: Bool = false) async {
+        guard let api, !betaLoading else { return }
+        if !force, let u = betaUpdated, Date().timeIntervalSince(u) < 15 * 60, !betaUsage.isEmpty { return }
+        let gen = generation
+        let ids = apps.map(\.id)
+        guard !ids.isEmpty else { return }
+        betaLoading = true
+        defer { if gen == generation { betaLoading = false } }
+        let known = buildUsage
+        var perApp = betaUsage
+        var perBuild = buildUsage
+        var index = 0
+        while index < ids.count {
+            let chunk = Array(ids[index..<min(index + 3, ids.count)])
+            index += 3
+            await withTaskGroup(of: (String, BetaUsage?, [String: BetaUsage]).self) { group in
+                for id in chunk {
+                    group.addTask { await Self.loadBetaUsage(api: api, appID: id, known: known) }
+                }
+                for await (id, total, builds) in group {
+                    if let total { perApp[id] = total }
+                    perBuild.merge(builds) { _, new in new }
+                }
+            }
+            guard gen == generation else { return }
+            betaUsage = perApp
+            buildUsage = perBuild
+        }
+        betaUpdated = .now
+        saveCachedBeta()
+    }
+
+    nonisolated private static func loadBetaUsage(api: ConnectAPI, appID: String, known: [String: BetaUsage]) async -> (String, BetaUsage?, [String: BetaUsage]) {
+        guard let builds = try? await api.builds(appID: appID, limit: 100) else { return (appID, nil, [:]) }
+        async let testers = try? api.betaTesterCount(appID: appID)
+        var result: [String: BetaUsage] = [:]
+        var i = 0
+        while i < builds.count {
+            let chunk = Array(builds[i..<min(i + 6, builds.count)])
+            i += 6
+            await withTaskGroup(of: (String, BetaUsage?).self) { group in
+                for b in chunk {
+                    if b.expired, let cached = known[b.id] { result[b.id] = cached; continue }
+                    group.addTask { (b.id, try? await api.betaUsage(buildID: b.id)) }
+                }
+                for await (id, usage) in group {
+                    if let usage { result[id] = usage } else if let cached = known[id] { result[id] = cached }
+                }
+            }
+        }
+        var total = result.values.reduce(BetaUsage(), +)
+        total.testers = await testers
+        return (appID, total, result)
     }
 
     // MARK: Sales
