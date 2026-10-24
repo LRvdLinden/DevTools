@@ -1,0 +1,8 @@
+name = "devtools-push"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+# Set these once with `npx wrangler secret put <NAME>` (or via the GitHub workflow):
+#   ONESIGNAL_APP_ID   – OneSignal app ID (Settings → Keys & IDs)
+#   ONESIGNAL_REST_KEY – OneSignal REST API key
+#   HOOK_SECRET        – any long random string; signs the per-device webhook secrets

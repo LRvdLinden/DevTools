@@ -12,6 +12,8 @@
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
+	<key>DevToolsPushRelay</key>
+	<string>https://devtools-push.REPLACE.workers.dev</string>
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>

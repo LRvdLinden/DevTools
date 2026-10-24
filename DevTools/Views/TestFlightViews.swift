@@ -202,6 +202,12 @@ struct BuildDetailView: View {
                     .cardRows()
                 }
 
+                Section {
+                    NavigationLink { FeedbackView(app: app, buildID: b.id) } label: { Label("Feedback en crashes van testers", systemImage: "bubble.left.and.exclamationmark.bubble.right") }
+                    NavigationLink { DiagnosticsView(buildID: b.id) } label: { Label("Diagnose (vastlopers, opstarten, schrijfacties)", systemImage: "stethoscope") }
+                }
+                .cardRows()
+
                 if b.needsCompliance || b.usesNonExemptEncryption == nil {
                     Section {
                         Text("Gebruikt deze build encryptie die niet is vrijgesteld (bijv. eigen crypto, niet alleen HTTPS)?").font(.footnote)

@@ -84,9 +84,18 @@ struct AccountView: View {
             }
             .cardRows()
 
+            if store.active != nil {
+                Section("Ontwikkelaar") {
+                    NavigationLink { PushSettingsView() } label: { Label("Pushmeldingen", systemImage: "bell.badge.fill") }
+                    NavigationLink { DeveloperResourcesView() } label: { Label("Team, certificaten en toestellen", systemImage: "person.2.badge.gearshape.fill") }
+                }
+                .cardRows()
+            }
+
             Section("Gegevens") {
                 Button {
                     SalesEngine.clearCache()
+                    AnalyticsEngine.clearCache()
                     Task { await store.refreshSales(force: true) }
                     feedback = "Rapportcache gewist"
                 } label: { Label("Downloadrapporten opnieuw ophalen", systemImage: "arrow.clockwise.circle") }

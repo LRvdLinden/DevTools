@@ -81,6 +81,15 @@ struct VersionDetailView: View {
 
             actionsSection
 
+            PhasedReleaseSection(versionID: version.id, versionState: version.state)
+
+            Section {
+                NavigationLink { MediaManagerView(appID: appID, versionID: version.id, title: "\(version.platformLabel) \(version.versionString)", editable: version.isEditable) } label: {
+                    Label("Screenshots en previews", systemImage: "photo.on.rectangle.angled")
+                }
+            }
+            .cardRows()
+
             Section {
                 if let build {
                     BuildRow(build: build)

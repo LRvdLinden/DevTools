@@ -270,6 +270,20 @@ struct AppDetailView: View {
             manageRow("App-informatie (naam, ondertitel)", "textformat", Theme.accent) { AppInfoEditorView(app: app) }
             Divider().padding(.leading, 44)
             manageRow("Testgroepen & testers", "person.3.fill", Theme.cyan) { BetaGroupsView(app: app) }
+            Divider().padding(.leading, 44)
+            manageRow("TestFlight-feedback en crashes", "bubble.left.and.exclamationmark.bubble.right.fill", Theme.rejected) { FeedbackView(app: app) }
+            Divider().padding(.leading, 44)
+            manageRow("App Analytics", "chart.bar.doc.horizontal.fill", Theme.live) { AnalyticsView(app: app) }
+            Divider().padding(.leading, 44)
+            manageRow("Prijs en beschikbaarheid", "globe.europe.africa.fill", Theme.pending) { PricingView(app: app) }
+            Divider().padding(.leading, 44)
+            manageRow("In-app aankopen en abonnementen", "cart.fill", Theme.review) { IAPView(app: app) }
+            Divider().padding(.leading, 44)
+            manageRow("Xcode Cloud", "cloud.fill", Theme.accent) { XcodeCloudView(app: app) }
+            Divider().padding(.leading, 44)
+            manageRow("Webhooks en pushmeldingen", "bell.badge.fill", .pink) { WebhooksView(app: app) }
+            Divider().padding(.leading, 44)
+            manageRow("Events, product pages, A/B-tests en Game Center", "square.grid.2x2.fill", .indigo) { ExtrasView(app: app) }
         }
         .devCard(padding: 6)
     }
