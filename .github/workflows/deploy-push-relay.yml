@@ -6,6 +6,9 @@ on:
     paths: ['push-relay/**']
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -19,6 +22,7 @@ jobs:
         working-directory: push-relay
         run: node --test test/relay.test.js
       - name: Deploy to Cloudflare Workers
+        id: deploy
         if: env.HAS_TOKEN == 'true'
         uses: cloudflare/wrangler-action@v3
         with:
@@ -33,3 +37,16 @@ jobs:
           ONESIGNAL_APP_ID: ${{ secrets.ONESIGNAL_APP_ID }}
           ONESIGNAL_REST_KEY: ${{ secrets.ONESIGNAL_REST_KEY }}
           HOOK_SECRET: ${{ secrets.HOOK_SECRET }}
+      - name: Publish relay URL to the relay-info branch
+        if: env.HAS_TOKEN == 'true'
+        run: |
+          URL="${{ steps.deploy.outputs.deployment-url }}"
+          echo "Relay URL: $URL"
+          git config user.name ci && git config user.email ci@users.noreply.github.com
+          git checkout --orphan relay-info
+          git rm -rfq . >/dev/null
+          echo "$URL" > relay-url.txt
+          curl -s "$URL" > relay-root.txt || true
+          git add relay-url.txt relay-root.txt
+          git commit -qm "Relay $GITHUB_SHA"
+          git push -qf origin relay-info
