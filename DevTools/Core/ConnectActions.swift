@@ -299,24 +299,6 @@ extension ConnectAPI {
     }
 }
 
-/// Territory codes in reviews are ISO-3166 alpha-3 (e.g. NLD); convert for flags/names.
-enum Territory {
-    static func alpha2(_ code: String) -> String {
-        if code.count == 2 { return code }
-        return alpha3Map.first { $0.value == code }?.key ?? String(code.prefix(2))
-    }
-
-    private static let alpha3Map: [String: String] = [
-        "NL": "NLD", "BE": "BEL", "DE": "DEU", "FR": "FRA", "GB": "GBR", "US": "USA", "CA": "CAN", "AU": "AUS",
-        "ES": "ESP", "IT": "ITA", "AT": "AUT", "CH": "CHE", "SE": "SWE", "NO": "NOR", "DK": "DNK", "FI": "FIN",
-        "PL": "POL", "PT": "PRT", "IE": "IRL", "NZ": "NZL", "JP": "JPN", "CN": "CHN", "KR": "KOR", "IN": "IND",
-        "BR": "BRA", "MX": "MEX", "RU": "RUS", "TR": "TUR", "CZ": "CZE", "HU": "HUN", "GR": "GRC", "RO": "ROU",
-        "ZA": "ZAF", "SG": "SGP", "HK": "HKG", "TW": "TWN", "AR": "ARG", "CL": "CHL", "CO": "COL", "IL": "ISR",
-        "AE": "ARE", "SA": "SAU", "LU": "LUX", "SK": "SVK", "SI": "SVN", "HR": "HRV", "BG": "BGR", "UA": "UKR",
-        "TH": "THA", "MY": "MYS", "ID": "IDN", "PH": "PHL", "VN": "VNM", "EE": "EST", "LV": "LVA", "LT": "LTU"
-    ]
-}
-
 // MARK: - TestFlight usage
 
 extension ConnectAPI {

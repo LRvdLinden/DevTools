@@ -10,7 +10,8 @@ enum Territory {
         }
         return m
     }()
-    static func iso2(_ id: String) -> String { map[id] ?? String(id.prefix(2)) }
+    static func iso2(_ id: String) -> String { id.count == 2 ? id : (map[id] ?? String(id.prefix(2))) }
+    static func alpha2(_ code: String) -> String { iso2(code) }
     static func name(_ id: String) -> String { Fmt.countryName(iso2(id)) }
     static func flag(_ id: String) -> String { Fmt.flag(iso2(id)) }
 }

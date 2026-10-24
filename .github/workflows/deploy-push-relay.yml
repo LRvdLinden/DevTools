@@ -1,0 +1,35 @@
+name: Deploy push relay
+
+on:
+  push:
+    branches: [main]
+    paths: ['push-relay/**']
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HAS_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Test
+        working-directory: push-relay
+        run: node --test test/relay.test.js
+      - name: Deploy to Cloudflare Workers
+        if: env.HAS_TOKEN == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: push-relay
+          secrets: |
+            ONESIGNAL_APP_ID
+            ONESIGNAL_REST_KEY
+            HOOK_SECRET
+        env:
+          ONESIGNAL_APP_ID: ${{ secrets.ONESIGNAL_APP_ID }}
+          ONESIGNAL_REST_KEY: ${{ secrets.ONESIGNAL_REST_KEY }}
+          HOOK_SECRET: ${{ secrets.HOOK_SECRET }}

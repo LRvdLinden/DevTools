@@ -26,16 +26,20 @@ enum WebhookEvents {
 
 extension PushManager {
     /// Creates (or updates) the DevTools push webhook for one app. Returns false if push isn't registered.
-    func ensureWebhook(api: ConnectAPI, appID: String) async throws -> Bool {
+    func ensureWebhook(api: ConnectAPI, appID: String, appName: String) async throws -> Bool {
         guard let reg = registration else { return false }
+        var comps = URLComponents(string: reg.webhookURL)
+        comps?.queryItems = [URLQueryItem(name: "app", value: appName),
+                             URLQueryItem(name: "lang", value: LanguageManager.locale.language.languageCode?.identifier ?? "en")]
+        let url = comps?.url?.absoluteString ?? reg.webhookURL
         let existing = try await api.jget("/v1/apps/\(appID)/webhooks", [("limit", "50")]).data
-        if let hook = existing.first(where: { $0.str("name") == WebhookEvents.pushName || $0.str("url") == reg.webhookURL }) {
+        if let hook = existing.first(where: { $0.str("name") == WebhookEvents.pushName || $0.str("url").hasPrefix(reg.webhookURL) }) {
             try await api.jpatch("/v1/webhooks/\(hook.id)", type: "webhooks", id: hook.id, attributes: [
-                "url": reg.webhookURL, "secret": reg.secret, "enabled": true, "eventTypes": WebhookEvents.pushDefault, "name": WebhookEvents.pushName,
+                "url": url, "secret": reg.secret, "enabled": true, "eventTypes": WebhookEvents.pushDefault, "name": WebhookEvents.pushName,
             ])
         } else {
             try await api.jcreate("/v1/webhooks", type: "webhooks", attributes: [
-                "name": WebhookEvents.pushName, "url": reg.webhookURL, "secret": reg.secret, "enabled": true, "eventTypes": WebhookEvents.pushDefault,
+                "name": WebhookEvents.pushName, "url": url, "secret": reg.secret, "enabled": true, "eventTypes": WebhookEvents.pushDefault,
             ], relationships: ["app": ("apps", appID)])
         }
         return true
@@ -43,7 +47,7 @@ extension PushManager {
 
     func removeWebhook(api: ConnectAPI, appID: String) async throws {
         let existing = try await api.jget("/v1/apps/\(appID)/webhooks", [("limit", "50")]).data
-        for hook in existing where hook.str("name") == WebhookEvents.pushName || hook.str("url") == registration?.webhookURL {
+        for hook in existing where hook.str("name") == WebhookEvents.pushName || (registration.map { hook.str("url").hasPrefix($0.webhookURL) } ?? false) {
             try await api.jdelete("/v1/webhooks/\(hook.id)")
         }
     }
@@ -99,7 +103,7 @@ struct PushSettingsView: View {
         for app in store.apps {
             progress = "\(app.name) (\(done + 1)/\(store.apps.count))"
             do {
-                if on { _ = try await push.ensureWebhook(api: api, appID: app.id) }
+                if on { _ = try await push.ensureWebhook(api: api, appID: app.id, appName: app.name) }
                 else { try await push.removeWebhook(api: api, appID: app.id) }
             } catch { self.error = "\(app.name): \(error.localizedDescription)" }
             done += 1
@@ -168,7 +172,7 @@ struct WebhooksView: View {
     private func setPush(_ on: Bool) async {
         guard let api = store.api else { return }
         do {
-            if on { _ = try await push.ensureWebhook(api: api, appID: app.id); feedback = L("Pushmeldingen aan") }
+            if on { _ = try await push.ensureWebhook(api: api, appID: app.id, appName: app.name); feedback = L("Pushmeldingen aan") }
             else { try await push.removeWebhook(api: api, appID: app.id); feedback = L("Pushmeldingen uit") }
             await load()
         } catch { loader.error = error.localizedDescription }

@@ -2,6 +2,6 @@
   "name": "devtools-push",
   "private": true,
   "type": "module",
-  "scripts": { "deploy": "wrangler deploy", "test": "node --test test/" },
+  "scripts": { "deploy": "wrangler deploy", "test": "node --test test/relay.test.js" },
   "devDependencies": { "wrangler": "^4.0.0" }
 }
