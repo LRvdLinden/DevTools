@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 (build 18)
+- **DevTools for Mac (Mac Catalyst):** the same app now also runs as a real Mac app, on Apple silicon and Intel.
+  - You get a sidebar layout, freely resizable windows (minimum 900 × 620), menu commands **Refresh (⌘R)** and **Reload download reports (⇧⌘R)**, and the widgets in the Mac widget gallery.
+  - It is one App Store app with the same bundle ID, so iPhone, iPad and Mac are a single purchase.
+  - The Apple Watch app and the Watch connection are only available on iPhone.
+- Version 1.0.1 with build number 18.
+
 ## 1.0.0 (build 16)
 - **Push notifications live:** the DevTools push relay runs at `devtools-push.devtools-45d.workers.dev`, connected to OneSignal (SDK 5.8.0 with Notification Service Extension).
   - Turn it on via Account → Push notifications.

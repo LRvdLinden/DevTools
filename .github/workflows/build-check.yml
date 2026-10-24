@@ -21,6 +21,14 @@ jobs:
           xcodebuild -project DevTools.xcodeproj -scheme DevTools \
             -destination 'generic/platform=iOS' -configuration Debug \
             CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tee build.log || echo "BUILD_FAILED" >> build.log
+      - name: Build Mac Catalyst app, unsigned
+        if: success()
+        run: |
+          set -o pipefail
+          xcodebuild -project DevTools.xcodeproj -scheme DevTools \
+            -destination 'generic/platform=macOS,variant=Mac Catalyst' -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tee catalyst.log || echo "CATALYST_FAILED" >> catalyst.log
+          grep -E "error:|BUILD SUCCEEDED|BUILD FAILED|CATALYST_FAILED" catalyst.log | sed 's/^/[catalyst] /' >> build.log || true
       - name: Export localizations (string extraction)
         if: success()
         run: |

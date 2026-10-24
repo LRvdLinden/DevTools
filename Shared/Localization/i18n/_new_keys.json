@@ -3938,5 +3938,15 @@
   "nb": "Registrerer hos OneSignal…",
   "da": "Registrerer hos OneSignal…",
   "sv": "Registrerar hos OneSignal…"
+ },
+ "Vernieuwen": {
+  "en": "Refresh",
+  "de": "Aktualisieren",
+  "fr": "Actualiser",
+  "es": "Actualizar",
+  "pl": "Odśwież",
+  "nb": "Oppdater",
+  "da": "Opdater",
+  "sv": "Uppdatera"
  }
 }

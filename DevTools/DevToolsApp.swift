@@ -1,6 +1,8 @@
 import SwiftUI
 import UIKit
+#if !targetEnvironment(macCatalyst)
 import WatchConnectivity
+#endif
 
 @main
 struct DevToolsApp: App {
@@ -22,6 +24,21 @@ struct DevToolsApp: App {
                 .id(language)
                 .preferredColorScheme(appearance.colorScheme)
                 .tint(Theme.accent)
+                #if targetEnvironment(macCatalyst)
+                .frame(minWidth: 900, minHeight: 620)
+                #endif
+        }
+        .commands {
+            CommandGroup(after: .newItem) {
+                Button("Vernieuwen") {
+                    Task { await store.refresh(); await store.refreshBetaUsage(force: true) }
+                }
+                .keyboardShortcut("r", modifiers: .command)
+                Button("Downloadrapporten opnieuw ophalen") {
+                    Task { await store.refreshSales(force: true) }
+                }
+                .keyboardShortcut("r", modifiers: [.command, .shift])
+            }
         }
     }
 }
@@ -371,6 +388,14 @@ struct WelcomeView: View {
     }
 }
 
+#if targetEnvironment(macCatalyst)
+/// No Apple Watch on the Mac.
+final class PhoneWatchBridge {
+    static let shared = PhoneWatchBridge()
+    func activate() {}
+    func send(_ snapshot: SharedSnapshot) {}
+}
+#else
 /// Sends the snapshot (and small app icons) to the Apple Watch and answers the
 /// watch's "refresh" requests, like HomeyDev.
 final class PhoneWatchBridge: NSObject, WCSessionDelegate {
@@ -423,3 +448,4 @@ final class PhoneWatchBridge: NSObject, WCSessionDelegate {
     func sessionDidBecomeInactive(_ session: WCSession) {}
     func sessionDidDeactivate(_ session: WCSession) { session.activate() }
 }
+#endif

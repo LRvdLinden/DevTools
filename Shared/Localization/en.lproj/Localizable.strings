@@ -702,6 +702,7 @@
 "Verloopt" = "Expires";
 "Verlopen" = "Expired";
 "Verlopen builds tonen" = "Show expired builds";
+"Vernieuwen" = "Refresh";
 "Versie" = "Version";
 "Versie %@ bij App Review" = "Version %@ at App Review";
 "Versie %@ is afgewezen" = "Version %@ was rejected";
