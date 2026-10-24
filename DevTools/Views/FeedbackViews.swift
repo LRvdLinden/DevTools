@@ -51,9 +51,10 @@ struct FeedbackView: View {
         defer { loading = false }
         var q: [(String, String)] = [("limit", "100")]
         if let buildID { q.append(("filter[build]", buildID)) }
+        let query = q
         do {
-            async let s = api.jget("/v1/apps/\(app.id)/betaFeedbackScreenshotSubmissions", q, all: true, max: 300)
-            async let c = api.jget("/v1/apps/\(app.id)/betaFeedbackCrashSubmissions", q, all: true, max: 300)
+            async let s = api.jget("/v1/apps/\(app.id)/betaFeedbackScreenshotSubmissions", query, all: true, max: 300)
+            async let c = api.jget("/v1/apps/\(app.id)/betaFeedbackCrashSubmissions", query, all: true, max: 300)
             async let b = api.builds(appID: app.id, limit: 100)
             screenshots = try await s.data
             crashes = try await c.data

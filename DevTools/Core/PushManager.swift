@@ -67,7 +67,7 @@ final class PushManager {
         if enabled { OneSignal.login(deviceKey) }
     }
 
-    static func validID(_ id: String?) -> String? {
+    nonisolated static func validID(_ id: String?) -> String? {
         guard let id, !id.isEmpty, !id.hasPrefix("local-") else { return nil }
         return id
     }
