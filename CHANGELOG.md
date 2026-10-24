@@ -1,13 +1,44 @@
 # Changelog
 
 ## 1.0.0 (build 15)
-- **TestFlight installs:** DevTools now shows how often your TestFlight builds are installed.
-  - *TestFlight tab:* totals across all apps (installs, testers, sessions, crashes), plus the install count next to each app.
-  - *Builds of an app:* totals for that app, plus the installs per build in the list.
-  - *Build detail:* new section *TestFlight usage* with installs, sessions, crashes, feedback and invites.
-  - *App detail and dashboard:* new tile *TestFlight installs* with the number of testers.
-- Figures come from Apple's `betaBuildUsages` metrics per build; app totals are the sum of all builds. They refresh at most every 15 minutes (pull to refresh forces it). Expired builds are cached, because their figures no longer change.
-- The demo mode shows sample TestFlight figures.
+Everything the App Store Connect API offers is now in DevTools. Per app, under *Manage* in the app detail screen:
+
+- **App Analytics:**
+  - What you see: impressions, product page views, conversion, first-time downloads and redownloads, sessions with average duration, active devices, crashes, deletions, and day 1 / day 7 retention.
+  - Includes a chart and a choice of 7, 14 or 30 days.
+  - DevTools turns on Apple's ongoing analytics reports once; the first reports arrive after 1–2 days. Instances are cached locally.
+  - Apple has no retention report, so retention is approximated from sessions of new users.
+- **Phased release:**
+  - Turn it on before release and follow the 7 days (1–100%).
+  - Pause or resume it, or release to everyone right away.
+  - Located on the version screen.
+- **TestFlight feedback and crashes:**
+  - Screenshots and comments from testers, with device, OS, battery, connection and free storage.
+  - Crash logs that you can share or copy; feedback can be deleted.
+  - Per app, and per build from the build screen.
+  - **Diagnostics** per build: hangs, launches and disk writes, with call stacks.
+- **Screenshots and previews:**
+  - View, upload (from Photos), reorder and delete, per language and per screen size.
+  - Add new screen sizes. Previews (video) can be uploaded too.
+  - **Header and Search Results images** are placed through Apple's Asset Library, on the version screen.
+- **Price and availability:**
+  - Base price and your proceeds, prices per country, and changing the price through Apple's price points.
+  - Turn availability on or off per country.
+- **In-app purchases and subscriptions:**
+  - List, create (IAP) and edit them: family sharing, review note, display name and description per language.
+  - Submit for review.
+  - **Offer codes:** generate one-time codes and download or share them as CSV; custom codes are listed. Apple replaced IAP promo codes with offer codes on 26 March 2026; app promo codes are only available in App Store Connect.
+- **Xcode Cloud:** workflows, build runs with commit, duration and actions (errors, warnings, test failures), and **starting a build** on a branch or tag of your choice.
+- **Webhooks:** create, turn on or off, choose events, send a ping, and view and resend deliveries. This also works for a Homey or Slack URL.
+- **Push notifications (OneSignal):**
+  - Account → Push notifications → turn on for all apps.
+  - DevTools creates a webhook per app that points to the DevTools push relay (Cloudflare Worker, `push-relay/`). The relay checks Apple's signature and sends the notification through OneSignal in your language.
+  - Notifications cover versions entering review, being approved, rejected or going live, builds being ready or failing, external TestFlight, and new feedback or crashes.
+  - Your API key never leaves the device. Set it up once following `push-relay/README.md`.
+- **Team and development** (Account): users and roles (edit, remove), invitations, certificates (revoke), identifiers (create), devices (register, turn on/off) and provisioning profiles.
+- **More:** in-app events, custom product pages (visibility, copy link), A/B tests of your product page with variants, and Game Center leaderboards and achievements.
+- **TestFlight installs** per app and per build, with testers, sessions, crashes, feedback and invites, on the TestFlight tab, the app detail screen and the dashboard.
+- All new screens are in all 9 languages, and the privacy policy is updated for the optional push notifications.
 
 ## 1.0.0 (build 14)
 - **English is the default.** If the device language is not supported, the app shows English.

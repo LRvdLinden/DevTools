@@ -153,6 +153,18 @@ enum DemoData {
                     doc = ["data": b, "included": full["included"] ?? []]
                 }
             }
+        case parts.count == 4 && parts[1] == "apps" && parts[3] == "ciProduct":
+            doc = ["data": res("ciProducts", parts[2] + "-ci", ["name": app(parts[2])?.name ?? "App", "productType": "APP"])]
+        case parts.count == 4 && parts[1] == "ciProducts" && parts[3] == "workflows":
+            doc = ["data": [res("ciWorkflows", parts[2] + "-w1", ["name": "Release – TestFlight", "description": "Archive and upload on every push to main", "isEnabled": true]),
+                            res("ciWorkflows", parts[2] + "-w2", ["name": "Pull requests – Tests", "description": "Build and test pull requests", "isEnabled": true])]]
+        case parts.count == 4 && parts[1] == "ciWorkflows" && parts[3] == "buildRuns":
+            let msgs = ["Add Apple Watch complications", "Fix crash when opening widgets", "Bump version to 2.5.0", "Improve chart animations"]
+            doc = ["data": (0..<4).map { i in
+                res("ciBuildRuns", "\(parts[2])-r\(i)", ["number": 318 - i, "createdDate": ago(i, hours: 3), "startedDate": ago(i, hours: 3), "finishedDate": i == 0 ? NSNull() as Any : ago(i, hours: 2) as Any,
+                                                         "executionProgress": i == 0 ? "RUNNING" : "COMPLETE", "completionStatus": (i == 2 ? "FAILED" : "SUCCEEDED") as Any, "startReason": "GIT_REF_CHANGE",
+                                                         "sourceCommit": ["commitSha": "a1b2c3d4e5f6a7b8c9d0", "message": msgs[i], "author": ["displayName": "Léon"]]])
+            }]
         case parts.count == 5 && parts[1] == "builds" && parts[4] == "betaBuildUsages":
             let seed = parts[2].unicodeScalars.reduce(7) { ($0 &* 31 &+ Int($1.value)) % 9973 }
             let installs = 40 + seed % 260

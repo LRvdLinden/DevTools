@@ -40,7 +40,10 @@ If "DevTools – Developer Dashboard" is already taken, use one of these alterna
 
 ## App Privacy (nutrition label)
 
-- Select **Data Not Collected**. DevTools has no analytics or tracking, and no servers of its own.
+- Since build 15 DevTools has **optional** push notifications (OneSignal + the DevTools push relay). Declare:
+  - **Identifiers → Device ID**: collected, used for **App Functionality**, **not linked** to the user, **not used for tracking**.
+  - Everything else: not collected (no analytics, no tracking, no contact info).
+- If push notifications are not enabled in the shipped build (no relay URL in Info.plist), you can keep **Data Not Collected**.
 - Privacy Policy URL: see above.
 
 ## Export compliance
