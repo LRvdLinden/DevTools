@@ -75,7 +75,11 @@ struct PushSettingsView: View {
                 if !push.isConfigured {
                     Text("Pushmeldingen zijn in deze build nog niet geactiveerd.").font(.footnote).foregroundStyle(Theme.review)
                 } else if push.enabled && push.registration != nil {
-                    Label("Deze iPhone is aangemeld", systemImage: "checkmark.circle.fill").foregroundStyle(Theme.live)
+                    if push.subscriptionID != nil {
+                        Label("Deze iPhone is aangemeld", systemImage: "checkmark.circle.fill").foregroundStyle(Theme.live)
+                    } else {
+                        Label("Aanmelden bij OneSignal…", systemImage: "hourglass").foregroundStyle(Theme.review)
+                    }
                     Button { Task { await allApps(on: true) } } label: { Label("Aanzetten voor al mijn apps", systemImage: "bell.and.waves.left.and.right") }
                         .disabled(progress != nil || store.isDemo)
                     Button(role: .destructive) { Task { await allApps(on: false) } } label: { Label("Uitzetten voor al mijn apps", systemImage: "bell.slash") }

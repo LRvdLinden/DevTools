@@ -1,8 +1,8 @@
 /**
  * DevTools push relay (Cloudflare Worker).
  *
- * POST /register      {key, token, sandbox, language} → links the APNs token to OneSignal (external_id = key)
- *                     and returns {webhookURL, secret} for App Store Connect webhooks.
+ * POST /register      {key} → returns {webhookURL, secret} for App Store Connect webhooks. The app itself logs in
+ *                     to OneSignal with the same key (external_id). Legacy: {key, token} also creates the OneSignal user.
  * POST /hook/:key     App Store Connect webhook delivery → checks X-Apple-SIGNATURE → OneSignal push to that device.
  *
  * Stateless: the per-device webhook secret is HMAC(HOOK_SECRET, key), so nothing has to be stored.
@@ -45,20 +45,24 @@ async function register(env, request, origin) {
   let input;
   try { input = await request.json(); } catch { return json({ error: 'invalid json' }, 400); }
   const { key, token, sandbox, language } = input || {};
-  if (!KEY_RE.test(String(key || '')) || !TOKEN_RE.test(String(token || ''))) return json({ error: 'invalid key or token' }, 400);
-  const subscription = { type: 'iOSPush', token, enabled: true };
-  if (sandbox) subscription.test_type = 1;
-  const lang = String(language || 'en').slice(0, 2);
-  let res = await oneSignal(env, `/apps/${env.ONESIGNAL_APP_ID}/users`, {
-    properties: { language: lang },
-    identity: { external_id: key },
-    subscriptions: [subscription],
-  });
-  if (res.status === 409) {
-    res = await oneSignal(env, `/apps/${env.ONESIGNAL_APP_ID}/users/by/external_id/${key}/subscriptions`, { subscription });
-  }
-  if (!res.ok && res.status !== 409) {
-    return json({ error: `OneSignal ${res.status}`, detail: (await res.text()).slice(0, 300) }, 502);
+  if (!KEY_RE.test(String(key || ''))) return json({ error: 'invalid key' }, 400);
+  // The DevTools app registers itself with the OneSignal SDK (external_id = key). Older builds sent the raw APNs
+  // token instead; in that case the relay creates the OneSignal user itself.
+  if (token !== undefined) {
+    if (!TOKEN_RE.test(String(token))) return json({ error: 'invalid token' }, 400);
+    const subscription = { type: 'iOSPush', token, enabled: true };
+    if (sandbox) subscription.test_type = 1;
+    let res = await oneSignal(env, `/apps/${env.ONESIGNAL_APP_ID}/users`, {
+      properties: { language: String(language || 'en').slice(0, 2) },
+      identity: { external_id: key },
+      subscriptions: [subscription],
+    });
+    if (res.status === 409) {
+      res = await oneSignal(env, `/apps/${env.ONESIGNAL_APP_ID}/users/by/external_id/${key}/subscriptions`, { subscription });
+    }
+    if (!res.ok && res.status !== 409) {
+      return json({ error: `OneSignal ${res.status}`, detail: (await res.text()).slice(0, 300) }, 502);
+    }
   }
   return json({ webhookURL: `${origin}/hook/${key}`, secret: await secretFor(env, key) });
 }

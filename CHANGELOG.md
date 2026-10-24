@@ -30,7 +30,7 @@ Everything the App Store Connect API offers is now in DevTools. Per app, under *
   - **Offer codes:** generate one-time codes and download or share them as CSV; custom codes are listed. Apple replaced IAP promo codes with offer codes on 26 March 2026; app promo codes are only available in App Store Connect.
 - **Xcode Cloud:** workflows, build runs with commit, duration and actions (errors, warnings, test failures), and **starting a build** on a branch or tag of your choice.
 - **Webhooks:** create, turn on or off, choose events, send a ping, and view and resend deliveries. This also works for a Homey or Slack URL.
-- **Push notifications (OneSignal):**
+- **Push notifications (OneSignal SDK 5.8.0 with Notification Service Extension):**
   - Account → Push notifications → turn on for all apps.
   - DevTools creates a webhook per app that points to the DevTools push relay (Cloudflare Worker, `push-relay/`). The relay checks Apple's signature and sends the notification through OneSignal in your language.
   - Notifications cover versions entering review, being approved, rejected or going live, builds being ready or failing, external TestFlight, and new feedback or crashes.

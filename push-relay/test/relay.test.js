@@ -28,6 +28,11 @@ test('register validates input and returns webhook + secret', async () => {
   assert.equal(body.secret, await secretFor(env, key));
   const bad = await worker.fetch(new Request('https://relay.test/register', { method: 'POST', body: JSON.stringify({ key: 'x', token: 'y' }) }), env);
   assert.equal(bad.status, 400);
+  let called = false;
+  globalThis.fetch = async () => { called = true; return new Response('{}', { status: 200 }); };
+  const sdk = await worker.fetch(new Request('https://relay.test/register', { method: 'POST', body: JSON.stringify({ key }) }), env);
+  assert.equal(sdk.status, 200);
+  assert.equal(called, false);
 });
 
 test('hook checks signature and sends push', async () => {

@@ -3928,5 +3928,15 @@
   "nb": "© DevTools - PixelForges",
   "da": "© DevTools - PixelForges",
   "sv": "© DevTools - PixelForges"
+ },
+ "Aanmelden bij OneSignal…": {
+  "en": "Registering with OneSignal…",
+  "de": "Anmeldung bei OneSignal…",
+  "fr": "Inscription auprès de OneSignal…",
+  "es": "Registrando en OneSignal…",
+  "pl": "Rejestracja w OneSignal…",
+  "nb": "Registrerer hos OneSignal…",
+  "da": "Registrerer hos OneSignal…",
+  "sv": "Registrerar hos OneSignal…"
  }
 }

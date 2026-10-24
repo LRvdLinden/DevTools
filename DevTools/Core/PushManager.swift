@@ -1,13 +1,14 @@
 import Foundation
 import UIKit
 import UserNotifications
+import OneSignalFramework
 
-/// Push notifications for App Store Connect events.
+/// Push notifications for App Store Connect events (OneSignal SDK).
 ///
-/// Flow: the device registers with APNs → its token goes to the DevTools push relay (a Cloudflare Worker),
-/// which links it to a random device key in OneSignal and returns a webhook URL + secret for that key.
-/// DevTools then creates an App Store Connect webhook per app with that URL. Apple → relay (checks the
-/// signature) → OneSignal → this device. The relay stores nothing; the API key never leaves the device.
+/// Flow: OneSignal registers the device (APNs) and is logged in with a random per-install key (external_id).
+/// The DevTools push relay (Cloudflare Worker) returns a webhook URL + secret for that key; DevTools creates an
+/// App Store Connect webhook per app with it. Apple → relay (checks the signature) → OneSignal → this device.
+/// The relay stores nothing and the App Store Connect API key never leaves the device.
 @MainActor
 @Observable
 final class PushManager {
@@ -17,11 +18,19 @@ final class PushManager {
     var authorized = false
     var working = false
     var error: String?
+    var subscriptionID: String?
     var registration: Registration? = PushManager.loadRegistration()
 
     struct Registration: Codable {
         var webhookURL: String
         var secret: String
+    }
+
+    @ObservationIgnored private var observer: SubscriptionObserver?
+
+    static var oneSignalAppID: String? {
+        guard let s = Bundle.main.object(forInfoDictionaryKey: "OneSignalAppID") as? String, !s.isEmpty else { return nil }
+        return s
     }
 
     /// Relay URL from Info.plist (DevToolsPushRelay), e.g. https://devtools-push.<account>.workers.dev
@@ -30,9 +39,9 @@ final class PushManager {
               !s.isEmpty, !s.contains("REPLACE"), let u = URL(string: s) else { return nil }
         return u
     }
-    var isConfigured: Bool { Self.relayURL != nil }
+    var isConfigured: Bool { Self.relayURL != nil && Self.oneSignalAppID != nil }
 
-    /// Random, per-install key. Not linked to Apple ID, e-mail or App Store Connect account.
+    /// Random, per-install key (OneSignal external_id). Not linked to Apple ID, e-mail or App Store Connect account.
     var deviceKey: String {
         if let k = Vault.read("push.deviceKey") { return k }
         let k = UUID().uuidString.lowercased()
@@ -40,32 +49,51 @@ final class PushManager {
         return k
     }
 
-    private var tokenContinuation: CheckedContinuation<String, Error>?
+    /// Called once at launch (DevToolsApp.init).
+    static func initialize() {
+        guard let appID = oneSignalAppID else { return }
+        #if DEBUG
+        OneSignal.Debug.setLogLevel(.LL_WARN)
+        #endif
+        OneSignal.initialize(appID, withLaunchOptions: nil)
+        Task { @MainActor in shared.startObserving() }
+    }
+
+    private func startObserving() {
+        let obs = SubscriptionObserver { [weak self] id in self?.subscriptionID = id }
+        observer = obs   // OneSignal keeps observers weakly
+        OneSignal.User.pushSubscription.addObserver(obs)
+        subscriptionID = Self.validID(OneSignal.User.pushSubscription.id)
+        if enabled { OneSignal.login(deviceKey) }
+    }
+
+    static func validID(_ id: String?) -> String? {
+        guard let id, !id.isEmpty, !id.hasPrefix("local-") else { return nil }
+        return id
+    }
 
     func refreshAuthorization() async {
         let s = await UNUserNotificationCenter.current().notificationSettings()
         authorized = s.authorizationStatus == .authorized || s.authorizationStatus == .provisional
     }
 
-    /// Asks permission, gets the APNs token and registers it with the relay.
+    /// Asks permission (only on the user's tap), logs in to OneSignal and gets the webhook URL from the relay.
     func enable() async -> Bool {
-        guard let relay = Self.relayURL else { error = L("Pushmeldingen zijn nog niet ingesteld in deze build."); return false }
+        guard let relay = Self.relayURL, Self.oneSignalAppID != nil else { error = L("Pushmeldingen zijn nog niet ingesteld in deze build."); return false }
         working = true
         defer { working = false }
+        let granted = await withCheckedContinuation { cont in
+            OneSignal.Notifications.requestPermission({ accepted in cont.resume(returning: accepted) }, fallbackToSettings: true)
+        }
+        guard granted else { error = L("Meldingen zijn uitgeschakeld voor DevTools in Instellingen."); return false }
+        authorized = true
+        OneSignal.login(deviceKey)
+        OneSignal.User.pushSubscription.optIn()
         do {
-            let granted = try await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge])
-            guard granted else { error = L("Meldingen zijn uitgeschakeld voor DevTools in Instellingen."); return false }
-            authorized = true
-            let token = try await apnsToken()
-            #if DEBUG
-            let sandbox = true
-            #else
-            let sandbox = false
-            #endif
             var req = URLRequest(url: relay.appendingPathComponent("register"))
             req.httpMethod = "POST"
             req.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            req.httpBody = try JSONSerialization.data(withJSONObject: ["key": deviceKey, "token": token, "sandbox": sandbox,
+            req.httpBody = try JSONSerialization.data(withJSONObject: ["key": deviceKey,
                                                                        "language": LanguageManager.locale.language.languageCode?.identifier ?? "en"])
             req.timeoutInterval = 20
             let (data, resp) = try await URLSession.shared.data(for: req)
@@ -88,26 +116,7 @@ final class PushManager {
     func disable() {
         enabled = false
         UserDefaults.standard.set(false, forKey: "push.enabled")
-        UIApplication.shared.unregisterForRemoteNotifications()
-    }
-
-    private func apnsToken() async throws -> String {
-        try await withCheckedThrowingContinuation { cont in
-            tokenContinuation?.resume(throwing: CancellationError())
-            tokenContinuation = cont
-            UIApplication.shared.registerForRemoteNotifications()
-        }
-    }
-
-    func didRegister(_ token: Data) {
-        let hex = token.map { String(format: "%02x", $0) }.joined()
-        tokenContinuation?.resume(returning: hex)
-        tokenContinuation = nil
-    }
-
-    func didFail(_ error: Error) {
-        tokenContinuation?.resume(throwing: error)
-        tokenContinuation = nil
+        OneSignal.User.pushSubscription.optOut()
     }
 
     private static func loadRegistration() -> Registration? {
@@ -120,23 +129,13 @@ final class PushManager {
     }
 }
 
-/// UIKit hooks for APNs registration and foreground presentation.
-final class DevToolsAppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        UNUserNotificationCenter.current().delegate = self
-        if UserDefaults.standard.bool(forKey: "push.enabled") { application.registerForRemoteNotifications() }
-        return true
-    }
+/// Strongly held by PushManager; forwards OneSignal push subscription changes.
+final class SubscriptionObserver: NSObject, OSPushSubscriptionObserver {
+    private let onChange: @MainActor (String?) -> Void
+    init(_ onChange: @escaping @MainActor (String?) -> Void) { self.onChange = onChange }
 
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        Task { @MainActor in PushManager.shared.didRegister(deviceToken) }
-    }
-
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        Task { @MainActor in PushManager.shared.didFail(error) }
-    }
-
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
-        [.banner, .sound, .list]
+    func onPushSubscriptionDidChange(state: OSPushSubscriptionChangedState) {
+        let id = PushManager.validID(state.current.id)
+        Task { @MainActor in onChange(id) }
     }
 }

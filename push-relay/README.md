@@ -7,7 +7,7 @@ App Store Connect ──(signed webhook)──▶ Worker /hook/<deviceKey> ─�
 DevTools app ──(APNs token + random deviceKey)──▶ Worker /register ──▶ OneSignal user (external_id = deviceKey)
 ```
 
-- `/register` links the device's APNs token to OneSignal. It returns the webhook URL plus a per-device secret: `HMAC(HOOK_SECRET, deviceKey)`.
+- The app uses the **OneSignal SDK** (App ID in `DevTools/Info.plist` → `OneSignalAppID`) and logs in with a random per-install key as `external_id`. `/register` returns the webhook URL plus a per-device secret: `HMAC(HOOK_SECRET, deviceKey)`.
 - `/hook/<key>` checks `X-Apple-SIGNATURE` (`hmacsha256=<hex>` over the raw body), builds a localized message and sends it to that one device only.
 - In-between states (for example builds that are still processing) are skipped.
 

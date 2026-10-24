@@ -12,6 +12,12 @@
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
+	<key>OneSignalAppID</key>
+	<string>2701f25d-6687-40a0-8242-7d67f913ccc7</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>DevToolsPushRelay</key>
 	<string>https://devtools-push.REPLACE.workers.dev</string>
 	<key>CFBundleLocalizations</key>

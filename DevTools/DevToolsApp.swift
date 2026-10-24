@@ -4,13 +4,13 @@ import WatchConnectivity
 
 @main
 struct DevToolsApp: App {
-    @UIApplicationDelegateAdaptor(DevToolsAppDelegate.self) private var appDelegate
     @State private var store = DevStore()
     @AppStorage("appearance") private var appearance: AppearanceSetting = .system
     @AppStorage(LanguageManager.key, store: LanguageManager.defaults) private var language = ""
 
     init() {
         LanguageManager.apply()
+        PushManager.initialize()
         PhoneWatchBridge.shared.activate()
     }
 
