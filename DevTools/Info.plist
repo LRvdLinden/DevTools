@@ -19,7 +19,7 @@
 		<string>remote-notification</string>
 	</array>
 	<key>DevToolsPushRelay</key>
-	<string>https://devtools-push.REPLACE.workers.dev</string>
+	<string>https://devtools-push.devtools-45d.workers.dev</string>
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>

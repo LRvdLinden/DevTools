@@ -30,7 +30,7 @@ DevTools app ──(APNs token + random deviceKey)──▶ Worker /register ─
    | `ONESIGNAL_REST_KEY` | the REST API key |
    | `HOOK_SECRET` | a long random string, e.g. `openssl rand -hex 32`. Never change it, or existing webhooks stop working. |
 
-4. **Deploy.** Go to Actions → *Deploy push relay* → Run workflow, or push a change in `push-relay/`. The URL becomes `https://devtools-push.<your-subdomain>.workers.dev`.
+4. **Deploy.** Go to Actions → *Deploy push relay* → Run workflow, or push a change in `push-relay/`. The URL becomes `https://devtools-push.<your-subdomain>.workers.dev` (DevTools: `https://devtools-push.devtools-45d.workers.dev`); the workflow also writes it to the `relay-info` branch.
 5. **App.** In `DevTools/Info.plist`, set `DevToolsPushRelay` to that URL. Push Notifications is already in the entitlements, and Xcode turns the capability on for the App ID automatically.
 6. **App Privacy** (App Store Connect): **Identifiers → Device ID**, used for App Functionality, not linked to the user, no tracking.
 
