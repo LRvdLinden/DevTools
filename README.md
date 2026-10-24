@@ -18,6 +18,17 @@ Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch,
 | **Test groups** | Create internal/external groups, enable public link and share it, add testers (email invite) and remove them, delete groups |
 | **Reviews** | Rating distribution chart, filter by stars or unanswered, reply to reviews and edit or delete replies |
 | **Insights** | Installs, new downloads, re-downloads, updates, in-app purchases and proceeds. Trend chart with scrubbing, installs per app over time (top 5), proceeds per app, countries with flags, devices donut, status of all apps |
+| **TestFlight usage** | Installs, testers, sessions, crashes, feedback and invites per build and per app (`betaBuildUsages` metrics) |
+| **App Analytics** | Impressions, product page views, conversion, first-time downloads, sessions, active devices, crashes, deletions and approximate day 1/day 7 retention (Analytics Reports API), with a chart |
+| **Phased release** | Turn it on, follow the 7 days, pause, resume or release to everyone |
+| **Feedback & diagnostics** | TestFlight screenshots, comments and crash logs from testers; hangs, launches and disk writes per build |
+| **Screenshots & previews** | Upload from Photos, reorder and delete screenshots and app previews per language and screen size; Header and Search Results images via the Asset Library |
+| **Price & availability** | Base price, proceeds, prices per country, change the price, availability per country |
+| **In-app purchases** | IAPs and subscriptions: create, edit, localize, submit; offer codes (generate one-time codes, export CSV) |
+| **Xcode Cloud** | Workflows, build runs with actions and issues, start a build on a branch or tag |
+| **Webhooks & push** | Manage App Store Connect webhooks (events, ping, deliveries); optional push notifications through OneSignal and the `push-relay/` Cloudflare Worker |
+| **Team** | Users and roles, invitations, certificates, identifiers, devices and provisioning profiles |
+| **More** | In-app events, custom product pages, product page A/B tests, Game Center |
 | **Widgets** | Same layout as HomeyDev: *Downloads* (pick one app or all apps, Insights chart), *Top apps* (icons, sparklines, change), *Review & status* |
 | **Apple Watch** | Same layout as HomeyDev: vertical pages *Overview*, *My apps* (with icons) and *Attention*, a Fetch button and an app detail screen. Complications show downloads, change, live and in review |
 | **Guide** | Account → Guide: how to get the API key, Issuer ID, Key ID, .p8 and vendor number, which roles you need, and troubleshooting |

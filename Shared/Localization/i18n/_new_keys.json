@@ -148,5 +148,3785 @@
   "nb": "%@ TestFlight-installasjoner",
   "da": "%@ TestFlight-installationer",
   "sv": "%@ TestFlight-installationer"
+ },
+ "%@ downloads": {
+  "en": "%@ downloads",
+  "de": "%@ Downloads",
+  "fr": "%@ téléchargements",
+  "es": "%@ descargas",
+  "pl": "%@ pobrań",
+  "nb": "%@ nedlastinger",
+  "da": "%@ downloads",
+  "sv": "%@ nedladdningar"
+ },
+ "%@ herdownloads": {
+  "en": "%@ redownloads",
+  "de": "%@ erneute Downloads",
+  "fr": "%@ retéléchargements",
+  "es": "%@ redescargas",
+  "pl": "%@ ponownych pobrań",
+  "nb": "%@ gjentatte nedlastinger",
+  "da": "%@ gentagne downloads",
+  "sv": "%@ omnedladdningar"
+ },
+ "%@ uniek": {
+  "en": "%@ unique",
+  "de": "%@ eindeutig",
+  "fr": "%@ uniques",
+  "es": "%@ únicos",
+  "pl": "%@ unikalnych",
+  "nb": "%@ unike",
+  "da": "%@ unikke",
+  "sv": "%@ unika"
+ },
+ "%@ unieke bezoekers": {
+  "en": "%@ unique visitors",
+  "de": "%@ eindeutige Besucher",
+  "fr": "%@ visiteurs uniques",
+  "es": "%@ visitantes únicos",
+  "pl": "%@ unikalnych odwiedzających",
+  "nb": "%@ unike besøkende",
+  "da": "%@ unikke besøgende",
+  "sv": "%@ unika besökare"
+ },
+ "%@ verwijderingen": {
+  "en": "%@ deletions",
+  "de": "%@ Löschungen",
+  "fr": "%@ suppressions",
+  "es": "%@ eliminaciones",
+  "pl": "%@ usunięć",
+  "nb": "%@ slettinger",
+  "da": "%@ sletninger",
+  "sv": "%@ raderingar"
+ },
+ "%lld codes": {
+  "en": "%lld codes",
+  "de": "%lld Codes",
+  "fr": "%lld codes",
+  "es": "%lld códigos",
+  "pl": "%lld kodów",
+  "nb": "%lld koder",
+  "da": "%lld koder",
+  "sv": "%lld koder"
+ },
+ "%lld fouten, %lld waarschuwingen, %lld testfouten": {
+  "en": "%lld errors, %lld warnings, %lld test failures",
+  "de": "%lld Fehler, %lld Warnungen, %lld Testfehler",
+  "fr": "%lld erreurs, %lld avertissements, %lld échecs de test",
+  "es": "%lld errores, %lld advertencias, %lld fallos de prueba",
+  "pl": "%lld błędów, %lld ostrzeżeń, %lld nieudanych testów",
+  "nb": "%lld feil, %lld advarsler, %lld testfeil",
+  "da": "%lld fejl, %lld advarsler, %lld testfejl",
+  "sv": "%lld fel, %lld varningar, %lld testfel"
+ },
+ "%lld gebeurtenissen": {
+  "en": "%lld events",
+  "de": "%lld Ereignisse",
+  "fr": "%lld événements",
+  "es": "%lld eventos",
+  "pl": "%lld zdarzeń",
+  "nb": "%lld hendelser",
+  "da": "%lld hændelser",
+  "sv": "%lld händelser"
+ },
+ "%lld keer": {
+  "en": "%lld times",
+  "de": "%lld-mal",
+  "fr": "%lld fois",
+  "es": "%lld veces",
+  "pl": "%lld razy",
+  "nb": "%lld ganger",
+  "da": "%lld gange",
+  "sv": "%lld gånger"
+ },
+ "%lld punten": {
+  "en": "%lld points",
+  "de": "%lld Punkte",
+  "fr": "%lld points",
+  "es": "%lld puntos",
+  "pl": "%lld punktów",
+  "nb": "%lld poeng",
+  "da": "%lld point",
+  "sv": "%lld poäng"
+ },
+ "%lld van %lld landen": {
+  "en": "%lld of %lld countries",
+  "de": "%lld von %lld Ländern",
+  "fr": "%lld pays sur %lld",
+  "es": "%lld de %lld países",
+  "pl": "%lld z %lld krajów",
+  "nb": "%lld av %lld land",
+  "da": "%lld af %lld lande",
+  "sv": "%lld av %lld länder"
+ },
+ "%lld%% van het verkeer": {
+  "en": "%lld%% of traffic",
+  "de": "%lld%% des Traffics",
+  "fr": "%lld%% du trafic",
+  "es": "%lld%% del tráfico",
+  "pl": "%lld%% ruchu",
+  "nb": "%lld%% av trafikken",
+  "da": "%lld%% af trafikken",
+  "sv": "%lld%% av trafiken"
+ },
+ "%lld/10": {
+  "en": "%lld/10",
+  "de": "%lld/10",
+  "fr": "%lld/10",
+  "es": "%lld/10",
+  "pl": "%lld/10",
+  "nb": "%lld/10",
+  "da": "%lld/10",
+  "sv": "%lld/10"
+ },
+ "%lld/3": {
+  "en": "%lld/3",
+  "de": "%lld/3",
+  "fr": "%lld/3",
+  "es": "%lld/3",
+  "pl": "%lld/3",
+  "nb": "%lld/3",
+  "da": "%lld/3",
+  "sv": "%lld/3"
+ },
+ "1 jaar": {
+  "en": "1 year",
+  "de": "1 Jahr",
+  "fr": "1 an",
+  "es": "1 año",
+  "pl": "1 rok",
+  "nb": "1 år",
+  "da": "1 år",
+  "sv": "1 år"
+ },
+ "1 maand": {
+  "en": "1 month",
+  "de": "1 Monat",
+  "fr": "1 mois",
+  "es": "1 mes",
+  "pl": "1 miesiąc",
+  "nb": "1 måned",
+  "da": "1 måned",
+  "sv": "1 månad"
+ },
+ "1 week": {
+  "en": "1 week",
+  "de": "1 Woche",
+  "fr": "1 semaine",
+  "es": "1 semana",
+  "pl": "1 tydzień",
+  "nb": "1 uke",
+  "da": "1 uge",
+  "sv": "1 vecka"
+ },
+ "14 dagen": {
+  "en": "14 days",
+  "de": "14 Tage",
+  "fr": "14 jours",
+  "es": "14 días",
+  "pl": "14 dni",
+  "nb": "14 dager",
+  "da": "14 dage",
+  "sv": "14 dagar"
+ },
+ "2 maanden": {
+  "en": "2 months",
+  "de": "2 Monate",
+  "fr": "2 mois",
+  "es": "2 meses",
+  "pl": "2 miesiące",
+  "nb": "2 måneder",
+  "da": "2 måneder",
+  "sv": "2 månader"
+ },
+ "3 maanden": {
+  "en": "3 months",
+  "de": "3 Monate",
+  "fr": "3 mois",
+  "es": "3 meses",
+  "pl": "3 miesiące",
+  "nb": "3 måneder",
+  "da": "3 måneder",
+  "sv": "3 månader"
+ },
+ "30 dagen": {
+  "en": "30 days",
+  "de": "30 Tage",
+  "fr": "30 jours",
+  "es": "30 días",
+  "pl": "30 dni",
+  "nb": "30 dager",
+  "da": "30 dage",
+  "sv": "30 dagar"
+ },
+ "6 maanden": {
+  "en": "6 months",
+  "de": "6 Monate",
+  "fr": "6 mois",
+  "es": "6 meses",
+  "pl": "6 miesięcy",
+  "nb": "6 måneder",
+  "da": "6 måneder",
+  "sv": "6 månader"
+ },
+ "7 dagen": {
+  "en": "7 days",
+  "de": "7 Tage",
+  "fr": "7 jours",
+  "es": "7 días",
+  "pl": "7 dni",
+  "nb": "7 dager",
+  "da": "7 dage",
+  "sv": "7 dagar"
+ },
+ "A/B-tests": {
+  "en": "A/B tests",
+  "de": "A/B-Tests",
+  "fr": "A/B tests",
+  "es": "A/B tests",
+  "pl": "A/B tests",
+  "nb": "A/B-tester",
+  "da": "A/B-tests",
+  "sv": "A/B-tester"
+ },
+ "A/B-tests van je productpagina": {
+  "en": "A/B tests of your product page",
+  "de": "A/B-Tests deiner Produktseite",
+  "fr": "A/B tests de votre page produit",
+  "es": "A/B tests de tu página de producto",
+  "pl": "A/B tests twojej strony produktu",
+  "nb": "A/B-tester av produktsiden din",
+  "da": "A/B-tests af din produktside",
+  "sv": "A/B-tester av din produktsida"
+ },
+ "Aan, nog niet gestart": {
+  "en": "On, not started yet",
+  "de": "An, noch nicht gestartet",
+  "fr": "Activé, pas encore démarré",
+  "es": "Activado, aún no iniciado",
+  "pl": "Włączone, jeszcze nie rozpoczęte",
+  "nb": "På, ikke startet ennå",
+  "da": "Til, ikke startet endnu",
+  "sv": "På, inte startad än"
+ },
+ "Aanbiedingscodes": {
+  "en": "Offer Codes",
+  "de": "Angebotscodes",
+  "fr": "Codes d’offre",
+  "es": "Códigos de oferta",
+  "pl": "Kody ofert",
+  "nb": "Tilbudskoder",
+  "da": "Tilbudskoder",
+  "sv": "Erbjudandekoder"
+ },
+ "Aantal codes": {
+  "en": "Number of codes",
+  "de": "Anzahl der Codes",
+  "fr": "Nombre de codes",
+  "es": "Número de códigos",
+  "pl": "Liczba kodów",
+  "nb": "Antall koder",
+  "da": "Antal koder",
+  "sv": "Antal koder"
+ },
+ "Aanzetten voor al mijn apps": {
+  "en": "Turn on for all my apps",
+  "de": "Für alle meine Apps aktivieren",
+  "fr": "Activer pour toutes mes apps",
+  "es": "Activar para todas mis apps",
+  "pl": "Włącz dla wszystkich moich aplikacji",
+  "nb": "Slå på for alle appene mine",
+  "da": "Slå til for alle mine apps",
+  "sv": "Aktivera för alla mina appar"
+ },
+ "Abonnementen": {
+  "en": "Subscriptions",
+  "de": "Abonnements",
+  "fr": "Abonnements",
+  "es": "Suscripciones",
+  "pl": "Subskrypcje",
+  "nb": "Abonnementer",
+  "da": "Abonnementer",
+  "sv": "Prenumerationer"
+ },
+ "Account": {
+  "en": "Account",
+  "de": "Account",
+  "fr": "Compte",
+  "es": "Cuenta",
+  "pl": "Konto",
+  "nb": "Konto",
+  "da": "Konto",
+  "sv": "Konto"
+ },
+ "Accounthouder": {
+  "en": "Account Holder",
+  "de": "Account-Inhaber",
+  "fr": "Titulaire du compte",
+  "es": "Titular de la cuenta",
+  "pl": "Właściciel konta",
+  "nb": "Kontoinnehaver",
+  "da": "Kontoindehaver",
+  "sv": "Kontoinnehavare"
+ },
+ "Accounts": {
+  "en": "Accounts",
+  "de": "Accounts",
+  "fr": "Comptes",
+  "es": "Cuentas",
+  "pl": "Konta",
+  "nb": "Kontoer",
+  "da": "Konti",
+  "sv": "Konton"
+ },
+ "Actief": {
+  "en": "Active",
+  "de": "Aktiv",
+  "fr": "Actif",
+  "es": "Activo",
+  "pl": "Aktywne",
+  "nb": "Aktiv",
+  "da": "Aktiv",
+  "sv": "Aktiv"
+ },
+ "Actieve toestellen": {
+  "en": "Active devices",
+  "de": "Aktive Geräte",
+  "fr": "Appareils actifs",
+  "es": "Dispositivos activos",
+  "pl": "Aktywne urządzenia",
+  "nb": "Aktive enheter",
+  "da": "Aktive enheder",
+  "sv": "Aktiva enheter"
+ },
+ "Afbeelding": {
+  "en": "Image",
+  "de": "Bild",
+  "fr": "Image",
+  "es": "Imagen",
+  "pl": "Obraz",
+  "nb": "Bilde",
+  "da": "Billede",
+  "sv": "Bild"
+ },
+ "Afbeeldingen zonder transparantie. Ze gaan via de Asset Library van App Store Connect en worden samen met de versie beoordeeld.": {
+  "en": "Images without transparency. They go through the App Store Connect Asset Library and are reviewed together with the version.",
+  "de": "Bilder ohne Transparenz. Sie laufen über die Asset Library von App Store Connect und werden zusammen mit der Version geprüft.",
+  "fr": "Images sans transparence. Elles passent par l’Asset Library d’App Store Connect et sont examinées avec la version.",
+  "es": "Imágenes sin transparencia. Pasan por la Asset Library de App Store Connect y se revisan junto con la versión.",
+  "pl": "Obrazy bez przezroczystości. Trafiają do Asset Library w App Store Connect i są weryfikowane razem z wersją.",
+  "nb": "Bilder uten gjennomsiktighet. De går via Asset Library i App Store Connect og vurderes sammen med versjonen.",
+  "da": "Billeder uden gennemsigtighed. De går via Asset Library i App Store Connect og gennemgås sammen med versionen.",
+  "sv": "Bilder utan transparens. De går via Asset Library i App Store Connect och granskas tillsammans med versionen."
+ },
+ "Alle gebruikers met automatische updates krijgen deze versie. Dit kan niet teruggedraaid worden.": {
+  "en": "All users with automatic updates will get this version. This can't be undone.",
+  "de": "Alle Nutzer mit automatischen Updates erhalten diese Version. Das kann nicht rückgängig gemacht werden.",
+  "fr": "Tous les utilisateurs ayant activé les mises à jour automatiques recevront cette version. Cette action est irréversible.",
+  "es": "Todos los usuarios con actualizaciones automáticas recibirán esta versión. No se puede deshacer.",
+  "pl": "Wszyscy użytkownicy z automatycznymi aktualizacjami otrzymają tę wersję. Tego nie można cofnąć.",
+  "nb": "Alle brukere med automatiske oppdateringer får denne versjonen. Dette kan ikke angres.",
+  "da": "Alle brugere med automatiske opdateringer får denne version. Det kan ikke fortrydes.",
+  "sv": "Alla användare med automatiska uppdateringar får den här versionen. Det går inte att ångra."
+ },
+ "Alternatieve distributie: landen": {
+  "en": "Alternative distribution: countries",
+  "de": "Alternativer Vertrieb: Länder",
+  "fr": "Distribution alternative : pays",
+  "es": "Distribución alternativa: países",
+  "pl": "Alternatywna dystrybucja: kraje",
+  "nb": "Alternativ distribusjon: land",
+  "da": "Alternativ distribution: lande",
+  "sv": "Alternativ distribution: länder"
+ },
+ "Alternatieve distributie: nieuwe pakketversie": {
+  "en": "Alternative distribution: new package version",
+  "de": "Alternativer Vertrieb: neue Paketversion",
+  "fr": "Distribution alternative : nouvelle version du package",
+  "es": "Distribución alternativa: nueva versión del paquete",
+  "pl": "Alternatywna dystrybucja: nowa wersja pakietu",
+  "nb": "Alternativ distribusjon: ny pakkeversjon",
+  "da": "Alternativ distribution: ny pakkeversion",
+  "sv": "Alternativ distribution: ny paketversion"
+ },
+ "Alternatieve distributie: pakket beschikbaar": {
+  "en": "Alternative distribution: package available",
+  "de": "Alternativer Vertrieb: Paket verfügbar",
+  "fr": "Distribution alternative : package disponible",
+  "es": "Distribución alternativa: paquete disponible",
+  "pl": "Alternatywna dystrybucja: pakiet dostępny",
+  "nb": "Alternativ distribusjon: pakke tilgjengelig",
+  "da": "Alternativ distribution: pakke tilgængelig",
+  "sv": "Alternativ distribution: paket tillgängligt"
+ },
+ "App": {
+  "en": "App",
+  "de": "App",
+  "fr": "App",
+  "es": "App",
+  "pl": "Aplikacja",
+  "nb": "App",
+  "da": "App",
+  "sv": "App"
+ },
+ "App Analytics": {
+  "en": "App Analytics",
+  "de": "App Analytics",
+  "fr": "App Analytics",
+  "es": "App Analytics",
+  "pl": "App Analytics",
+  "nb": "App Analytics",
+  "da": "App Analytics",
+  "sv": "App Analytics"
+ },
+ "App Analytics inschakelen": {
+  "en": "Enable App Analytics",
+  "de": "App Analytics aktivieren",
+  "fr": "Activer App Analytics",
+  "es": "Activar App Analytics",
+  "pl": "Włącz App Analytics",
+  "nb": "Slå på App Analytics",
+  "da": "Slå App Analytics til",
+  "sv": "Aktivera App Analytics"
+ },
+ "App Analytics staat aan. Apple maakt de eerste rapporten binnen 1 à 2 dagen klaar. Kom morgen terug of trek omlaag om te verversen.": {
+  "en": "App Analytics is on. Apple prepares the first reports within 1–2 days. Come back tomorrow or pull down to refresh.",
+  "de": "App Analytics ist aktiv. Apple stellt die ersten Berichte innerhalb von 1–2 Tagen bereit. Schau morgen wieder vorbei oder zieh nach unten, um zu aktualisieren.",
+  "fr": "App Analytics est activé. Apple prépare les premiers rapports sous 1 à 2 jours. Revenez demain ou tirez vers le bas pour actualiser.",
+  "es": "App Analytics está activado. Apple prepara los primeros informes en 1 o 2 días. Vuelve mañana o desliza hacia abajo para actualizar.",
+  "pl": "App Analytics jest włączone. Apple przygotuje pierwsze raporty w ciągu 1–2 dni. Wróć jutro lub przeciągnij w dół, aby odświeżyć.",
+  "nb": "App Analytics er på. Apple klargjør de første rapportene innen 1–2 dager. Kom tilbake i morgen, eller dra ned for å oppdatere.",
+  "da": "App Analytics er slået til. Apple klargør de første rapporter inden for 1–2 dage. Kom tilbage i morgen, eller træk ned for at opdatere.",
+  "sv": "App Analytics är på. Apple tar fram de första rapporterna inom 1–2 dagar. Kom tillbaka i morgon eller dra nedåt för att uppdatera."
+ },
+ "App Store Connect API": {
+  "en": "App Store Connect API",
+  "de": "App Store Connect API",
+  "fr": "App Store Connect API",
+  "es": "App Store Connect API",
+  "pl": "App Store Connect API",
+  "nb": "App Store Connect API",
+  "da": "App Store Connect API",
+  "sv": "App Store Connect API"
+ },
+ "App actief": {
+  "en": "App active",
+  "de": "App aktiv",
+  "fr": "App active",
+  "es": "App activa",
+  "pl": "Aplikacja aktywna",
+  "nb": "App aktiv",
+  "da": "App aktiv",
+  "sv": "App aktiv"
+ },
+ "App-beheerder": {
+  "en": "App Manager",
+  "de": "App-Manager",
+  "fr": "Gestionnaire d’apps",
+  "es": "Gestor de apps",
+  "pl": "Menedżer aplikacji",
+  "nb": "Appansvarlig",
+  "da": "Appadministrator",
+  "sv": "Appansvarig"
+ },
+ "App-previews (video)": {
+  "en": "App previews (video)",
+  "de": "App-Vorschauen (Video)",
+  "fr": "Aperçus de l’app (vidéo)",
+  "es": "Vistas previas de la app (vídeo)",
+  "pl": "Podglądy aplikacji (wideo)",
+  "nb": "Appforhåndsvisninger (video)",
+  "da": "App-forhåndsvisninger (video)",
+  "sv": "Appförhandsvisningar (video)"
+ },
+ "Apple heeft de rapporten gestopt omdat ze lang niet zijn opgehaald. Schakel opnieuw in.": {
+  "en": "Apple stopped the reports because they haven't been fetched for a long time. Turn them on again.",
+  "de": "Apple hat die Berichte gestoppt, weil sie lange nicht abgerufen wurden. Aktiviere sie erneut.",
+  "fr": "Apple a arrêté les rapports, car ils n’ont pas été récupérés depuis longtemps. Réactivez-les.",
+  "es": "Apple ha detenido los informes porque hace mucho que no se descargan. Vuelve a activarlos.",
+  "pl": "Apple wstrzymało raporty, ponieważ od dawna nie były pobierane. Włącz je ponownie.",
+  "nb": "Apple har stoppet rapportene fordi de ikke er hentet på lenge. Slå dem på igjen.",
+  "da": "Apple har stoppet rapporterne, fordi de ikke er hentet i lang tid. Slå dem til igen.",
+  "sv": "Apple har stoppat rapporterna eftersom de inte har hämtats på länge. Aktivera dem igen."
+ },
+ "Apple levert App Analytics als dagrapporten met 2 tot 5 dagen vertraging. Sessies, installaties en crashes tellen alleen mee als minstens 5 gebruikers hebben ingestemd met het delen van analysegegevens. Apple heeft geen retentierapport: retentie is hier een benadering op basis van sessies van nieuwe gebruikers.": {
+  "en": "Apple delivers App Analytics as daily reports with a delay of 2 to 5 days. Sessions, installations and crashes only count if at least 5 users have agreed to share analytics data. Apple has no retention report: retention here is an approximation based on sessions from new users.",
+  "de": "Apple liefert App Analytics als Tagesberichte mit 2 bis 5 Tagen Verzögerung. Sitzungen, Installationen und Abstürze zählen nur, wenn mindestens 5 Nutzer der Freigabe von Analysedaten zugestimmt haben. Apple bietet keinen Bindungsbericht: Die Bindung ist hier eine Näherung auf Basis der Sitzungen neuer Nutzer.",
+  "fr": "Apple fournit App Analytics sous forme de rapports quotidiens avec 2 à 5 jours de retard. Les sessions, installations et crashs ne sont comptés que si au moins 5 utilisateurs ont accepté de partager leurs données d’analyse. Apple ne propose pas de rapport de rétention : ici, la rétention est une estimation basée sur les sessions des nouveaux utilisateurs.",
+  "es": "Apple ofrece App Analytics como informes diarios con un retraso de 2 a 5 días. Las sesiones, instalaciones y fallos solo cuentan si al menos 5 usuarios han aceptado compartir datos de análisis. Apple no tiene informe de retención: aquí la retención es una aproximación basada en las sesiones de usuarios nuevos.",
+  "pl": "Apple dostarcza App Analytics jako raporty dzienne z opóźnieniem od 2 do 5 dni. Sesje, instalacje i awarie są liczone tylko wtedy, gdy co najmniej 5 użytkowników zgodziło się na udostępnianie danych analitycznych. Apple nie ma raportu retencji: retencja jest tu przybliżeniem na podstawie sesji nowych użytkowników.",
+  "nb": "Apple leverer App Analytics som daglige rapporter med 2 til 5 dagers forsinkelse. Økter, installasjoner og krasj telles bare hvis minst 5 brukere har samtykket til å dele analysedata. Apple har ingen retensjonsrapport: Retensjon er her et anslag basert på økter fra nye brukere.",
+  "da": "Apple leverer App Analytics som daglige rapporter med 2 til 5 dages forsinkelse. Sessioner, installationer og nedbrud tæller kun, hvis mindst 5 brugere har accepteret at dele analysedata. Apple har ingen fastholdelsesrapport: Fastholdelse er her et skøn baseret på sessioner fra nye brugere.",
+  "sv": "Apple levererar App Analytics som dagliga rapporter med 2 till 5 dagars fördröjning. Sessioner, installationer och krascher räknas bara om minst 5 användare har godkänt att dela analysdata. Apple har ingen kvarhållningsrapport: kvarhållning är här en uppskattning baserad på sessioner från nya användare."
+ },
+ "Apple maakt de codes in de achtergrond; het kan even duren voordat je ze kunt downloaden.": {
+  "en": "Apple creates the codes in the background; it may take a while before you can download them.",
+  "de": "Apple erstellt die Codes im Hintergrund; es kann etwas dauern, bis du sie herunterladen kannst.",
+  "fr": "Apple génère les codes en arrière-plan ; il peut s’écouler un moment avant que vous puissiez les télécharger.",
+  "es": "Apple crea los códigos en segundo plano; puede tardar un poco hasta que puedas descargarlos.",
+  "pl": "Apple tworzy kody w tle; może minąć chwila, zanim będzie można je pobrać.",
+  "nb": "Apple lager kodene i bakgrunnen; det kan ta litt tid før du kan laste dem ned.",
+  "da": "Apple opretter koderne i baggrunden; der kan gå lidt tid, før du kan downloade dem.",
+  "sv": "Apple skapar koderna i bakgrunden; det kan dröja en stund innan du kan ladda ner dem."
+ },
+ "Apple rekent de prijzen in andere landen automatisch om vanuit je basisland, tenzij je ze in App Store Connect handmatig vastzet.": {
+  "en": "Apple automatically converts prices in other countries from your base country, unless you set them manually in App Store Connect.",
+  "de": "Apple rechnet die Preise in anderen Ländern automatisch aus deinem Basisland um, sofern du sie nicht in App Store Connect manuell festlegst.",
+  "fr": "Apple convertit automatiquement les prix des autres pays à partir de votre pays de référence, sauf si vous les fixez manuellement dans App Store Connect.",
+  "es": "Apple convierte automáticamente los precios de otros países a partir de tu país base, salvo que los fijes manualmente en App Store Connect.",
+  "pl": "Apple automatycznie przelicza ceny w innych krajach na podstawie twojego kraju bazowego, chyba że ustawisz je ręcznie w App Store Connect.",
+  "nb": "Apple regner automatisk om prisene i andre land fra basislandet ditt, med mindre du låser dem manuelt i App Store Connect.",
+  "da": "Apple omregner automatisk priserne i andre lande fra dit basisland, medmindre du fastlåser dem manuelt i App Store Connect.",
+  "sv": "Apple räknar automatiskt om priserna i andra länder utifrån ditt basland, om du inte låser dem manuellt i App Store Connect."
+ },
+ "Apple stuurt bij elke gekozen gebeurtenis een ondertekend bericht naar de URL, bijvoorbeeld naar Homey, Slack of je eigen server.": {
+  "en": "For every selected event, Apple sends a signed message to the URL, for example to Homey, Slack or your own server.",
+  "de": "Apple sendet bei jedem ausgewählten Ereignis eine signierte Nachricht an die URL, zum Beispiel an Homey, Slack oder deinen eigenen Server.",
+  "fr": "Pour chaque événement choisi, Apple envoie un message signé à l’URL, par exemple vers Homey, Slack ou votre propre serveur.",
+  "es": "Por cada evento elegido, Apple envía un mensaje firmado a la URL, por ejemplo a Homey, Slack o tu propio servidor.",
+  "pl": "Przy każdym wybranym zdarzeniu Apple wysyła podpisaną wiadomość na URL, na przykład do Homey, Slack lub twojego własnego serwera.",
+  "nb": "Apple sender en signert melding til URL-en for hver valgte hendelse, for eksempel til Homey, Slack eller din egen server.",
+  "da": "Apple sender en signeret besked til URL'en ved hver valgt hændelse, for eksempel til Homey, Slack eller din egen server.",
+  "sv": "Apple skickar ett signerat meddelande till URL:en vid varje vald händelse, till exempel till Homey, Slack eller din egen server."
+ },
+ "Apps": {
+  "en": "Apps",
+  "de": "Apps",
+  "fr": "Apps",
+  "es": "Apps",
+  "pl": "Apps",
+  "nb": "Apps",
+  "da": "Apps",
+  "sv": "Apps"
+ },
+ "Apps aanmaken": {
+  "en": "Create apps",
+  "de": "Apps erstellen",
+  "fr": "Créer des apps",
+  "es": "Crear apps",
+  "pl": "Tworzenie aplikacji",
+  "nb": "Opprette apper",
+  "da": "Opret apps",
+  "sv": "Skapa appar"
+ },
+ "Apps die met dit certificaat zijn ondertekend kunnen niet meer worden geïnstalleerd voor ontwikkeling. Dit kan niet ongedaan gemaakt worden.": {
+  "en": "Apps signed with this certificate can no longer be installed for development. This can't be undone.",
+  "de": "Mit diesem Zertifikat signierte Apps können nicht mehr für die Entwicklung installiert werden. Das kann nicht rückgängig gemacht werden.",
+  "fr": "Les apps signées avec ce certificat ne pourront plus être installées pour le développement. Cette action est irréversible.",
+  "es": "Las apps firmadas con este certificado ya no se podrán instalar para desarrollo. No se puede deshacer.",
+  "pl": "Aplikacji podpisanych tym certyfikatem nie będzie można już instalować do celów deweloperskich. Tego nie można cofnąć.",
+  "nb": "Apper signert med dette sertifikatet kan ikke lenger installeres for utvikling. Dette kan ikke angres.",
+  "da": "Apps, der er signeret med dette certifikat, kan ikke længere installeres til udvikling. Det kan ikke fortrydes.",
+  "sv": "Appar som har signerats med det här certifikatet kan inte längre installeras för utveckling. Det går inte att ångra."
+ },
+ "Auteur": {
+  "en": "Author",
+  "de": "Autor",
+  "fr": "Auteur",
+  "es": "Autor",
+  "pl": "Autor",
+  "nb": "Forfatter",
+  "da": "Forfatter",
+  "sv": "Författare"
+ },
+ "Background Assets: App Store-release": {
+  "en": "Background Assets: App Store release",
+  "de": "Background Assets: App Store-Veröffentlichung",
+  "fr": "Background Assets : publication sur l’App Store",
+  "es": "Background Assets: publicación en el App Store",
+  "pl": "Background Assets: wydanie w App Store",
+  "nb": "Background Assets: App Store-utgivelse",
+  "da": "Background Assets: App Store-udgivelse",
+  "sv": "Background Assets: App Store-release"
+ },
+ "Background Assets: externe beta": {
+  "en": "Background Assets: external beta",
+  "de": "Background Assets: externe Beta",
+  "fr": "Background Assets : bêta externe",
+  "es": "Background Assets: beta externa",
+  "pl": "Background Assets: zewnętrzna beta",
+  "nb": "Background Assets: ekstern beta",
+  "da": "Background Assets: ekstern beta",
+  "sv": "Background Assets: extern beta"
+ },
+ "Background Assets: interne beta": {
+  "en": "Background Assets: internal beta",
+  "de": "Background Assets: interne Beta",
+  "fr": "Background Assets : bêta interne",
+  "es": "Background Assets: beta interna",
+  "pl": "Background Assets: wewnętrzna beta",
+  "nb": "Background Assets: intern beta",
+  "da": "Background Assets: intern beta",
+  "sv": "Background Assets: intern beta"
+ },
+ "Background Assets: status": {
+  "en": "Background Assets: status",
+  "de": "Background Assets: Status",
+  "fr": "Background Assets : statut",
+  "es": "Background Assets: estado",
+  "pl": "Background Assets: status",
+  "nb": "Background Assets: status",
+  "da": "Background Assets: status",
+  "sv": "Background Assets: status"
+ },
+ "Basisprijs": {
+  "en": "Base price",
+  "de": "Basispreis",
+  "fr": "Prix de base",
+  "es": "Precio base",
+  "pl": "Cena bazowa",
+  "nb": "Grunnpris",
+  "da": "Basispris",
+  "sv": "Baspris"
+ },
+ "Batterij": {
+  "en": "Battery",
+  "de": "Batterie",
+  "fr": "Batterie",
+  "es": "Batería",
+  "pl": "Bateria",
+  "nb": "Batteri",
+  "da": "Batteri",
+  "sv": "Batteri"
+ },
+ "Beheerder": {
+  "en": "Admin",
+  "de": "Admin",
+  "fr": "Admin",
+  "es": "Administrador",
+  "pl": "Administrator",
+  "nb": "Administrator",
+  "da": "Administrator",
+  "sv": "Administratör"
+ },
+ "Beschikbaar in": {
+  "en": "Available in",
+  "de": "Verfügbar in",
+  "fr": "Disponible dans",
+  "es": "Disponible en",
+  "pl": "Dostępne w",
+  "nb": "Tilgjengelig i",
+  "da": "Tilgængelig i",
+  "sv": "Tillgänglig i"
+ },
+ "Beschikbaarheid": {
+  "en": "Availability",
+  "de": "Verfügbarkeit",
+  "fr": "Disponibilité",
+  "es": "Disponibilidad",
+  "pl": "Dostępność",
+  "nb": "Tilgjengelighet",
+  "da": "Tilgængelighed",
+  "sv": "Tillgänglighet"
+ },
+ "Besturingssysteem": {
+  "en": "Operating system",
+  "de": "Betriebssystem",
+  "fr": "Système d’exploitation",
+  "es": "Sistema operativo",
+  "pl": "System operacyjny",
+  "nb": "Operativsystem",
+  "da": "Styresystem",
+  "sv": "Operativsystem"
+ },
+ "Beta-review": {
+  "en": "Beta Review",
+  "de": "Beta-Prüfung",
+  "fr": "Examen de la bêta",
+  "es": "Revisión de beta",
+  "pl": "Weryfikacja bety",
+  "nb": "Betagjennomgang",
+  "da": "Betagennemgang",
+  "sv": "Betagranskning"
+ },
+ "Bezig": {
+  "en": "In progress",
+  "de": "Läuft",
+  "fr": "En cours",
+  "es": "En curso",
+  "pl": "W toku",
+  "nb": "Pågår",
+  "da": "I gang",
+  "sv": "Pågår"
+ },
+ "Branch of tag": {
+  "en": "Branch or tag",
+  "de": "Branch oder Tag",
+  "fr": "Branche ou tag",
+  "es": "Rama o etiqueta",
+  "pl": "Gałąź lub tag",
+  "nb": "Gren eller tagg",
+  "da": "Branch eller tag",
+  "sv": "Gren eller tagg"
+ },
+ "Build": {
+  "en": "Build",
+  "de": "Build",
+  "fr": "Build",
+  "es": "Build",
+  "pl": "Build",
+  "nb": "Build",
+  "da": "Build",
+  "sv": "Build"
+ },
+ "Build #%lld": {
+  "en": "Build #%lld",
+  "de": "Build #%lld",
+  "fr": "Build #%lld",
+  "es": "Build #%lld",
+  "pl": "Build #%lld",
+  "nb": "Build #%lld",
+  "da": "Build #%lld",
+  "sv": "Build #%lld"
+ },
+ "Build %@": {
+  "en": "Build %@",
+  "de": "Build %@",
+  "fr": "Build %@",
+  "es": "Build %@",
+  "pl": "Build %@",
+  "nb": "Build %@",
+  "da": "Build %@",
+  "sv": "Build %@"
+ },
+ "Build gestart": {
+  "en": "Build started",
+  "de": "Build gestartet",
+  "fr": "Build lancé",
+  "es": "Build iniciado",
+  "pl": "Build uruchomiony",
+  "nb": "Build startet",
+  "da": "Build startet",
+  "sv": "Build startad"
+ },
+ "Build geüpload of verwerkt": {
+  "en": "Build uploaded or processed",
+  "de": "Build hochgeladen oder verarbeitet",
+  "fr": "Build téléversé ou traité",
+  "es": "Build subido o procesado",
+  "pl": "Build przesłany lub przetworzony",
+  "nb": "Build lastet opp eller behandlet",
+  "da": "Build uploadet eller behandlet",
+  "sv": "Build uppladdad eller bearbetad"
+ },
+ "Builds": {
+  "en": "Builds",
+  "de": "Builds",
+  "fr": "Builds",
+  "es": "Builds",
+  "pl": "Builds",
+  "nb": "Builds",
+  "da": "Builds",
+  "sv": "Builds"
+ },
+ "Bundle ID (bijv. com.bedrijf.app)": {
+  "en": "Bundle ID (e.g. com.company.app)",
+  "de": "Bundle-ID (z. B. com.firma.app)",
+  "fr": "Bundle ID (ex. : com.societe.app)",
+  "es": "Bundle ID (p. ej., com.empresa.app)",
+  "pl": "Bundle ID (np. com.firma.app)",
+  "nb": "Bundle-ID (f.eks. com.firma.app)",
+  "da": "Bundle-ID (f.eks. com.firma.app)",
+  "sv": "Bundle-ID (t.ex. com.foretag.app)"
+ },
+ "Bundle ID's van je apps": {
+  "en": "Bundle IDs of your apps",
+  "de": "Bundle-IDs deiner Apps",
+  "fr": "Bundle ID de vos apps",
+  "es": "Bundle ID de tus apps",
+  "pl": "Bundle ID twoich aplikacji",
+  "nb": "Bundle-ID-er for appene dine",
+  "da": "Bundle-ID'er for dine apps",
+  "sv": "Bundle-ID:n för dina appar"
+ },
+ "Certificaat ingetrokken": {
+  "en": "Certificate revoked",
+  "de": "Zertifikat widerrufen",
+  "fr": "Certificat révoqué",
+  "es": "Certificado revocado",
+  "pl": "Certyfikat unieważniony",
+  "nb": "Sertifikat tilbakekalt",
+  "da": "Certifikat tilbagekaldt",
+  "sv": "Certifikat återkallat"
+ },
+ "Certificaat intrekken?": {
+  "en": "Revoke certificate?",
+  "de": "Zertifikat widerrufen?",
+  "fr": "Révoquer le certificat ?",
+  "es": "¿Revocar el certificado?",
+  "pl": "Unieważnić certyfikat?",
+  "nb": "Tilbakekalle sertifikatet?",
+  "da": "Tilbagekald certifikat?",
+  "sv": "Återkalla certifikatet?"
+ },
+ "Certificaten": {
+  "en": "Certificates",
+  "de": "Zertifikate",
+  "fr": "Certificats",
+  "es": "Certificados",
+  "pl": "Certyfikaty",
+  "nb": "Sertifikater",
+  "da": "Certifikater",
+  "sv": "Certifikat"
+ },
+ "Certificaten, identifiers en profielen": {
+  "en": "Certificates, Identifiers & Profiles",
+  "de": "Zertifikate, IDs und Profile",
+  "fr": "Certificats, identifiants et profils",
+  "es": "Certificados, identificadores y perfiles",
+  "pl": "Certyfikaty, identyfikatory i profile",
+  "nb": "Sertifikater, identifikatorer og profiler",
+  "da": "Certifikater, identifikatorer og profiler",
+  "sv": "Certifikat, identifierare och profiler"
+ },
+ "Codes": {
+  "en": "Codes",
+  "de": "Codes",
+  "fr": "Codes",
+  "es": "Códigos",
+  "pl": "Kody",
+  "nb": "Koder",
+  "da": "Koder",
+  "sv": "Koder"
+ },
+ "Codes genereren": {
+  "en": "Generate codes",
+  "de": "Codes generieren",
+  "fr": "Générer des codes",
+  "es": "Generar códigos",
+  "pl": "Generuj kody",
+  "nb": "Generer koder",
+  "da": "Generer koder",
+  "sv": "Generera koder"
+ },
+ "Codes worden aangemaakt": {
+  "en": "Creating codes",
+  "de": "Codes werden erstellt",
+  "fr": "Création des codes en cours",
+  "es": "Creando códigos",
+  "pl": "Tworzenie kodów",
+  "nb": "Oppretter koder",
+  "da": "Opretter koder",
+  "sv": "Skapar koder"
+ },
+ "Commit": {
+  "en": "Commit",
+  "de": "Commit",
+  "fr": "Commit",
+  "es": "Commit",
+  "pl": "Commit",
+  "nb": "Commit",
+  "da": "Commit",
+  "sv": "Commit"
+ },
+ "Conversie": {
+  "en": "Conversion",
+  "de": "Konversion",
+  "fr": "Conversion",
+  "es": "Conversión",
+  "pl": "Konwersja",
+  "nb": "Konvertering",
+  "da": "Konvertering",
+  "sv": "Konvertering"
+ },
+ "Crash": {
+  "en": "Crash",
+  "de": "Absturz",
+  "fr": "Crash",
+  "es": "Fallo",
+  "pl": "Awaria",
+  "nb": "Krasj",
+  "da": "Nedbrud",
+  "sv": "Krasch"
+ },
+ "Crashes (%lld)": {
+  "en": "Crashes (%lld)",
+  "de": "Abstürze (%lld)",
+  "fr": "Crashs (%lld)",
+  "es": "Fallos (%lld)",
+  "pl": "Awarie (%lld)",
+  "nb": "Krasj (%lld)",
+  "da": "Nedbrud (%lld)",
+  "sv": "Krascher (%lld)"
+ },
+ "Crashlog": {
+  "en": "Crash log",
+  "de": "Absturzprotokoll",
+  "fr": "Journal de crash",
+  "es": "Registro de fallos",
+  "pl": "Log awarii",
+  "nb": "Krasjlogg",
+  "da": "Nedbrudslog",
+  "sv": "Kraschlogg"
+ },
+ "Crashlog laden": {
+  "en": "Load crash log",
+  "de": "Absturzprotokoll laden",
+  "fr": "Charger le journal de crash",
+  "es": "Cargar registro de fallos",
+  "pl": "Wczytaj log awarii",
+  "nb": "Last inn krasjlogg",
+  "da": "Indlæs nedbrudslog",
+  "sv": "Läs in kraschlogg"
+ },
+ "Custom product pages": {
+  "en": "Custom product pages",
+  "de": "Custom product pages",
+  "fr": "Custom product pages",
+  "es": "Custom product pages",
+  "pl": "Custom product pages",
+  "nb": "Custom product pages",
+  "da": "Custom product pages",
+  "sv": "Custom product pages"
+ },
+ "Dag %lld van 7 · %lld%%": {
+  "en": "Day %lld of 7 · %lld%%",
+  "de": "Tag %lld von 7 · %lld%%",
+  "fr": "Jour %lld sur 7 · %lld%%",
+  "es": "Día %lld de 7 · %lld%%",
+  "pl": "Dzień %lld z 7 · %lld%%",
+  "nb": "Dag %lld av 7 · %lld%%",
+  "da": "Dag %lld af 7 · %lld%%",
+  "sv": "Dag %lld av 7 · %lld%%"
+ },
+ "De UDID vind je in Finder of Xcode als het toestel is aangesloten.": {
+  "en": "You can find the UDID in Finder or Xcode when the device is connected.",
+  "de": "Die UDID findest du im Finder oder in Xcode, wenn das Gerät angeschlossen ist.",
+  "fr": "Vous trouverez l’UDID dans le Finder ou dans Xcode lorsque l’appareil est connecté.",
+  "es": "Encontrarás el UDID en Finder o Xcode cuando el dispositivo esté conectado.",
+  "pl": "UDID znajdziesz w Finderze lub Xcode, gdy urządzenie jest podłączone.",
+  "nb": "Du finner UDID i Finder eller Xcode når enheten er koblet til.",
+  "da": "Du kan finde UDID i Finder eller Xcode, når enheden er tilsluttet.",
+  "sv": "Du hittar UDID i Finder eller Xcode när enheten är ansluten."
+ },
+ "De pushserver gaf een fout: %@": {
+  "en": "The push server returned an error: %@",
+  "de": "Der Push-Server hat einen Fehler gemeldet: %@",
+  "fr": "Le serveur push a renvoyé une erreur : %@",
+  "es": "El servidor push devolvió un error: %@",
+  "pl": "Serwer push zwrócił błąd: %@",
+  "nb": "Push-serveren returnerte en feil: %@",
+  "da": "Push-serveren returnerede en fejl: %@",
+  "sv": "Push-servern returnerade ett fel: %@"
+ },
+ "De rollen van de accounthouder kun je niet wijzigen.": {
+  "en": "You can't change the Account Holder's roles.",
+  "de": "Die Rollen des Account-Inhabers kannst du nicht ändern.",
+  "fr": "Vous ne pouvez pas modifier les rôles du titulaire du compte.",
+  "es": "No puedes cambiar los roles del titular de la cuenta.",
+  "pl": "Nie możesz zmienić ról właściciela konta.",
+  "nb": "Du kan ikke endre rollene til kontoinnehaveren.",
+  "da": "Du kan ikke ændre kontoindehaverens roller.",
+  "sv": "Du kan inte ändra kontoinnehavarens roller."
+ },
+ "Deel codes (CSV)": {
+  "en": "Share codes (CSV)",
+  "de": "Codes teilen (CSV)",
+  "fr": "Partager les codes (CSV)",
+  "es": "Compartir códigos (CSV)",
+  "pl": "Udostępnij kody (CSV)",
+  "nb": "Del koder (CSV)",
+  "da": "Del koder (CSV)",
+  "sv": "Dela koder (CSV)"
+ },
+ "Deel crashlog": {
+  "en": "Share crash log",
+  "de": "Absturzprotokoll teilen",
+  "fr": "Partager le journal de crash",
+  "es": "Compartir registro de fallos",
+  "pl": "Udostępnij log awarii",
+  "nb": "Del krasjlogg",
+  "da": "Del nedbrudslog",
+  "sv": "Dela kraschlogg"
+ },
+ "Deel log": {
+  "en": "Share log",
+  "de": "Protokoll teilen",
+  "fr": "Partager le journal",
+  "es": "Compartir registro",
+  "pl": "Udostępnij log",
+  "nb": "Del logg",
+  "da": "Del log",
+  "sv": "Dela logg"
+ },
+ "Delen met gezin": {
+  "en": "Family Sharing",
+  "de": "Familienfreigabe",
+  "fr": "Partage familial",
+  "es": "En familia",
+  "pl": "Chmura rodzinna",
+  "nb": "Familiedeling",
+  "da": "Familiedeling",
+  "sv": "Familjedelning"
+ },
+ "Details": {
+  "en": "Details",
+  "de": "Details",
+  "fr": "Détails",
+  "es": "Detalles",
+  "pl": "Szczegóły",
+  "nb": "Detaljer",
+  "da": "Detaljer",
+  "sv": "Detaljer"
+ },
+ "DevTools": {
+  "en": "DevTools",
+  "de": "DevTools",
+  "fr": "DevTools",
+  "es": "DevTools",
+  "pl": "DevTools",
+  "nb": "DevTools",
+  "da": "DevTools",
+  "sv": "DevTools"
+ },
+ "DevTools vraagt Apple eenmalig om doorlopende analyserapporten voor %@. Apple maakt de eerste rapporten binnen 1 à 2 dagen klaar; daarna komen er elke dag nieuwe bij.": {
+  "en": "DevTools asks Apple once for ongoing analytics reports for %@. Apple prepares the first reports within 1–2 days; after that, new ones are added every day.",
+  "de": "DevTools fordert bei Apple einmalig fortlaufende Analyseberichte für %@ an. Apple stellt die ersten Berichte innerhalb von 1–2 Tagen bereit; danach kommen täglich neue hinzu.",
+  "fr": "DevTools demande une seule fois à Apple des rapports d’analyse continus pour %@. Apple prépare les premiers rapports sous 1 à 2 jours ; ensuite, de nouveaux s’ajoutent chaque jour.",
+  "es": "DevTools solicita a Apple una sola vez informes de análisis continuos para %@. Apple prepara los primeros informes en 1 o 2 días; después se añaden nuevos cada día.",
+  "pl": "DevTools jednorazowo prosi Apple o ciągłe raporty analityczne dla %@. Apple przygotuje pierwsze raporty w ciągu 1–2 dni; potem codziennie pojawiają się nowe.",
+  "nb": "DevTools ber Apple én gang om løpende analyserapporter for %@. Apple klargjør de første rapportene innen 1–2 dager; deretter kommer det nye hver dag.",
+  "da": "DevTools beder én gang Apple om løbende analyserapporter for %@. Apple klargør de første rapporter inden for 1–2 dage; derefter kommer der nye hver dag.",
+  "sv": "DevTools ber Apple en gång om löpande analysrapporter för %@. Apple tar fram de första rapporterna inom 1–2 dagar; därefter tillkommer nya varje dag."
+ },
+ "DevTools zet per app een webhook in App Store Connect die naar de DevTools-pushserver wijst. Die controleert Apple's handtekening en stuurt de melding via OneSignal naar dit toestel. Er wordt niets opgeslagen; je API-sleutel verlaat dit toestel niet.": {
+  "en": "DevTools sets up a webhook in App Store Connect for each app that points to the DevTools push server. It verifies Apple's signature and sends the notification to this device via OneSignal. Nothing is stored; your API key never leaves this device.",
+  "de": "DevTools richtet pro App einen Webhook in App Store Connect ein, der auf den DevTools-Push-Server zeigt. Dieser prüft Apples Signatur und sendet die Mitteilung über OneSignal an dieses Gerät. Es wird nichts gespeichert; dein API-Schlüssel verlässt dieses Gerät nicht.",
+  "fr": "DevTools configure pour chaque app un webhook dans App Store Connect qui pointe vers le serveur push de DevTools. Celui-ci vérifie la signature d’Apple et envoie la notification à cet appareil via OneSignal. Rien n’est stocké ; votre clé API ne quitte jamais cet appareil.",
+  "es": "DevTools configura para cada app un webhook en App Store Connect que apunta al servidor push de DevTools. Este verifica la firma de Apple y envía la notificación a este dispositivo mediante OneSignal. No se guarda nada; tu clave API nunca sale de este dispositivo.",
+  "pl": "DevTools ustawia dla każdej aplikacji webhook w App Store Connect, który wskazuje na serwer push DevTools. Serwer sprawdza podpis Apple i wysyła powiadomienie na to urządzenie przez OneSignal. Nic nie jest zapisywane; twój klucz API nie opuszcza tego urządzenia.",
+  "nb": "DevTools setter opp en webhook i App Store Connect for hver app som peker til DevTools-push-serveren. Den kontrollerer Apples signatur og sender varselet til denne enheten via OneSignal. Ingenting lagres; API-nøkkelen din forlater aldri denne enheten.",
+  "da": "DevTools opretter for hver app en webhook i App Store Connect, der peger på DevTools-push-serveren. Den kontrollerer Apples signatur og sender notifikationen til denne enhed via OneSignal. Intet gemmes; din API-nøgle forlader aldrig denne enhed.",
+  "sv": "DevTools skapar en webhook i App Store Connect för varje app som pekar på DevTools push-server. Den kontrollerar Apples signatur och skickar notisen till den här enheten via OneSignal. Inget sparas; din API-nyckel lämnar aldrig den här enheten."
+ },
+ "Deze app gebruikt geen Game Center.": {
+  "en": "This app doesn't use Game Center.",
+  "de": "Diese App verwendet Game Center nicht.",
+  "fr": "Cette app n’utilise pas Game Center.",
+  "es": "Esta app no usa Game Center.",
+  "pl": "Ta aplikacja nie korzysta z Game Center.",
+  "nb": "Denne appen bruker ikke Game Center.",
+  "da": "Denne app bruger ikke Game Center.",
+  "sv": "Den här appen använder inte Game Center."
+ },
+ "Deze iPhone is aangemeld": {
+  "en": "This iPhone is registered",
+  "de": "Dieses iPhone ist registriert",
+  "fr": "Cet iPhone est enregistré",
+  "es": "Este iPhone está registrado",
+  "pl": "Ten iPhone jest zarejestrowany",
+  "nb": "Denne iPhonen er registrert",
+  "da": "Denne iPhone er registreret",
+  "sv": "Den här iPhonen är registrerad"
+ },
+ "Deze versie is aan alle gebruikers uitgebracht.": {
+  "en": "This version has been released to all users.",
+  "de": "Diese Version wurde für alle Nutzer veröffentlicht.",
+  "fr": "Cette version a été publiée pour tous les utilisateurs.",
+  "es": "Esta versión se ha publicado para todos los usuarios.",
+  "pl": "Ta wersja została udostępniona wszystkim użytkownikom.",
+  "nb": "Denne versjonen er utgitt til alle brukere.",
+  "da": "Denne version er udgivet til alle brugere.",
+  "sv": "Den här versionen har släppts till alla användare."
+ },
+ "Deze versie kan niet meer worden aangepast.": {
+  "en": "This version can no longer be edited.",
+  "de": "Diese Version kann nicht mehr bearbeitet werden.",
+  "fr": "Cette version ne peut plus être modifiée.",
+  "es": "Esta versión ya no se puede editar.",
+  "pl": "Tej wersji nie można już edytować.",
+  "nb": "Denne versjonen kan ikke lenger endres.",
+  "da": "Denne version kan ikke længere redigeres.",
+  "sv": "Den här versionen kan inte längre redigeras."
+ },
+ "Deze workflow is uitgeschakeld in Xcode.": {
+  "en": "This workflow is disabled in Xcode.",
+  "de": "Dieser Workflow ist in Xcode deaktiviert.",
+  "fr": "Ce workflow est désactivé dans Xcode.",
+  "es": "Este flujo de trabajo está desactivado en Xcode.",
+  "pl": "Ten workflow jest wyłączony w Xcode.",
+  "nb": "Denne arbeidsflyten er deaktivert i Xcode.",
+  "da": "Dette workflow er deaktiveret i Xcode.",
+  "sv": "Det här arbetsflödet är inaktiverat i Xcode."
+ },
+ "Diagnose": {
+  "en": "Diagnostics",
+  "de": "Diagnose",
+  "fr": "Diagnostics",
+  "es": "Diagnóstico",
+  "pl": "Diagnostyka",
+  "nb": "Diagnostikk",
+  "da": "Diagnosticering",
+  "sv": "Diagnostik"
+ },
+ "Diagnose (vastlopers, opstarten, schrijfacties)": {
+  "en": "Diagnostics (hangs, launches, disk writes)",
+  "de": "Diagnose (Hänger, Starts, Schreibvorgänge)",
+  "fr": "Diagnostics (blocages, lancements, écritures sur disque)",
+  "es": "Diagnóstico (bloqueos, inicios, escrituras en disco)",
+  "pl": "Diagnostyka (zawieszenia, uruchomienia, zapisy na dysku)",
+  "nb": "Diagnostikk (heng, oppstarter, diskskrivinger)",
+  "da": "Diagnosticering (hæng, opstarter, diskskrivninger)",
+  "sv": "Diagnostik (häng, starter, diskskrivningar)"
+ },
+ "Downloads": {
+  "en": "Downloads",
+  "de": "Downloads",
+  "fr": "Téléchargements",
+  "es": "Descargas",
+  "pl": "Pobrania",
+  "nb": "Nedlastinger",
+  "da": "Downloads",
+  "sv": "Nedladdningar"
+ },
+ "Duur": {
+  "en": "Duration",
+  "de": "Dauer",
+  "fr": "Durée",
+  "es": "Duración",
+  "pl": "Czas trwania",
+  "nb": "Varighet",
+  "da": "Varighed",
+  "sv": "Varaktighet"
+ },
+ "E-mail": {
+  "en": "Email",
+  "de": "E-Mail",
+  "fr": "E-mail",
+  "es": "Correo electrónico",
+  "pl": "E-mail",
+  "nb": "E-post",
+  "da": "E-mail",
+  "sv": "E-post"
+ },
+ "Eenmalige codes": {
+  "en": "One-time use codes",
+  "de": "Einmalcodes",
+  "fr": "Codes à usage unique",
+  "es": "Códigos de un solo uso",
+  "pl": "Kody jednorazowe",
+  "nb": "Engangskoder",
+  "da": "Engangskoder",
+  "sv": "Engångskoder"
+ },
+ "Eerste downloads": {
+  "en": "First-time downloads",
+  "de": "Erstmalige Downloads",
+  "fr": "Premiers téléchargements",
+  "es": "Primeras descargas",
+  "pl": "Pierwsze pobrania",
+  "nb": "Førstegangsnedlastinger",
+  "da": "Førstegangsdownloads",
+  "sv": "Förstagångsnedladdningar"
+ },
+ "Eigen API-sleutels": {
+  "en": "Your own API keys",
+  "de": "Eigene API-Schlüssel",
+  "fr": "Vos propres clés API",
+  "es": "Tus propias claves API",
+  "pl": "Własne klucze API",
+  "nb": "Egne API-nøkler",
+  "da": "Egne API-nøgler",
+  "sv": "Egna API-nycklar"
+ },
+ "Eigen codes": {
+  "en": "Custom codes",
+  "de": "Benutzerdefinierte Codes",
+  "fr": "Codes personnalisés",
+  "es": "Códigos personalizados",
+  "pl": "Kody niestandardowe",
+  "nb": "Egendefinerte koder",
+  "da": "Brugerdefinerede koder",
+  "sv": "Anpassade koder"
+ },
+ "Einde": {
+  "en": "End",
+  "de": "Ende",
+  "fr": "Fin",
+  "es": "Fin",
+  "pl": "Koniec",
+  "nb": "Slutt",
+  "da": "Slut",
+  "sv": "Slut"
+ },
+ "Evenementen op je productpagina en in zoekresultaten": {
+  "en": "Events on your product page and in search results",
+  "de": "Events auf deiner Produktseite und in den Suchergebnissen",
+  "fr": "Événements sur votre page produit et dans les résultats de recherche",
+  "es": "Eventos en tu página de producto y en los resultados de búsqueda",
+  "pl": "Wydarzenia na twojej stronie produktu i w wynikach wyszukiwania",
+  "nb": "Hendelser på produktsiden din og i søkeresultater",
+  "da": "Events på din produktside og i søgeresultater",
+  "sv": "Evenemang på din produktsida och i sökresultat"
+ },
+ "Events, product pages, A/B-tests en Game Center": {
+  "en": "Events, product pages, A/B tests and Game Center",
+  "de": "Events, Produktseiten, A/B-Tests und Game Center",
+  "fr": "Événements, pages produit, A/B tests et Game Center",
+  "es": "Eventos, páginas de producto, A/B tests y Game Center",
+  "pl": "Wydarzenia, strony produktu, A/B tests i Game Center",
+  "nb": "Hendelser, produktsider, A/B-tester og Game Center",
+  "da": "Events, produktsider, A/B-tests og Game Center",
+  "sv": "Evenemang, produktsidor, A/B-tester och Game Center"
+ },
+ "Export compliance": {
+  "en": "Export compliance",
+  "de": "Exportkonformität",
+  "fr": "Conformité à l’exportation",
+  "es": "Cumplimiento de exportación",
+  "pl": "Zgodność eksportowa",
+  "nb": "Eksportsamsvar",
+  "da": "Eksportoverholdelse",
+  "sv": "Exportefterlevnad"
+ },
+ "Extra productpagina's met eigen screenshots en link": {
+  "en": "Additional product pages with their own screenshots and link",
+  "de": "Zusätzliche Produktseiten mit eigenen Screenshots und Link",
+  "fr": "Pages produit supplémentaires avec leurs propres captures d’écran et lien",
+  "es": "Páginas de producto adicionales con sus propias capturas y enlace",
+  "pl": "Dodatkowe strony produktu z własnymi zrzutami ekranu i linkiem",
+  "nb": "Ekstra produktsider med egne skjermbilder og lenke",
+  "da": "Ekstra produktsider med egne skærmbilleder og link",
+  "sv": "Extra produktsidor med egna skärmbilder och länk"
+ },
+ "Feedback (%lld)": {
+  "en": "Feedback (%lld)",
+  "de": "Feedback (%lld)",
+  "fr": "Commentaires (%lld)",
+  "es": "Comentarios (%lld)",
+  "pl": "Opinie (%lld)",
+  "nb": "Tilbakemeldinger (%lld)",
+  "da": "Feedback (%lld)",
+  "sv": "Feedback (%lld)"
+ },
+ "Feedback en crashes van testers": {
+  "en": "Feedback and crashes from testers",
+  "de": "Feedback und Abstürze von Testern",
+  "fr": "Commentaires et crashs des testeurs",
+  "es": "Comentarios y fallos de los testers",
+  "pl": "Opinie i awarie od testerów",
+  "nb": "Tilbakemeldinger og krasj fra testere",
+  "da": "Feedback og nedbrud fra testere",
+  "sv": "Feedback och krascher från testare"
+ },
+ "Feedback verwijderen?": {
+  "en": "Delete feedback?",
+  "de": "Feedback löschen?",
+  "fr": "Supprimer le commentaire ?",
+  "es": "¿Eliminar comentario?",
+  "pl": "Usunąć opinię?",
+  "nb": "Slette tilbakemeldingen?",
+  "da": "Slet feedback?",
+  "sv": "Radera feedback?"
+ },
+ "Feedback voor deze build": {
+  "en": "Feedback for this build",
+  "de": "Feedback zu diesem Build",
+  "fr": "Commentaires sur ce build",
+  "es": "Comentarios de este build",
+  "pl": "Opinie dla tego buildu",
+  "nb": "Tilbakemeldinger for dette buildet",
+  "da": "Feedback til dette build",
+  "sv": "Feedback för den här builden"
+ },
+ "Financiën": {
+  "en": "Finance",
+  "de": "Finanzen",
+  "fr": "Finances",
+  "es": "Finanzas",
+  "pl": "Finanse",
+  "nb": "Økonomi",
+  "da": "Økonomi",
+  "sv": "Ekonomi"
+ },
+ "Fout": {
+  "en": "Error",
+  "de": "Fehler",
+  "fr": "Erreur",
+  "es": "Error",
+  "pl": "Błąd",
+  "nb": "Feil",
+  "da": "Fejl",
+  "sv": "Fel"
+ },
+ "Game Center": {
+  "en": "Game Center",
+  "de": "Game Center",
+  "fr": "Game Center",
+  "es": "Game Center",
+  "pl": "Game Center",
+  "nb": "Game Center",
+  "da": "Game Center",
+  "sv": "Game Center"
+ },
+ "Game Center staat uit": {
+  "en": "Game Center is off",
+  "de": "Game Center ist deaktiviert",
+  "fr": "Game Center est désactivé",
+  "es": "Game Center está desactivado",
+  "pl": "Game Center jest wyłączone",
+  "nb": "Game Center er av",
+  "da": "Game Center er slået fra",
+  "sv": "Game Center är av"
+ },
+ "Geannuleerd": {
+  "en": "Cancelled",
+  "de": "Abgebrochen",
+  "fr": "Annulé",
+  "es": "Cancelado",
+  "pl": "Anulowano",
+  "nb": "Avbrutt",
+  "da": "Annulleret",
+  "sv": "Avbruten"
+ },
+ "Gebeurtenis": {
+  "en": "Event",
+  "de": "Ereignis",
+  "fr": "Événement",
+  "es": "Evento",
+  "pl": "Zdarzenie",
+  "nb": "Hendelse",
+  "da": "Hændelse",
+  "sv": "Händelse"
+ },
+ "Gebeurtenissen": {
+  "en": "Events",
+  "de": "Ereignisse",
+  "fr": "Événements",
+  "es": "Eventos",
+  "pl": "Zdarzenia",
+  "nb": "Hendelser",
+  "da": "Hændelser",
+  "sv": "Händelser"
+ },
+ "Gebruiker verwijderd": {
+  "en": "User removed",
+  "de": "Benutzer entfernt",
+  "fr": "Utilisateur supprimé",
+  "es": "Usuario eliminado",
+  "pl": "Użytkownik usunięty",
+  "nb": "Bruker fjernet",
+  "da": "Bruger fjernet",
+  "sv": "Användare borttagen"
+ },
+ "Gebruikers (%lld)": {
+  "en": "Users (%lld)",
+  "de": "Benutzer (%lld)",
+  "fr": "Utilisateurs (%lld)",
+  "es": "Usuarios (%lld)",
+  "pl": "Użytkownicy (%lld)",
+  "nb": "Brukere (%lld)",
+  "da": "Brugere (%lld)",
+  "sv": "Användare (%lld)"
+ },
+ "Gebruikers en toegang": {
+  "en": "Users and Access",
+  "de": "Benutzer und Zugriff",
+  "fr": "Utilisateurs et accès",
+  "es": "Usuarios y acceso",
+  "pl": "Użytkownicy i dostęp",
+  "nb": "Brukere og tilgang",
+  "da": "Brugere og adgang",
+  "sv": "Användare och åtkomst"
+ },
+ "Gebruikersnaam": {
+  "en": "Username",
+  "de": "Benutzername",
+  "fr": "Nom d’utilisateur",
+  "es": "Nombre de usuario",
+  "pl": "Nazwa użytkownika",
+  "nb": "Brukernavn",
+  "da": "Brugernavn",
+  "sv": "Användarnamn"
+ },
+ "Geen A/B-tests": {
+  "en": "No A/B tests",
+  "de": "Keine A/B-Tests",
+  "fr": "Aucun A/B test",
+  "es": "No hay A/B tests",
+  "pl": "Brak A/B tests",
+  "nb": "Ingen A/B-tester",
+  "da": "Ingen A/B-tests",
+  "sv": "Inga A/B-tester"
+ },
+ "Geen Asset Library gevonden voor deze app.": {
+  "en": "No Asset Library found for this app.",
+  "de": "Keine Asset Library für diese App gefunden.",
+  "fr": "Aucune Asset Library trouvée pour cette app.",
+  "es": "No se encontró ninguna Asset Library para esta app.",
+  "pl": "Nie znaleziono Asset Library dla tej aplikacji.",
+  "nb": "Fant ingen Asset Library for denne appen.",
+  "da": "Der blev ikke fundet noget Asset Library til denne app.",
+  "sv": "Inget Asset Library hittades för den här appen."
+ },
+ "Geen certificaten": {
+  "en": "No certificates",
+  "de": "Keine Zertifikate",
+  "fr": "Aucun certificat",
+  "es": "No hay certificados",
+  "pl": "Brak certyfikatów",
+  "nb": "Ingen sertifikater",
+  "da": "Ingen certifikater",
+  "sv": "Inga certifikat"
+ },
+ "Geen crashlog beschikbaar": {
+  "en": "No crash log available",
+  "de": "Kein Absturzprotokoll verfügbar",
+  "fr": "Aucun journal de crash disponible",
+  "es": "No hay registro de fallos disponible",
+  "pl": "Brak dostępnego logu awarii",
+  "nb": "Ingen krasjlogg tilgjengelig",
+  "da": "Ingen nedbrudslog tilgængelig",
+  "sv": "Ingen kraschlogg tillgänglig"
+ },
+ "Geen crashmeldingen": {
+  "en": "No crash reports",
+  "de": "Keine Absturzberichte",
+  "fr": "Aucun rapport de crash",
+  "es": "No hay informes de fallos",
+  "pl": "Brak raportów awarii",
+  "nb": "Ingen krasjrapporter",
+  "da": "Ingen nedbrudsrapporter",
+  "sv": "Inga kraschrapporter"
+ },
+ "Geen custom product pages": {
+  "en": "No custom product pages",
+  "de": "Keine Custom product pages",
+  "fr": "Aucune Custom product page",
+  "es": "No hay Custom product pages",
+  "pl": "Brak Custom product pages",
+  "nb": "Ingen Custom product pages",
+  "da": "Ingen Custom product pages",
+  "sv": "Inga Custom product pages"
+ },
+ "Geen diagnosegegevens voor deze build": {
+  "en": "No diagnostics data for this build",
+  "de": "Keine Diagnosedaten für diesen Build",
+  "fr": "Aucune donnée de diagnostic pour ce build",
+  "es": "No hay datos de diagnóstico para este build",
+  "pl": "Brak danych diagnostycznych dla tego buildu",
+  "nb": "Ingen diagnostikkdata for dette buildet",
+  "da": "Ingen diagnosticeringsdata for dette build",
+  "sv": "Inga diagnostikdata för den här builden"
+ },
+ "Geen gefaseerde release voor deze versie.": {
+  "en": "No phased release for this version.",
+  "de": "Keine phasenweise Veröffentlichung für diese Version.",
+  "fr": "Aucune publication progressive pour cette version.",
+  "es": "No hay publicación por fases para esta versión.",
+  "pl": "Brak wydania etapowego dla tej wersji.",
+  "nb": "Ingen trinnvis utgivelse for denne versjonen.",
+  "da": "Ingen trinvis udgivelse for denne version.",
+  "sv": "Ingen stegvis lansering för den här versionen."
+ },
+ "Geen identifiers": {
+  "en": "No identifiers",
+  "de": "Keine IDs",
+  "fr": "Aucun identifiant",
+  "es": "No hay identificadores",
+  "pl": "Brak identyfikatorów",
+  "nb": "Ingen identifikatorer",
+  "da": "Ingen identifikatorer",
+  "sv": "Inga identifierare"
+ },
+ "Geen in-app events": {
+  "en": "No in-app events",
+  "de": "Keine In-app events",
+  "fr": "Aucun In-app event",
+  "es": "No hay In-app events",
+  "pl": "Brak In-app events",
+  "nb": "Ingen In-app events",
+  "da": "Ingen In-app events",
+  "sv": "Inga In-app events"
+ },
+ "Geen opmerking": {
+  "en": "No comment",
+  "de": "Kein Kommentar",
+  "fr": "Aucun commentaire",
+  "es": "Sin comentario",
+  "pl": "Brak komentarza",
+  "nb": "Ingen kommentar",
+  "da": "Ingen kommentar",
+  "sv": "Ingen kommentar"
+ },
+ "Geen profielen": {
+  "en": "No profiles",
+  "de": "Keine Profile",
+  "fr": "Aucun profil",
+  "es": "No hay perfiles",
+  "pl": "Brak profili",
+  "nb": "Ingen profiler",
+  "da": "Ingen profiler",
+  "sv": "Inga profiler"
+ },
+ "Geen toestellen": {
+  "en": "No devices",
+  "de": "Keine Geräte",
+  "fr": "Aucun appareil",
+  "es": "No hay dispositivos",
+  "pl": "Brak urządzeń",
+  "nb": "Ingen enheter",
+  "da": "Ingen enheder",
+  "sv": "Inga enheter"
+ },
+ "Geen varianten": {
+  "en": "No variants",
+  "de": "Keine Varianten",
+  "fr": "Aucune variante",
+  "es": "No hay variantes",
+  "pl": "Brak wariantów",
+  "nb": "Ingen varianter",
+  "da": "Ingen varianter",
+  "sv": "Inga varianter"
+ },
+ "Gefaseerde release": {
+  "en": "Phased release",
+  "de": "Phasenweise Veröffentlichung",
+  "fr": "Publication progressive",
+  "es": "Publicación por fases",
+  "pl": "Wydanie etapowe",
+  "nb": "Trinnvis utgivelse",
+  "da": "Trinvis udgivelse",
+  "sv": "Stegvis lansering"
+ },
+ "Gefaseerde release aanzetten": {
+  "en": "Turn on phased release",
+  "de": "Phasenweise Veröffentlichung aktivieren",
+  "fr": "Activer la publication progressive",
+  "es": "Activar publicación por fases",
+  "pl": "Włącz wydanie etapowe",
+  "nb": "Slå på trinnvis utgivelse",
+  "da": "Slå trinvis udgivelse til",
+  "sv": "Aktivera stegvis lansering"
+ },
+ "Gefaseerde release uitzetten": {
+  "en": "Turn off phased release",
+  "de": "Phasenweise Veröffentlichung deaktivieren",
+  "fr": "Désactiver la publication progressive",
+  "es": "Desactivar publicación por fases",
+  "pl": "Wyłącz wydanie etapowe",
+  "nb": "Slå av trinnvis utgivelse",
+  "da": "Slå trinvis udgivelse fra",
+  "sv": "Inaktivera stegvis lansering"
+ },
+ "Gegenereerde reeksen": {
+  "en": "Generated batches",
+  "de": "Generierte Codesätze",
+  "fr": "Lots générés",
+  "es": "Lotes generados",
+  "pl": "Wygenerowane partie",
+  "nb": "Genererte serier",
+  "da": "Genererede serier",
+  "sv": "Genererade omgångar"
+ },
+ "Geheim": {
+  "en": "Secret",
+  "de": "Geheimer Schlüssel",
+  "fr": "Secret",
+  "es": "Secreto",
+  "pl": "Sekret",
+  "nb": "Hemmelighet",
+  "da": "Hemmelighed",
+  "sv": "Hemlighet"
+ },
+ "Gekopieerd": {
+  "en": "Copied",
+  "de": "Kopiert",
+  "fr": "Copié",
+  "es": "Copiado",
+  "pl": "Skopiowano",
+  "nb": "Kopiert",
+  "da": "Kopieret",
+  "sv": "Kopierat"
+ },
+ "Gepauzeerd": {
+  "en": "Paused",
+  "de": "Pausiert",
+  "fr": "En pause",
+  "es": "En pausa",
+  "pl": "Wstrzymano",
+  "nb": "Satt på pause",
+  "da": "Sat på pause",
+  "sv": "Pausad"
+ },
+ "Gepauzeerd. Nieuwe gebruikers kunnen de versie nog wel handmatig downloaden. Je kunt maximaal 30 dagen pauzeren.": {
+  "en": "Paused. New users can still download the version manually. You can pause for up to 30 days.",
+  "de": "Pausiert. Neue Nutzer können die Version weiterhin manuell laden. Du kannst bis zu 30 Tage pausieren.",
+  "fr": "En pause. Les nouveaux utilisateurs peuvent toujours télécharger la version manuellement. Vous pouvez suspendre jusqu’à 30 jours.",
+  "es": "En pausa. Los nuevos usuarios aún pueden descargar la versión manualmente. Puedes pausar hasta 30 días.",
+  "pl": "Wstrzymano. Nowi użytkownicy nadal mogą pobrać wersję ręcznie. Możesz wstrzymać maksymalnie na 30 dni.",
+  "nb": "Satt på pause. Nye brukere kan fortsatt laste ned versjonen manuelt. Du kan pause i opptil 30 dager.",
+  "da": "Sat på pause. Nye brugere kan stadig downloade versionen manuelt. Du kan sætte på pause i op til 30 dage.",
+  "sv": "Pausad. Nya användare kan fortfarande ladda ner versionen manuellt. Du kan pausa i upp till 30 dagar."
+ },
+ "Geregistreerde testtoestellen": {
+  "en": "Registered test devices",
+  "de": "Registrierte Testgeräte",
+  "fr": "Appareils de test enregistrés",
+  "es": "Dispositivos de prueba registrados",
+  "pl": "Zarejestrowane urządzenia testowe",
+  "nb": "Registrerte testenheter",
+  "da": "Registrerede testenheder",
+  "sv": "Registrerade testenheter"
+ },
+ "Geslaagd": {
+  "en": "Succeeded",
+  "de": "Erfolgreich",
+  "fr": "Réussi",
+  "es": "Correcto",
+  "pl": "Powodzenie",
+  "nb": "Vellykket",
+  "da": "Gennemført",
+  "sv": "Lyckades"
+ },
+ "Gestart": {
+  "en": "Started",
+  "de": "Gestartet",
+  "fr": "Démarré",
+  "es": "Iniciado",
+  "pl": "Rozpoczęto",
+  "nb": "Startet",
+  "da": "Startet",
+  "sv": "Startad"
+ },
+ "Geüpload. Apple verwerkt de bestanden nu.": {
+  "en": "Uploaded. Apple is now processing the files.",
+  "de": "Hochgeladen. Apple verarbeitet die Dateien jetzt.",
+  "fr": "Téléversé. Apple traite maintenant les fichiers.",
+  "es": "Subido. Apple está procesando los archivos.",
+  "pl": "Przesłano. Apple przetwarza teraz pliki.",
+  "nb": "Lastet opp. Apple behandler nå filene.",
+  "da": "Uploadet. Apple behandler nu filerne.",
+  "sv": "Uppladdat. Apple bearbetar nu filerna."
+ },
+ "Grafiek": {
+  "en": "Chart",
+  "de": "Diagramm",
+  "fr": "Graphique",
+  "es": "Gráfico",
+  "pl": "Wykres",
+  "nb": "Diagram",
+  "da": "Diagram",
+  "sv": "Diagram"
+ },
+ "Gratis": {
+  "en": "Free",
+  "de": "Gratis",
+  "fr": "Gratuit",
+  "es": "Gratis",
+  "pl": "Bezpłatna",
+  "nb": "Gratis",
+  "da": "Gratis",
+  "sv": "Gratis"
+ },
+ "Header en Search Results": {
+  "en": "Header and Search Results",
+  "de": "Header und Search Results",
+  "fr": "Header et Search Results",
+  "es": "Header y Search Results",
+  "pl": "Header i Search Results",
+  "nb": "Header og Search Results",
+  "da": "Header og Search Results",
+  "sv": "Header och Search Results"
+ },
+ "Hervat release": {
+  "en": "Resume release",
+  "de": "Veröffentlichung fortsetzen",
+  "fr": "Reprendre la publication",
+  "es": "Reanudar publicación",
+  "pl": "Wznów wydanie",
+  "nb": "Gjenoppta utgivelsen",
+  "da": "Genoptag udgivelse",
+  "sv": "Återuppta lanseringen"
+ },
+ "Hiervoor heeft je API-sleutel de rol Beheerder (Admin) nodig.": {
+  "en": "Your API key needs the Admin role for this.",
+  "de": "Dafür braucht dein API-Schlüssel die Rolle Admin.",
+  "fr": "Votre clé API doit disposer du rôle Admin pour cela.",
+  "es": "Tu clave API necesita el rol Administrador (Admin) para esto.",
+  "pl": "Do tego twój klucz API potrzebuje roli Administrator (Admin).",
+  "nb": "API-nøkkelen din trenger rollen Administrator (Admin) for dette.",
+  "da": "Din API-nøgle skal have rollen Administrator (Admin) til dette.",
+  "sv": "Din API-nyckel behöver rollen Administratör (Admin) för detta."
+ },
+ "Home": {
+  "en": "Home",
+  "de": "Home",
+  "fr": "Home",
+  "es": "Home",
+  "pl": "Home",
+  "nb": "Home",
+  "da": "Home",
+  "sv": "Home"
+ },
+ "Houd een screenshot ingedrukt om te verplaatsen of te verwijderen. Maximaal 10 per formaat.": {
+  "en": "Touch and hold a screenshot to move or delete it. Up to 10 per size.",
+  "de": "Halte einen Screenshot gedrückt, um ihn zu verschieben oder zu löschen. Maximal 10 pro Größe.",
+  "fr": "Maintenez une capture d’écran enfoncée pour la déplacer ou la supprimer. 10 maximum par format.",
+  "es": "Mantén pulsada una captura para moverla o eliminarla. Máximo 10 por tamaño.",
+  "pl": "Przytrzymaj zrzut ekranu, aby go przenieść lub usunąć. Maksymalnie 10 na rozmiar.",
+  "nb": "Hold inne et skjermbilde for å flytte eller slette det. Maks. 10 per størrelse.",
+  "da": "Hold et skærmbillede nede for at flytte eller slette det. Maks. 10 pr. størrelse.",
+  "sv": "Håll ned en skärmbild för att flytta eller radera den. Högst 10 per storlek."
+ },
+ "Identifier aangemaakt": {
+  "en": "Identifier created",
+  "de": "ID erstellt",
+  "fr": "Identifiant créé",
+  "es": "Identificador creado",
+  "pl": "Identyfikator utworzony",
+  "nb": "Identifikator opprettet",
+  "da": "Identifikator oprettet",
+  "sv": "Identifierare skapad"
+ },
+ "Identifiers": {
+  "en": "Identifiers",
+  "de": "IDs",
+  "fr": "Identifiants",
+  "es": "Identificadores",
+  "pl": "Identyfikatory",
+  "nb": "Identifikatorer",
+  "da": "Identifikatorer",
+  "sv": "Identifierare"
+ },
+ "Iemand uitnodigen": {
+  "en": "Invite someone",
+  "de": "Jemanden einladen",
+  "fr": "Inviter quelqu’un",
+  "es": "Invitar a alguien",
+  "pl": "Zaproś kogoś",
+  "nb": "Inviter noen",
+  "da": "Inviter nogen",
+  "sv": "Bjud in någon"
+ },
+ "In de wachtrij": {
+  "en": "Queued",
+  "de": "In Warteschlange",
+  "fr": "En file d’attente",
+  "es": "En cola",
+  "pl": "W kolejce",
+  "nb": "I kø",
+  "da": "I kø",
+  "sv": "I kö"
+ },
+ "In review": {
+  "en": "In Review",
+  "de": "In Prüfung",
+  "fr": "En cours d’examen",
+  "es": "En revisión",
+  "pl": "W trakcie weryfikacji",
+  "nb": "Under vurdering",
+  "da": "Under gennemgang",
+  "sv": "Granskas"
+ },
+ "In-app": {
+  "en": "In-app",
+  "de": "In-App",
+  "fr": "Intégré",
+  "es": "In-app",
+  "pl": "W aplikacji",
+  "nb": "I appen",
+  "da": "In-app",
+  "sv": "I appen"
+ },
+ "In-app aankopen en abonnementen": {
+  "en": "In-app purchases and subscriptions",
+  "de": "In-App-Käufe und Abonnements",
+  "fr": "Achats intégrés et abonnements",
+  "es": "Compras dentro de la app y suscripciones",
+  "pl": "Zakupy w aplikacji i subskrypcje",
+  "nb": "Kjøp i appen og abonnementer",
+  "da": "Køb i appen og abonnementer",
+  "sv": "Köp inuti appar och prenumerationer"
+ },
+ "In-app events": {
+  "en": "In-app events",
+  "de": "In-app events",
+  "fr": "In-app events",
+  "es": "In-app events",
+  "pl": "In-app events",
+  "nb": "In-app events",
+  "da": "In-app events",
+  "sv": "In-app events"
+ },
+ "Ingediend voor review": {
+  "en": "Submitted for review",
+  "de": "Zur Prüfung eingereicht",
+  "fr": "Soumis pour examen",
+  "es": "Enviado para revisión",
+  "pl": "Przesłano do weryfikacji",
+  "nb": "Sendt til vurdering",
+  "da": "Indsendt til gennemgang",
+  "sv": "Skickad för granskning"
+ },
+ "Inschakelen": {
+  "en": "Enable",
+  "de": "Aktivieren",
+  "fr": "Activer",
+  "es": "Activar",
+  "pl": "Włącz",
+  "nb": "Slå på",
+  "da": "Slå til",
+  "sv": "Aktivera"
+ },
+ "Intrekken": {
+  "en": "Revoke",
+  "de": "Widerrufen",
+  "fr": "Révoquer",
+  "es": "Revocar",
+  "pl": "Unieważnij",
+  "nb": "Tilbakekall",
+  "da": "Tilbagekald",
+  "sv": "Återkalla"
+ },
+ "Issuer ID": {
+  "en": "Issuer ID",
+  "de": "Issuer ID",
+  "fr": "Issuer ID",
+  "es": "Issuer ID",
+  "pl": "Issuer ID",
+  "nb": "Issuer ID",
+  "da": "Issuer ID",
+  "sv": "Issuer ID"
+ },
+ "Ja": {
+  "en": "Yes",
+  "de": "Ja",
+  "fr": "Oui",
+  "es": "Sí",
+  "pl": "Tak",
+  "nb": "Ja",
+  "da": "Ja",
+  "sv": "Ja"
+ },
+ "Jouw opbrengst": {
+  "en": "Your proceeds",
+  "de": "Dein Erlös",
+  "fr": "Vos revenus",
+  "es": "Tus ingresos",
+  "pl": "Twoje wpływy",
+  "nb": "Dine inntekter",
+  "da": "Dit provenu",
+  "sv": "Dina intäkter"
+ },
+ "Kan alleen als de status 'Ready to submit' is. De eerste in-app aankoop dien je samen met een app-versie in.": {
+  "en": "Only possible when the status is 'Ready to Submit'. Submit your first in-app purchase together with an app version.",
+  "de": "Nur möglich, wenn der Status 'Ready to Submit' ist. Den ersten In-App-Kauf reichst du zusammen mit einer App-Version ein.",
+  "fr": "Possible uniquement si le statut est 'Ready to Submit'. Le premier achat intégré doit être soumis avec une version de l’app.",
+  "es": "Solo es posible si el estado es 'Ready to Submit'. La primera compra dentro de la app se envía junto con una versión de la app.",
+  "pl": "Możliwe tylko przy statusie 'Ready to Submit'. Pierwszy zakup w aplikacji przesyłasz razem z wersją aplikacji.",
+  "nb": "Bare mulig når statusen er 'Ready to Submit'. Det første kjøpet i appen sender du inn sammen med en appversjon.",
+  "da": "Kun muligt, når status er 'Ready to Submit'. Det første køb i appen indsender du sammen med en appversion.",
+  "sv": "Endast möjligt när statusen är 'Ready to Submit'. Det första köpet inuti appen skickar du in tillsammans med en appversion."
+ },
+ "Key ID": {
+  "en": "Key ID",
+  "de": "Key ID",
+  "fr": "Key ID",
+  "es": "Key ID",
+  "pl": "Key ID",
+  "nb": "Key ID",
+  "da": "Key ID",
+  "sv": "Key ID"
+ },
+ "Kies de nieuwe prijs in %@. De nieuwe prijs geldt meteen; andere landen worden automatisch omgerekend.": {
+  "en": "Choose the new price in %@. The new price takes effect immediately; other countries are converted automatically.",
+  "de": "Wähle den neuen Preis in %@. Der neue Preis gilt sofort; andere Länder werden automatisch umgerechnet.",
+  "fr": "Choisissez le nouveau prix en %@. Le nouveau prix s’applique immédiatement ; les autres pays sont convertis automatiquement.",
+  "es": "Elige el nuevo precio en %@. El nuevo precio se aplica de inmediato; los demás países se convierten automáticamente.",
+  "pl": "Wybierz nową cenę w %@. Nowa cena obowiązuje od razu; pozostałe kraje są przeliczane automatycznie.",
+  "nb": "Velg den nye prisen i %@. Den nye prisen gjelder umiddelbart; andre land regnes om automatisk.",
+  "da": "Vælg den nye pris i %@. Den nye pris gælder med det samme; andre lande omregnes automatisk.",
+  "sv": "Välj det nya priset i %@. Det nya priset gäller direkt; andra länder räknas om automatiskt."
+ },
+ "Klantenservice": {
+  "en": "Customer Support",
+  "de": "Kundensupport",
+  "fr": "Service client",
+  "es": "Atención al cliente",
+  "pl": "Obsługa klienta",
+  "nb": "Kundestøtte",
+  "da": "Kundesupport",
+  "sv": "Kundsupport"
+ },
+ "Kopieer": {
+  "en": "Copy",
+  "de": "Kopieren",
+  "fr": "Copier",
+  "es": "Copiar",
+  "pl": "Kopiuj",
+  "nb": "Kopier",
+  "da": "Kopiér",
+  "sv": "Kopiera"
+ },
+ "Kopieer alle codes": {
+  "en": "Copy all codes",
+  "de": "Alle Codes kopieren",
+  "fr": "Copier tous les codes",
+  "es": "Copiar todos los códigos",
+  "pl": "Kopiuj wszystkie kody",
+  "nb": "Kopier alle koder",
+  "da": "Kopiér alle koder",
+  "sv": "Kopiera alla koder"
+ },
+ "Kopieer crashlog": {
+  "en": "Copy crash log",
+  "de": "Absturzprotokoll kopieren",
+  "fr": "Copier le journal de crash",
+  "es": "Copiar registro de fallos",
+  "pl": "Kopiuj log awarii",
+  "nb": "Kopier krasjlogg",
+  "da": "Kopiér nedbrudslog",
+  "sv": "Kopiera kraschlogg"
+ },
+ "Kopieer link": {
+  "en": "Copy link",
+  "de": "Link kopieren",
+  "fr": "Copier le lien",
+  "es": "Copiar enlace",
+  "pl": "Kopiuj link",
+  "nb": "Kopier lenke",
+  "da": "Kopiér link",
+  "sv": "Kopiera länk"
+ },
+ "Krijg een pushmelding zodra een versie in review gaat, wordt goedgekeurd, afgewezen of live gaat, als een build klaar is, en bij nieuwe TestFlight-feedback of crashes.": {
+  "en": "Get a push notification when a version goes into review, is approved, rejected or goes live, when a build is ready, and for new TestFlight feedback or crashes.",
+  "de": "Erhalte eine Push-Mitteilung, sobald eine Version in die Prüfung geht, genehmigt, abgelehnt oder live geschaltet wird, wenn ein Build bereit ist und bei neuem TestFlight-Feedback oder Abstürzen.",
+  "fr": "Recevez une notification push dès qu’une version passe en examen, est approuvée, refusée ou mise en ligne, lorsqu’un build est prêt, et en cas de nouveaux commentaires ou crashs TestFlight.",
+  "es": "Recibe una notificación push cuando una versión entre en revisión, se apruebe, se rechace o se publique, cuando un build esté listo y con nuevos comentarios o fallos de TestFlight.",
+  "pl": "Otrzymuj powiadomienie push, gdy wersja trafi do weryfikacji, zostanie zatwierdzona, odrzucona lub opublikowana, gdy build będzie gotowy oraz przy nowych opiniach lub awariach z TestFlight.",
+  "nb": "Få et push-varsel når en versjon går til vurdering, blir godkjent, avvist eller publisert, når et build er klart, og ved ny TestFlight-tilbakemelding eller krasj.",
+  "da": "Få en push-notifikation, når en version går til gennemgang, bliver godkendt, afvist eller udgivet, når et build er klar, og ved ny TestFlight-feedback eller nedbrud.",
+  "sv": "Få en pushnotis när en version skickas till granskning, godkänns, avvisas eller publiceras, när en build är klar och vid ny TestFlight-feedback eller krascher."
+ },
+ "Laatste afleveringen": {
+  "en": "Recent deliveries",
+  "de": "Letzte Zustellungen",
+  "fr": "Dernières livraisons",
+  "es": "Últimas entregas",
+  "pl": "Ostatnie dostarczenia",
+  "nb": "Siste leveringer",
+  "da": "Seneste leveringer",
+  "sv": "Senaste leveranser"
+ },
+ "Link gekopieerd": {
+  "en": "Link copied",
+  "de": "Link kopiert",
+  "fr": "Lien copié",
+  "es": "Enlace copiado",
+  "pl": "Link skopiowany",
+  "nb": "Lenke kopiert",
+  "da": "Link kopieret",
+  "sv": "Länk kopierad"
+ },
+ "Links": {
+  "en": "Links",
+  "de": "Links",
+  "fr": "Liens",
+  "es": "Enlaces",
+  "pl": "Linki",
+  "nb": "Lenker",
+  "da": "Links",
+  "sv": "Länkar"
+ },
+ "Live": {
+  "en": "Live",
+  "de": "Live",
+  "fr": "Live",
+  "es": "Live",
+  "pl": "Live",
+  "nb": "Live",
+  "da": "Live",
+  "sv": "Live"
+ },
+ "Live %@": {
+  "en": "Live %@",
+  "de": "Live %@",
+  "fr": "Live %@",
+  "es": "Live %@",
+  "pl": "Live %@",
+  "nb": "Live %@",
+  "da": "Live %@",
+  "sv": "Live %@"
+ },
+ "Logs": {
+  "en": "Logs",
+  "de": "Protokolle",
+  "fr": "Journaux",
+  "es": "Registros",
+  "pl": "Logi",
+  "nb": "Logger",
+  "da": "Logs",
+  "sv": "Loggar"
+ },
+ "Marketing": {
+  "en": "Marketing",
+  "de": "Marketing",
+  "fr": "Marketing",
+  "es": "Marketing",
+  "pl": "Marketing",
+  "nb": "Markedsføring",
+  "da": "Marketing",
+  "sv": "Marknadsföring"
+ },
+ "Marketing-URL": {
+  "en": "Marketing URL",
+  "de": "Marketing-URL",
+  "fr": "URL marketing",
+  "es": "URL de marketing",
+  "pl": "URL marketingowy",
+  "nb": "Markedsførings-URL",
+  "da": "Marketing-URL",
+  "sv": "Marknadsförings-URL"
+ },
+ "Meer": {
+  "en": "More",
+  "de": "Mehr",
+  "fr": "Plus",
+  "es": "Más",
+  "pl": "Więcej",
+  "nb": "Mer",
+  "da": "Mere",
+  "sv": "Mer"
+ },
+ "Meldingen van App Store Connect": {
+  "en": "Notifications from App Store Connect",
+  "de": "Mitteilungen von App Store Connect",
+  "fr": "Notifications d’App Store Connect",
+  "es": "Notificaciones de App Store Connect",
+  "pl": "Powiadomienia z App Store Connect",
+  "nb": "Varsler fra App Store Connect",
+  "da": "Notifikationer fra App Store Connect",
+  "sv": "Notiser från App Store Connect"
+ },
+ "Meldingen zijn uitgeschakeld voor DevTools in Instellingen.": {
+  "en": "Notifications are turned off for DevTools in Settings.",
+  "de": "Mitteilungen sind für DevTools in den Einstellungen deaktiviert.",
+  "fr": "Les notifications sont désactivées pour DevTools dans Réglages.",
+  "es": "Las notificaciones están desactivadas para DevTools en Ajustes.",
+  "pl": "Powiadomienia dla DevTools są wyłączone w Ustawieniach.",
+  "nb": "Varsler er slått av for DevTools i Innstillinger.",
+  "da": "Notifikationer er slået fra for DevTools i Indstillinger.",
+  "sv": "Notiser är avstängda för DevTools i Inställningar."
+ },
+ "Met het geheim controleert de ontvanger de X-Apple-SIGNATURE-header (HMAC-SHA256). Bewaar het goed; Apple toont het later niet meer.": {
+  "en": "The receiver uses the secret to verify the X-Apple-SIGNATURE header (HMAC-SHA256). Keep it safe; Apple won't show it again later.",
+  "de": "Mit dem geheimen Schlüssel prüft der Empfänger den X-Apple-SIGNATURE-Header (HMAC-SHA256). Bewahre ihn gut auf; Apple zeigt ihn später nicht mehr an.",
+  "fr": "Le destinataire utilise le secret pour vérifier l’en-tête X-Apple-SIGNATURE (HMAC-SHA256). Conservez-le précieusement ; Apple ne l’affichera plus.",
+  "es": "El receptor usa el secreto para verificar el encabezado X-Apple-SIGNATURE (HMAC-SHA256). Guárdalo bien; Apple no volverá a mostrarlo.",
+  "pl": "Odbiorca używa sekretu do weryfikacji nagłówka X-Apple-SIGNATURE (HMAC-SHA256). Przechowuj go bezpiecznie; Apple nie pokaże go ponownie.",
+  "nb": "Mottakeren bruker hemmeligheten til å kontrollere X-Apple-SIGNATURE-headeren (HMAC-SHA256). Ta godt vare på den; Apple viser den ikke igjen senere.",
+  "da": "Modtageren bruger hemmeligheden til at kontrollere X-Apple-SIGNATURE-headeren (HMAC-SHA256). Gem den godt; Apple viser den ikke igen senere.",
+  "sv": "Mottagaren använder hemligheten för att kontrollera X-Apple-SIGNATURE-headern (HMAC-SHA256). Spara den säkert; Apple visar den inte igen senare."
+ },
+ "Min": {
+  "en": "Min",
+  "de": "Min.",
+  "fr": "Min",
+  "es": "Mín.",
+  "pl": "Min.",
+  "nb": "Min.",
+  "da": "Min.",
+  "sv": "Min"
+ },
+ "Min. OS": {
+  "en": "Min. OS",
+  "de": "Min. OS",
+  "fr": "OS min.",
+  "es": "SO mín.",
+  "pl": "Min. OS",
+  "nb": "Min. OS",
+  "da": "Min. OS",
+  "sv": "Min. OS"
+ },
+ "Naam (alleen voor jezelf)": {
+  "en": "Name (just for you)",
+  "de": "Name (nur für dich)",
+  "fr": "Nom (pour vous uniquement)",
+  "es": "Nombre (solo para ti)",
+  "pl": "Nazwa (tylko dla ciebie)",
+  "nb": "Navn (bare for deg)",
+  "da": "Navn (kun til dig)",
+  "sv": "Namn (bara för dig)"
+ },
+ "Naar links": {
+  "en": "Move left",
+  "de": "Nach links",
+  "fr": "Vers la gauche",
+  "es": "Mover a la izquierda",
+  "pl": "W lewo",
+  "nb": "Flytt til venstre",
+  "da": "Flyt til venstre",
+  "sv": "Flytta åt vänster"
+ },
+ "Naar rechts": {
+  "en": "Move right",
+  "de": "Nach rechts",
+  "fr": "Vers la droite",
+  "es": "Mover a la derecha",
+  "pl": "W prawo",
+  "nb": "Flytt til høyre",
+  "da": "Flyt til højre",
+  "sv": "Flytta åt höger"
+ },
+ "Nee": {
+  "en": "No",
+  "de": "Nein",
+  "fr": "Non",
+  "es": "No",
+  "pl": "Nie",
+  "nb": "Nei",
+  "da": "Nej",
+  "sv": "Nej"
+ },
+ "Neemt af": {
+  "en": "Decreasing",
+  "de": "Rückläufig",
+  "fr": "En baisse",
+  "es": "Disminuye",
+  "pl": "Spada",
+  "nb": "Synkende",
+  "da": "Faldende",
+  "sv": "Minskar"
+ },
+ "Neemt toe": {
+  "en": "Increasing",
+  "de": "Steigend",
+  "fr": "En hausse",
+  "es": "Aumenta",
+  "pl": "Rośnie",
+  "nb": "Stigende",
+  "da": "Stigende",
+  "sv": "Ökar"
+ },
+ "Niet-verbruiksartikel": {
+  "en": "Non-consumable",
+  "de": "Nicht-Verbrauchsartikel",
+  "fr": "Non consommable",
+  "es": "No consumible",
+  "pl": "Nieulegający zużyciu",
+  "nb": "Ikke-forbruksvare",
+  "da": "Ikke-forbrugsvare",
+  "sv": "Icke-förbrukningsbar"
+ },
+ "Niet-verlengend abonnement": {
+  "en": "Non-renewing subscription",
+  "de": "Nicht verlängerbares Abonnement",
+  "fr": "Abonnement non renouvelable",
+  "es": "Suscripción no renovable",
+  "pl": "Subskrypcja nieodnawialna",
+  "nb": "Ikke-fornybart abonnement",
+  "da": "Ikke-fornyeligt abonnement",
+  "sv": "Icke-förnyelsebar prenumeration"
+ },
+ "Niets gevonden": {
+  "en": "Nothing found",
+  "de": "Nichts gefunden",
+  "fr": "Aucun résultat",
+  "es": "No se encontró nada",
+  "pl": "Nic nie znaleziono",
+  "nb": "Ingenting funnet",
+  "da": "Intet fundet",
+  "sv": "Inget hittades"
+ },
+ "Nieuwe TestFlight-crash": {
+  "en": "New TestFlight crash",
+  "de": "Neuer TestFlight-Absturz",
+  "fr": "Nouveau crash TestFlight",
+  "es": "Nuevo fallo de TestFlight",
+  "pl": "Nowa awaria TestFlight",
+  "nb": "Nytt TestFlight-krasj",
+  "da": "Nyt TestFlight-nedbrud",
+  "sv": "Ny TestFlight-krasch"
+ },
+ "Nieuwe TestFlight-feedback": {
+  "en": "New TestFlight feedback",
+  "de": "Neues TestFlight-Feedback",
+  "fr": "Nouveau commentaire TestFlight",
+  "es": "Nuevo comentario de TestFlight",
+  "pl": "Nowa opinia TestFlight",
+  "nb": "Ny TestFlight-tilbakemelding",
+  "da": "Ny TestFlight-feedback",
+  "sv": "Ny TestFlight-feedback"
+ },
+ "Nieuwe identifier": {
+  "en": "New identifier",
+  "de": "Neue ID",
+  "fr": "Nouvel identifiant",
+  "es": "Nuevo identificador",
+  "pl": "Nowy identyfikator",
+  "nb": "Ny identifikator",
+  "da": "Ny identifikator",
+  "sv": "Ny identifierare"
+ },
+ "Nieuwe in-app aankoop": {
+  "en": "New in-app purchase",
+  "de": "Neuer In-App-Kauf",
+  "fr": "Nouvel achat intégré",
+  "es": "Nueva compra dentro de la app",
+  "pl": "Nowy zakup w aplikacji",
+  "nb": "Nytt kjøp i appen",
+  "da": "Nyt køb i appen",
+  "sv": "Nytt köp inuti appen"
+ },
+ "Nieuwe landen automatisch": {
+  "en": "New countries automatically",
+  "de": "Neue Länder automatisch",
+  "fr": "Nouveaux pays automatiquement",
+  "es": "Nuevos países automáticamente",
+  "pl": "Nowe kraje automatycznie",
+  "nb": "Nye land automatisk",
+  "da": "Nye lande automatisk",
+  "sv": "Nya länder automatiskt"
+ },
+ "Nieuwe prijs ingesteld": {
+  "en": "New price set",
+  "de": "Neuer Preis festgelegt",
+  "fr": "Nouveau prix défini",
+  "es": "Nuevo precio establecido",
+  "pl": "Ustawiono nową cenę",
+  "nb": "Ny pris angitt",
+  "da": "Ny pris angivet",
+  "sv": "Nytt pris angivet"
+ },
+ "Nieuwe webhook": {
+  "en": "New webhook",
+  "de": "Neuer Webhook",
+  "fr": "Nouveau webhook",
+  "es": "Nuevo webhook",
+  "pl": "Nowy webhook",
+  "nb": "Ny webhook",
+  "da": "Ny webhook",
+  "sv": "Ny webhook"
+ },
+ "Nog geen aanbiedingscodes. Maak er een in App Store Connect; hier genereer je daarna codes.": {
+  "en": "No offer codes yet. Create one in App Store Connect; then you can generate codes here.",
+  "de": "Noch keine Angebotscodes. Erstelle einen in App Store Connect; danach generierst du hier Codes.",
+  "fr": "Aucun code d’offre pour l’instant. Créez-en un dans App Store Connect ; vous pourrez ensuite générer des codes ici.",
+  "es": "Aún no hay códigos de oferta. Crea uno en App Store Connect; después podrás generar códigos aquí.",
+  "pl": "Brak kodów ofert. Utwórz jeden w App Store Connect; potem wygenerujesz tu kody.",
+  "nb": "Ingen tilbudskoder ennå. Opprett en i App Store Connect; deretter genererer du koder her.",
+  "da": "Ingen tilbudskoder endnu. Opret en i App Store Connect; derefter genererer du koder her.",
+  "sv": "Inga erbjudandekoder än. Skapa en i App Store Connect; sedan genererar du koder här."
+ },
+ "Nog geen abonnementen": {
+  "en": "No subscriptions yet",
+  "de": "Noch keine Abonnements",
+  "fr": "Aucun abonnement pour l’instant",
+  "es": "Aún no hay suscripciones",
+  "pl": "Brak subskrypcji",
+  "nb": "Ingen abonnementer ennå",
+  "da": "Ingen abonnementer endnu",
+  "sv": "Inga prenumerationer än"
+ },
+ "Nog geen acties": {
+  "en": "No actions yet",
+  "de": "Noch keine Aktionen",
+  "fr": "Aucune action pour l’instant",
+  "es": "Aún no hay acciones",
+  "pl": "Brak akcji",
+  "nb": "Ingen handlinger ennå",
+  "da": "Ingen handlinger endnu",
+  "sv": "Inga åtgärder än"
+ },
+ "Nog geen afbeelding": {
+  "en": "No image yet",
+  "de": "Noch kein Bild",
+  "fr": "Aucune image pour l’instant",
+  "es": "Aún no hay imagen",
+  "pl": "Brak obrazu",
+  "nb": "Ikke noe bilde ennå",
+  "da": "Intet billede endnu",
+  "sv": "Ingen bild än"
+ },
+ "Nog geen afleveringen": {
+  "en": "No deliveries yet",
+  "de": "Noch keine Zustellungen",
+  "fr": "Aucune livraison pour l’instant",
+  "es": "Aún no hay entregas",
+  "pl": "Brak dostarczeń",
+  "nb": "Ingen leveringer ennå",
+  "da": "Ingen leveringer endnu",
+  "sv": "Inga leveranser än"
+ },
+ "Nog geen builds": {
+  "en": "No builds yet",
+  "de": "Noch keine Builds",
+  "fr": "Aucun build pour l’instant",
+  "es": "Aún no hay builds",
+  "pl": "Brak buildów",
+  "nb": "Ingen builds ennå",
+  "da": "Ingen builds endnu",
+  "sv": "Inga builds än"
+ },
+ "Nog geen codes gegenereerd": {
+  "en": "No codes generated yet",
+  "de": "Noch keine Codes generiert",
+  "fr": "Aucun code généré pour l’instant",
+  "es": "Aún no se han generado códigos",
+  "pl": "Nie wygenerowano jeszcze kodów",
+  "nb": "Ingen koder generert ennå",
+  "da": "Ingen koder genereret endnu",
+  "sv": "Inga koder genererade än"
+ },
+ "Nog geen feedback": {
+  "en": "No feedback yet",
+  "de": "Noch kein Feedback",
+  "fr": "Aucun commentaire pour l’instant",
+  "es": "Aún no hay comentarios",
+  "pl": "Brak opinii",
+  "nb": "Ingen tilbakemeldinger ennå",
+  "da": "Ingen feedback endnu",
+  "sv": "Ingen feedback än"
+ },
+ "Nog geen in-app aankopen": {
+  "en": "No in-app purchases yet",
+  "de": "Noch keine In-App-Käufe",
+  "fr": "Aucun achat intégré pour l’instant",
+  "es": "Aún no hay compras dentro de la app",
+  "pl": "Brak zakupów w aplikacji",
+  "nb": "Ingen kjøp i appen ennå",
+  "da": "Ingen køb i appen endnu",
+  "sv": "Inga köp inuti appen än"
+ },
+ "Nog geen talen. Voeg ze toe in App Store Connect.": {
+  "en": "No languages yet. Add them in App Store Connect.",
+  "de": "Noch keine Sprachen. Füge sie in App Store Connect hinzu.",
+  "fr": "Aucune langue pour l’instant. Ajoutez-les dans App Store Connect.",
+  "es": "Aún no hay idiomas. Añádelos en App Store Connect.",
+  "pl": "Brak języków. Dodaj je w App Store Connect.",
+  "nb": "Ingen språk ennå. Legg dem til i App Store Connect.",
+  "da": "Ingen sprog endnu. Tilføj dem i App Store Connect.",
+  "sv": "Inga språk än. Lägg till dem i App Store Connect."
+ },
+ "Notitie voor de review": {
+  "en": "Notes for review",
+  "de": "Notizen für die Prüfung",
+  "fr": "Notes pour l’examen",
+  "es": "Notas para la revisión",
+  "pl": "Uwagi do weryfikacji",
+  "nb": "Merknader til vurderingen",
+  "da": "Noter til gennemgangen",
+  "sv": "Anteckningar för granskningen"
+ },
+ "Nu aan iedereen uitbrengen": {
+  "en": "Release to everyone now",
+  "de": "Jetzt für alle veröffentlichen",
+  "fr": "Publier pour tous maintenant",
+  "es": "Publicar para todos ahora",
+  "pl": "Udostępnij wszystkim teraz",
+  "nb": "Utgi til alle nå",
+  "da": "Udgiv til alle nu",
+  "sv": "Släpp till alla nu"
+ },
+ "Nu aan iedereen uitbrengen?": {
+  "en": "Release to everyone now?",
+  "de": "Jetzt für alle veröffentlichen?",
+  "fr": "Publier pour tous maintenant ?",
+  "es": "¿Publicar para todos ahora?",
+  "pl": "Udostępnić wszystkim teraz?",
+  "nb": "Utgi til alle nå?",
+  "da": "Udgiv til alle nu?",
+  "sv": "Släppa till alla nu?"
+ },
+ "Ontwikkel- en distributiecertificaten": {
+  "en": "Development and distribution certificates",
+  "de": "Entwicklungs- und Vertriebszertifikate",
+  "fr": "Certificats de développement et de distribution",
+  "es": "Certificados de desarrollo y distribución",
+  "pl": "Certyfikaty deweloperskie i dystrybucyjne",
+  "nb": "Utviklings- og distribusjonssertifikater",
+  "da": "Udviklings- og distributionscertifikater",
+  "sv": "Utvecklings- och distributionscertifikat"
+ },
+ "Ontwikkelaar": {
+  "en": "Developer",
+  "de": "Entwickler",
+  "fr": "Développeur",
+  "es": "Desarrollador",
+  "pl": "Deweloper",
+  "nb": "Utvikler",
+  "da": "Udvikler",
+  "sv": "Utvecklare"
+ },
+ "Open": {
+  "en": "Open",
+  "de": "Öffnen",
+  "fr": "Ouvrir",
+  "es": "Abrir",
+  "pl": "Otwórz",
+  "nb": "Åpne",
+  "da": "Åbn",
+  "sv": "Öppna"
+ },
+ "Open in App Store Connect": {
+  "en": "Open in App Store Connect",
+  "de": "In App Store Connect öffnen",
+  "fr": "Ouvrir dans App Store Connect",
+  "es": "Abrir en App Store Connect",
+  "pl": "Otwórz w App Store Connect",
+  "nb": "Åpne i App Store Connect",
+  "da": "Åbn i App Store Connect",
+  "sv": "Öppna i App Store Connect"
+ },
+ "Opmerking": {
+  "en": "Comment",
+  "de": "Kommentar",
+  "fr": "Commentaire",
+  "es": "Comentario",
+  "pl": "Komentarz",
+  "nb": "Kommentar",
+  "da": "Kommentar",
+  "sv": "Kommentar"
+ },
+ "Opnieuw inschakelen": {
+  "en": "Re-enable",
+  "de": "Erneut aktivieren",
+  "fr": "Réactiver",
+  "es": "Volver a activar",
+  "pl": "Włącz ponownie",
+  "nb": "Slå på igjen",
+  "da": "Slå til igen",
+  "sv": "Aktivera igen"
+ },
+ "Opnieuw verstuurd": {
+  "en": "Redelivered",
+  "de": "Erneut gesendet",
+  "fr": "Renvoyé",
+  "es": "Reenviado",
+  "pl": "Wysłano ponownie",
+  "nb": "Sendt på nytt",
+  "da": "Sendt igen",
+  "sv": "Skickat igen"
+ },
+ "Opstarten": {
+  "en": "Launches",
+  "de": "Starts",
+  "fr": "Lancements",
+  "es": "Inicios",
+  "pl": "Uruchomienia",
+  "nb": "Oppstarter",
+  "da": "Opstarter",
+  "sv": "Starter"
+ },
+ "Over deze cijfers": {
+  "en": "About these numbers",
+  "de": "Über diese Zahlen",
+  "fr": "À propos de ces chiffres",
+  "es": "Acerca de estas cifras",
+  "pl": "O tych liczbach",
+  "nb": "Om disse tallene",
+  "da": "Om disse tal",
+  "sv": "Om de här siffrorna"
+ },
+ "Overgeslagen": {
+  "en": "Skipped",
+  "de": "Übersprungen",
+  "fr": "Ignoré",
+  "es": "Omitido",
+  "pl": "Pominięto",
+  "nb": "Hoppet over",
+  "da": "Sprunget over",
+  "sv": "Överhoppad"
+ },
+ "Pauzeer release": {
+  "en": "Pause release",
+  "de": "Veröffentlichung pausieren",
+  "fr": "Suspendre la publication",
+  "es": "Pausar publicación",
+  "pl": "Wstrzymaj wydanie",
+  "nb": "Pause utgivelsen",
+  "da": "Sæt udgivelse på pause",
+  "sv": "Pausa lanseringen"
+ },
+ "Ping": {
+  "en": "Ping",
+  "de": "Ping",
+  "fr": "Ping",
+  "es": "Ping",
+  "pl": "Ping",
+  "nb": "Ping",
+  "da": "Ping",
+  "sv": "Ping"
+ },
+ "Platform": {
+  "en": "Platform",
+  "de": "Plattform",
+  "fr": "Plateforme",
+  "es": "Plataforma",
+  "pl": "Platforma",
+  "nb": "Plattform",
+  "da": "Platform",
+  "sv": "Plattform"
+ },
+ "Pre-order": {
+  "en": "Pre-order",
+  "de": "Pre-order",
+  "fr": "Pre-order",
+  "es": "Pre-order",
+  "pl": "Pre-order",
+  "nb": "Pre-order",
+  "da": "Pre-order",
+  "sv": "Pre-order"
+ },
+ "Prestaties (%lld)": {
+  "en": "Achievements (%lld)",
+  "de": "Erfolge (%lld)",
+  "fr": "Succès (%lld)",
+  "es": "Logros (%lld)",
+  "pl": "Osiągnięcia (%lld)",
+  "nb": "Prestasjoner (%lld)",
+  "da": "Præstationer (%lld)",
+  "sv": "Prestationer (%lld)"
+ },
+ "Prestaties en ranglijsten": {
+  "en": "Achievements and leaderboards",
+  "de": "Erfolge und Bestenlisten",
+  "fr": "Succès et classements",
+  "es": "Logros y clasificaciones",
+  "pl": "Osiągnięcia i rankingi",
+  "nb": "Prestasjoner og poengtavler",
+  "da": "Præstationer og ranglister",
+  "sv": "Prestationer och topplistor"
+ },
+ "Previewformaat toevoegen": {
+  "en": "Add preview size",
+  "de": "Vorschaugröße hinzufügen",
+  "fr": "Ajouter un format d’aperçu",
+  "es": "Añadir tamaño de vista previa",
+  "pl": "Dodaj rozmiar podglądu",
+  "nb": "Legg til forhåndsvisningsstørrelse",
+  "da": "Tilføj forhåndsvisningsstørrelse",
+  "sv": "Lägg till förhandsvisningsstorlek"
+ },
+ "Prijs": {
+  "en": "Price",
+  "de": "Preis",
+  "fr": "Prix",
+  "es": "Precio",
+  "pl": "Cena",
+  "nb": "Pris",
+  "da": "Pris",
+  "sv": "Pris"
+ },
+ "Prijs en beschikbaarheid": {
+  "en": "Pricing and Availability",
+  "de": "Preise und Verfügbarkeit",
+  "fr": "Prix et disponibilité",
+  "es": "Precio y disponibilidad",
+  "pl": "Ceny i dostępność",
+  "nb": "Pris og tilgjengelighet",
+  "da": "Pris og tilgængelighed",
+  "sv": "Pris och tillgänglighet"
+ },
+ "Prijs wijzigen": {
+  "en": "Change price",
+  "de": "Preis ändern",
+  "fr": "Modifier le prix",
+  "es": "Cambiar precio",
+  "pl": "Zmień cenę",
+  "nb": "Endre pris",
+  "da": "Skift pris",
+  "sv": "Ändra pris"
+ },
+ "Prijs, beschikbaarheid en screenshot voor de review stel je daarna in App Store Connect in.": {
+  "en": "You can then set the price, availability and review screenshot in App Store Connect.",
+  "de": "Preis, Verfügbarkeit und Screenshot für die Prüfung legst du danach in App Store Connect fest.",
+  "fr": "Vous définirez ensuite le prix, la disponibilité et la capture d’écran pour l’examen dans App Store Connect.",
+  "es": "Después podrás configurar el precio, la disponibilidad y la captura para la revisión en App Store Connect.",
+  "pl": "Cenę, dostępność i zrzut ekranu do weryfikacji ustawisz potem w App Store Connect.",
+  "nb": "Pris, tilgjengelighet og skjermbilde for vurderingen angir du deretter i App Store Connect.",
+  "da": "Pris, tilgængelighed og skærmbillede til gennemgangen angiver du derefter i App Store Connect.",
+  "sv": "Pris, tillgänglighet och skärmbild för granskningen ställer du sedan in i App Store Connect."
+ },
+ "Prijzen per land (%lld)": {
+  "en": "Prices by country (%lld)",
+  "de": "Preise nach Land (%lld)",
+  "fr": "Prix par pays (%lld)",
+  "es": "Precios por país (%lld)",
+  "pl": "Ceny według kraju (%lld)",
+  "nb": "Priser per land (%lld)",
+  "da": "Priser pr. land (%lld)",
+  "sv": "Priser per land (%lld)"
+ },
+ "Product page optimization": {
+  "en": "Product page optimization",
+  "de": "Product page optimization",
+  "fr": "Product page optimization",
+  "es": "Product page optimization",
+  "pl": "Product page optimization",
+  "nb": "Product page optimization",
+  "da": "Product page optimization",
+  "sv": "Product page optimization"
+ },
+ "Product-ID": {
+  "en": "Product ID",
+  "de": "Produkt-ID",
+  "fr": "ID du produit",
+  "es": "ID de producto",
+  "pl": "ID produktu",
+  "nb": "Produkt-ID",
+  "da": "Produkt-ID",
+  "sv": "Produkt-ID"
+ },
+ "Product-ID (bijv. com.bedrijf.app.pro)": {
+  "en": "Product ID (e.g. com.company.app.pro)",
+  "de": "Produkt-ID (z. B. com.firma.app.pro)",
+  "fr": "ID du produit (ex. : com.societe.app.pro)",
+  "es": "ID de producto (p. ej., com.empresa.app.pro)",
+  "pl": "ID produktu (np. com.firma.app.pro)",
+  "nb": "Produkt-ID (f.eks. com.firma.app.pro)",
+  "da": "Produkt-ID (f.eks. com.firma.app.pro)",
+  "sv": "Produkt-ID (t.ex. com.foretag.app.pro)"
+ },
+ "Productpagina": {
+  "en": "Product page",
+  "de": "Produktseite",
+  "fr": "Page produit",
+  "es": "Página de producto",
+  "pl": "Strona produktu",
+  "nb": "Produktside",
+  "da": "Produktside",
+  "sv": "Produktsida"
+ },
+ "Profiel verwijderd": {
+  "en": "Profile deleted",
+  "de": "Profil gelöscht",
+  "fr": "Profil supprimé",
+  "es": "Perfil eliminado",
+  "pl": "Profil usunięty",
+  "nb": "Profil slettet",
+  "da": "Profil slettet",
+  "sv": "Profil raderad"
+ },
+ "Profielen": {
+  "en": "Profiles",
+  "de": "Profile",
+  "fr": "Profils",
+  "es": "Perfiles",
+  "pl": "Profile",
+  "nb": "Profiler",
+  "da": "Profiler",
+  "sv": "Profiler"
+ },
+ "Promotiecodes": {
+  "en": "Promo codes",
+  "de": "Promo-Codes",
+  "fr": "Codes promotionnels",
+  "es": "Códigos promocionales",
+  "pl": "Kody promocyjne",
+  "nb": "Kampanjekoder",
+  "da": "Kampagnekoder",
+  "sv": "Kampanjkoder"
+ },
+ "Promotiecodes in App Store Connect": {
+  "en": "Promo codes in App Store Connect",
+  "de": "Promo-Codes in App Store Connect",
+  "fr": "Codes promotionnels dans App Store Connect",
+  "es": "Códigos promocionales en App Store Connect",
+  "pl": "Kody promocyjne w App Store Connect",
+  "nb": "Kampanjekoder i App Store Connect",
+  "da": "Kampagnekoder i App Store Connect",
+  "sv": "Kampanjkoder i App Store Connect"
+ },
+ "Promotiecodes voor in-app aankopen zijn sinds 26 maart 2026 vervangen door aanbiedingscodes; die beheer je per product hierboven. Promotiecodes voor de app zelf kun je alleen in App Store Connect aanmaken.": {
+  "en": "Since March 26, 2026, promo codes for in-app purchases have been replaced by offer codes; you manage those per product above. Promo codes for the app itself can only be created in App Store Connect.",
+  "de": "Promo-Codes für In-App-Käufe wurden am 26. März 2026 durch Angebotscodes ersetzt; diese verwaltest du oben pro Produkt. Promo-Codes für die App selbst kannst du nur in App Store Connect erstellen.",
+  "fr": "Depuis le 26 mars 2026, les codes promotionnels des achats intégrés sont remplacés par des codes d’offre, que vous gérez par produit ci-dessus. Les codes promotionnels de l’app elle-même ne peuvent être créés que dans App Store Connect.",
+  "es": "Desde el 26 de marzo de 2026, los códigos promocionales de compras dentro de la app se han sustituido por códigos de oferta, que gestionas por producto arriba. Los códigos promocionales de la propia app solo se pueden crear en App Store Connect.",
+  "pl": "Od 26 marca 2026 kody promocyjne dla zakupów w aplikacji zostały zastąpione kodami ofert; zarządzasz nimi powyżej dla każdego produktu. Kody promocyjne dla samej aplikacji można tworzyć tylko w App Store Connect.",
+  "nb": "Kampanjekoder for kjøp i appen er siden 26. mars 2026 erstattet av tilbudskoder; dem administrerer du per produkt ovenfor. Kampanjekoder for selve appen kan bare opprettes i App Store Connect.",
+  "da": "Kampagnekoder til køb i appen er siden 26. marts 2026 erstattet af tilbudskoder; dem administrerer du pr. produkt ovenfor. Kampagnekoder til selve appen kan kun oprettes i App Store Connect.",
+  "sv": "Kampanjkoder för köp inuti appen har sedan 26 mars 2026 ersatts av erbjudandekoder; dem hanterar du per produkt ovan. Kampanjkoder för själva appen kan bara skapas i App Store Connect."
+ },
+ "Provisioning profiles": {
+  "en": "Provisioning profiles",
+  "de": "Provisioning-Profile",
+  "fr": "Profils de provisionnement",
+  "es": "Perfiles de aprovisionamiento",
+  "pl": "Profile aprowizacji",
+  "nb": "Klargjøringsprofiler",
+  "da": "Provisioneringsprofiler",
+  "sv": "Provisioneringsprofiler"
+ },
+ "Pushmeldingen": {
+  "en": "Push notifications",
+  "de": "Push-Mitteilungen",
+  "fr": "Notifications push",
+  "es": "Notificaciones push",
+  "pl": "Powiadomienia push",
+  "nb": "Push-varsler",
+  "da": "Push-notifikationer",
+  "sv": "Pushnotiser"
+ },
+ "Pushmeldingen aan": {
+  "en": "Push notifications on",
+  "de": "Push-Mitteilungen an",
+  "fr": "Notifications push activées",
+  "es": "Notificaciones push activadas",
+  "pl": "Powiadomienia push włączone",
+  "nb": "Push-varsler på",
+  "da": "Push-notifikationer til",
+  "sv": "Pushnotiser på"
+ },
+ "Pushmeldingen inschakelen": {
+  "en": "Enable push notifications",
+  "de": "Push-Mitteilungen aktivieren",
+  "fr": "Activer les notifications push",
+  "es": "Activar notificaciones push",
+  "pl": "Włącz powiadomienia push",
+  "nb": "Slå på push-varsler",
+  "da": "Slå push-notifikationer til",
+  "sv": "Aktivera pushnotiser"
+ },
+ "Pushmeldingen instellen": {
+  "en": "Set up push notifications",
+  "de": "Push-Mitteilungen einrichten",
+  "fr": "Configurer les notifications push",
+  "es": "Configurar notificaciones push",
+  "pl": "Skonfiguruj powiadomienia push",
+  "nb": "Konfigurer push-varsler",
+  "da": "Konfigurer push-notifikationer",
+  "sv": "Konfigurera pushnotiser"
+ },
+ "Pushmeldingen op dit toestel": {
+  "en": "Push notifications on this device",
+  "de": "Push-Mitteilungen auf diesem Gerät",
+  "fr": "Notifications push sur cet appareil",
+  "es": "Notificaciones push en este dispositivo",
+  "pl": "Powiadomienia push na tym urządzeniu",
+  "nb": "Push-varsler på denne enheten",
+  "da": "Push-notifikationer på denne enhed",
+  "sv": "Pushnotiser på den här enheten"
+ },
+ "Pushmeldingen staan aan": {
+  "en": "Push notifications are on",
+  "de": "Push-Mitteilungen sind aktiviert",
+  "fr": "Les notifications push sont activées",
+  "es": "Las notificaciones push están activadas",
+  "pl": "Powiadomienia push są włączone",
+  "nb": "Push-varsler er på",
+  "da": "Push-notifikationer er slået til",
+  "sv": "Pushnotiser är på"
+ },
+ "Pushmeldingen staan aan voor %lld apps": {
+  "en": "Push notifications are on for %lld apps",
+  "de": "Push-Mitteilungen sind für %lld Apps aktiviert",
+  "fr": "Les notifications push sont activées pour %lld apps",
+  "es": "Las notificaciones push están activadas para %lld apps",
+  "pl": "Powiadomienia push są włączone dla %lld aplikacji",
+  "nb": "Push-varsler er på for %lld apper",
+  "da": "Push-notifikationer er slået til for %lld apps",
+  "sv": "Pushnotiser är på för %lld appar"
+ },
+ "Pushmeldingen uit": {
+  "en": "Push notifications off",
+  "de": "Push-Mitteilungen aus",
+  "fr": "Notifications push désactivées",
+  "es": "Notificaciones push desactivadas",
+  "pl": "Powiadomienia push wyłączone",
+  "nb": "Push-varsler av",
+  "da": "Push-notifikationer fra",
+  "sv": "Pushnotiser av"
+ },
+ "Pushmeldingen uitgezet": {
+  "en": "Push notifications turned off",
+  "de": "Push-Mitteilungen deaktiviert",
+  "fr": "Notifications push désactivées",
+  "es": "Notificaciones push desactivadas",
+  "pl": "Wyłączono powiadomienia push",
+  "nb": "Push-varsler slått av",
+  "da": "Push-notifikationer slået fra",
+  "sv": "Pushnotiser avstängda"
+ },
+ "Pushmeldingen voor deze app aanzetten": {
+  "en": "Turn on push notifications for this app",
+  "de": "Push-Mitteilungen für diese App aktivieren",
+  "fr": "Activer les notifications push pour cette app",
+  "es": "Activar notificaciones push para esta app",
+  "pl": "Włącz powiadomienia push dla tej aplikacji",
+  "nb": "Slå på push-varsler for denne appen",
+  "da": "Slå push-notifikationer til for denne app",
+  "sv": "Aktivera pushnotiser för den här appen"
+ },
+ "Pushmeldingen zijn in deze build nog niet geactiveerd.": {
+  "en": "Push notifications haven't been activated in this build yet.",
+  "de": "Push-Mitteilungen sind in diesem Build noch nicht aktiviert.",
+  "fr": "Les notifications push ne sont pas encore activées dans ce build.",
+  "es": "Las notificaciones push aún no están activadas en este build.",
+  "pl": "Powiadomienia push nie zostały jeszcze aktywowane w tym buildzie.",
+  "nb": "Push-varsler er ikke aktivert i dette buildet ennå.",
+  "da": "Push-notifikationer er endnu ikke aktiveret i dette build.",
+  "sv": "Pushnotiser har inte aktiverats i den här builden än."
+ },
+ "Pushmeldingen zijn nog niet ingesteld in deze build.": {
+  "en": "Push notifications haven't been set up in this build yet.",
+  "de": "Push-Mitteilungen sind in diesem Build noch nicht eingerichtet.",
+  "fr": "Les notifications push ne sont pas encore configurées dans ce build.",
+  "es": "Las notificaciones push aún no están configuradas en este build.",
+  "pl": "Powiadomienia push nie zostały jeszcze skonfigurowane w tym buildzie.",
+  "nb": "Push-varsler er ikke konfigurert i dette buildet ennå.",
+  "da": "Push-notifikationer er endnu ikke konfigureret i dette build.",
+  "sv": "Pushnotiser har inte konfigurerats i den här builden än."
+ },
+ "Ranglijsten (%lld)": {
+  "en": "Leaderboards (%lld)",
+  "de": "Bestenlisten (%lld)",
+  "fr": "Classements (%lld)",
+  "es": "Clasificaciones (%lld)",
+  "pl": "Rankingi (%lld)",
+  "nb": "Poengtavler (%lld)",
+  "da": "Ranglister (%lld)",
+  "sv": "Topplistor (%lld)"
+ },
+ "Rapporten worden voorbereid": {
+  "en": "Preparing reports",
+  "de": "Berichte werden vorbereitet",
+  "fr": "Préparation des rapports",
+  "es": "Preparando informes",
+  "pl": "Przygotowywanie raportów",
+  "nb": "Klargjør rapporter",
+  "da": "Klargør rapporter",
+  "sv": "Förbereder rapporter"
+ },
+ "Reden": {
+  "en": "Reason",
+  "de": "Grund",
+  "fr": "Motif",
+  "es": "Motivo",
+  "pl": "Powód",
+  "nb": "Årsak",
+  "da": "Årsag",
+  "sv": "Orsak"
+ },
+ "Registreer": {
+  "en": "Register",
+  "de": "Registrieren",
+  "fr": "Enregistrer",
+  "es": "Registrar",
+  "pl": "Zarejestruj",
+  "nb": "Registrer",
+  "da": "Registrer",
+  "sv": "Registrera"
+ },
+ "Resultaten van A/B-tests (conversie per variant) toont Apple alleen in App Store Connect.": {
+  "en": "Apple only shows A/B test results (conversion per variant) in App Store Connect.",
+  "de": "Ergebnisse von A/B-Tests (Konversion pro Variante) zeigt Apple nur in App Store Connect an.",
+  "fr": "Apple n’affiche les résultats des A/B tests (conversion par variante) que dans App Store Connect.",
+  "es": "Apple solo muestra los resultados de los A/B tests (conversión por variante) en App Store Connect.",
+  "pl": "Wyniki A/B tests (konwersję dla każdego wariantu) Apple pokazuje tylko w App Store Connect.",
+  "nb": "Resultater av A/B-tester (konvertering per variant) viser Apple bare i App Store Connect.",
+  "da": "Resultater af A/B-tests (konvertering pr. variant) viser Apple kun i App Store Connect.",
+  "sv": "Resultat av A/B-tester (konvertering per variant) visar Apple bara i App Store Connect."
+ },
+ "Retentie dag 1": {
+  "en": "Day 1 retention",
+  "de": "Bindung Tag 1",
+  "fr": "Rétention jour 1",
+  "es": "Retención día 1",
+  "pl": "Retencja dzień 1",
+  "nb": "Retensjon dag 1",
+  "da": "Fastholdelse dag 1",
+  "sv": "Kvarhållning dag 1"
+ },
+ "Review": {
+  "en": "Review",
+  "de": "Prüfung",
+  "fr": "Examen",
+  "es": "Revisión",
+  "pl": "Weryfikacja",
+  "nb": "Vurdering",
+  "da": "Gennemgang",
+  "sv": "Granskning"
+ },
+ "Rollen": {
+  "en": "Roles",
+  "de": "Rollen",
+  "fr": "Rôles",
+  "es": "Roles",
+  "pl": "Role",
+  "nb": "Roller",
+  "da": "Roller",
+  "sv": "Roller"
+ },
+ "SHA": {
+  "en": "SHA",
+  "de": "SHA",
+  "fr": "SHA",
+  "es": "SHA",
+  "pl": "SHA",
+  "nb": "SHA",
+  "da": "SHA",
+  "sv": "SHA"
+ },
+ "Scherm": {
+  "en": "Display",
+  "de": "Bildschirm",
+  "fr": "Écran",
+  "es": "Pantalla",
+  "pl": "Ekran",
+  "nb": "Skjerm",
+  "da": "Skærm",
+  "sv": "Skärm"
+ },
+ "Schermformaat toevoegen": {
+  "en": "Add display size",
+  "de": "Bildschirmgröße hinzufügen",
+  "fr": "Ajouter une taille d’écran",
+  "es": "Añadir tamaño de pantalla",
+  "pl": "Dodaj rozmiar ekranu",
+  "nb": "Legg til skjermstørrelse",
+  "da": "Tilføj skærmstørrelse",
+  "sv": "Lägg till skärmstorlek"
+ },
+ "Schrijfacties": {
+  "en": "Disk writes",
+  "de": "Schreibvorgänge",
+  "fr": "Écritures sur disque",
+  "es": "Escrituras en disco",
+  "pl": "Zapisy na dysku",
+  "nb": "Diskskrivinger",
+  "da": "Diskskrivninger",
+  "sv": "Diskskrivningar"
+ },
+ "Screenshots": {
+  "en": "Screenshots",
+  "de": "Screenshots",
+  "fr": "Captures d’écran",
+  "es": "Capturas de pantalla",
+  "pl": "Zrzuty ekranu",
+  "nb": "Skjermbilder",
+  "da": "Skærmbilleder",
+  "sv": "Skärmbilder"
+ },
+ "Screenshots en previews": {
+  "en": "Screenshots and previews",
+  "de": "Screenshots und Vorschauen",
+  "fr": "Captures d’écran et aperçus",
+  "es": "Capturas de pantalla y vistas previas",
+  "pl": "Zrzuty ekranu i podglądy",
+  "nb": "Skjermbilder og forhåndsvisninger",
+  "da": "Skærmbilleder og forhåndsvisninger",
+  "sv": "Skärmbilder och förhandsvisningar"
+ },
+ "Sluit": {
+  "en": "Close",
+  "de": "Schließen",
+  "fr": "Fermer",
+  "es": "Cerrar",
+  "pl": "Zamknij",
+  "nb": "Lukk",
+  "da": "Luk",
+  "sv": "Stäng"
+ },
+ "Soort": {
+  "en": "Type",
+  "de": "Typ",
+  "fr": "Type",
+  "es": "Tipo",
+  "pl": "Typ",
+  "nb": "Type",
+  "da": "Type",
+  "sv": "Typ"
+ },
+ "Standaard (volgens workflow)": {
+  "en": "Default (per workflow)",
+  "de": "Standard (laut Workflow)",
+  "fr": "Par défaut (selon le workflow)",
+  "es": "Predeterminado (según el flujo de trabajo)",
+  "pl": "Domyślnie (według workflow)",
+  "nb": "Standard (ifølge arbeidsflyt)",
+  "da": "Standard (ifølge workflow)",
+  "sv": "Standard (enligt arbetsflöde)"
+ },
+ "Start": {
+  "en": "Start",
+  "de": "Start",
+  "fr": "Début",
+  "es": "Inicio",
+  "pl": "Start",
+  "nb": "Start",
+  "da": "Start",
+  "sv": "Start"
+ },
+ "Start automatisch zodra de versie live gaat.": {
+  "en": "Starts automatically once the version goes live.",
+  "de": "Startet automatisch, sobald die Version live geht.",
+  "fr": "Démarre automatiquement dès que la version est en ligne.",
+  "es": "Se inicia automáticamente cuando la versión se publique.",
+  "pl": "Rozpocznie się automatycznie, gdy wersja zostanie opublikowana.",
+  "nb": "Starter automatisk når versjonen publiseres.",
+  "da": "Starter automatisk, når versionen udgives.",
+  "sv": "Startar automatiskt när versionen publiceras."
+ },
+ "Start build": {
+  "en": "Start build",
+  "de": "Build starten",
+  "fr": "Lancer le build",
+  "es": "Iniciar build",
+  "pl": "Uruchom build",
+  "nb": "Start build",
+  "da": "Start build",
+  "sv": "Starta build"
+ },
+ "Status": {
+  "en": "Status",
+  "de": "Status",
+  "fr": "Statut",
+  "es": "Estado",
+  "pl": "Status",
+  "nb": "Status",
+  "da": "Status",
+  "sv": "Status"
+ },
+ "Status externe TestFlight": {
+  "en": "External TestFlight status",
+  "de": "Status externes TestFlight",
+  "fr": "Statut TestFlight externe",
+  "es": "Estado de TestFlight externo",
+  "pl": "Status zewnętrznego TestFlight",
+  "nb": "Status for ekstern TestFlight",
+  "da": "Status for ekstern TestFlight",
+  "sv": "Status för extern TestFlight"
+ },
+ "Status van een App Store-versie": {
+  "en": "App Store version status",
+  "de": "Status einer App Store-Version",
+  "fr": "Statut d’une version App Store",
+  "es": "Estado de una versión del App Store",
+  "pl": "Status wersji w App Store",
+  "nb": "Status for en App Store-versjon",
+  "da": "Status for en App Store-version",
+  "sv": "Status för en App Store-version"
+ },
+ "Stel Xcode Cloud eenmalig in via Xcode (Product → Xcode Cloud → Create Workflow). Daarna kun je hier builds starten en volgen.": {
+  "en": "Set up Xcode Cloud once in Xcode (Product → Xcode Cloud → Create Workflow). After that you can start and follow builds here.",
+  "de": "Richte Xcode Cloud einmalig in Xcode ein (Product → Xcode Cloud → Create Workflow). Danach kannst du hier Builds starten und verfolgen.",
+  "fr": "Configurez Xcode Cloud une seule fois dans Xcode (Product → Xcode Cloud → Create Workflow). Vous pourrez ensuite lancer et suivre les builds ici.",
+  "es": "Configura Xcode Cloud una vez en Xcode (Product → Xcode Cloud → Create Workflow). Después podrás iniciar y seguir builds aquí.",
+  "pl": "Skonfiguruj Xcode Cloud jednorazowo w Xcode (Product → Xcode Cloud → Create Workflow). Potem możesz tu uruchamiać i śledzić buildy.",
+  "nb": "Konfigurer Xcode Cloud én gang i Xcode (Product → Xcode Cloud → Create Workflow). Deretter kan du starte og følge builds her.",
+  "da": "Konfigurer Xcode Cloud én gang i Xcode (Product → Xcode Cloud → Create Workflow). Derefter kan du starte og følge builds her.",
+  "sv": "Konfigurera Xcode Cloud en gång i Xcode (Product → Xcode Cloud → Create Workflow). Sedan kan du starta och följa builds här."
+ },
+ "Stuur testbericht (ping)": {
+  "en": "Send test message (ping)",
+  "de": "Testnachricht senden (Ping)",
+  "fr": "Envoyer un message de test (ping)",
+  "es": "Enviar mensaje de prueba (ping)",
+  "pl": "Wyślij wiadomość testową (ping)",
+  "nb": "Send testmelding (ping)",
+  "da": "Send testbesked (ping)",
+  "sv": "Skicka testmeddelande (ping)"
+ },
+ "Support-URL": {
+  "en": "Support URL",
+  "de": "Support-URL",
+  "fr": "URL d’assistance",
+  "es": "URL de soporte",
+  "pl": "URL wsparcia",
+  "nb": "Støtte-URL",
+  "da": "Support-URL",
+  "sv": "Support-URL"
+ },
+ "Team": {
+  "en": "Team",
+  "de": "Team",
+  "fr": "Équipe",
+  "es": "Equipo",
+  "pl": "Zespół",
+  "nb": "Team",
+  "da": "Team",
+  "sv": "Team"
+ },
+ "Team & ontwikkeling": {
+  "en": "Team & development",
+  "de": "Team & Entwicklung",
+  "fr": "Équipe et développement",
+  "es": "Equipo y desarrollo",
+  "pl": "Zespół i rozwój",
+  "nb": "Team og utvikling",
+  "da": "Team og udvikling",
+  "sv": "Team och utveckling"
+ },
+ "Team, certificaten en toestellen": {
+  "en": "Team, certificates and devices",
+  "de": "Team, Zertifikate und Geräte",
+  "fr": "Équipe, certificats et appareils",
+  "es": "Equipo, certificados y dispositivos",
+  "pl": "Zespół, certyfikaty i urządzenia",
+  "nb": "Team, sertifikater og enheter",
+  "da": "Team, certifikater og enheder",
+  "sv": "Team, certifikat och enheter"
+ },
+ "Teamleden, rollen en uitnodigingen": {
+  "en": "Team members, roles and invitations",
+  "de": "Teammitglieder, Rollen und Einladungen",
+  "fr": "Membres de l’équipe, rôles et invitations",
+  "es": "Miembros del equipo, roles e invitaciones",
+  "pl": "Członkowie zespołu, role i zaproszenia",
+  "nb": "Teammedlemmer, roller og invitasjoner",
+  "da": "Teammedlemmer, roller og invitationer",
+  "sv": "Teammedlemmar, roller och inbjudningar"
+ },
+ "TestFlight": {
+  "en": "TestFlight",
+  "de": "TestFlight",
+  "fr": "TestFlight",
+  "es": "TestFlight",
+  "pl": "TestFlight",
+  "nb": "TestFlight",
+  "da": "TestFlight",
+  "sv": "TestFlight"
+ },
+ "TestFlight-feedback": {
+  "en": "TestFlight feedback",
+  "de": "TestFlight-Feedback",
+  "fr": "Commentaires TestFlight",
+  "es": "Comentarios de TestFlight",
+  "pl": "Opinie z TestFlight",
+  "nb": "TestFlight-tilbakemeldinger",
+  "da": "TestFlight-feedback",
+  "sv": "TestFlight-feedback"
+ },
+ "TestFlight-feedback en crashes": {
+  "en": "TestFlight feedback and crashes",
+  "de": "TestFlight-Feedback und Abstürze",
+  "fr": "Commentaires et crashs TestFlight",
+  "es": "Comentarios y fallos de TestFlight",
+  "pl": "Opinie i awarie z TestFlight",
+  "nb": "TestFlight-tilbakemeldinger og krasj",
+  "da": "TestFlight-feedback og nedbrud",
+  "sv": "TestFlight-feedback och krascher"
+ },
+ "Testbericht verstuurd": {
+  "en": "Test message sent",
+  "de": "Testnachricht gesendet",
+  "fr": "Message de test envoyé",
+  "es": "Mensaje de prueba enviado",
+  "pl": "Wysłano wiadomość testową",
+  "nb": "Testmelding sendt",
+  "da": "Testbesked sendt",
+  "sv": "Testmeddelande skickat"
+ },
+ "Tester": {
+  "en": "Tester",
+  "de": "Tester",
+  "fr": "Testeur",
+  "es": "Tester",
+  "pl": "Tester",
+  "nb": "Tester",
+  "da": "Tester",
+  "sv": "Testare"
+ },
+ "Toegang tot alle apps": {
+  "en": "Access to all apps",
+  "de": "Zugriff auf alle Apps",
+  "fr": "Accès à toutes les apps",
+  "es": "Acceso a todas las apps",
+  "pl": "Dostęp do wszystkich aplikacji",
+  "nb": "Tilgang til alle apper",
+  "da": "Adgang til alle apps",
+  "sv": "Åtkomst till alla appar"
+ },
+ "Toegang tot rapporten": {
+  "en": "Access to Reports",
+  "de": "Zugriff auf Berichte",
+  "fr": "Accès aux rapports",
+  "es": "Acceso a informes",
+  "pl": "Dostęp do raportów",
+  "nb": "Tilgang til rapporter",
+  "da": "Adgang til rapporter",
+  "sv": "Åtkomst till rapporter"
+ },
+ "Toestel": {
+  "en": "Device",
+  "de": "Gerät",
+  "fr": "Appareil",
+  "es": "Dispositivo",
+  "pl": "Urządzenie",
+  "nb": "Enhet",
+  "da": "Enhed",
+  "sv": "Enhet"
+ },
+ "Toestel geregistreerd": {
+  "en": "Device registered",
+  "de": "Gerät registriert",
+  "fr": "Appareil enregistré",
+  "es": "Dispositivo registrado",
+  "pl": "Urządzenie zarejestrowane",
+  "nb": "Enhet registrert",
+  "da": "Enhed registreret",
+  "sv": "Enhet registrerad"
+ },
+ "Toestel registreren": {
+  "en": "Register device",
+  "de": "Gerät registrieren",
+  "fr": "Enregistrer un appareil",
+  "es": "Registrar dispositivo",
+  "pl": "Zarejestruj urządzenie",
+  "nb": "Registrer enhet",
+  "da": "Registrer enhed",
+  "sv": "Registrera enhet"
+ },
+ "Toestellen": {
+  "en": "Devices",
+  "de": "Geräte",
+  "fr": "Appareils",
+  "es": "Dispositivos",
+  "pl": "Urządzenia",
+  "nb": "Enheter",
+  "da": "Enheder",
+  "sv": "Enheter"
+ },
+ "UDID": {
+  "en": "UDID",
+  "de": "UDID",
+  "fr": "UDID",
+  "es": "UDID",
+  "pl": "UDID",
+  "nb": "UDID",
+  "da": "UDID",
+  "sv": "UDID"
+ },
+ "URL": {
+  "en": "URL",
+  "de": "URL",
+  "fr": "URL",
+  "es": "URL",
+  "pl": "URL",
+  "nb": "URL",
+  "da": "URL",
+  "sv": "URL"
+ },
+ "URL (https)": {
+  "en": "URL (https)",
+  "de": "URL (https)",
+  "fr": "URL (https)",
+  "es": "URL (https)",
+  "pl": "URL (https)",
+  "nb": "URL (https)",
+  "da": "URL (https)",
+  "sv": "URL (https)"
+ },
+ "Uitbrengen aan iedereen": {
+  "en": "Release to everyone",
+  "de": "Für alle veröffentlichen",
+  "fr": "Publier pour tous",
+  "es": "Publicar para todos",
+  "pl": "Udostępnij wszystkim",
+  "nb": "Utgi til alle",
+  "da": "Udgiv til alle",
+  "sv": "Släpp till alla"
+ },
+ "Uitgeschakeld": {
+  "en": "Disabled",
+  "de": "Deaktiviert",
+  "fr": "Désactivé",
+  "es": "Desactivado",
+  "pl": "Wyłączone",
+  "nb": "Deaktivert",
+  "da": "Deaktiveret",
+  "sv": "Inaktiverad"
+ },
+ "Uitnodiging ingetrokken": {
+  "en": "Invitation revoked",
+  "de": "Einladung widerrufen",
+  "fr": "Invitation révoquée",
+  "es": "Invitación revocada",
+  "pl": "Zaproszenie wycofane",
+  "nb": "Invitasjon trukket tilbake",
+  "da": "Invitation tilbagekaldt",
+  "sv": "Inbjudan återkallad"
+ },
+ "Uitschakelen": {
+  "en": "Disable",
+  "de": "Deaktivieren",
+  "fr": "Désactiver",
+  "es": "Desactivar",
+  "pl": "Wyłącz",
+  "nb": "Deaktiver",
+  "da": "Deaktiver",
+  "sv": "Inaktivera"
+ },
+ "Uitzetten": {
+  "en": "Turn off",
+  "de": "Ausschalten",
+  "fr": "Désactiver",
+  "es": "Desactivar",
+  "pl": "Wyłącz",
+  "nb": "Slå av",
+  "da": "Slå fra",
+  "sv": "Stäng av"
+ },
+ "Uitzetten voor al mijn apps": {
+  "en": "Turn off for all my apps",
+  "de": "Für alle meine Apps ausschalten",
+  "fr": "Désactiver pour toutes mes apps",
+  "es": "Desactivar para todas mis apps",
+  "pl": "Wyłącz dla wszystkich moich aplikacji",
+  "nb": "Slå av for alle appene mine",
+  "da": "Slå fra for alle mine apps",
+  "sv": "Stäng av för alla mina appar"
+ },
+ "Updates": {
+  "en": "Updates",
+  "de": "Updates",
+  "fr": "Mises à jour",
+  "es": "Actualizaciones",
+  "pl": "Aktualizacje",
+  "nb": "Oppdateringer",
+  "da": "Opdateringer",
+  "sv": "Uppdateringar"
+ },
+ "Uploaden %lld van %lld…": {
+  "en": "Uploading %lld of %lld…",
+  "de": "%lld von %lld wird hochgeladen…",
+  "fr": "Téléversement %lld sur %lld…",
+  "es": "Subiendo %lld de %lld…",
+  "pl": "Przesyłanie %lld z %lld…",
+  "nb": "Laster opp %lld av %lld…",
+  "da": "Uploader %lld af %lld…",
+  "sv": "Laddar upp %lld av %lld…"
+ },
+ "Uploaden mislukt (%lld): %@": {
+  "en": "Upload failed (%lld): %@",
+  "de": "Hochladen fehlgeschlagen (%lld): %@",
+  "fr": "Échec du téléversement (%lld) : %@",
+  "es": "Error al subir (%lld): %@",
+  "pl": "Przesyłanie nie powiodło się (%lld): %@",
+  "nb": "Opplasting mislyktes (%lld): %@",
+  "da": "Upload mislykkedes (%lld): %@",
+  "sv": "Uppladdningen misslyckades (%lld): %@"
+ },
+ "Varianten": {
+  "en": "Variants",
+  "de": "Varianten",
+  "fr": "Variantes",
+  "es": "Variantes",
+  "pl": "Warianty",
+  "nb": "Varianter",
+  "da": "Varianter",
+  "sv": "Varianter"
+ },
+ "Vastlopers": {
+  "en": "Hangs",
+  "de": "Hänger",
+  "fr": "Blocages",
+  "es": "Bloqueos",
+  "pl": "Zawieszenia",
+  "nb": "Heng",
+  "da": "Hæng",
+  "sv": "Häng"
+ },
+ "Verbinding": {
+  "en": "Connection",
+  "de": "Verbindung",
+  "fr": "Connexion",
+  "es": "Conexión",
+  "pl": "Połączenie",
+  "nb": "Tilkobling",
+  "da": "Forbindelse",
+  "sv": "Anslutning"
+ },
+ "Verbruiksartikel": {
+  "en": "Consumable",
+  "de": "Verbrauchsartikel",
+  "fr": "Consommable",
+  "es": "Consumible",
+  "pl": "Ulegający zużyciu",
+  "nb": "Forbruksvare",
+  "da": "Forbrugsvare",
+  "sv": "Förbrukningsbar"
+ },
+ "Verkeer": {
+  "en": "Traffic",
+  "de": "Traffic",
+  "fr": "Trafic",
+  "es": "Tráfico",
+  "pl": "Ruch",
+  "nb": "Trafikk",
+  "da": "Trafik",
+  "sv": "Trafik"
+ },
+ "Verkoop": {
+  "en": "Sales",
+  "de": "Vertrieb",
+  "fr": "Ventes",
+  "es": "Ventas",
+  "pl": "Sprzedaż",
+  "nb": "Salg",
+  "da": "Salg",
+  "sv": "Försäljning"
+ },
+ "Verspreid de automatische update over 7 dagen (1%, 2%, 5%, 10%, 20%, 50%, 100%). Iedereen kan de versie wel direct handmatig downloaden.": {
+  "en": "Spread the automatic update over 7 days (1%, 2%, 5%, 10%, 20%, 50%, 100%). Anyone can still download the version manually right away.",
+  "de": "Verteile das automatische Update über 7 Tage (1%, 2%, 5%, 10%, 20%, 50%, 100%). Jeder kann die Version trotzdem sofort manuell laden.",
+  "fr": "Répartissez la mise à jour automatique sur 7 jours (1%, 2%, 5%, 10%, 20%, 50%, 100%). Chacun peut tout de même télécharger la version manuellement tout de suite.",
+  "es": "Distribuye la actualización automática a lo largo de 7 días (1%, 2%, 5%, 10%, 20%, 50%, 100%). Cualquiera puede descargar la versión manualmente de inmediato.",
+  "pl": "Rozłóż automatyczną aktualizację na 7 dni (1%, 2%, 5%, 10%, 20%, 50%, 100%). Każdy może jednak od razu pobrać wersję ręcznie.",
+  "nb": "Fordel den automatiske oppdateringen over 7 dager (1%, 2%, 5%, 10%, 20%, 50%, 100%). Alle kan likevel laste ned versjonen manuelt med en gang.",
+  "da": "Fordel den automatiske opdatering over 7 dage (1%, 2%, 5%, 10%, 20%, 50%, 100%). Alle kan dog downloade versionen manuelt med det samme.",
+  "sv": "Sprid den automatiska uppdateringen över 7 dagar (1%, 2%, 5%, 10%, 20%, 50%, 100%). Alla kan ändå ladda ner versionen manuellt direkt."
+ },
+ "Verstuur": {
+  "en": "Send",
+  "de": "Senden",
+  "fr": "Envoyer",
+  "es": "Enviar",
+  "pl": "Wyślij",
+  "nb": "Send",
+  "da": "Send",
+  "sv": "Skicka"
+ },
+ "Vertoningen": {
+  "en": "Impressions",
+  "de": "Impressionen",
+  "fr": "Impressions",
+  "es": "Impresiones",
+  "pl": "Wyświetlenia",
+  "nb": "Visninger",
+  "da": "Visninger",
+  "sv": "Visningar"
+ },
+ "Verwijderd": {
+  "en": "Deleted",
+  "de": "Gelöscht",
+  "fr": "Supprimé",
+  "es": "Eliminado",
+  "pl": "Usunięto",
+  "nb": "Slettet",
+  "da": "Slettet",
+  "sv": "Raderad"
+ },
+ "Verwijderingen": {
+  "en": "Deletions",
+  "de": "Löschungen",
+  "fr": "Suppressions",
+  "es": "Eliminaciones",
+  "pl": "Usunięcia",
+  "nb": "Slettinger",
+  "da": "Sletninger",
+  "sv": "Raderingar"
+ },
+ "Video's van 15–30 seconden, .mov of .mp4. Apple verwerkt ze na het uploaden.": {
+  "en": "Videos of 15–30 seconds, .mov or .mp4. Apple processes them after uploading.",
+  "de": "Videos mit 15–30 Sekunden, .mov oder .mp4. Apple verarbeitet sie nach dem Hochladen.",
+  "fr": "Vidéos de 15 à 30 secondes, .mov ou .mp4. Apple les traite après le téléversement.",
+  "es": "Vídeos de 15–30 segundos, .mov o .mp4. Apple los procesa tras subirlos.",
+  "pl": "Filmy 15–30 sekund, .mov lub .mp4. Apple przetwarza je po przesłaniu.",
+  "nb": "Videoer på 15–30 sekunder, .mov eller .mp4. Apple behandler dem etter opplasting.",
+  "da": "Videoer på 15–30 sekunder, .mov eller .mp4. Apple behandler dem efter upload.",
+  "sv": "Videor på 15–30 sekunder, .mov eller .mp4. Apple bearbetar dem efter uppladdning."
+ },
+ "Voor": {
+  "en": "Before",
+  "de": "Vorher",
+  "fr": "Avant",
+  "es": "Antes",
+  "pl": "Przed",
+  "nb": "Før",
+  "da": "Før",
+  "sv": "Före"
+ },
+ "Vrije opslag": {
+  "en": "Free storage",
+  "de": "Freier Speicher",
+  "fr": "Stockage disponible",
+  "es": "Almacenamiento libre",
+  "pl": "Wolne miejsce",
+  "nb": "Ledig lagringsplass",
+  "da": "Ledig lagerplads",
+  "sv": "Ledigt utrymme"
+ },
+ "Webhook verwijderen": {
+  "en": "Delete webhook",
+  "de": "Webhook löschen",
+  "fr": "Supprimer le webhook",
+  "es": "Eliminar webhook",
+  "pl": "Usuń webhook",
+  "nb": "Slett webhook",
+  "da": "Slet webhook",
+  "sv": "Radera webhook"
+ },
+ "Webhook verwijderen?": {
+  "en": "Delete webhook?",
+  "de": "Webhook löschen?",
+  "fr": "Supprimer le webhook ?",
+  "es": "¿Eliminar webhook?",
+  "pl": "Usunąć webhook?",
+  "nb": "Slette webhook?",
+  "da": "Slet webhook?",
+  "sv": "Radera webhook?"
+ },
+ "Webhooks": {
+  "en": "Webhooks",
+  "de": "Webhooks",
+  "fr": "Webhooks",
+  "es": "Webhooks",
+  "pl": "Webhooks",
+  "nb": "Webhooks",
+  "da": "Webhooks",
+  "sv": "Webhooks"
+ },
+ "Webhooks en pushmeldingen": {
+  "en": "Webhooks and push notifications",
+  "de": "Webhooks und Push-Mitteilungen",
+  "fr": "Webhooks et notifications push",
+  "es": "Webhooks y notificaciones push",
+  "pl": "Webhooki i powiadomienia push",
+  "nb": "Webhooks og push-varsler",
+  "da": "Webhooks og push-notifikationer",
+  "sv": "Webhooks och pushnotiser"
+ },
+ "Weergavenaam": {
+  "en": "Display name",
+  "de": "Anzeigename",
+  "fr": "Nom d’affichage",
+  "es": "Nombre visible",
+  "pl": "Nazwa wyświetlana",
+  "nb": "Visningsnavn",
+  "da": "Visningsnavn",
+  "sv": "Visningsnamn"
+ },
+ "Weergavenaam en beschrijving": {
+  "en": "Display name and description",
+  "de": "Anzeigename und Beschreibung",
+  "fr": "Nom d’affichage et description",
+  "es": "Nombre visible y descripción",
+  "pl": "Nazwa wyświetlana i opis",
+  "nb": "Visningsnavn og beskrivelse",
+  "da": "Visningsnavn og beskrivelse",
+  "sv": "Visningsnamn och beskrivning"
+ },
+ "Wordt aangemaakt voor iOS. Andere platforms kun je in App Store Connect toevoegen.": {
+  "en": "Will be created for iOS. You can add other platforms in App Store Connect.",
+  "de": "Wird für iOS erstellt. Andere Plattformen kannst du in App Store Connect hinzufügen.",
+  "fr": "Sera créée pour iOS. Vous pouvez ajouter d’autres plateformes dans App Store Connect.",
+  "es": "Se creará para iOS. Puedes añadir otras plataformas en App Store Connect.",
+  "pl": "Zostanie utworzona dla iOS. Inne platformy możesz dodać w App Store Connect.",
+  "nb": "Opprettes for iOS. Andre plattformer kan du legge til i App Store Connect.",
+  "da": "Oprettes til iOS. Andre platforme kan du tilføje i App Store Connect.",
+  "sv": "Skapas för iOS. Andra plattformar kan du lägga till i App Store Connect."
+ },
+ "Xcode Cloud": {
+  "en": "Xcode Cloud",
+  "de": "Xcode Cloud",
+  "fr": "Xcode Cloud",
+  "es": "Xcode Cloud",
+  "pl": "Xcode Cloud",
+  "nb": "Xcode Cloud",
+  "da": "Xcode Cloud",
+  "sv": "Xcode Cloud"
+ },
+ "Xcode Cloud is niet ingesteld": {
+  "en": "Xcode Cloud isn't set up",
+  "de": "Xcode Cloud ist nicht eingerichtet",
+  "fr": "Xcode Cloud n’est pas configuré",
+  "es": "Xcode Cloud no está configurado",
+  "pl": "Xcode Cloud nie jest skonfigurowany",
+  "nb": "Xcode Cloud er ikke konfigurert",
+  "da": "Xcode Cloud er ikke konfigureret",
+  "sv": "Xcode Cloud är inte konfigurerat"
+ },
+ "Zoek land": {
+  "en": "Search country",
+  "de": "Land suchen",
+  "fr": "Rechercher un pays",
+  "es": "Buscar país",
+  "pl": "Szukaj kraju",
+  "nb": "Søk etter land",
+  "da": "Søg efter land",
+  "sv": "Sök land"
+ },
+ "aangemaakt %@ · verloopt %@": {
+  "en": "created %@ · expires %@",
+  "de": "erstellt %@ · läuft ab %@",
+  "fr": "créé %@ · expire %@",
+  "es": "creado %@ · caduca %@",
+  "pl": "utworzono %@ · wygasa %@",
+  "nb": "opprettet %@ · utløper %@",
+  "da": "oprettet %@ · udløber %@",
+  "sv": "skapad %@ · upphör %@"
+ },
+ "dag 7: %@": {
+  "en": "day 7: %@",
+  "de": "Tag 7: %@",
+  "fr": "jour 7 : %@",
+  "es": "día 7: %@",
+  "pl": "dzień 7: %@",
+  "nb": "dag 7: %@",
+  "da": "dag 7: %@",
+  "sv": "dag 7: %@"
+ },
+ "downloads": {
+  "en": "downloads",
+  "de": "Downloads",
+  "fr": "téléchargements",
+  "es": "descargas",
+  "pl": "pobrania",
+  "nb": "nedlastinger",
+  "da": "downloads",
+  "sv": "nedladdningar"
+ },
+ "geldig tot %@": {
+  "en": "valid until %@",
+  "de": "gültig bis %@",
+  "fr": "valable jusqu’au %@",
+  "es": "válido hasta %@",
+  "pl": "ważny do %@",
+  "nb": "gyldig til %@",
+  "da": "gyldig til %@",
+  "sv": "giltig till %@"
+ },
+ "gem. %lld min %lld s": {
+  "en": "avg. %lld min %lld s",
+  "de": "Ø %lld Min. %lld s",
+  "fr": "moy. %lld min %lld s",
+  "es": "media %lld min %lld s",
+  "pl": "śr. %lld min %lld s",
+  "nb": "snitt %lld min %lld s",
+  "da": "gns. %lld min. %lld sek.",
+  "sv": "snitt %lld min %lld s"
+ },
+ "gepromoveerd %@": {
+  "en": "promoted %@",
+  "de": "hervorgehoben %@",
+  "fr": "mis en avant %@",
+  "es": "destacado %@",
+  "pl": "promowany %@",
+  "nb": "fremhevet %@",
+  "da": "fremhævet %@",
+  "sv": "framhävd %@"
+ },
+ "gestart %@": {
+  "en": "started %@",
+  "de": "gestartet %@",
+  "fr": "démarré %@",
+  "es": "iniciado %@",
+  "pl": "rozpoczęto %@",
+  "nb": "startet %@",
+  "da": "startet %@",
+  "sv": "startad %@"
+ },
+ "herhaalbaar": {
+  "en": "repeatable",
+  "de": "wiederholbar",
+  "fr": "répétable",
+  "es": "repetible",
+  "pl": "powtarzalne",
+  "nb": "repeterbar",
+  "da": "gentagelig",
+  "sv": "repeterbar"
+ },
+ "hoogste eerst": {
+  "en": "highest first",
+  "de": "höchste zuerst",
+  "fr": "plus élevé d’abord",
+  "es": "mayor primero",
+  "pl": "najwyższe najpierw",
+  "nb": "høyest først",
+  "da": "højeste først",
+  "sv": "högst först"
+ },
+ "i": {
+  "en": "i",
+  "de": "i",
+  "fr": "i",
+  "es": "i",
+  "pl": "i",
+  "nb": "i",
+  "da": "i",
+  "sv": "i"
+ },
+ "laagste eerst": {
+  "en": "lowest first",
+  "de": "niedrigste zuerst",
+  "fr": "plus bas d’abord",
+  "es": "menor primero",
+  "pl": "najniższe najpierw",
+  "nb": "lavest først",
+  "da": "laveste først",
+  "sv": "lägst först"
+ },
+ "opbrengst %@": {
+  "en": "proceeds %@",
+  "de": "Erlös %@",
+  "fr": "revenus %@",
+  "es": "ingresos %@",
+  "pl": "wpływy %@",
+  "nb": "inntekter %@",
+  "da": "provenu %@",
+  "sv": "intäkter %@"
+ },
+ "prioriteit %@": {
+  "en": "priority %@",
+  "de": "Priorität %@",
+  "fr": "priorité %@",
+  "es": "prioridad %@",
+  "pl": "priorytet %@",
+  "nb": "prioritet %@",
+  "da": "prioritet %@",
+  "sv": "prioritet %@"
+ },
+ "release %@": {
+  "en": "release %@",
+  "de": "Veröffentlichung %@",
+  "fr": "publication %@",
+  "es": "publicación %@",
+  "pl": "wydanie %@",
+  "nb": "utgivelse %@",
+  "da": "udgivelse %@",
+  "sv": "release %@"
+ },
+ "som per dag": {
+  "en": "summed per day",
+  "de": "Summe pro Tag",
+  "fr": "somme par jour",
+  "es": "suma por día",
+  "pl": "suma dzienna",
+  "nb": "sum per dag",
+  "da": "sum pr. dag",
+  "sv": "summa per dag"
+ },
+ "tot %@": {
+  "en": "until %@",
+  "de": "bis %@",
+  "fr": "jusqu’au %@",
+  "es": "hasta %@",
+  "pl": "do %@",
+  "nb": "til %@",
+  "da": "til %@",
+  "sv": "till %@"
+ },
+ "verloopt %@": {
+  "en": "expires %@",
+  "de": "läuft ab %@",
+  "fr": "expire %@",
+  "es": "caduca %@",
+  "pl": "wygasa %@",
+  "nb": "utløper %@",
+  "da": "udløber %@",
+  "sv": "upphör %@"
+ },
+ "verlopen": {
+  "en": "expired",
+  "de": "abgelaufen",
+  "fr": "expiré",
+  "es": "caducado",
+  "pl": "wygasło",
+  "nb": "utløpt",
+  "da": "udløbet",
+  "sv": "har upphört"
+ },
+ "© DevTools - PixelForges": {
+  "en": "© DevTools - PixelForges",
+  "de": "© DevTools - PixelForges",
+  "fr": "© DevTools - PixelForges",
+  "es": "© DevTools - PixelForges",
+  "pl": "© DevTools - PixelForges",
+  "nb": "© DevTools - PixelForges",
+  "da": "© DevTools - PixelForges",
+  "sv": "© DevTools - PixelForges"
  }
 }
