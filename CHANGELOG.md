@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0 (build 16)
+- **Push notifications live:** the DevTools push relay runs at `devtools-push.devtools-45d.workers.dev`, connected to OneSignal (SDK 5.8.0 with Notification Service Extension).
+  - Turn it on via Account → Push notifications.
+- All new features of build 15 are included in this build (see below).
+
 ## 1.0.0 (build 15)
 Everything the App Store Connect API offers is now in DevTools. Per app, under *Manage* in the app detail screen:
 
