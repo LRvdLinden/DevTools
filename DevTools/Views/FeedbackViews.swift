@@ -100,7 +100,6 @@ struct FeedbackDetailView: View {
     var onDelete: () async -> Void
     @Environment(DevStore.self) private var store
     @Environment(\.dismiss) private var dismiss
-    @Environment(\.openURL) private var openURL
     @State private var log: String?
     @State private var loadingLog = false
     @State private var error: String?
@@ -112,14 +111,6 @@ struct FeedbackDetailView: View {
             if let error { ErrorBanner(message: error).listRowBackground(Color.clear) }
             if let c = item.s("comment"), !c.isEmpty {
                 Section("Opmerking") { Text(c).textSelection(.enabled) }.cardRows()
-            }
-            if let mail = replyURL {
-                Section {
-                    Button { openURL(mail) } label: { Label("Antwoord per e-mail", systemImage: "envelope.fill") }
-                } footer: {
-                    Text("Apple heeft geen antwoordfunctie voor TestFlight-feedback. Je mail-app opent met de opmerking van de tester als citaat.")
-                }
-                .cardRows()
             }
             let shots = item.list("screenshots").compactMap { $0 as? [String: Any] }
             if !shots.isEmpty {
@@ -194,21 +185,6 @@ struct FeedbackDetailView: View {
                     .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Sluit") { fullScreen = nil } } }
             }
         }
-    }
-
-    /// mailto: link to the tester with subject (app, version, build) and the quoted comment.
-    private var replyURL: URL? {
-        guard let email = item.s("email"), email.contains("@") else { return nil }
-        let subject = L("Je feedback op \(build?.title ?? item.str("buildBundleId"))")
-        var body = "\n\n"
-        if let c = item.s("comment"), !c.isEmpty {
-            body += "—\n" + c.split(separator: "\n", omittingEmptySubsequences: false).map { "> " + $0 }.joined(separator: "\n")
-        }
-        var comps = URLComponents()
-        comps.scheme = "mailto"
-        comps.path = email
-        comps.queryItems = [URLQueryItem(name: "subject", value: subject), URLQueryItem(name: "body", value: body)]
-        return comps.url
     }
 
     @ViewBuilder private func row(_ title: String, _ value: String?) -> some View {

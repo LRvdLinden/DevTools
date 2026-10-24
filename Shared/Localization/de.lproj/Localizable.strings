@@ -88,7 +88,6 @@
 "Annuleer" = "Abbrechen";
 "Annuleren…" = "Wird abgebrochen …";
 "Anonieme tester" = "Anonymer Tester";
-"Antwoord per e-mail" = "Per E-Mail antworten";
 "Antwoord van Apple kon niet gelezen worden: %@" = "Die Antwort von Apple konnte nicht gelesen werden: %@";
 "App" = "App";
 "App Analytics" = "App Analytics";
@@ -110,7 +109,6 @@
 "Apple API-fout %lld." = "Apple API-Fehler %lld.";
 "Apple ID gekopieerd" = "Apple-ID kopiert";
 "Apple heeft de rapporten gestopt omdat ze lang niet zijn opgehaald. Schakel opnieuw in." = "Apple hat die Berichte gestoppt, weil sie lange nicht abgerufen wurden. Aktiviere sie erneut.";
-"Apple heeft geen antwoordfunctie voor TestFlight-feedback. Je mail-app opent met de opmerking van de tester als citaat." = "Apple bietet keine Antwortfunktion für TestFlight-Feedback. Deine Mail-App öffnet sich mit dem Kommentar des Testers als Zitat.";
 "Apple levert App Analytics als dagrapporten met 2 tot 5 dagen vertraging. Sessies, installaties en crashes tellen alleen mee als minstens 5 gebruikers hebben ingestemd met het delen van analysegegevens. Apple heeft geen retentierapport: retentie is hier een benadering op basis van sessies van nieuwe gebruikers." = "Apple liefert App Analytics als Tagesberichte mit 2 bis 5 Tagen Verzögerung. Sitzungen, Installationen und Abstürze zählen nur, wenn mindestens 5 Nutzer der Freigabe von Analysedaten zugestimmt haben. Apple bietet keinen Bindungsbericht: Die Bindung ist hier eine Näherung auf Basis der Sitzungen neuer Nutzer.";
 "Apple levert verkoopcijfers ongeveer een dag later; de cijfers van vandaag zie je morgen." = "Apple liefert Verkaufszahlen etwa einen Tag später; die Zahlen von heute siehst du morgen.";
 "Apple maakt de codes in de achtergrond; het kan even duren voordat je ze kunt downloaden." = "Apple erstellt die Codes im Hintergrund; es kann etwas dauern, bis du sie herunterladen kannst.";
@@ -382,7 +380,6 @@
 "Ja" = "Ja";
 "Ja, gebruikt niet-vrijgestelde encryptie" = "Ja, nutzt nicht ausgenommene Verschlüsselung";
 "Je apps met icoon, trend, downloads, rating en status." = "Deine Apps mit Symbol, Trend, Downloads, Bewertung und Status.";
-"Je feedback op %@" = "Dein Feedback zu %@";
 "Je hebt een App Store Connect API-sleutel (.p8) nodig. Maak die aan in App Store Connect → Gebruikers en toegang → Integraties." = "Du brauchst einen App Store Connect API-Schlüssel (.p8). Erstelle ihn in App Store Connect → Benutzer und Zugriff → Integrationen.";
 "Je hebt nodig: Issuer ID, Key ID, het .p8-bestand en (voor downloads) je vendornummer." = "Du brauchst: Issuer ID, Key ID, die .p8-Datei und (für Downloads) deine Anbieternummer.";
 "Je reactie" = "Deine Antwort";

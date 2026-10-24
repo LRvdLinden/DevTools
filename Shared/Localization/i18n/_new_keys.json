@@ -3938,35 +3938,5 @@
   "nb": "Registrerer hos OneSignal…",
   "da": "Registrerer hos OneSignal…",
   "sv": "Registrerar hos OneSignal…"
- },
- "Antwoord per e-mail": {
-  "en": "Reply by email",
-  "de": "Per E-Mail antworten",
-  "fr": "Répondre par e-mail",
-  "es": "Responder por correo",
-  "pl": "Odpowiedz e-mailem",
-  "nb": "Svar på e-post",
-  "da": "Svar via e-mail",
-  "sv": "Svara via e-post"
- },
- "Apple heeft geen antwoordfunctie voor TestFlight-feedback. Je mail-app opent met de opmerking van de tester als citaat.": {
-  "en": "Apple has no reply option for TestFlight feedback. Your mail app opens with the tester's comment quoted.",
-  "de": "Apple bietet keine Antwortfunktion für TestFlight-Feedback. Deine Mail-App öffnet sich mit dem Kommentar des Testers als Zitat.",
-  "fr": "Apple ne permet pas de répondre aux retours TestFlight. Votre app Mail s’ouvre avec le commentaire du testeur en citation.",
-  "es": "Apple no permite responder a los comentarios de TestFlight. Tu app de correo se abre con el comentario del tester citado.",
-  "pl": "Apple nie umożliwia odpowiadania na opinie TestFlight. Aplikacja poczty otworzy się z cytatem komentarza testera.",
-  "nb": "Apple har ingen svarfunksjon for TestFlight-tilbakemeldinger. E-postappen åpnes med testerens kommentar sitert.",
-  "da": "Apple har ingen svarfunktion til TestFlight-feedback. Din mailapp åbner med testerens kommentar citeret.",
-  "sv": "Apple har ingen svarsfunktion för TestFlight-feedback. Din e-postapp öppnas med testarens kommentar citerad."
- },
- "Je feedback op %@": {
-  "en": "Your feedback on %@",
-  "de": "Dein Feedback zu %@",
-  "fr": "Votre retour sur %@",
-  "es": "Tus comentarios sobre %@",
-  "pl": "Twoja opinia o %@",
-  "nb": "Tilbakemeldingen din på %@",
-  "da": "Din feedback på %@",
-  "sv": "Din feedback på %@"
  }
 }

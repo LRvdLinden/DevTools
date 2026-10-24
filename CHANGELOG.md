@@ -15,7 +15,6 @@ Everything the App Store Connect API offers is now in DevTools. Per app, under *
 - **TestFlight feedback and crashes:**
   - Screenshots and comments from testers, with device, OS, battery, connection and free storage.
   - Crash logs that you can share or copy; feedback can be deleted.
-  - **Reply by email** to the tester. Apple has no reply option for TestFlight feedback, so your mail app opens with the comment quoted.
   - Per app, and per build from the build screen.
   - **Diagnostics** per build: hangs, launches and disk writes, with call stacks.
 - **Screenshots and previews:**
