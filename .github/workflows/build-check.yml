@@ -21,6 +21,15 @@ jobs:
           xcodebuild -project DevTools.xcodeproj -scheme DevTools \
             -destination 'generic/platform=iOS' -configuration Debug \
             CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tee build.log || echo "BUILD_FAILED" >> build.log
+      - name: Check embedded frameworks and runpaths
+        if: success()
+        run: |
+          APP=$(find ~/Library/Developer/Xcode/DerivedData -path "*Debug-iphoneos/DevTools.app" -maxdepth 6 | head -1)
+          {
+            echo "[rpath] app: $(otool -l "$APP/DevTools" | grep -A2 LC_RPATH | grep path | awk '{print $2}' | tr '\n' ' ')"
+            echo "[rpath] nse: $(otool -l "$APP/PlugIns/OneSignalNotificationServiceExtension.appex/OneSignalNotificationServiceExtension" | grep -A2 LC_RPATH | grep path | awk '{print $2}' | tr '\n' ' ')"
+            echo "[frameworks] $(ls "$APP/Frameworks" | tr '\n' ' ')"
+          } >> build.log
       - name: Build Mac Catalyst app, unsigned
         if: success()
         run: |
@@ -40,7 +49,7 @@ jobs:
           SHA=$(git rev-parse --short HEAD)
           mkdir -p /tmp/out && cd /tmp/out
           cp $GITHUB_WORKSPACE/xcode-version.txt . || true
-          grep -E "error:|BUILD SUCCEEDED|BUILD FAILED|BUILD_FAILED|\*\* " $GITHUB_WORKSPACE/build.log | sort -u | head -400 > summary.txt || true
+          grep -E "error:|BUILD SUCCEEDED|BUILD FAILED|BUILD_FAILED|\*\* |\[rpath\]|\[frameworks\]" $GITHUB_WORKSPACE/build.log | sort -u | head -400 > summary.txt || true
           tail -150 $GITHUB_WORKSPACE/build.log > tail.txt || true
           cp $GITHUB_WORKSPACE/export-en.xliff . 2>/dev/null || true
           tail -30 $GITHUB_WORKSPACE/loc.log > loc-tail.txt 2>/dev/null || true
