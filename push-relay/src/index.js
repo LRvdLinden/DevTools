@@ -193,6 +193,12 @@ export function isNoise(payload) {
   return false;
 }
 
+/** The resource the event is about (relationships.instance.data). */
+export function instanceOf(payload) {
+  const rel = ((payload && payload.data) || {}).relationships || {};
+  return ((rel.instance || {}).data) || {};
+}
+
 async function hook(env, request, key, url) {
   if (!KEY_RE.test(key)) return new Response('not found', { status: 404 });
   const raw = await request.arrayBuffer();
@@ -216,7 +222,14 @@ async function hook(env, request, key, url) {
     contents: { en: body },
     ios_sound: 'default',
     thread_id: appName || 'devtools',
-    data: { event: String((payload.data || {}).type || ''), id: String((payload.data || {}).id || '') },
+    data: {
+      event: String((payload.data || {}).type || ''),
+      id: String((payload.data || {}).id || ''),
+      instanceType: String(instanceOf(payload).type || ''),
+      instanceId: String(instanceOf(payload).id || ''),
+      app: appName,
+      appId: url.searchParams.get('appId') || '',
+    },
   });
   // Always 200 to Apple once the signature is valid, so it doesn't retry for OneSignal problems.
   return new Response(res.ok ? 'sent' : `onesignal ${res.status}`, { status: 200 });

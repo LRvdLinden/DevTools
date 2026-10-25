@@ -214,6 +214,7 @@
 "Deze API-sleutel heeft geen toegang tot apps." = "Deze API-sleutel heeft geen toegang tot apps.";
 "Deze app gebruikt geen Game Center." = "Deze app gebruikt geen Game Center.";
 "Deze iPhone is aangemeld" = "Deze iPhone is aangemeld";
+"Deze melding hoort niet bij een scherm in DevTools." = "Deze melding hoort niet bij een scherm in DevTools.";
 "Deze versie is aan alle gebruikers uitgebracht." = "Deze versie is aan alle gebruikers uitgebracht.";
 "Deze versie kan niet meer worden aangepast." = "Deze versie kan niet meer worden aangepast.";
 "Deze workflow is uitgeschakeld in Xcode." = "Deze workflow is uitgeschakeld in Xcode.";
@@ -407,6 +408,7 @@
 "Klaar voor release" = "Klaar voor release";
 "Klaar voor review" = "Klaar voor review";
 "Klantenservice" = "Klantenservice";
+"Kon de melding niet openen" = "Kon de melding niet openen";
 "Kopieer" = "Kopieer";
 "Kopieer Apple ID" = "Kopieer Apple ID";
 "Kopieer alle codes" = "Kopieer alle codes";

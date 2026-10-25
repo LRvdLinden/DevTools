@@ -68,6 +68,10 @@ struct RootView: View {
                     .zIndex(10)
             }
         }
+        .sheet(item: Binding(get: { store.active == nil ? nil : PushManager.shared.pendingRoute },
+                             set: { PushManager.shared.pendingRoute = $0 })) { route in
+            PushRouteView(route: route).environment(store)
+        }
         .sensoryFeedback(.success, trigger: splashFinished)
         .task { await runSplash() }
         .onChange(of: scenePhase) { _, phase in

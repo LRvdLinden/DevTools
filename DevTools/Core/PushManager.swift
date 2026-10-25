@@ -27,6 +27,10 @@ final class PushManager {
     }
 
     @ObservationIgnored private var observer: SubscriptionObserver?
+    @ObservationIgnored private var clickListener: ClickListener?
+
+    /// Set when the user taps a notification; RootView opens the matching screen.
+    var pendingRoute: PushRoute?
 
     static var oneSignalAppID: String? {
         guard let s = Bundle.main.object(forInfoDictionaryKey: "OneSignalAppID") as? String, !s.isEmpty else { return nil }
@@ -62,6 +66,9 @@ final class PushManager {
     private func startObserving() {
         let obs = SubscriptionObserver { [weak self] id in self?.subscriptionID = id }
         observer = obs   // OneSignal keeps observers weakly
+        let click = ClickListener { [weak self] route in self?.pendingRoute = route }
+        clickListener = click
+        OneSignal.Notifications.addClickListener(click)
         OneSignal.User.pushSubscription.addObserver(obs)
         subscriptionID = Self.validID(OneSignal.User.pushSubscription.id)
         if enabled { OneSignal.login(deviceKey) }
@@ -137,5 +144,35 @@ final class SubscriptionObserver: NSObject, OSPushSubscriptionObserver {
     func onPushSubscriptionDidChange(state: OSPushSubscriptionChangedState) {
         let id = PushManager.validID(state.current.id)
         Task { @MainActor in onChange(id) }
+    }
+}
+
+/// What a tapped notification is about (data added by the push relay).
+struct PushRoute: Identifiable, Equatable {
+    let id = UUID()
+    var event: String
+    var instanceType: String
+    var instanceID: String
+    var appID: String
+    var appName: String
+
+    init?(_ data: [AnyHashable: Any]?) {
+        guard let data, let event = data["event"] as? String, !event.isEmpty, event != "webhookPingCreated" else { return nil }
+        self.event = event
+        instanceType = data["instanceType"] as? String ?? ""
+        instanceID = data["instanceId"] as? String ?? ""
+        appID = data["appId"] as? String ?? ""
+        appName = data["app"] as? String ?? ""
+    }
+}
+
+final class ClickListener: NSObject, OSNotificationClickListener {
+    private let handler: @MainActor (PushRoute) -> Void
+    init(_ handler: @escaping @MainActor (PushRoute) -> Void) { self.handler = handler }
+
+    func onClick(event: OSNotificationClickEvent) {
+        guard let route = PushRoute(event.notification.additionalData) else { return }
+        let handler = self.handler
+        Task { @MainActor in handler(route) }
     }
 }

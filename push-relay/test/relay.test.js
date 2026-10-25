@@ -38,15 +38,18 @@ test('register validates input and returns webhook + secret', async () => {
 test('hook checks signature and sends push', async () => {
   let sent;
   globalThis.fetch = async (url, init) => { sent = { url, body: JSON.parse(init.body) }; return new Response('{}', { status: 200 }); };
-  const payload = JSON.stringify({ data: { type: 'appStoreVersionAppVersionStateUpdated', id: '1', attributes: { oldValue: 'IN_REVIEW', newValue: 'PENDING_DEVELOPER_RELEASE' } } });
+  const payload = JSON.stringify({ data: { type: 'appStoreVersionAppVersionStateUpdated', id: '1', attributes: { oldValue: 'IN_REVIEW', newValue: 'PENDING_DEVELOPER_RELEASE' }, relationships: { instance: { data: { type: 'appStoreVersions', id: 'v42' } } } } });
   const secret = await secretFor(env, key);
-  const good = await worker.fetch(new Request(`https://relay.test/hook/${key}?app=Trailhead&lang=en`, {
+  const good = await worker.fetch(new Request(`https://relay.test/hook/${key}?app=Trailhead&lang=en&appId=123`, {
     method: 'POST', body: payload, headers: { 'X-Apple-SIGNATURE': `hmacsha256=${await sign(secret, payload)}` },
   }), env);
   assert.equal(good.status, 200);
   assert.equal(sent.url, 'https://api.onesignal.com/notifications');
   assert.deepEqual(sent.body.include_aliases, { external_id: [key] });
   assert.equal(sent.body.contents.en, 'Trailhead was approved and is ready for release');
+  assert.equal(sent.body.data.instanceId, 'v42');
+  assert.equal(sent.body.data.instanceType, 'appStoreVersions');
+  assert.equal(sent.body.data.appId, '123');
   const forged = await worker.fetch(new Request(`https://relay.test/hook/${key}`, {
     method: 'POST', body: payload, headers: { 'X-Apple-SIGNATURE': 'hmacsha256=deadbeef' },
   }), env);

@@ -20,37 +20,63 @@ struct DeveloperAccount: Codable, Identifiable, Hashable {
 }
 
 /// Device-only Keychain storage for the .p8 private keys.
+/// Items live in a shared access group so the push extension can read them to enrich notifications
+/// (version, build and platform). Older items without a group are migrated on first read.
 enum Vault {
     private static let service = "nl.lrvdlinden.devtools"
 
+    /// "<TeamID>.nl.lrvdlinden.devtools.shared", from Info.plist (AppIdentifierPrefix is filled in by Xcode).
+    static var sharedGroup: String? {
+        guard let prefix = Bundle.main.object(forInfoDictionaryKey: "AppIdentifierPrefix") as? String,
+              !prefix.isEmpty, !prefix.contains("$") else { return nil }
+        return prefix + "nl.lrvdlinden.devtools.shared"
+    }
+
+    private static func base(_ key: String, group: String?) -> [String: Any] {
+        var q: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
+                                kSecAttrService as String: service,
+                                kSecAttrAccount as String: key]
+        if let group { q[kSecAttrAccessGroup as String] = group }
+        return q
+    }
+
     static func save(_ value: String, key: String) throws {
-        let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                    kSecAttrService as String: service,
-                                    kSecAttrAccount as String: key]
-        SecItemDelete(query as CFDictionary)
-        var add = query
-        add[kSecValueData as String] = Data(value.utf8)
-        add[kSecAttrAccessible as String] = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
-        let code = SecItemAdd(add as CFDictionary, nil)
+        SecItemDelete(base(key, group: nil) as CFDictionary)
+        var code = errSecMissingEntitlement
+        if let group = sharedGroup {
+            var add = base(key, group: group)
+            add[kSecValueData as String] = Data(value.utf8)
+            add[kSecAttrAccessible as String] = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
+            code = SecItemAdd(add as CFDictionary, nil)
+        }
+        if code != errSecSuccess {   // no shared group available (e.g. unsigned build): app-only item
+            var add = base(key, group: nil)
+            add[kSecValueData as String] = Data(value.utf8)
+            add[kSecAttrAccessible as String] = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
+            code = SecItemAdd(add as CFDictionary, nil)
+        }
         if code != errSecSuccess { throw ConnectError(message: L("Keychain-fout: \(code)")) }
     }
 
-    static func read(_ key: String) -> String? {
-        let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                    kSecAttrService as String: service,
-                                    kSecAttrAccount as String: key,
-                                    kSecReturnData as String: true,
-                                    kSecMatchLimit as String: kSecMatchLimitOne]
+    private static func fetch(_ key: String, group: String?) -> String? {
+        var q = base(key, group: group)
+        q[kSecReturnData as String] = true
+        q[kSecMatchLimit as String] = kSecMatchLimitOne
         var result: CFTypeRef?
-        guard SecItemCopyMatching(query as CFDictionary, &result) == errSecSuccess, let data = result as? Data else { return nil }
+        guard SecItemCopyMatching(q as CFDictionary, &result) == errSecSuccess, let data = result as? Data else { return nil }
         return String(data: data, encoding: .utf8)
     }
 
+    static func read(_ key: String) -> String? {
+        if let group = sharedGroup, let v = fetch(key, group: group) { return v }
+        guard let legacy = fetch(key, group: nil) else { return nil }
+        if sharedGroup != nil { try? save(legacy, key: key) }   // migrate into the shared group
+        return legacy
+    }
+
     static func delete(_ key: String) {
-        let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                    kSecAttrService as String: service,
-                                    kSecAttrAccount as String: key]
-        SecItemDelete(query as CFDictionary)
+        SecItemDelete(base(key, group: nil) as CFDictionary)
+        if let group = sharedGroup { SecItemDelete(base(key, group: group) as CFDictionary) }
     }
 }
 

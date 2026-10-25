@@ -3948,5 +3948,25 @@
   "nb": "Oppdater",
   "da": "Opdater",
   "sv": "Uppdatera"
+ },
+ "Kon de melding niet openen": {
+  "en": "Couldn't open the notification",
+  "de": "Mitteilung konnte nicht geöffnet werden",
+  "fr": "Impossible d’ouvrir la notification",
+  "es": "No se pudo abrir la notificación",
+  "pl": "Nie można otworzyć powiadomienia",
+  "nb": "Kunne ikke åpne varselet",
+  "da": "Kunne ikke åbne notifikationen",
+  "sv": "Kunde inte öppna notisen"
+ },
+ "Deze melding hoort niet bij een scherm in DevTools.": {
+  "en": "This notification doesn't belong to a screen in DevTools.",
+  "de": "Diese Mitteilung gehört zu keinem Bildschirm in DevTools.",
+  "fr": "Cette notification ne correspond à aucun écran de DevTools.",
+  "es": "Esta notificación no corresponde a ninguna pantalla de DevTools.",
+  "pl": "To powiadomienie nie należy do żadnego ekranu w DevTools.",
+  "nb": "Dette varselet hører ikke til en skjerm i DevTools.",
+  "da": "Denne notifikation hører ikke til en skærm i DevTools.",
+  "sv": "Den här notisen hör inte till någon skärm i DevTools."
  }
 }

@@ -43,6 +43,7 @@ final class DevStore {
         if selectedID == nil || !accounts.contains(where: { $0.id == selectedID }) { selectedID = accounts.first?.id }
         if let r = UserDefaults.standard.string(forKey: "salesRange"), let range = SalesRange(rawValue: r) { salesRange = range }
         loadCachedApps()
+        Self.mirrorAccountsForPush(accounts, selected: selectedID)
     }
 
     /// Demo mode (App Review / screenshots): sample data, nothing is saved.
@@ -141,6 +142,15 @@ final class DevStore {
     private func persist() {
         UserDefaults.standard.set(try? JSONEncoder().encode(accounts), forKey: "accounts")
         UserDefaults.standard.set(selectedID?.uuidString, forKey: "selectedAccount")
+        Self.mirrorAccountsForPush(accounts, selected: selectedID)
+    }
+
+    /// Non-secret account info (id, Issuer ID, Key ID) for the push extension, via the App Group.
+    static func mirrorAccountsForPush(_ accounts: [DeveloperAccount], selected: UUID?) {
+        guard let shared = UserDefaults(suiteName: "group.nl.lrvdlinden.devtools") else { return }
+        let ordered = accounts.sorted { a, _ in a.id == selected }
+        let list = ordered.map { ["id": $0.id.uuidString, "issuer": $0.issuerID, "key": $0.keyID] }
+        shared.set(list, forKey: "push.accounts")
     }
 
     // MARK: Local cache (instant start)
@@ -250,6 +260,8 @@ final class DevStore {
         }
         Task { await refreshSales() }
         Task { await refreshBetaUsage() }
+        let currentApps = apps
+        Task { await PushManager.shared.syncWebhooksIfNeeded(api: api, apps: currentApps) }
     }
 
     nonisolated private static func loadDetails(api: ConnectAPI, appID: String) async -> (String, [VersionInfo]?, BuildInfo?) {

@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.1 (build 19)
+- **Push notifications open the right screen:**
+  - Tapping a notification opens the matching screen: the version (status, phased release), the build (TestFlight), the tester's feedback or crash, or otherwise the app.
+- **Platform, version and build in notifications, like Apple's:**
+  - Example: title "Trailhead (iOS)", subtitle "2.5.0 (318)".
+  - TestFlight feedback shows the tester's comment and device.
+  - The push extension looks these up with your own API key, which it reads from the shared, device-only Keychain. The key never leaves the device.
+- Existing push webhooks are updated automatically once, with the app ID in the URL.
+- The push relay sends along the instance (version, build or feedback) and the app ID.
+
 ## 1.0.1 (build 18)
 - **DevTools for Mac (Mac Catalyst):** the same app now also runs as a real Mac app, on Apple silicon and Intel.
   - You get a sidebar layout, freely resizable windows (minimum 900 × 620), menu commands **Refresh (⌘R)** and **Reload download reports (⇧⌘R)**, and the widgets in the Mac widget gallery.

@@ -30,6 +30,7 @@ extension PushManager {
         guard let reg = registration else { return false }
         var comps = URLComponents(string: reg.webhookURL)
         comps?.queryItems = [URLQueryItem(name: "app", value: appName),
+                             URLQueryItem(name: "appId", value: appID),
                              URLQueryItem(name: "lang", value: LanguageManager.locale.language.languageCode?.identifier ?? "en")]
         let url = comps?.url?.absoluteString ?? reg.webhookURL
         let existing = try await api.jget("/v1/apps/\(appID)/webhooks", [("limit", "50")]).data
@@ -43,6 +44,17 @@ extension PushManager {
             ], relationships: ["app": ("apps", appID)])
         }
         return true
+    }
+
+    /// Build 19 adds the app ID to the push webhook URL (for opening the right screen); update existing hooks once.
+    func syncWebhooksIfNeeded(api: ConnectAPI, apps: [AppSummary]) async {
+        guard enabled, registration != nil, UserDefaults.standard.integer(forKey: "push.hookVersion") < 2 else { return }
+        for app in apps {
+            guard let hooks = try? await api.jget("/v1/apps/\(app.id)/webhooks", [("limit", "50")]).data,
+                  hooks.contains(where: { $0.str("name") == WebhookEvents.pushName }) else { continue }
+            _ = try? await ensureWebhook(api: api, appID: app.id, appName: app.name)
+        }
+        UserDefaults.standard.set(2, forKey: "push.hookVersion")
     }
 
     func removeWebhook(api: ConnectAPI, appID: String) async throws {
