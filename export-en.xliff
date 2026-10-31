@@ -1,0 +1,4220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="DevTools/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="26.6" build-num="17F113"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>DevTools</source>
+        <target>DevTools</target>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>DevTools</source>
+        <target>DevTools</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="DevToolsWatch/en.lproj/DevToolsWatch-InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="26.6" build-num="17F113"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>DevTools</source>
+        <target>DevTools</target>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>DevToolsWatch</source>
+        <target>DevToolsWatch</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="DevToolsWatchWidgets/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="26.6" build-num="17F113"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>DevTools Watch Widgets</source>
+        <target>DevTools Watch Widgets</target>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>DevToolsWatchWidgets</source>
+        <target>DevToolsWatchWidgets</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="DevToolsWidgets/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="26.6" build-num="17F113"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>DevTools Widgets</source>
+        <target>DevTools Widgets</target>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>DevToolsWidgets</source>
+        <target>DevToolsWidgets</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="OneSignalNotificationServiceExtension/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="26.6" build-num="17F113"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>OneSignalNotificationServiceExtension</source>
+        <target>OneSignalNotificationServiceExtension</target>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>OneSignalNotificationServiceExtension</source>
+        <target>OneSignalNotificationServiceExtension</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Shared/Localization/en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="26.6" build-num="17F113"/>
+    </header>
+    <body>
+      <trans-unit id="#%lld" xml:space="preserve">
+        <source>#%lld</source>
+        <target>#%lld</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@" xml:space="preserve">
+        <source>%@</source>
+        <target>%@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@  %@" xml:space="preserve">
+        <source>%@  %@</source>
+        <target>%@  %@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@ %@" xml:space="preserve">
+        <source>%@ %@</source>
+        <target>%@ %@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@ 7d" xml:space="preserve">
+        <source>%@ 7d</source>
+        <target>%@ 7d</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@ TestFlight-installaties" xml:space="preserve">
+        <source>%@ TestFlight installs</source>
+        <target>%@ TestFlight installs</target>
+        <note>DevTools – en (generated by translations.py)</note>
+      </trans-unit>
+      <trans-unit id="%@ beoordelingen" xml:space="preserve">
+        <source>%@ ratings</source>
+        <target>%@ ratings</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ downloads" xml:space="preserve">
+        <source>%@ downloads</source>
+        <target>%@ downloads</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ feedback" xml:space="preserve">
+        <source>%@ feedback</source>
+        <target>%@ feedback</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ herdownloads" xml:space="preserve">
+        <source>%@ redownloads</source>
+        <target>%@ redownloads</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ in-app aankopen" xml:space="preserve">
+        <source>%@ in-app purchases</source>
+        <target>%@ in-app purchases</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ testers" xml:space="preserve">
+        <source>%@ testers</source>
+        <target>%@ testers</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ toegevoegd" xml:space="preserve">
+        <source>%@ added</source>
+        <target>%@ added</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ uitnodigingen" xml:space="preserve">
+        <source>%@ invites</source>
+        <target>%@ invites</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ uniek" xml:space="preserve">
+        <source>%@ unique</source>
+        <target>%@ unique</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ unieke bezoekers" xml:space="preserve">
+        <source>%@ unique visitors</source>
+        <target>%@ unique visitors</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ verwijderingen" xml:space="preserve">
+        <source>%@ deletions</source>
+        <target>%@ deletions</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ · %@" xml:space="preserve">
+        <source>%@ · %@</source>
+        <target>%@ · %@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@ · 7d" xml:space="preserve">
+        <source>%@ · 7d</source>
+        <target>%@ · 7d</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%@ · bijgewerkt %@" xml:space="preserve">
+        <source>%@ · updated %@</source>
+        <target>%@ · updated %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@: export compliance invullen" xml:space="preserve">
+        <source>%@: complete export compliance</source>
+        <target>%@: complete export compliance</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld" xml:space="preserve">
+        <source>%lld</source>
+        <target>%lld</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%lld apps" xml:space="preserve">
+        <source>%lld apps</source>
+        <target>%lld apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld codes" xml:space="preserve">
+        <source>%lld codes</source>
+        <target>%lld codes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld fouten, %lld waarschuwingen, %lld testfouten" xml:space="preserve">
+        <source>%lld errors, %lld warnings, %lld test failures</source>
+        <target>%lld errors, %lld warnings, %lld test failures</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld gebeurtenissen" xml:space="preserve">
+        <source>%lld events</source>
+        <target>%lld events</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld keer" xml:space="preserve">
+        <source>%lld times</source>
+        <target>%lld times</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld punten" xml:space="preserve">
+        <source>%lld points</source>
+        <target>%lld points</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld reviews" xml:space="preserve">
+        <source>%lld reviews</source>
+        <target>%lld reviews</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld van %lld apps" xml:space="preserve">
+        <source>%lld of %lld apps</source>
+        <target>%lld of %lld apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld van %lld landen" xml:space="preserve">
+        <source>%lld of %lld countries</source>
+        <target>%lld of %lld countries</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld%%" xml:space="preserve">
+        <source>%lld%%</source>
+        <target>%lld%%</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%lld%% van het verkeer" xml:space="preserve">
+        <source>%lld%% of traffic</source>
+        <target>%lld%% of traffic</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld/%lld" xml:space="preserve">
+        <source>%lld/%lld</source>
+        <target>%lld/%lld</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%lld/3" xml:space="preserve">
+        <source>%lld/3</source>
+        <target>%lld/3</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld/10" xml:space="preserve">
+        <source>%lld/10</source>
+        <target>%lld/10</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld★" xml:space="preserve">
+        <source>%lld★</source>
+        <target>%lld★</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=".p8-bestand downloaden" xml:space="preserve">
+        <source>Download the .p8 file</source>
+        <target>Download the .p8 file</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="1 jaar" xml:space="preserve">
+        <source>1 year</source>
+        <target>1 year</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="1 maand" xml:space="preserve">
+        <source>1 month</source>
+        <target>1 month</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="1 week" xml:space="preserve">
+        <source>1 week</source>
+        <target>1 week</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="1j" xml:space="preserve">
+        <source>1y</source>
+        <target>1y</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="2 maanden" xml:space="preserve">
+        <source>2 months</source>
+        <target>2 months</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="3 maanden" xml:space="preserve">
+        <source>3 months</source>
+        <target>3 months</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="6 maanden" xml:space="preserve">
+        <source>6 months</source>
+        <target>6 months</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="7 dagen" xml:space="preserve">
+        <source>7 days</source>
+        <target>7 days</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="10 tekens, staat in de lijst én in de bestandsnaam" xml:space="preserve">
+        <source>10 characters, shown in the list and in the file name</source>
+        <target>10 characters, shown in the list and in the file name</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="14 dagen" xml:space="preserve">
+        <source>14 days</source>
+        <target>14 days</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="30 dagen" xml:space="preserve">
+        <source>30 days</source>
+        <target>30 days</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="401 – Authenticatie mislukt" xml:space="preserve">
+        <source>401 – Authentication failed</source>
+        <target>401 – Authentication failed</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="403 – Geen toegang" xml:space="preserve">
+        <source>403 – No access</source>
+        <target>403 – No access</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="A/B-tests" xml:space="preserve">
+        <source>A/B tests</source>
+        <target>A/B tests</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="A/B-tests van je productpagina" xml:space="preserve">
+        <source>A/B tests of your product page</source>
+        <target>A/B tests of your product page</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="API-sleutel aanmaken" xml:space="preserve">
+        <source>Create an API key</source>
+        <target>Create an API key</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="API-sleutels beheren" xml:space="preserve">
+        <source>Manage API keys</source>
+        <target>Manage API keys</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Aan, nog niet gestart" xml:space="preserve">
+        <source>On, not started yet</source>
+        <target>On, not started yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Aanbiedingscodes" xml:space="preserve">
+        <source>Offer Codes</source>
+        <target>Offer Codes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Aandacht" xml:space="preserve">
+        <source>Attention</source>
+        <target>Attention</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Aandacht nodig" xml:space="preserve">
+        <source>Needs attention</source>
+        <target>Needs attention</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Aangemaakt %@" xml:space="preserve">
+        <source>Created %@</source>
+        <target>Created %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Aangemaakt, maar het antwoord kon niet gelezen worden." xml:space="preserve">
+        <source>Created, but the response could not be read.</source>
+        <target>Created, but the response could not be read.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Aanmelden bij OneSignal…" xml:space="preserve">
+        <source>Registering with OneSignal…</source>
+        <target>Registering with OneSignal…</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Aantal" xml:space="preserve">
+        <source>Count</source>
+        <target>Count</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Aantal codes" xml:space="preserve">
+        <source>Number of codes</source>
+        <target>Number of codes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Aanzetten voor al mijn apps" xml:space="preserve">
+        <source>Turn on for all my apps</source>
+        <target>Turn on for all my apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Abonnementen" xml:space="preserve">
+        <source>Subscriptions</source>
+        <target>Subscriptions</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Account" xml:space="preserve">
+        <source>Account</source>
+        <target>Account</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Account koppelen" xml:space="preserve">
+        <source>Connect account</source>
+        <target>Connect account</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Account wijzigen" xml:space="preserve">
+        <source>Edit account</source>
+        <target>Edit account</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Accounthouder" xml:space="preserve">
+        <source>Account Holder</source>
+        <target>Account Holder</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Accounts" xml:space="preserve">
+        <source>Accounts</source>
+        <target>Accounts</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Achternaam" xml:space="preserve">
+        <source>Last name</source>
+        <target>Last name</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Actief" xml:space="preserve">
+        <source>Active</source>
+        <target>Active</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Acties" xml:space="preserve">
+        <source>Actions</source>
+        <target>Actions</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Actieve toestellen" xml:space="preserve">
+        <source>Active devices</source>
+        <target>Active devices</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Admin geeft toegang tot alles" xml:space="preserve">
+        <source>Admin gives access to everything</source>
+        <target>Admin gives access to everything</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Afbeelding" xml:space="preserve">
+        <source>Image</source>
+        <target>Image</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Afbeeldingen zonder transparantie. Ze gaan via de Asset Library van App Store Connect en worden samen met de versie beoordeeld." xml:space="preserve">
+        <source>Images without transparency. They go through the App Store Connect Asset Library and are reviewed together with the version.</source>
+        <target>Images without transparency. They go through the App Store Connect Asset Library and are reviewed together with the version.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Afgelopen 7 dagen" xml:space="preserve">
+        <source>Last 7 days</source>
+        <target>Last 7 days</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Afgelopen 30 dagen" xml:space="preserve">
+        <source>Last 30 days</source>
+        <target>Last 30 days</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Afgelopen 90 dagen" xml:space="preserve">
+        <source>Last 90 days</source>
+        <target>Last 90 days</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Afgelopen jaar (per week)" xml:space="preserve">
+        <source>Last year (weekly)</source>
+        <target>Last year (weekly)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Afgerond" xml:space="preserve">
+        <source>Completed</source>
+        <target>Completed</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Afgewezen" xml:space="preserve">
+        <source>Rejected</source>
+        <target>Rejected</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Al je apps" xml:space="preserve">
+        <source>All your apps</source>
+        <target>All your apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Alle" xml:space="preserve">
+        <source>All</source>
+        <target>All</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Alle apps" xml:space="preserve">
+        <source>All apps</source>
+        <target>All apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Alle gebruikers met automatische updates krijgen deze versie. Dit kan niet teruggedraaid worden." xml:space="preserve">
+        <source>All users with automatic updates will get this version. This can't be undone.</source>
+        <target>All users with automatic updates will get this version. This can't be undone.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Alleen zonder reactie" xml:space="preserve">
+        <source>Only without a reply</source>
+        <target>Only without a reply</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Alles" xml:space="preserve">
+        <source>All</source>
+        <target>All</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Alles " xml:space="preserve">
+        <source>All</source>
+        <target>All</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Alles in orde" xml:space="preserve">
+        <source>All good</source>
+        <target>All good</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Alternatieve distributie: landen" xml:space="preserve">
+        <source>Alternative distribution: countries</source>
+        <target>Alternative distribution: countries</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Alternatieve distributie: nieuwe pakketversie" xml:space="preserve">
+        <source>Alternative distribution: new package version</source>
+        <target>Alternative distribution: new package version</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Alternatieve distributie: pakket beschikbaar" xml:space="preserve">
+        <source>Alternative distribution: package available</source>
+        <target>Alternative distribution: package available</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Andere build kiezen" xml:space="preserve">
+        <source>Choose another build</source>
+        <target>Choose another build</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Annuleer" xml:space="preserve">
+        <source>Cancel</source>
+        <target>Cancel</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Annuleren…" xml:space="preserve">
+        <source>Cancelling…</source>
+        <target>Cancelling…</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Anonieme tester" xml:space="preserve">
+        <source>Anonymous tester</source>
+        <target>Anonymous tester</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Antwoord van Apple kon niet gelezen worden: %@" xml:space="preserve">
+        <source>Apple's response could not be read: %@</source>
+        <target>Apple's response could not be read: %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App" xml:space="preserve">
+        <source>App</source>
+        <target>App</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App Analytics" xml:space="preserve">
+        <source>App Analytics</source>
+        <target>App Analytics</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App Analytics inschakelen" xml:space="preserve">
+        <source>Enable App Analytics</source>
+        <target>Enable App Analytics</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App Analytics staat aan. Apple maakt de eerste rapporten binnen 1 à 2 dagen klaar. Kom morgen terug of trek omlaag om te verversen." xml:space="preserve">
+        <source>App Analytics is on. Apple prepares the first reports within 1–2 days. Come back tomorrow or pull down to refresh.</source>
+        <target>App Analytics is on. Apple prepares the first reports within 1–2 days. Come back tomorrow or pull down to refresh.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App Review, klaar voor release en wat aandacht nodig heeft in één oogopslag." xml:space="preserve">
+        <source>App Review, ready for release and what needs attention at a glance.</source>
+        <target>App Review, ready for release and what needs attention at a glance.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App Store Connect API" xml:space="preserve">
+        <source>App Store Connect API</source>
+        <target>App Store Connect API</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App Store Connect API-documentatie" xml:space="preserve">
+        <source>App Store Connect API documentation</source>
+        <target>App Store Connect API documentation</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App Store Connect · TestFlight · Insights" xml:space="preserve">
+        <source>App Store Connect · TestFlight · Insights</source>
+        <target>App Store Connect · TestFlight · Insights</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="App Store Connect-account toevoegen" xml:space="preserve">
+        <source>Add App Store Connect account</source>
+        <target>Add App Store Connect account</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App Store-versies" xml:space="preserve">
+        <source>App Store versions</source>
+        <target>App Store versions</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App actief" xml:space="preserve">
+        <source>App active</source>
+        <target>App active</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App niet gevonden" xml:space="preserve">
+        <source>App not found</source>
+        <target>App not found</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App-beheerder" xml:space="preserve">
+        <source>App Manager</source>
+        <target>App Manager</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App-iconen en beoordelingen…" xml:space="preserve">
+        <source>App icons and ratings…</source>
+        <target>App icons and ratings…</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App-informatie" xml:space="preserve">
+        <source>App information</source>
+        <target>App information</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App-informatie (naam, ondertitel)" xml:space="preserve">
+        <source>App information (name, subtitle)</source>
+        <target>App information (name, subtitle)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="App-previews (video)" xml:space="preserve">
+        <source>App previews (video)</source>
+        <target>App previews (video)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apparaten" xml:space="preserve">
+        <source>Devices</source>
+        <target>Devices</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apple API-fout %lld." xml:space="preserve">
+        <source>Apple API error %lld.</source>
+        <target>Apple API error %lld.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apple ID gekopieerd" xml:space="preserve">
+        <source>Apple ID copied</source>
+        <target>Apple ID copied</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apple heeft de rapporten gestopt omdat ze lang niet zijn opgehaald. Schakel opnieuw in." xml:space="preserve">
+        <source>Apple stopped the reports because they haven't been fetched for a long time. Turn them on again.</source>
+        <target>Apple stopped the reports because they haven't been fetched for a long time. Turn them on again.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apple levert App Analytics als dagrapporten met 2 tot 5 dagen vertraging. Sessies, installaties en crashes tellen alleen mee als minstens 5 gebruikers hebben ingestemd met het delen van analysegegevens. Apple heeft geen retentierapport: retentie is hier een benadering op basis van sessies van nieuwe gebruikers." xml:space="preserve">
+        <source>Apple delivers App Analytics as daily reports with a delay of 2 to 5 days. Sessions, installations and crashes only count if at least 5 users have agreed to share analytics data. Apple has no retention report: retention here is an approximation based on sessions from new users.</source>
+        <target>Apple delivers App Analytics as daily reports with a delay of 2 to 5 days. Sessions, installations and crashes only count if at least 5 users have agreed to share analytics data. Apple has no retention report: retention here is an approximation based on sessions from new users.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apple levert verkoopcijfers ongeveer een dag later; de cijfers van vandaag zie je morgen." xml:space="preserve">
+        <source>Apple delivers sales figures about a day later; you'll see today's numbers tomorrow.</source>
+        <target>Apple delivers sales figures about a day later; you'll see today's numbers tomorrow.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apple maakt de codes in de achtergrond; het kan even duren voordat je ze kunt downloaden." xml:space="preserve">
+        <source>Apple creates the codes in the background; it may take a while before you can download them.</source>
+        <target>Apple creates the codes in the background; it may take a while before you can download them.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apple neemt de teksten van de vorige versie over. Daarna vul je What's New in, kies je een build en dien je in." xml:space="preserve">
+        <source>Apple copies the texts from the previous version. Then fill in What's New, choose a build and submit.</source>
+        <target>Apple copies the texts from the previous version. Then fill in What's New, choose a build and submit.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apple rekent de prijzen in andere landen automatisch om vanuit je basisland, tenzij je ze in App Store Connect handmatig vastzet." xml:space="preserve">
+        <source>Apple automatically converts prices in other countries from your base country, unless you set them manually in App Store Connect.</source>
+        <target>Apple automatically converts prices in other countries from your base country, unless you set them manually in App Store Connect.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apple stuurt bij elke gekozen gebeurtenis een ondertekend bericht naar de URL, bijvoorbeeld naar Homey, Slack of je eigen server." xml:space="preserve">
+        <source>For every selected event, Apple sends a signed message to the URL, for example to Homey, Slack or your own server.</source>
+        <target>For every selected event, Apple sends a signed message to the URL, for example to Homey, Slack or your own server.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apple weigert deze wijziging (409)." xml:space="preserve">
+        <source>Apple rejected this change (409).</source>
+        <target>Apple rejected this change (409).</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apple-documentatie over API-sleutels" xml:space="preserve">
+        <source>Apple documentation on API keys</source>
+        <target>Apple documentation on API keys</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apps" xml:space="preserve">
+        <source>Apps</source>
+        <target>Apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apps aanmaken" xml:space="preserve">
+        <source>Create apps</source>
+        <target>Create apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apps die met dit certificaat zijn ondertekend kunnen niet meer worden geïnstalleerd voor ontwikkeling. Dit kan niet ongedaan gemaakt worden." xml:space="preserve">
+        <source>Apps signed with this certificate can no longer be installed for development. This can't be undone.</source>
+        <target>Apps signed with this certificate can no longer be installed for development. This can't be undone.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apps laden…" xml:space="preserve">
+        <source>Loading apps…</source>
+        <target>Loading apps…</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Apps, versies, teksten, builds en TestFlight: App Manager of Admin." xml:space="preserve">
+        <source>Apps, versions, texts, builds and TestFlight: App Manager or Admin.</source>
+        <target>Apps, versions, texts, builds and TestFlight: App Manager or Admin.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Auteur" xml:space="preserve">
+        <source>Author</source>
+        <target>Author</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Authenticatie mislukt (401). Controleer Issuer ID, Key ID en de .p8-sleutel." xml:space="preserve">
+        <source>Authentication failed (401). Check the Issuer ID, Key ID and the .p8 key.</source>
+        <target>Authentication failed (401). Check the Issuer ID, Key ID and the .p8 key.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Automatisch (toestel)" xml:space="preserve">
+        <source>Automatic (device)</source>
+        <target>Automatic (device)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Automatisch informeren uit" xml:space="preserve">
+        <source>Automatic notifications off</source>
+        <target>Automatic notifications off</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Automatisch na goedkeuring" xml:space="preserve">
+        <source>Automatically after approval</source>
+        <target>Automatically after approval</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Automatisch volgt de taal van je toestel (anders Engels). Widgets en Apple Watch gebruiken dezelfde taal." xml:space="preserve">
+        <source>Automatic follows your device language (otherwise English). Widgets and Apple Watch use the same language.</source>
+        <target>Automatic follows your device language (otherwise English). Widgets and Apple Watch use the same language.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Background Assets: App Store-release" xml:space="preserve">
+        <source>Background Assets: App Store release</source>
+        <target>Background Assets: App Store release</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Background Assets: externe beta" xml:space="preserve">
+        <source>Background Assets: external beta</source>
+        <target>Background Assets: external beta</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Background Assets: interne beta" xml:space="preserve">
+        <source>Background Assets: internal beta</source>
+        <target>Background Assets: internal beta</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Background Assets: status" xml:space="preserve">
+        <source>Background Assets: status</source>
+        <target>Background Assets: status</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Basisprijs" xml:space="preserve">
+        <source>Base price</source>
+        <target>Base price</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Batterij" xml:space="preserve">
+        <source>Battery</source>
+        <target>Battery</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Beheerder" xml:space="preserve">
+        <source>Admin</source>
+        <target>Admin</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Bekijk DevTools met voorbeeldgegevens, zonder API-sleutel." xml:space="preserve">
+        <source>Explore DevTools with sample data, no API key needed.</source>
+        <target>Explore DevTools with sample data, no API key needed.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Bekijk demo" xml:space="preserve">
+        <source>Try the demo</source>
+        <target>Try the demo</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Bekijk in App Store" xml:space="preserve">
+        <source>View in App Store</source>
+        <target>View in App Store</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Beoordelingen" xml:space="preserve">
+        <source>Ratings &amp; Reviews</source>
+        <target>Ratings &amp; Reviews</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Beoordelingen &amp; reacties" xml:space="preserve">
+        <source>Ratings &amp; replies</source>
+        <target>Ratings &amp; replies</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Beschikbaar in" xml:space="preserve">
+        <source>Available in</source>
+        <target>Available in</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Beschikbaarheid" xml:space="preserve">
+        <source>Availability</source>
+        <target>Availability</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Beschrijving" xml:space="preserve">
+        <source>Description</source>
+        <target>Description</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Besturingssysteem" xml:space="preserve">
+        <source>Operating system</source>
+        <target>Operating system</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Beta goedgekeurd" xml:space="preserve">
+        <source>Beta approved</source>
+        <target>Beta approved</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Beta-review" xml:space="preserve">
+        <source>Beta Review</source>
+        <target>Beta Review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Bewaar" xml:space="preserve">
+        <source>Save</source>
+        <target>Save</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Bezig" xml:space="preserve">
+        <source>In progress</source>
+        <target>In progress</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Bijgewerkt" xml:space="preserve">
+        <source>Updated</source>
+        <target>Updated</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Branch of tag" xml:space="preserve">
+        <source>Branch or tag</source>
+        <target>Branch or tag</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Build" xml:space="preserve">
+        <source>Build</source>
+        <target>Build</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Build #%lld" xml:space="preserve">
+        <source>Build #%lld</source>
+        <target>Build #%lld</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Build %@" xml:space="preserve">
+        <source>Build %@</source>
+        <target>Build %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Build %@ gekoppeld" xml:space="preserve">
+        <source>Build %@ attached</source>
+        <target>Build %@ attached</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Build %@ is verlopen" xml:space="preserve">
+        <source>Build %@ expired</source>
+        <target>Build %@ expired</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Build %@ laten verlopen" xml:space="preserve">
+        <source>Expire build %@</source>
+        <target>Expire build %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Build %@: export compliance ontbreekt" xml:space="preserve">
+        <source>Build %@: export compliance missing</source>
+        <target>Build %@: export compliance missing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Build gestart" xml:space="preserve">
+        <source>Build started</source>
+        <target>Build started</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Build geüpload of verwerkt" xml:space="preserve">
+        <source>Build uploaded or processed</source>
+        <target>Build uploaded or processed</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Build is verlopen" xml:space="preserve">
+        <source>Build expired</source>
+        <target>Build expired</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Build laten verlopen" xml:space="preserve">
+        <source>Expire build</source>
+        <target>Expire build</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Build laten verlopen?" xml:space="preserve">
+        <source>Expire build?</source>
+        <target>Expire build?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Builds" xml:space="preserve">
+        <source>Builds</source>
+        <target>Builds</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Builds beheren, testgroepen, testers, What to Test en beta-review." xml:space="preserve">
+        <source>Manage builds, test groups, testers, What to Test and beta review.</source>
+        <target>Manage builds, test groups, testers, What to Test and beta review.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Builds upload je vanuit Xcode of Transporter. Hier koppel je een verwerkte build aan deze versie." xml:space="preserve">
+        <source>Upload builds from Xcode or Transporter. Here you attach a processed build to this version.</source>
+        <target>Upload builds from Xcode or Transporter. Here you attach a processed build to this version.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Bundle ID (bijv. com.bedrijf.app)" xml:space="preserve">
+        <source>Bundle ID (e.g. com.company.app)</source>
+        <target>Bundle ID (e.g. com.company.app)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Bundle ID gekopieerd" xml:space="preserve">
+        <source>Bundle ID copied</source>
+        <target>Bundle ID copied</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Bundle ID's van je apps" xml:space="preserve">
+        <source>Bundle IDs of your apps</source>
+        <target>Bundle IDs of your apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Certificaat ingetrokken" xml:space="preserve">
+        <source>Certificate revoked</source>
+        <target>Certificate revoked</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Certificaat intrekken?" xml:space="preserve">
+        <source>Revoke certificate?</source>
+        <target>Revoke certificate?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Certificaten" xml:space="preserve">
+        <source>Certificates</source>
+        <target>Certificates</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Certificaten, identifiers en profielen" xml:space="preserve">
+        <source>Certificates, Identifiers &amp; Profiles</source>
+        <target>Certificates, Identifiers &amp; Profiles</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Codes" xml:space="preserve">
+        <source>Codes</source>
+        <target>Codes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Codes genereren" xml:space="preserve">
+        <source>Generate codes</source>
+        <target>Generate codes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Codes worden aangemaakt" xml:space="preserve">
+        <source>Creating codes</source>
+        <target>Creating codes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Commit" xml:space="preserve">
+        <source>Commit</source>
+        <target>Commit</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Compliance review" xml:space="preserve">
+        <source>Compliance review</source>
+        <target>Compliance review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Contract nodig" xml:space="preserve">
+        <source>Contract needed</source>
+        <target>Contract needed</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Conversie" xml:space="preserve">
+        <source>Conversion</source>
+        <target>Conversion</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Copyright, bijv. 2026 PixelForges" xml:space="preserve">
+        <source>Copyright, e.g. 2026 PixelForges</source>
+        <target>Copyright, e.g. 2026 PixelForges</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Crash" xml:space="preserve">
+        <source>Crash</source>
+        <target>Crash</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Crashes" xml:space="preserve">
+        <source>Crashes</source>
+        <target>Crashes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Crashes (%lld)" xml:space="preserve">
+        <source>Crashes (%lld)</source>
+        <target>Crashes (%lld)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Crashlog" xml:space="preserve">
+        <source>Crash log</source>
+        <target>Crash log</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Crashlog laden" xml:space="preserve">
+        <source>Load crash log</source>
+        <target>Load crash log</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Custom product pages" xml:space="preserve">
+        <source>Custom product pages</source>
+        <target>Custom product pages</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Dag" xml:space="preserve">
+        <source>Day</source>
+        <target>Day</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Dag %lld van 7 · %lld%%" xml:space="preserve">
+        <source>Day %lld of 7 · %lld%%</source>
+        <target>Day %lld of 7 · %lld%%</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Datum" xml:space="preserve">
+        <source>Date</source>
+        <target>Date</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="De .p8 wordt alleen in de Keychain van dit toestel bewaard en nooit gesynchroniseerd of verstuurd." xml:space="preserve">
+        <source>The .p8 is stored only in this device's Keychain and is never synced or sent.</source>
+        <target>The .p8 is stored only in this device's Keychain and is never synced or sent.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="De UDID vind je in Finder of Xcode als het toestel is aangesloten." xml:space="preserve">
+        <source>You can find the UDID in Finder or Xcode when the device is connected.</source>
+        <target>You can find the UDID in Finder or Xcode when the device is connected.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="De pushserver gaf een fout: %@" xml:space="preserve">
+        <source>The push server returned an error: %@</source>
+        <target>The push server returned an error: %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="De rol van de sleutel is te beperkt voor deze actie. Gebruik een sleutel met de rol Admin." xml:space="preserve">
+        <source>The key's role is too limited for this action. Use a key with the Admin role.</source>
+        <target>The key's role is too limited for this action. Use a key with the Admin role.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="De rol van een bestaande sleutel kun je niet wijzigen; maak dan een nieuwe sleutel." xml:space="preserve">
+        <source>You can't change the role of an existing key; create a new key instead.</source>
+        <target>You can't change the role of an existing key; create a new key instead.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="De rollen van de accounthouder kun je niet wijzigen." xml:space="preserve">
+        <source>You can't change the Account Holder's roles.</source>
+        <target>You can't change the Account Holder's roles.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="De sleutel gaat direct de Keychain van dit toestel in. Verwijder daarna gerust de kopie uit Bestanden." xml:space="preserve">
+        <source>The key goes straight into this device's Keychain. Feel free to delete the copy from Files afterwards.</source>
+        <target>The key goes straight into this device's Keychain. Feel free to delete the copy from Files afterwards.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="De versie wordt teruggetrokken uit App Review. Je kunt hem daarna opnieuw indienen." xml:space="preserve">
+        <source>The version is withdrawn from App Review. You can submit it again afterwards.</source>
+        <target>The version is withdrawn from App Review. You can submit it again afterwards.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deel codes (CSV)" xml:space="preserve">
+        <source>Share codes (CSV)</source>
+        <target>Share codes (CSV)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deel crashlog" xml:space="preserve">
+        <source>Share crash log</source>
+        <target>Share crash log</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deel log" xml:space="preserve">
+        <source>Share log</source>
+        <target>Share log</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delen met gezin" xml:space="preserve">
+        <source>Family Sharing</source>
+        <target>Family Sharing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Demo afsluiten" xml:space="preserve">
+        <source>Exit demo</source>
+        <target>Exit demo</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Demo-modus" xml:space="preserve">
+        <source>Demo mode</source>
+        <target>Demo mode</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Demo-modus actief – voorbeeldgegevens" xml:space="preserve">
+        <source>Demo mode – sample data</source>
+        <target>Demo mode – sample data</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Details" xml:space="preserve">
+        <source>Details</source>
+        <target>Details</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="DevTools" xml:space="preserve">
+        <source>DevTools</source>
+        <target>DevTools</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="DevTools praat rechtstreeks met api.appstoreconnect.apple.com; er zit geen server tussen." xml:space="preserve">
+        <source>DevTools talks directly to api.appstoreconnect.apple.com; there is no server in between.</source>
+        <target>DevTools talks directly to api.appstoreconnect.apple.com; there is no server in between.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="DevTools vraagt Apple eenmalig om doorlopende analyserapporten voor %@. Apple maakt de eerste rapporten binnen 1 à 2 dagen klaar; daarna komen er elke dag nieuwe bij." xml:space="preserve">
+        <source>DevTools asks Apple once for ongoing analytics reports for %@. Apple prepares the first reports within 1–2 days; after that, new ones are added every day.</source>
+        <target>DevTools asks Apple once for ongoing analytics reports for %@. Apple prepares the first reports within 1–2 days; after that, new ones are added every day.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="DevTools wordt geladen" xml:space="preserve">
+        <source>DevTools is loading</source>
+        <target>DevTools is loading</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="DevTools zet per app een webhook in App Store Connect die naar de DevTools-pushserver wijst. Die controleert Apple's handtekening en stuurt de melding via OneSignal naar dit toestel. Er wordt niets opgeslagen; je API-sleutel verlaat dit toestel niet." xml:space="preserve">
+        <source>DevTools sets up a webhook in App Store Connect for each app that points to the DevTools push server. It verifies Apple's signature and sends the notification to this device via OneSignal. Nothing is stored; your API key never leaves this device.</source>
+        <target>DevTools sets up a webhook in App Store Connect for each app that points to the DevTools push server. It verifies Apple's signature and sends the notification to this device via OneSignal. Nothing is stored; your API key never leaves this device.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Developer-status" xml:space="preserve">
+        <source>Developer status</source>
+        <target>Developer status</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deze API-sleutel heeft geen toegang tot apps." xml:space="preserve">
+        <source>This API key has no access to apps.</source>
+        <target>This API key has no access to apps.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deze app gebruikt geen Game Center." xml:space="preserve">
+        <source>This app doesn't use Game Center.</source>
+        <target>This app doesn't use Game Center.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deze iPhone is aangemeld" xml:space="preserve">
+        <source>This iPhone is registered</source>
+        <target>This iPhone is registered</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deze melding hoort niet bij een scherm in DevTools." xml:space="preserve">
+        <source>This notification doesn't belong to a screen in DevTools.</source>
+        <target>This notification doesn't belong to a screen in DevTools.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deze versie is aan alle gebruikers uitgebracht." xml:space="preserve">
+        <source>This version has been released to all users.</source>
+        <target>This version has been released to all users.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deze versie kan niet meer worden aangepast." xml:space="preserve">
+        <source>This version can no longer be edited.</source>
+        <target>This version can no longer be edited.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deze workflow is uitgeschakeld in Xcode." xml:space="preserve">
+        <source>This workflow is disabled in Xcode.</source>
+        <target>This workflow is disabled in Xcode.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Diagnose" xml:space="preserve">
+        <source>Diagnostics</source>
+        <target>Diagnostics</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Diagnose (vastlopers, opstarten, schrijfacties)" xml:space="preserve">
+        <source>Diagnostics (hangs, launches, disk writes)</source>
+        <target>Diagnostics (hangs, launches, disk writes)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Dit is de demo-modus. Koppel je eigen App Store Connect-account om echte gegevens te zien." xml:space="preserve">
+        <source>This is demo mode. Connect your own App Store Connect account to see real data.</source>
+        <target>This is demo mode. Connect your own App Store Connect account to see real data.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Dit lijkt geen geldige .p8-sleutel" xml:space="preserve">
+        <source>This doesn't look like a valid .p8 key</source>
+        <target>This doesn't look like a valid .p8 key</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Donker" xml:space="preserve">
+        <source>Dark</source>
+        <target>Dark</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Downloadrapporten opnieuw ophalen" xml:space="preserve">
+        <source>Reload download reports</source>
+        <target>Reload download reports</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Downloads" xml:space="preserve">
+        <source>Downloads</source>
+        <target>Downloads</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Downloads &amp; opbrengst" xml:space="preserve">
+        <source>Downloads &amp; proceeds</source>
+        <target>Downloads &amp; proceeds</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Downloads en opbrengst activeren" xml:space="preserve">
+        <source>Enable downloads and proceeds</source>
+        <target>Enable downloads and proceeds</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Downloads met de Insights-grafiek van één app of al je apps. Houd ingedrukt → Wijzig widget om een app te kiezen." xml:space="preserve">
+        <source>Downloads with the Insights chart for one app or all apps. Touch and hold → Edit Widget to choose an app.</source>
+        <target>Downloads with the Insights chart for one app or all apps. Touch and hold → Edit Widget to choose an app.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Downloads per app" xml:space="preserve">
+        <source>Downloads per app</source>
+        <target>Downloads per app</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Downloads · %@" xml:space="preserve">
+        <source>Downloads · %@</source>
+        <target>Downloads · %@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Downloads, groei en apps in review." xml:space="preserve">
+        <source>Downloads, growth and apps in review.</source>
+        <target>Downloads, growth and apps in review.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Downloads, opbrengst (Sales Reports): Sales, Finance of Admin." xml:space="preserve">
+        <source>Downloads, proceeds (Sales Reports): Sales, Finance or Admin.</source>
+        <target>Downloads, proceeds (Sales Reports): Sales, Finance or Admin.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Downloads, updates en opbrengsten per app in Homey-stijl grafieken." xml:space="preserve">
+        <source>Downloads, updates and proceeds per app in beautiful charts.</source>
+        <target>Downloads, updates and proceeds per app in beautiful charts.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Duur" xml:space="preserve">
+        <source>Duration</source>
+        <target>Duration</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="E-mail" xml:space="preserve">
+        <source>Email</source>
+        <target>Email</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="E-mailadres" xml:space="preserve">
+        <source>Email address</source>
+        <target>Email address</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Een teamsleutel in App Store Connect" xml:space="preserve">
+        <source>A team key in App Store Connect</source>
+        <target>A team key in App Store Connect</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Eenmalige codes" xml:space="preserve">
+        <source>One-time use codes</source>
+        <target>One-time use codes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Eerste downloads" xml:space="preserve">
+        <source>First-time downloads</source>
+        <target>First-time downloads</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Eerste keer? Tik op Vraag toegang aan en accepteer de voorwaarden." xml:space="preserve">
+        <source>First time? Tap Request Access and accept the terms.</source>
+        <target>First time? Tap Request Access and accept the terms.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Eén ID voor je hele team" xml:space="preserve">
+        <source>One ID for your whole team</source>
+        <target>One ID for your whole team</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Eigen API-sleutels" xml:space="preserve">
+        <source>Your own API keys</source>
+        <target>Your own API keys</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Eigen codes" xml:space="preserve">
+        <source>Custom codes</source>
+        <target>Custom codes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Einde" xml:space="preserve">
+        <source>End</source>
+        <target>End</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Evenementen op je productpagina en in zoekresultaten" xml:space="preserve">
+        <source>Events on your product page and in search results</source>
+        <target>Events on your product page and in search results</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Events, product pages, A/B-tests en Game Center" xml:space="preserve">
+        <source>Events, product pages, A/B tests and Game Center</source>
+        <target>Events, product pages, A/B tests and Game Center</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Export compliance" xml:space="preserve">
+        <source>Export compliance</source>
+        <target>Export compliance</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Export compliance opgeslagen" xml:space="preserve">
+        <source>Export compliance saved</source>
+        <target>Export compliance saved</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Extern" xml:space="preserve">
+        <source>External</source>
+        <target>External</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Extern testen" xml:space="preserve">
+        <source>External testing</source>
+        <target>External testing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Externe tests" xml:space="preserve">
+        <source>External testing</source>
+        <target>External testing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Extra productpagina's met eigen screenshots en link" xml:space="preserve">
+        <source>Additional product pages with their own screenshots and link</source>
+        <target>Additional product pages with their own screenshots and link</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Feedback" xml:space="preserve">
+        <source>Feedback</source>
+        <target>Feedback</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Feedback (%lld)" xml:space="preserve">
+        <source>Feedback (%lld)</source>
+        <target>Feedback (%lld)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Feedback en crashes van testers" xml:space="preserve">
+        <source>Feedback and crashes from testers</source>
+        <target>Feedback and crashes from testers</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Feedback verwijderen?" xml:space="preserve">
+        <source>Delete feedback?</source>
+        <target>Delete feedback?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Feedback voor deze build" xml:space="preserve">
+        <source>Feedback for this build</source>
+        <target>Feedback for this build</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Financiën" xml:space="preserve">
+        <source>Finance</source>
+        <target>Finance</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Fout" xml:space="preserve">
+        <source>Error</source>
+        <target>Error</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Fout bij verwerken" xml:space="preserve">
+        <source>Processing error</source>
+        <target>Processing error</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ga in App Store Connect naar Business (bovenin de menubalk)." xml:space="preserve">
+        <source>In App Store Connect, go to Business (in the top menu bar).</source>
+        <target>In App Store Connect, go to Business (in the top menu bar).</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ga naar Gebruikers en toegang → tabblad Integraties." xml:space="preserve">
+        <source>Go to Users and Access → Integrations tab.</source>
+        <target>Go to Users and Access → Integrations tab.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Game Center" xml:space="preserve">
+        <source>Game Center</source>
+        <target>Game Center</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Game Center staat uit" xml:space="preserve">
+        <source>Game Center is off</source>
+        <target>Game Center is off</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geannuleerd" xml:space="preserve">
+        <source>Cancelled</source>
+        <target>Cancelled</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gebeurtenis" xml:space="preserve">
+        <source>Event</source>
+        <target>Event</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gebeurtenissen" xml:space="preserve">
+        <source>Events</source>
+        <target>Events</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gebruiker verwijderd" xml:space="preserve">
+        <source>User removed</source>
+        <target>User removed</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gebruikers (%lld)" xml:space="preserve">
+        <source>Users (%lld)</source>
+        <target>Users (%lld)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gebruikers en toegang" xml:space="preserve">
+        <source>Users and Access</source>
+        <target>Users and Access</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gebruikersnaam" xml:space="preserve">
+        <source>Username</source>
+        <target>Username</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gebruikt deze build encryptie die niet is vrijgesteld (bijv. eigen crypto, niet alleen HTTPS)?" xml:space="preserve">
+        <source>Does this build use encryption that is not exempt (e.g. custom crypto, not just HTTPS)?</source>
+        <target>Does this build use encryption that is not exempt (e.g. custom crypto, not just HTTPS)?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen A/B-tests" xml:space="preserve">
+        <source>No A/B tests</source>
+        <target>No A/B tests</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen Asset Library gevonden voor deze app." xml:space="preserve">
+        <source>No Asset Library found for this app.</source>
+        <target>No Asset Library found for this app.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen HTTP-antwoord van Apple" xml:space="preserve">
+        <source>No HTTP response from Apple</source>
+        <target>No HTTP response from Apple</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen account geselecteerd" xml:space="preserve">
+        <source>No account selected</source>
+        <target>No account selected</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen actieve review-inzending gevonden." xml:space="preserve">
+        <source>No active review submission found.</source>
+        <target>No active review submission found.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen app-iconen" xml:space="preserve">
+        <source>No app icons</source>
+        <target>No app icons</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen app-informatie gevonden" xml:space="preserve">
+        <source>No app information found</source>
+        <target>No app information found</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen apps" xml:space="preserve">
+        <source>No apps</source>
+        <target>No apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen bruikbare builds" xml:space="preserve">
+        <source>No usable builds</source>
+        <target>No usable builds</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen builds" xml:space="preserve">
+        <source>No builds</source>
+        <target>No builds</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen certificaten" xml:space="preserve">
+        <source>No certificates</source>
+        <target>No certificates</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen crashlog beschikbaar" xml:space="preserve">
+        <source>No crash log available</source>
+        <target>No crash log available</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen crashmeldingen" xml:space="preserve">
+        <source>No crash reports</source>
+        <target>No crash reports</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen custom product pages" xml:space="preserve">
+        <source>No custom product pages</source>
+        <target>No custom product pages</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen diagnosegegevens voor deze build" xml:space="preserve">
+        <source>No diagnostics data for this build</source>
+        <target>No diagnostics data for this build</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen downloads zichtbaar" xml:space="preserve">
+        <source>No downloads visible</source>
+        <target>No downloads visible</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen gefaseerde release voor deze versie." xml:space="preserve">
+        <source>No phased release for this version.</source>
+        <target>No phased release for this version.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen identifiers" xml:space="preserve">
+        <source>No identifiers</source>
+        <target>No identifiers</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen in-app events" xml:space="preserve">
+        <source>No in-app events</source>
+        <target>No in-app events</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen opmerking" xml:space="preserve">
+        <source>No comment</source>
+        <target>No comment</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen profielen" xml:space="preserve">
+        <source>No profiles</source>
+        <target>No profiles</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen testgroepen" xml:space="preserve">
+        <source>No test groups</source>
+        <target>No test groups</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen testgroepen. Maak er een aan via Testgroepen." xml:space="preserve">
+        <source>No test groups. Create one under Test groups.</source>
+        <target>No test groups. Create one under Test groups.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen toegang (403). De API-sleutel heeft niet de juiste rol voor deze actie." xml:space="preserve">
+        <source>No access (403). The API key doesn't have the right role for this action.</source>
+        <target>No access (403). The API key doesn't have the right role for this action.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen toestellen" xml:space="preserve">
+        <source>No devices</source>
+        <target>No devices</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen varianten" xml:space="preserve">
+        <source>No variants</source>
+        <target>No variants</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen vendornummer ingesteld." xml:space="preserve">
+        <source>No vendor number set.</source>
+        <target>No vendor number set.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geen wijzigingen" xml:space="preserve">
+        <source>No changes</source>
+        <target>No changes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gefaseerde release" xml:space="preserve">
+        <source>Phased release</source>
+        <target>Phased release</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gefaseerde release aanzetten" xml:space="preserve">
+        <source>Turn on phased release</source>
+        <target>Turn on phased release</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gefaseerde release uitzetten" xml:space="preserve">
+        <source>Turn off phased release</source>
+        <target>Turn off phased release</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gegenereerde reeksen" xml:space="preserve">
+        <source>Generated batches</source>
+        <target>Generated batches</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gegevens" xml:space="preserve">
+        <source>Data</source>
+        <target>Data</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geheim" xml:space="preserve">
+        <source>Secret</source>
+        <target>Secret</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gekopieerd" xml:space="preserve">
+        <source>Copied</source>
+        <target>Copied</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gem. rating" xml:space="preserve">
+        <source>Avg. rating</source>
+        <target>Avg. rating</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gem./dag" xml:space="preserve">
+        <source>Avg./day</source>
+        <target>Avg./day</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gem./week" xml:space="preserve">
+        <source>Avg./week</source>
+        <target>Avg./week</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gepauzeerd" xml:space="preserve">
+        <source>Paused</source>
+        <target>Paused</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gepauzeerd. Nieuwe gebruikers kunnen de versie nog wel handmatig downloaden. Je kunt maximaal 30 dagen pauzeren." xml:space="preserve">
+        <source>Paused. New users can still download the version manually. You can pause for up to 30 days.</source>
+        <target>Paused. New users can still download the version manually. You can pause for up to 30 days.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gereed" xml:space="preserve">
+        <source>Ready</source>
+        <target>Ready</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geregistreerde testtoestellen" xml:space="preserve">
+        <source>Registered test devices</source>
+        <target>Registered test devices</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geslaagd" xml:space="preserve">
+        <source>Succeeded</source>
+        <target>Succeeded</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gestart" xml:space="preserve">
+        <source>Started</source>
+        <target>Started</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geüpload" xml:space="preserve">
+        <source>Uploaded</source>
+        <target>Uploaded</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Geüpload. Apple verwerkt de bestanden nu." xml:space="preserve">
+        <source>Uploaded. Apple is now processing the files.</source>
+        <target>Uploaded. Apple is now processing the files.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Goedemiddag" xml:space="preserve">
+        <source>Good afternoon</source>
+        <target>Good afternoon</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Goedemorgen" xml:space="preserve">
+        <source>Good morning</source>
+        <target>Good morning</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Goedenavond" xml:space="preserve">
+        <source>Good evening</source>
+        <target>Good evening</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Goedgekeurd" xml:space="preserve">
+        <source>Approved</source>
+        <target>Approved</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Grafiek" xml:space="preserve">
+        <source>Chart</source>
+        <target>Chart</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Gratis" xml:space="preserve">
+        <source>Free</source>
+        <target>Free</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Groep" xml:space="preserve">
+        <source>Group</source>
+        <target>Group</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Groep verwijderen" xml:space="preserve">
+        <source>Delete group</source>
+        <target>Delete group</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Groep verwijderen?" xml:space="preserve">
+        <source>Delete group?</source>
+        <target>Delete group?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Handleiding" xml:space="preserve">
+        <source>Guide</source>
+        <target>Guide</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Handleiding: API-sleutel, Issuer ID &amp; vendornummer" xml:space="preserve">
+        <source>Guide: API key, Issuer ID &amp; vendor number</source>
+        <target>Guide: API key, Issuer ID &amp; vendor number</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Handmatig vrijgeven" xml:space="preserve">
+        <source>Release manually</source>
+        <target>Release manually</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Header en Search Results" xml:space="preserve">
+        <source>Header and Search Results</source>
+        <target>Header and Search Results</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Herdownload" xml:space="preserve">
+        <source>Re-download</source>
+        <target>Re-download</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Herdownloads" xml:space="preserve">
+        <source>Re-downloads</source>
+        <target>Re-downloads</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Hervat release" xml:space="preserve">
+        <source>Resume release</source>
+        <target>Resume release</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Het is een lange code in de vorm 69a6de7a-xxxx-xxxx-xxxx-xxxxxxxxxxxx." xml:space="preserve">
+        <source>It's a long code in the form 69a6de7a-xxxx-xxxx-xxxx-xxxxxxxxxxxx.</source>
+        <target>It's a long code in the form 69a6de7a-xxxx-xxxx-xxxx-xxxxxxxxxxxx.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Hetzelfde ID zit in de bestandsnaam: AuthKey_2X9R4HXF34.p8." xml:space="preserve">
+        <source>The same ID is in the file name: AuthKey_2X9R4HXF34.p8.</source>
+        <target>The same ID is in the file name: AuthKey_2X9R4HXF34.p8.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Hiervoor heeft je API-sleutel de rol Beheerder (Admin) nodig." xml:space="preserve">
+        <source>Your API key needs the Admin role for this.</source>
+        <target>Your API key needs the Admin role for this.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Hoe kom ik aan een API-sleutel?" xml:space="preserve">
+        <source>How do I get an API key?</source>
+        <target>How do I get an API key?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Hoe kom ik hieraan? Bekijk de handleiding" xml:space="preserve">
+        <source>Where do I find these? See the guide</source>
+        <target>Where do I find these? See the guide</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Home" xml:space="preserve">
+        <source>Home</source>
+        <target>Home</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Houd een screenshot ingedrukt om te verplaatsen of te verwijderen. Maximaal 10 per formaat." xml:space="preserve">
+        <source>Touch and hold a screenshot to move or delete it. Up to 10 per size.</source>
+        <target>Touch and hold a screenshot to move or delete it. Up to 10 per size.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Hulp" xml:space="preserve">
+        <source>Help</source>
+        <target>Help</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Iconen komen uit de App Store (live apps) of uit je laatste geüploade build. Upload een build of trek omlaag om te verversen." xml:space="preserve">
+        <source>Icons come from the App Store (live apps) or from your latest uploaded build. Upload a build or pull down to refresh.</source>
+        <target>Icons come from the App Store (live apps) or from your latest uploaded build. Upload a build or pull down to refresh.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Iconen, status (Live, In review) en versies in één overzicht." xml:space="preserve">
+        <source>Icons, status (Live, In Review) and versions in one overview.</source>
+        <target>Icons, status (Live, In Review) and versions in one overview.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Identifier aangemaakt" xml:space="preserve">
+        <source>Identifier created</source>
+        <target>Identifier created</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Identifiers" xml:space="preserve">
+        <source>Identifiers</source>
+        <target>Identifiers</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Iemand uitnodigen" xml:space="preserve">
+        <source>Invite someone</source>
+        <target>Invite someone</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="In DevTools: Account → Account toevoegen → Kies AuthKey_*.p8." xml:space="preserve">
+        <source>In DevTools: Account → Add account → Choose AuthKey_*.p8.</source>
+        <target>In DevTools: Account → Add account → Choose AuthKey_*.p8.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="In beta-review" xml:space="preserve">
+        <source>In beta review</source>
+        <target>In beta review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="In de lijst met sleutels staat per sleutel een Sleutel-ID (Key ID), bijvoorbeeld 2X9R4HXF34." xml:space="preserve">
+        <source>The list of keys shows a Key ID for each key, for example 2X9R4HXF34.</source>
+        <target>The list of keys shows a Key ID for each key, for example 2X9R4HXF34.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="In de wachtrij" xml:space="preserve">
+        <source>Queued</source>
+        <target>Queued</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="In review" xml:space="preserve">
+        <source>In Review</source>
+        <target>In Review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="In test" xml:space="preserve">
+        <source>In testing</source>
+        <target>In testing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="In voorbereiding" xml:space="preserve">
+        <source>Preparing</source>
+        <target>Preparing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="In-app" xml:space="preserve">
+        <source>In-app</source>
+        <target>In-app</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="In-app aankopen" xml:space="preserve">
+        <source>In-app purchases</source>
+        <target>In-app purchases</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="In-app aankopen en abonnementen" xml:space="preserve">
+        <source>In-app purchases and subscriptions</source>
+        <target>In-app purchases and subscriptions</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="In-app events" xml:space="preserve">
+        <source>In-app events</source>
+        <target>In-app events</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Indienen" xml:space="preserve">
+        <source>Submit</source>
+        <target>Submit</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Indienen voor App Review?" xml:space="preserve">
+        <source>Submit for App Review?</source>
+        <target>Submit for App Review?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Indienen voor beta-review (extern)" xml:space="preserve">
+        <source>Submit for beta review (external)</source>
+        <target>Submit for beta review (external)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Indienen voor review" xml:space="preserve">
+        <source>Submit for review</source>
+        <target>Submit for review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ingediend voor beta-review" xml:space="preserve">
+        <source>Submitted for beta review</source>
+        <target>Submitted for beta review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ingediend voor review" xml:space="preserve">
+        <source>Submitted for review</source>
+        <target>Submitted for review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ingediend voor review 🚀" xml:space="preserve">
+        <source>Submitted for review 🚀</source>
+        <target>Submitted for review 🚀</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Inschakelen" xml:space="preserve">
+        <source>Enable</source>
+        <target>Enable</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Insights" xml:space="preserve">
+        <source>Insights</source>
+        <target>Insights</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Install." xml:space="preserve">
+        <source>Installs</source>
+        <target>Installs</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Installaties" xml:space="preserve">
+        <source>Installs</source>
+        <target>Installs</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Installaties per app" xml:space="preserve">
+        <source>Installs per app</source>
+        <target>Installs per app</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Instellingen opgeslagen" xml:space="preserve">
+        <source>Settings saved</source>
+        <target>Settings saved</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Instellingen opslaan" xml:space="preserve">
+        <source>Save settings</source>
+        <target>Save settings</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Intern" xml:space="preserve">
+        <source>Internal</source>
+        <target>Internal</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Intern testen" xml:space="preserve">
+        <source>Internal testing</source>
+        <target>Internal testing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Interne groepen met toegang tot alle builds krijgen elke build automatisch." xml:space="preserve">
+        <source>Internal groups with access to all builds get every build automatically.</source>
+        <target>Internal groups with access to all builds get every build automatically.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Interne testers zijn leden van je team; externe testers nodig je uit per e-mail of publieke link." xml:space="preserve">
+        <source>Internal testers are members of your team; external testers are invited by email or public link.</source>
+        <target>Internal testers are members of your team; external testers are invited by email or public link.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Intrekken" xml:space="preserve">
+        <source>Revoke</source>
+        <target>Revoke</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Issuer ID" xml:space="preserve">
+        <source>Issuer ID</source>
+        <target>Issuer ID</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Issuer ID kopiëren" xml:space="preserve">
+        <source>Copy the Issuer ID</source>
+        <target>Copy the Issuer ID</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Issuer ID of Key ID klopt niet, de .p8 hoort bij een andere sleutel, of de sleutel is ingetrokken." xml:space="preserve">
+        <source>The Issuer ID or Key ID is wrong, the .p8 belongs to another key, or the key was revoked.</source>
+        <target>The Issuer ID or Key ID is wrong, the .p8 belongs to another key, or the key was revoked.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ja" xml:space="preserve">
+        <source>Yes</source>
+        <target>Yes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ja, gebruikt niet-vrijgestelde encryptie" xml:space="preserve">
+        <source>Yes, uses non-exempt encryption</source>
+        <target>Yes, uses non-exempt encryption</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Je apps met icoon, trend, downloads, rating en status." xml:space="preserve">
+        <source>Your apps with icon, trend, downloads, rating and status.</source>
+        <target>Your apps with icon, trend, downloads, rating and status.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Je hebt een App Store Connect API-sleutel (.p8) nodig. Maak die aan in App Store Connect → Gebruikers en toegang → Integraties." xml:space="preserve">
+        <source>You need an App Store Connect API key (.p8). Create one in App Store Connect → Users and Access → Integrations.</source>
+        <target>You need an App Store Connect API key (.p8). Create one in App Store Connect → Users and Access → Integrations.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Je hebt nodig: Issuer ID, Key ID, het .p8-bestand en (voor downloads) je vendornummer." xml:space="preserve">
+        <source>You need: Issuer ID, Key ID, the .p8 file and (for downloads) your vendor number.</source>
+        <target>You need: Issuer ID, Key ID, the .p8 file and (for downloads) your vendor number.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Je reactie" xml:space="preserve">
+        <source>Your reply</source>
+        <target>Your reply</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Je sleutel blijft op dit toestel" xml:space="preserve">
+        <source>Your key stays on this device</source>
+        <target>Your key stays on this device</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Jouw App Store Connect in je broekzak." xml:space="preserve">
+        <source>Your App Store Connect in your pocket.</source>
+        <target>Your App Store Connect in your pocket.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Jouw opbrengst" xml:space="preserve">
+        <source>Your proceeds</source>
+        <target>Your proceeds</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Jouw reactie" xml:space="preserve">
+        <source>Your reply</source>
+        <target>Your reply</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kan alleen als de status 'Ready to submit' is. De eerste in-app aankoop dien je samen met een app-versie in." xml:space="preserve">
+        <source>Only possible when the status is 'Ready to Submit'. Submit your first in-app purchase together with an app version.</source>
+        <target>Only possible when the status is 'Ready to Submit'. Submit your first in-app purchase together with an app version.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kan altijd aangepast worden, ook zonder nieuwe versie." xml:space="preserve">
+        <source>Can be changed at any time, even without a new version.</source>
+        <target>Can be changed at any time, even without a new version.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kan maar één keer – bewaar hem goed" xml:space="preserve">
+        <source>Only possible once – keep it safe</source>
+        <target>Only possible once – keep it safe</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Key %@%@" xml:space="preserve">
+        <source>Key %@%@</source>
+        <target>Key %@%@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Key ID" xml:space="preserve">
+        <source>Key ID</source>
+        <target>Key ID</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Keychain-fout: %d" xml:space="preserve">
+        <source>Keychain error: %d</source>
+        <target>Keychain error: %d</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kies AuthKey_*.p8" xml:space="preserve">
+        <source>Choose AuthKey_*.p8</source>
+        <target>Choose AuthKey_*.p8</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kies build" xml:space="preserve">
+        <source>Choose build</source>
+        <target>Choose build</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kies de nieuwe prijs in %@. De nieuwe prijs geldt meteen; andere landen worden automatisch omgerekend." xml:space="preserve">
+        <source>Choose the new price in %@. The new price takes effect immediately; other countries are converted automatically.</source>
+        <target>Choose the new price in %@. The new price takes effect immediately; other countries are converted automatically.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kies een app" xml:space="preserve">
+        <source>Choose an app</source>
+        <target>Choose an app</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kies eerst een build." xml:space="preserve">
+        <source>Choose a build first.</source>
+        <target>Choose a build first.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kies je in DevTools het .p8-bestand, dan wordt de Key ID automatisch ingevuld." xml:space="preserve">
+        <source>When you choose the .p8 file in DevTools, the Key ID is filled in automatically.</source>
+        <target>When you choose the .p8 file in DevTools, the Key ID is filled in automatically.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kies links App Store Connect API en dan Teamsleutels." xml:space="preserve">
+        <source>Choose App Store Connect API on the left, then Team Keys.</source>
+        <target>Choose App Store Connect API on the left, then Team Keys.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Klaar" xml:space="preserve">
+        <source>Done</source>
+        <target>Done</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Klaar om te testen" xml:space="preserve">
+        <source>Ready to test</source>
+        <target>Ready to test</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Klaar voor beta-review" xml:space="preserve">
+        <source>Ready for beta review</source>
+        <target>Ready for beta review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Klaar voor distributie" xml:space="preserve">
+        <source>Ready for Distribution</source>
+        <target>Ready for Distribution</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Klaar voor release" xml:space="preserve">
+        <source>Pending release</source>
+        <target>Pending release</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Klaar voor review" xml:space="preserve">
+        <source>Ready for review</source>
+        <target>Ready for review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Klantenservice" xml:space="preserve">
+        <source>Customer Support</source>
+        <target>Customer Support</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kon de melding niet openen" xml:space="preserve">
+        <source>Couldn't open the notification</source>
+        <target>Couldn't open the notification</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kopieer" xml:space="preserve">
+        <source>Copy</source>
+        <target>Copy</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kopieer Apple ID" xml:space="preserve">
+        <source>Copy Apple ID</source>
+        <target>Copy Apple ID</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kopieer alle codes" xml:space="preserve">
+        <source>Copy all codes</source>
+        <target>Copy all codes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kopieer bundle ID" xml:space="preserve">
+        <source>Copy bundle ID</source>
+        <target>Copy bundle ID</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kopieer crashlog" xml:space="preserve">
+        <source>Copy crash log</source>
+        <target>Copy crash log</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kopieer link" xml:space="preserve">
+        <source>Copy link</source>
+        <target>Copy link</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kopieer naar alle %lld andere talen" xml:space="preserve">
+        <source>Copy to all %lld other languages</source>
+        <target>Copy to all %lld other languages</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Koppel App Store Connect" xml:space="preserve">
+        <source>Connect App Store Connect</source>
+        <target>Connect App Store Connect</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Koppelen in 5 minuten" xml:space="preserve">
+        <source>Connected in 5 minutes</source>
+        <target>Connected in 5 minutes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Krijg een pushmelding zodra een versie in review gaat, wordt goedgekeurd, afgewezen of live gaat, als een build klaar is, en bij nieuwe TestFlight-feedback of crashes." xml:space="preserve">
+        <source>Get a push notification when a version goes into review, is approved, rejected or goes live, when a build is ready, and for new TestFlight feedback or crashes.</source>
+        <target>Get a push notification when a version goes into review, is approved, rejected or goes live, when a build is ready, and for new TestFlight feedback or crashes.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Kwijt? Trek de oude sleutel in en maak een nieuwe aan." xml:space="preserve">
+        <source>Lost it? Revoke the old key and create a new one.</source>
+        <target>Lost it? Revoke the old key and create a new one.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Laat verlopen" xml:space="preserve">
+        <source>Expire</source>
+        <target>Expire</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Laatst ververst" xml:space="preserve">
+        <source>Last refreshed</source>
+        <target>Last refreshed</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Laatste afleveringen" xml:space="preserve">
+        <source>Recent deliveries</source>
+        <target>Recent deliveries</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Laatste build" xml:space="preserve">
+        <source>Latest build</source>
+        <target>Latest build</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Laatste builds" xml:space="preserve">
+        <source>Latest builds</source>
+        <target>Latest builds</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Laden…" xml:space="preserve">
+        <source>Loading…</source>
+        <target>Loading…</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Landen" xml:space="preserve">
+        <source>Countries</source>
+        <target>Countries</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Licht" xml:space="preserve">
+        <source>Light</source>
+        <target>Light</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Link gekopieerd" xml:space="preserve">
+        <source>Link copied</source>
+        <target>Link copied</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Links" xml:space="preserve">
+        <source>Links</source>
+        <target>Links</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Live" xml:space="preserve">
+        <source>Live</source>
+        <target>Live</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Live %@" xml:space="preserve">
+        <source>Live %@</source>
+        <target>Live %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Logs" xml:space="preserve">
+        <source>Logs</source>
+        <target>Logs</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Maak aan" xml:space="preserve">
+        <source>Create</source>
+        <target>Create</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Maak een interne of externe testgroep aan." xml:space="preserve">
+        <source>Create an internal or external test group.</source>
+        <target>Create an internal or external test group.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Maak een teamsleutel aan in App Store Connect → Gebruikers en toegang → Integraties → App Store Connect API. Kies de rol Admin voor alle functies." xml:space="preserve">
+        <source>Create a team key in App Store Connect → Users and Access → Integrations → App Store Connect API. Choose the Admin role for all features.</source>
+        <target>Create a team key in App Store Connect → Users and Access → Integrations → App Store Connect API. Choose the Admin role for all features.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Marketing" xml:space="preserve">
+        <source>Marketing</source>
+        <target>Marketing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Marketing-URL" xml:space="preserve">
+        <source>Marketing URL</source>
+        <target>Marketing URL</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Meer" xml:space="preserve">
+        <source>More</source>
+        <target>More</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Meeste downloads" xml:space="preserve">
+        <source>Most downloads</source>
+        <target>Most downloads</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Meldingen van App Store Connect" xml:space="preserve">
+        <source>Notifications from App Store Connect</source>
+        <target>Notifications from App Store Connect</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Meldingen zijn uitgeschakeld voor DevTools in Instellingen." xml:space="preserve">
+        <source>Notifications are turned off for DevTools in Settings.</source>
+        <target>Notifications are turned off for DevTools in Settings.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Met het geheim controleert de ontvanger de X-Apple-SIGNATURE-header (HMAC-SHA256). Bewaar het goed; Apple toont het later niet meer." xml:space="preserve">
+        <source>The receiver uses the secret to verify the X-Apple-SIGNATURE header (HMAC-SHA256). Keep it safe; Apple won't show it again later.</source>
+        <target>The receiver uses the secret to verify the X-Apple-SIGNATURE header (HMAC-SHA256). Keep it safe; Apple won't show it again later.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Mijn apps" xml:space="preserve">
+        <source>My Apps</source>
+        <target>My Apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Min" xml:space="preserve">
+        <source>Min</source>
+        <target>Min</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Min. OS" xml:space="preserve">
+        <source>Min. OS</source>
+        <target>Min. OS</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Mislukt" xml:space="preserve">
+        <source>Failed</source>
+        <target>Failed</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Naam" xml:space="preserve">
+        <source>Name</source>
+        <target>Name</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Naam (alleen voor jezelf)" xml:space="preserve">
+        <source>Name (just for you)</source>
+        <target>Name (just for you)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Naam (bijv. PixelForges)" xml:space="preserve">
+        <source>Name (e.g. PixelForges)</source>
+        <target>Name (e.g. PixelForges)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Naar account" xml:space="preserve">
+        <source>Go to Account</source>
+        <target>Go to Account</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Naar links" xml:space="preserve">
+        <source>Move left</source>
+        <target>Move left</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Naar rechts" xml:space="preserve">
+        <source>Move right</source>
+        <target>Move right</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nee" xml:space="preserve">
+        <source>No</source>
+        <target>No</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nee, alleen vrijgestelde encryptie" xml:space="preserve">
+        <source>No, only exempt encryption</source>
+        <target>No, only exempt encryption</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Neemt af" xml:space="preserve">
+        <source>Decreasing</source>
+        <target>Decreasing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Neemt toe" xml:space="preserve">
+        <source>Increasing</source>
+        <target>Increasing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Niet beschikbaar" xml:space="preserve">
+        <source>Not available</source>
+        <target>Not available</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Niet beschikbaar in de demo-modus" xml:space="preserve">
+        <source>Not available in demo mode</source>
+        <target>Not available in demo mode</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Niet gelukt voor: %@" xml:space="preserve">
+        <source>Failed for: %@</source>
+        <target>Failed for: %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Niet gevonden (404)." xml:space="preserve">
+        <source>Not found (404).</source>
+        <target>Not found (404).</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Niet in test" xml:space="preserve">
+        <source>Not in testing</source>
+        <target>Not in testing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Niet-verbruiksartikel" xml:space="preserve">
+        <source>Non-consumable</source>
+        <target>Non-consumable</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Niet-verlengend abonnement" xml:space="preserve">
+        <source>Non-renewing subscription</source>
+        <target>Non-renewing subscription</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Niets gevonden" xml:space="preserve">
+        <source>Nothing found</source>
+        <target>Nothing found</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Niets in review" xml:space="preserve">
+        <source>Nothing in review</source>
+        <target>Nothing in review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuw" xml:space="preserve">
+        <source>New</source>
+        <target>New</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuw in deze versie (What's New)" xml:space="preserve">
+        <source>What's New in This Version</source>
+        <target>What's New in This Version</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuwe TestFlight-crash" xml:space="preserve">
+        <source>New TestFlight crash</source>
+        <target>New TestFlight crash</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuwe TestFlight-feedback" xml:space="preserve">
+        <source>New TestFlight feedback</source>
+        <target>New TestFlight feedback</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuwe downloads" xml:space="preserve">
+        <source>New downloads</source>
+        <target>New downloads</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuwe identifier" xml:space="preserve">
+        <source>New identifier</source>
+        <target>New identifier</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuwe in-app aankoop" xml:space="preserve">
+        <source>New in-app purchase</source>
+        <target>New in-app purchase</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuwe landen automatisch" xml:space="preserve">
+        <source>New countries automatically</source>
+        <target>New countries automatically</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuwe prijs ingesteld" xml:space="preserve">
+        <source>New price set</source>
+        <target>New price set</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuwe testgroep" xml:space="preserve">
+        <source>New test group</source>
+        <target>New test group</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuwe versie" xml:space="preserve">
+        <source>New version</source>
+        <target>New version</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuwe versie maken, What's New, beschrijving en keywords invullen, build kiezen en indienen." xml:space="preserve">
+        <source>Create a new version, fill in What's New, description and keywords, choose a build and submit.</source>
+        <target>Create a new version, fill in What's New, description and keywords, choose a build and submit.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nieuwe webhook" xml:space="preserve">
+        <source>New webhook</source>
+        <target>New webhook</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nodig voor downloads en opbrengst" xml:space="preserve">
+        <source>Required for downloads and proceeds</source>
+        <target>Required for downloads and proceeds</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen aanbiedingscodes. Maak er een in App Store Connect; hier genereer je daarna codes." xml:space="preserve">
+        <source>No offer codes yet. Create one in App Store Connect; then you can generate codes here.</source>
+        <target>No offer codes yet. Create one in App Store Connect; then you can generate codes here.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen abonnementen" xml:space="preserve">
+        <source>No subscriptions yet</source>
+        <target>No subscriptions yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen acties" xml:space="preserve">
+        <source>No actions yet</source>
+        <target>No actions yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen afbeelding" xml:space="preserve">
+        <source>No image yet</source>
+        <target>No image yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen afleveringen" xml:space="preserve">
+        <source>No deliveries yet</source>
+        <target>No deliveries yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen apps" xml:space="preserve">
+        <source>No apps yet</source>
+        <target>No apps yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen build gekozen" xml:space="preserve">
+        <source>No build chosen yet</source>
+        <target>No build chosen yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen builds" xml:space="preserve">
+        <source>No builds yet</source>
+        <target>No builds yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen builds geüpload" xml:space="preserve">
+        <source>No builds uploaded yet</source>
+        <target>No builds uploaded yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen codes gegenereerd" xml:space="preserve">
+        <source>No codes generated yet</source>
+        <target>No codes generated yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen feedback" xml:space="preserve">
+        <source>No feedback yet</source>
+        <target>No feedback yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen gegevens in deze periode" xml:space="preserve">
+        <source>No data in this period yet</source>
+        <target>No data in this period yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen in-app aankopen" xml:space="preserve">
+        <source>No in-app purchases yet</source>
+        <target>No in-app purchases yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen reviews" xml:space="preserve">
+        <source>No reviews yet</source>
+        <target>No reviews yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen talen. Voeg ze toe in App Store Connect." xml:space="preserve">
+        <source>No languages yet. Add them in App Store Connect.</source>
+        <target>No languages yet. Add them in App Store Connect.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen tekst" xml:space="preserve">
+        <source>No text yet</source>
+        <target>No text yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog geen versies" xml:space="preserve">
+        <source>No versions yet</source>
+        <target>No versions yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nog niet uitgebracht" xml:space="preserve">
+        <source>Not released yet</source>
+        <target>Not released yet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Notitie voor de review" xml:space="preserve">
+        <source>Notes for review</source>
+        <target>Notes for review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nu aan iedereen uitbrengen" xml:space="preserve">
+        <source>Release to everyone now</source>
+        <target>Release to everyone now</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nu aan iedereen uitbrengen?" xml:space="preserve">
+        <source>Release to everyone now?</source>
+        <target>Release to everyone now?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nu vrijgeven" xml:space="preserve">
+        <source>Release now</source>
+        <target>Release now</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Nu vrijgeven?" xml:space="preserve">
+        <source>Release now?</source>
+        <target>Release now?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Onafhankelijke app, niet gelieerd aan Apple. Je .p8-sleutel blijft in de Keychain van dit toestel." xml:space="preserve">
+        <source>Independent app, not affiliated with Apple. Your .p8 key stays in this device's Keychain.</source>
+        <target>Independent app, not affiliated with Apple. Your .p8 key stays in this device's Keychain.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Onder je naam staat rechts naast je adres een getal van 8 cijfers, bijvoorbeeld 85734756. Dat is je vendornummer." xml:space="preserve">
+        <source>Under your name, to the right of your address, there's an 8-digit number, for example 85734756. That's your vendor number.</source>
+        <target>Under your name, to the right of your address, there's an 8-digit number, for example 85734756. That's your vendor number.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ondertitel" xml:space="preserve">
+        <source>Subtitle</source>
+        <target>Subtitle</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ongeldig rapportbestand" xml:space="preserve">
+        <source>Invalid report file</source>
+        <target>Invalid report file</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ongeldige ES256 .p8-sleutel: %@" xml:space="preserve">
+        <source>Invalid ES256 .p8 key: %@</source>
+        <target>Invalid ES256 .p8 key: %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ontwikkel- en distributiecertificaten" xml:space="preserve">
+        <source>Development and distribution certificates</source>
+        <target>Development and distribution certificates</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ontwikkelaar" xml:space="preserve">
+        <source>Developer</source>
+        <target>Developer</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Op datum vrijgeven" xml:space="preserve">
+        <source>Release on a date</source>
+        <target>Release on a date</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Op de Mac: AirDrop het AuthKey_….p8-bestand naar je iPhone en bewaar het in Bestanden, of zet het in iCloud Drive." xml:space="preserve">
+        <source>On your Mac: AirDrop the AuthKey_….p8 file to your iPhone and save it in Files, or put it in iCloud Drive.</source>
+        <target>On your Mac: AirDrop the AuthKey_….p8 file to your iPhone and save it in Files, or put it in iCloud Drive.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Op dezelfde pagina (Teamsleutels) staat bovenaan Issuer ID." xml:space="preserve">
+        <source>On the same page (Team Keys), the Issuer ID is shown at the top.</source>
+        <target>On the same page (Team Keys), the Issuer ID is shown at the top.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Opbrengst" xml:space="preserve">
+        <source>Proceeds</source>
+        <target>Proceeds</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Opbrengst per app" xml:space="preserve">
+        <source>Proceeds per app</source>
+        <target>Proceeds per app</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Open" xml:space="preserve">
+        <source>Open</source>
+        <target>Open</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Open App Store Connect en log in met je Apple-account (Account Holder of Admin)." xml:space="preserve">
+        <source>Open App Store Connect and sign in with your Apple Account (Account Holder or Admin).</source>
+        <target>Open App Store Connect and sign in with your Apple Account (Account Holder or Admin).</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Open Business" xml:space="preserve">
+        <source>Open Business</source>
+        <target>Open Business</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Open DevTools om je gegevens te laden." xml:space="preserve">
+        <source>Open DevTools to load your data.</source>
+        <target>Open DevTools to load your data.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Open DevTools op je iPhone om gegevens te laden." xml:space="preserve">
+        <source>Open DevTools on your iPhone to load data.</source>
+        <target>Open DevTools on your iPhone to load data.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Open Integraties" xml:space="preserve">
+        <source>Open Integrations</source>
+        <target>Open Integrations</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Open de app op je iPhone. Je gegevens komen dan vanzelf naar je Apple Watch." xml:space="preserve">
+        <source>Open the app on your iPhone. Your data will then appear on your Apple Watch automatically.</source>
+        <target>Open the app on your iPhone. Your data will then appear on your Apple Watch automatically.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Open de iPhone-app" xml:space="preserve">
+        <source>Open the iPhone app</source>
+        <target>Open the iPhone app</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Open in App Store Connect" xml:space="preserve">
+        <source>Open in App Store Connect</source>
+        <target>Open in App Store Connect</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Opgeslagen" xml:space="preserve">
+        <source>Saved</source>
+        <target>Saved</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ophalen" xml:space="preserve">
+        <source>Fetch</source>
+        <target>Fetch</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Opmerking" xml:space="preserve">
+        <source>Comment</source>
+        <target>Comment</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Opnieuw" xml:space="preserve">
+        <source>Retry</source>
+        <target>Retry</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Opnieuw inschakelen" xml:space="preserve">
+        <source>Re-enable</source>
+        <target>Re-enable</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Opnieuw verstuurd" xml:space="preserve">
+        <source>Redelivered</source>
+        <target>Redelivered</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Opslaan" xml:space="preserve">
+        <source>Save</source>
+        <target>Save</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Opstarten" xml:space="preserve">
+        <source>Launches</source>
+        <target>Launches</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Opstarten…" xml:space="preserve">
+        <source>Starting…</source>
+        <target>Starting…</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Over" xml:space="preserve">
+        <source>About</source>
+        <target>About</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Over deze cijfers" xml:space="preserve">
+        <source>About these numbers</source>
+        <target>About these numbers</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Overgeslagen" xml:space="preserve">
+        <source>Skipped</source>
+        <target>Skipped</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Overig" xml:space="preserve">
+        <source>Other</source>
+        <target>Other</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pauzeer release" xml:space="preserve">
+        <source>Pause release</source>
+        <target>Pause release</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Periode" xml:space="preserve">
+        <source>Period</source>
+        <target>Period</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ping" xml:space="preserve">
+        <source>Ping</source>
+        <target>Ping</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Plaats" xml:space="preserve">
+        <source>Post</source>
+        <target>Post</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Platform" xml:space="preserve">
+        <source>Platform</source>
+        <target>Platform</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Portfolio" xml:space="preserve">
+        <source>Portfolio</source>
+        <target>Portfolio</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pre-order" xml:space="preserve">
+        <source>Pre-order</source>
+        <target>Pre-order</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Prestaties (%lld)" xml:space="preserve">
+        <source>Achievements (%lld)</source>
+        <target>Achievements (%lld)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Prestaties en ranglijsten" xml:space="preserve">
+        <source>Achievements and leaderboards</source>
+        <target>Achievements and leaderboards</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Previewformaat toevoegen" xml:space="preserve">
+        <source>Add preview size</source>
+        <target>Add preview size</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Prijs" xml:space="preserve">
+        <source>Price</source>
+        <target>Price</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Prijs en beschikbaarheid" xml:space="preserve">
+        <source>Pricing and Availability</source>
+        <target>Pricing and Availability</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Prijs wijzigen" xml:space="preserve">
+        <source>Change price</source>
+        <target>Change price</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Prijs, beschikbaarheid en screenshot voor de review stel je daarna in App Store Connect in." xml:space="preserve">
+        <source>You can then set the price, availability and review screenshot in App Store Connect.</source>
+        <target>You can then set the price, availability and review screenshot in App Store Connect.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Prijzen per land (%lld)" xml:space="preserve">
+        <source>Prices by country (%lld)</source>
+        <target>Prices by country (%lld)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Privacybeleid-URL" xml:space="preserve">
+        <source>Privacy Policy URL</source>
+        <target>Privacy Policy URL</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Privésleutel (.p8) ontbreekt voor dit account. Voeg het account opnieuw toe." xml:space="preserve">
+        <source>Private key (.p8) is missing for this account. Add the account again.</source>
+        <target>Private key (.p8) is missing for this account. Add the account again.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Problemen" xml:space="preserve">
+        <source>Issues</source>
+        <target>Issues</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Problemen oplossen" xml:space="preserve">
+        <source>Troubleshooting</source>
+        <target>Troubleshooting</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Product page optimization" xml:space="preserve">
+        <source>Product page optimization</source>
+        <target>Product page optimization</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Product-ID" xml:space="preserve">
+        <source>Product ID</source>
+        <target>Product ID</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Product-ID (bijv. com.bedrijf.app.pro)" xml:space="preserve">
+        <source>Product ID (e.g. com.company.app.pro)</source>
+        <target>Product ID (e.g. com.company.app.pro)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Productpagina" xml:space="preserve">
+        <source>Product page</source>
+        <target>Product page</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Profiel verwijderd" xml:space="preserve">
+        <source>Profile deleted</source>
+        <target>Profile deleted</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Profielen" xml:space="preserve">
+        <source>Profiles</source>
+        <target>Profiles</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Promotiecodes" xml:space="preserve">
+        <source>Promo codes</source>
+        <target>Promo codes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Promotiecodes in App Store Connect" xml:space="preserve">
+        <source>Promo codes in App Store Connect</source>
+        <target>Promo codes in App Store Connect</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Promotiecodes voor in-app aankopen zijn sinds 26 maart 2026 vervangen door aanbiedingscodes; die beheer je per product hierboven. Promotiecodes voor de app zelf kun je alleen in App Store Connect aanmaken." xml:space="preserve">
+        <source>Since March 26, 2026, promo codes for in-app purchases have been replaced by offer codes; you manage those per product above. Promo codes for the app itself can only be created in App Store Connect.</source>
+        <target>Since March 26, 2026, promo codes for in-app purchases have been replaced by offer codes; you manage those per product above. Promo codes for the app itself can only be created in App Store Connect.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Promotietekst" xml:space="preserve">
+        <source>Promotional Text</source>
+        <target>Promotional Text</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Provisioning profiles" xml:space="preserve">
+        <source>Provisioning profiles</source>
+        <target>Provisioning profiles</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Publieke link" xml:space="preserve">
+        <source>Public link</source>
+        <target>Public link</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Publieke link actief" xml:space="preserve">
+        <source>Public link active</source>
+        <target>Public link active</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pushmeldingen" xml:space="preserve">
+        <source>Push notifications</source>
+        <target>Push notifications</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pushmeldingen aan" xml:space="preserve">
+        <source>Push notifications on</source>
+        <target>Push notifications on</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pushmeldingen inschakelen" xml:space="preserve">
+        <source>Enable push notifications</source>
+        <target>Enable push notifications</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pushmeldingen instellen" xml:space="preserve">
+        <source>Set up push notifications</source>
+        <target>Set up push notifications</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pushmeldingen op dit toestel" xml:space="preserve">
+        <source>Push notifications on this device</source>
+        <target>Push notifications on this device</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pushmeldingen staan aan" xml:space="preserve">
+        <source>Push notifications are on</source>
+        <target>Push notifications are on</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pushmeldingen staan aan voor %lld apps" xml:space="preserve">
+        <source>Push notifications are on for %lld apps</source>
+        <target>Push notifications are on for %lld apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pushmeldingen uit" xml:space="preserve">
+        <source>Push notifications off</source>
+        <target>Push notifications off</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pushmeldingen uitgezet" xml:space="preserve">
+        <source>Push notifications turned off</source>
+        <target>Push notifications turned off</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pushmeldingen voor deze app aanzetten" xml:space="preserve">
+        <source>Turn on push notifications for this app</source>
+        <target>Turn on push notifications for this app</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pushmeldingen zijn in deze build nog niet geactiveerd." xml:space="preserve">
+        <source>Push notifications haven't been activated in this build yet.</source>
+        <target>Push notifications haven't been activated in this build yet.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Pushmeldingen zijn nog niet ingesteld in deze build." xml:space="preserve">
+        <source>Push notifications haven't been set up in this build yet.</source>
+        <target>Push notifications haven't been set up in this build yet.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ranglijsten (%lld)" xml:space="preserve">
+        <source>Leaderboards (%lld)</source>
+        <target>Leaderboards (%lld)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Rapport kon niet uitgepakt worden: %@" xml:space="preserve">
+        <source>Report could not be decompressed: %@</source>
+        <target>Report could not be decompressed: %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Rapportcache gewist" xml:space="preserve">
+        <source>Report cache cleared</source>
+        <target>Report cache cleared</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Rapporten worden voorbereid" xml:space="preserve">
+        <source>Preparing reports</source>
+        <target>Preparing reports</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Reactie bewerken" xml:space="preserve">
+        <source>Edit reply</source>
+        <target>Edit reply</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Reactie geplaatst — Apple publiceert hem na controle" xml:space="preserve">
+        <source>Reply posted — Apple publishes it after review</source>
+        <target>Reply posted — Apple publishes it after review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Reactie verwijderd" xml:space="preserve">
+        <source>Reply deleted</source>
+        <target>Reply deleted</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Reacties zijn openbaar zichtbaar in de App Store." xml:space="preserve">
+        <source>Replies are publicly visible on the App Store.</source>
+        <target>Replies are publicly visible on the App Store.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Reageren" xml:space="preserve">
+        <source>Reply</source>
+        <target>Reply</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Reageren op reviews: Customer Support, App Manager of Admin." xml:space="preserve">
+        <source>Replying to reviews: Customer Support, App Manager or Admin.</source>
+        <target>Replying to reviews: Customer Support, App Manager or Admin.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Reden" xml:space="preserve">
+        <source>Reason</source>
+        <target>Reason</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Registreer" xml:space="preserve">
+        <source>Register</source>
+        <target>Register</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Resultaten van A/B-tests (conversie per variant) toont Apple alleen in App Store Connect." xml:space="preserve">
+        <source>Apple only shows A/B test results (conversion per variant) in App Store Connect.</source>
+        <target>Apple only shows A/B test results (conversion per variant) in App Store Connect.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Retentie dag 1" xml:space="preserve">
+        <source>Day 1 retention</source>
+        <target>Day 1 retention</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Review" xml:space="preserve">
+        <source>Review</source>
+        <target>Review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Review &amp; status" xml:space="preserve">
+        <source>Review &amp; status</source>
+        <target>Review &amp; status</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Review annuleren" xml:space="preserve">
+        <source>Cancel review</source>
+        <target>Cancel review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Review annuleren?" xml:space="preserve">
+        <source>Cancel review?</source>
+        <target>Cancel review?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Review geannuleerd" xml:space="preserve">
+        <source>Review cancelled</source>
+        <target>Review cancelled</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Rollen" xml:space="preserve">
+        <source>Roles</source>
+        <target>Roles</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SHA" xml:space="preserve">
+        <source>SHA</source>
+        <target>SHA</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Scherm" xml:space="preserve">
+        <source>Display</source>
+        <target>Display</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Schermformaat toevoegen" xml:space="preserve">
+        <source>Add display size</source>
+        <target>Add display size</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Schrijfacties" xml:space="preserve">
+        <source>Disk writes</source>
+        <target>Disk writes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Screenshots" xml:space="preserve">
+        <source>Screenshots</source>
+        <target>Screenshots</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Screenshots en previews" xml:space="preserve">
+        <source>Screenshots and previews</source>
+        <target>Screenshots and previews</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Sessies" xml:space="preserve">
+        <source>Sessions</source>
+        <target>Sessions</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Sleutel geïmporteerd ✓" xml:space="preserve">
+        <source>Key imported ✓</source>
+        <target>Key imported ✓</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Sluit" xml:space="preserve">
+        <source>Close</source>
+        <target>Close</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Soort" xml:space="preserve">
+        <source>Type</source>
+        <target>Type</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Sorteren" xml:space="preserve">
+        <source>Sort</source>
+        <target>Sort</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Standaard (volgens workflow)" xml:space="preserve">
+        <source>Default (per workflow)</source>
+        <target>Default (per workflow)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Stap %lld · %@" xml:space="preserve">
+        <source>Step %lld · %@</source>
+        <target>Step %lld · %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Start" xml:space="preserve">
+        <source>Start</source>
+        <target>Start</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Start automatisch zodra de versie live gaat." xml:space="preserve">
+        <source>Starts automatically once the version goes live.</source>
+        <target>Starts automatically once the version goes live.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Start build" xml:space="preserve">
+        <source>Start build</source>
+        <target>Start build</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Status" xml:space="preserve">
+        <source>Status</source>
+        <target>Status</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Status externe TestFlight" xml:space="preserve">
+        <source>External TestFlight status</source>
+        <target>External TestFlight status</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Status van een App Store-versie" xml:space="preserve">
+        <source>App Store version status</source>
+        <target>App Store version status</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Status van je apps" xml:space="preserve">
+        <source>Status of your apps</source>
+        <target>Status of your apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Stel Xcode Cloud eenmalig in via Xcode (Product → Xcode Cloud → Create Workflow). Daarna kun je hier builds starten en volgen." xml:space="preserve">
+        <source>Set up Xcode Cloud once in Xcode (Product → Xcode Cloud → Create Workflow). After that you can start and follow builds here.</source>
+        <target>Set up Xcode Cloud once in Xcode (Product → Xcode Cloud → Create Workflow). After that you can start and follow builds here.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Sterren" xml:space="preserve">
+        <source>Stars</source>
+        <target>Stars</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Stuur testbericht (ping)" xml:space="preserve">
+        <source>Send test message (ping)</source>
+        <target>Send test message (ping)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Support-URL" xml:space="preserve">
+        <source>Support URL</source>
+        <target>Support URL</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Taal" xml:space="preserve">
+        <source>Language</source>
+        <target>Language</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Taal toevoegen" xml:space="preserve">
+        <source>Add language</source>
+        <target>Add language</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Taal wijzigen in iOS-instellingen" xml:space="preserve">
+        <source>Change language in iOS Settings</source>
+        <target>Change language in iOS Settings</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Te veel verzoeken (429). Probeer het zo opnieuw." xml:space="preserve">
+        <source>Too many requests (429). Try again shortly.</source>
+        <target>Too many requests (429). Try again shortly.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Te vinden in App Store Connect → Business, naast je adres. Nodig voor Sales Reports." xml:space="preserve">
+        <source>Found in App Store Connect → Business, next to your address. Required for Sales Reports.</source>
+        <target>Found in App Store Connect → Business, next to your address. Required for Sales Reports.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Team" xml:space="preserve">
+        <source>Team</source>
+        <target>Team</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Team &amp; ontwikkeling" xml:space="preserve">
+        <source>Team &amp; development</source>
+        <target>Team &amp; development</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Team, certificaten en toestellen" xml:space="preserve">
+        <source>Team, certificates and devices</source>
+        <target>Team, certificates and devices</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Teamleden, rollen en uitnodigingen" xml:space="preserve">
+        <source>Team members, roles and invitations</source>
+        <target>Team members, roles and invitations</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Teksten per taal" xml:space="preserve">
+        <source>Text per language</source>
+        <target>Text per language</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Teruggetrokken" xml:space="preserve">
+        <source>Withdrawn</source>
+        <target>Withdrawn</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="TestFlight" xml:space="preserve">
+        <source>TestFlight</source>
+        <target>TestFlight</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="TestFlight-builds" xml:space="preserve">
+        <source>TestFlight builds</source>
+        <target>TestFlight builds</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="TestFlight-feedback" xml:space="preserve">
+        <source>TestFlight feedback</source>
+        <target>TestFlight feedback</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="TestFlight-feedback en crashes" xml:space="preserve">
+        <source>TestFlight feedback and crashes</source>
+        <target>TestFlight feedback and crashes</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="TestFlight-gebruik" xml:space="preserve">
+        <source>TestFlight usage</source>
+        <target>TestFlight usage</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="TestFlight-installaties" xml:space="preserve">
+        <source>TestFlight installs</source>
+        <target>TestFlight installs</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Testbericht verstuurd" xml:space="preserve">
+        <source>Test message sent</source>
+        <target>Test message sent</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Tester" xml:space="preserve">
+        <source>Tester</source>
+        <target>Tester</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Tester toevoegen" xml:space="preserve">
+        <source>Add tester</source>
+        <target>Add tester</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Tester verwijderd" xml:space="preserve">
+        <source>Tester removed</source>
+        <target>Tester removed</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Testers" xml:space="preserve">
+        <source>Testers</source>
+        <target>Testers</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Testers (%lld)" xml:space="preserve">
+        <source>Testers (%lld)</source>
+        <target>Testers (%lld)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Testers automatisch informeren" xml:space="preserve">
+        <source>Notify testers automatically</source>
+        <target>Notify testers automatically</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Testers kunnen deze build daarna niet meer installeren. Dit kan niet ongedaan gemaakt worden." xml:space="preserve">
+        <source>Testers can no longer install this build. This cannot be undone.</source>
+        <target>Testers can no longer install this build. This cannot be undone.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Testers worden automatisch geïnformeerd" xml:space="preserve">
+        <source>Testers are notified automatically</source>
+        <target>Testers are notified automatically</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Testgroepen" xml:space="preserve">
+        <source>Test groups</source>
+        <target>Test groups</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Testgroepen &amp; testers" xml:space="preserve">
+        <source>Test groups &amp; testers</source>
+        <target>Test groups &amp; testers</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Thema" xml:space="preserve">
+        <source>Theme</source>
+        <target>Theme</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Tik bij je nieuwe sleutel op Download API-sleutel. Apple laat dit maar één keer toe." xml:space="preserve">
+        <source>Tap Download API Key next to your new key. Apple only allows this once.</source>
+        <target>Tap Download API Key next to your new key. Apple only allows this once.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Tik op + (Genereer API-sleutel), geef een naam zoals ‘DevTools’ en kies de rol Admin." xml:space="preserve">
+        <source>Tap + (Generate API Key), give it a name such as ‘DevTools’ and choose the Admin role.</source>
+        <target>Tap + (Generate API Key), give it a name such as ‘DevTools’ and choose the Admin role.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Tik op Genereer. De sleutel verschijnt in de lijst." xml:space="preserve">
+        <source>Tap Generate. The key appears in the list.</source>
+        <target>Tap Generate. The key appears in the list.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Tik op Kopieer en plak hem in DevTools bij Issuer ID." xml:space="preserve">
+        <source>Tap Copy and paste it into DevTools under Issuer ID.</source>
+        <target>Tap Copy and paste it into DevTools under Issuer ID.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Tip: gebruik één sleutel met de rol Admin, dan werkt alles in DevTools." xml:space="preserve">
+        <source>Tip: use one key with the Admin role and everything in DevTools works.</source>
+        <target>Tip: use one key with the Admin role and everything in DevTools works.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Toegang tot alle apps" xml:space="preserve">
+        <source>Access to all apps</source>
+        <target>Access to all apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Toegang tot rapporten" xml:space="preserve">
+        <source>Access to Reports</source>
+        <target>Access to Reports</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Toegevoegd aan %@" xml:space="preserve">
+        <source>Added to %@</source>
+        <target>Added to %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Toestel" xml:space="preserve">
+        <source>Device</source>
+        <target>Device</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Toestel geregistreerd" xml:space="preserve">
+        <source>Device registered</source>
+        <target>Device registered</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Toestel kwijt? Trek de sleutel in via Integraties → Teamsleutels → Trek in." xml:space="preserve">
+        <source>Lost your device? Revoke the key via Integrations → Team Keys → Revoke.</source>
+        <target>Lost your device? Revoke the key via Integrations → Team Keys → Revoke.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Toestel registreren" xml:space="preserve">
+        <source>Register device</source>
+        <target>Register device</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Toestellen" xml:space="preserve">
+        <source>Devices</source>
+        <target>Devices</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Toon de downloads van één app, of laat leeg voor al je apps." xml:space="preserve">
+        <source>Show downloads for one app, or leave empty for all your apps.</source>
+        <target>Show downloads for one app, or leave empty for all your apps.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Top 5 · %@" xml:space="preserve">
+        <source>Top 5 · %@</source>
+        <target>Top 5 · %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Top apps" xml:space="preserve">
+        <source>Top apps</source>
+        <target>Top apps</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Top landen" xml:space="preserve">
+        <source>Top countries</source>
+        <target>Top countries</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Totaal van alle builds van al je apps, volgens TestFlight." xml:space="preserve">
+        <source>Total of all builds of all your apps, as reported by TestFlight.</source>
+        <target>Total of all builds of all your apps, as reported by TestFlight.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Trefwoorden (komma-gescheiden)" xml:space="preserve">
+        <source>Keywords (comma-separated)</source>
+        <target>Keywords (comma-separated)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="UDID" xml:space="preserve">
+        <source>UDID</source>
+        <target>UDID</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="URL" xml:space="preserve">
+        <source>URL</source>
+        <target>URL</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="URL (https)" xml:space="preserve">
+        <source>URL (https)</source>
+        <target>URL (https)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Uitbrengen aan iedereen" xml:space="preserve">
+        <source>Release to everyone</source>
+        <target>Release to everyone</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Uitgeschakeld" xml:space="preserve">
+        <source>Disabled</source>
+        <target>Disabled</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Uitnodigen" xml:space="preserve">
+        <source>Invite</source>
+        <target>Invite</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Uitnodiging ingetrokken" xml:space="preserve">
+        <source>Invitation revoked</source>
+        <target>Invitation revoked</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Uitnodiging verstuurd naar %@" xml:space="preserve">
+        <source>Invitation sent to %@</source>
+        <target>Invitation sent to %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Uitnodigingen" xml:space="preserve">
+        <source>Invites</source>
+        <target>Invites</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Uitschakelen" xml:space="preserve">
+        <source>Disable</source>
+        <target>Disable</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Uitzetten" xml:space="preserve">
+        <source>Turn off</source>
+        <target>Turn off</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Uitzetten voor al mijn apps" xml:space="preserve">
+        <source>Turn off for all my apps</source>
+        <target>Turn off for all my apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Updates" xml:space="preserve">
+        <source>Updates</source>
+        <target>Updates</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Upload een build vanuit Xcode; na verwerking verschijnt hij hier." xml:space="preserve">
+        <source>Upload a build from Xcode; it appears here after processing.</source>
+        <target>Upload a build from Xcode; it appears here after processing.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Uploaden %lld van %lld…" xml:space="preserve">
+        <source>Uploading %lld of %lld…</source>
+        <target>Uploading %lld of %lld…</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Uploaden mislukt (%lld): %@" xml:space="preserve">
+        <source>Upload failed (%lld): %@</source>
+        <target>Upload failed (%lld): %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Varianten" xml:space="preserve">
+        <source>Variants</source>
+        <target>Variants</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vastlopers" xml:space="preserve">
+        <source>Hangs</source>
+        <target>Hangs</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Veeg naar links om te wijzigen (vendornummer) of te verwijderen. Tik om te wisselen." xml:space="preserve">
+        <source>Swipe left to edit (vendor number) or delete. Tap to switch.</source>
+        <target>Swipe left to edit (vendor number) or delete. Tap to switch.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Veiligheid" xml:space="preserve">
+        <source>Security</source>
+        <target>Security</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vendornummer (bijv. 8xxxxxxx)" xml:space="preserve">
+        <source>Vendor number (e.g. 8xxxxxxx)</source>
+        <target>Vendor number (e.g. 8xxxxxxx)</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vendornummer invullen voor downloads" xml:space="preserve">
+        <source>Enter vendor number for downloads</source>
+        <target>Enter vendor number for downloads</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vendornummer ontbreekt of klopt niet, de sleutel heeft geen Sales-/Finance-rol, of er waren nog geen verkopen (rapporten lopen 1 dag achter)." xml:space="preserve">
+        <source>The vendor number is missing or wrong, the key has no Sales/Finance role, or there were no sales yet (reports are 1 day behind).</source>
+        <target>The vendor number is missing or wrong, the key has no Sales/Finance role, or there were no sales yet (reports are 1 day behind).</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vendornummer opzoeken" xml:space="preserve">
+        <source>Look up vendor number</source>
+        <target>Look up vendor number</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vendornummer opzoeken " xml:space="preserve">
+        <source>Look up vendor number</source>
+        <target>Look up vendor number</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verbinden met App Store Connect…" xml:space="preserve">
+        <source>Connecting to App Store Connect…</source>
+        <target>Connecting to App Store Connect…</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verbinding" xml:space="preserve">
+        <source>Connection</source>
+        <target>Connection</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verbruiksartikel" xml:space="preserve">
+        <source>Consumable</source>
+        <target>Consumable</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verkeer" xml:space="preserve">
+        <source>Traffic</source>
+        <target>Traffic</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verkoop" xml:space="preserve">
+        <source>Sales</source>
+        <target>Sales</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verloopt" xml:space="preserve">
+        <source>Expires</source>
+        <target>Expires</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verlopen" xml:space="preserve">
+        <source>Expired</source>
+        <target>Expired</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verlopen builds tonen" xml:space="preserve">
+        <source>Show expired builds</source>
+        <target>Show expired builds</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vernieuwen" xml:space="preserve">
+        <source>Refresh</source>
+        <target>Refresh</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versie" xml:space="preserve">
+        <source>Version</source>
+        <target>Version</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versie %@ bij App Review" xml:space="preserve">
+        <source>Version %@ at App Review</source>
+        <target>Version %@ at App Review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versie %@ is afgewezen" xml:space="preserve">
+        <source>Version %@ was rejected</source>
+        <target>Version %@ was rejected</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versie %@ kan vrijgegeven worden" xml:space="preserve">
+        <source>Version %@ can be released</source>
+        <target>Version %@ can be released</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versie %@ met build %@ gaat naar App Review." xml:space="preserve">
+        <source>Version %@ with build %@ goes to App Review.</source>
+        <target>Version %@ with build %@ goes to App Review.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versie %@ wordt direct beschikbaar voor gebruikers." xml:space="preserve">
+        <source>Version %@ becomes available to users immediately.</source>
+        <target>Version %@ becomes available to users immediately.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versie verwijderen" xml:space="preserve">
+        <source>Delete version</source>
+        <target>Delete version</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versie verwijderen?" xml:space="preserve">
+        <source>Delete version?</source>
+        <target>Delete version?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versie vrijgegeven 🎉" xml:space="preserve">
+        <source>Version released 🎉</source>
+        <target>Version released 🎉</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versie-instellingen" xml:space="preserve">
+        <source>Version settings</source>
+        <target>Version settings</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versienummer" xml:space="preserve">
+        <source>Version number</source>
+        <target>Version number</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versies &amp; teksten" xml:space="preserve">
+        <source>Versions &amp; texts</source>
+        <target>Versions &amp; texts</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Versies en builds ophalen…" xml:space="preserve">
+        <source>Fetching versions and builds…</source>
+        <target>Fetching versions and builds…</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verspreid de automatische update over 7 dagen (1%, 2%, 5%, 10%, 20%, 50%, 100%). Iedereen kan de versie wel direct handmatig downloaden." xml:space="preserve">
+        <source>Spread the automatic update over 7 days (1%, 2%, 5%, 10%, 20%, 50%, 100%). Anyone can still download the version manually right away.</source>
+        <target>Spread the automatic update over 7 days (1%, 2%, 5%, 10%, 20%, 50%, 100%). Anyone can still download the version manually right away.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verstuur" xml:space="preserve">
+        <source>Send</source>
+        <target>Send</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vertoningen" xml:space="preserve">
+        <source>Impressions</source>
+        <target>Impressions</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vervangen" xml:space="preserve">
+        <source>Replaced</source>
+        <target>Replaced</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verversen" xml:space="preserve">
+        <source>Refresh</source>
+        <target>Refresh</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verwerken" xml:space="preserve">
+        <source>Processing</source>
+        <target>Processing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verwerking" xml:space="preserve">
+        <source>Processing</source>
+        <target>Processing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verwijder" xml:space="preserve">
+        <source>Delete</source>
+        <target>Delete</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verwijderd" xml:space="preserve">
+        <source>Deleted</source>
+        <target>Deleted</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verwijderd uit %@" xml:space="preserve">
+        <source>Removed from %@</source>
+        <target>Removed from %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verwijderen" xml:space="preserve">
+        <source>Delete</source>
+        <target>Delete</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Verwijderingen" xml:space="preserve">
+        <source>Deletions</source>
+        <target>Deletions</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Video's van 15–30 seconden, .mov of .mp4. Apple verwerkt ze na het uploaden." xml:space="preserve">
+        <source>Videos of 15–30 seconds, .mov or .mp4. Apple processes them after uploading.</source>
+        <target>Videos of 15–30 seconds, .mov or .mp4. Apple processes them after uploading.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Volgende" xml:space="preserve">
+        <source>Next</source>
+        <target>Next</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Voor" xml:space="preserve">
+        <source>Before</source>
+        <target>Before</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Voor externe testgroepen keurt Apple de eerste build van een versie eerst goed." xml:space="preserve">
+        <source>For external test groups Apple reviews the first build of a version first.</source>
+        <target>For external test groups Apple reviews the first build of a version first.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Voorbereiden" xml:space="preserve">
+        <source>Prepare for Submission</source>
+        <target>Prepare for Submission</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Voornaam" xml:space="preserve">
+        <source>First name</source>
+        <target>First name</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vrije opslag" xml:space="preserve">
+        <source>Free storage</source>
+        <target>Free storage</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vrijgave" xml:space="preserve">
+        <source>Release</source>
+        <target>Release</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vrijgeven in de App Store" xml:space="preserve">
+        <source>Release on the App Store</source>
+        <target>Release on the App Store</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vul Issuer ID en Key ID in en kies een geldig .p8-bestand" xml:space="preserve">
+        <source>Enter Issuer ID and Key ID and choose a valid .p8 file</source>
+        <target>Enter Issuer ID and Key ID and choose a valid .p8 file</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vul het in bij Account → je account → Wijzig → Vendornummer." xml:space="preserve">
+        <source>Enter it under Account → your account → Edit → Vendor number.</source>
+        <target>Enter it under Account → your account → Edit → Vendor number.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vul je vendornummer in bij je account om downloads, updates, in-app aankopen en opbrengst per app te zien. Je vindt het in App Store Connect onder Business, naast je adres. De API-sleutel heeft de rol Admin, Finance of Sales nodig." xml:space="preserve">
+        <source>Enter your vendor number in your account to see downloads, updates, in-app purchases and proceeds per app. You find it in App Store Connect under Business, next to your address. The API key needs the Admin, Finance or Sales role.</source>
+        <target>Enter your vendor number in your account to see downloads, updates, in-app purchases and proceeds per app. You find it in App Store Connect under Business, next to your address. The API key needs the Admin, Finance or Sales role.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vul je vendornummer in op de iPhone voor downloads" xml:space="preserve">
+        <source>Enter your vendor number on iPhone for downloads</source>
+        <target>Enter your vendor number on iPhone for downloads</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Vul je vendornummer in voor downloads" xml:space="preserve">
+        <source>Enter your vendor number for downloads</source>
+        <target>Enter your vendor number for downloads</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Wacht op Apple" xml:space="preserve">
+        <source>Pending Apple release</source>
+        <target>Pending Apple release</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Wacht op beta-review" xml:space="preserve">
+        <source>Waiting for beta review</source>
+        <target>Waiting for beta review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Wacht op review" xml:space="preserve">
+        <source>Waiting for Review</source>
+        <target>Waiting for Review</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Wat te testen" xml:space="preserve">
+        <source>What to Test</source>
+        <target>What to Test</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Webhook verwijderen" xml:space="preserve">
+        <source>Delete webhook</source>
+        <target>Delete webhook</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Webhook verwijderen?" xml:space="preserve">
+        <source>Delete webhook?</source>
+        <target>Delete webhook?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Webhooks" xml:space="preserve">
+        <source>Webhooks</source>
+        <target>Webhooks</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Webhooks en pushmeldingen" xml:space="preserve">
+        <source>Webhooks and push notifications</source>
+        <target>Webhooks and push notifications</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Weergave" xml:space="preserve">
+        <source>Appearance</source>
+        <target>Appearance</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Weergavenaam" xml:space="preserve">
+        <source>Display name</source>
+        <target>Display name</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Weergavenaam en beschrijving" xml:space="preserve">
+        <source>Display name and description</source>
+        <target>Display name and description</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Welke rol heb ik nodig?" xml:space="preserve">
+        <source>Which role do I need?</source>
+        <target>Which role do I need?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Welkom" xml:space="preserve">
+        <source>Welcome</source>
+        <target>Welcome</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Welkom bij DevTools" xml:space="preserve">
+        <source>Welcome to DevTools</source>
+        <target>Welcome to DevTools</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="What to Test opgeslagen" xml:space="preserve">
+        <source>What to Test saved</source>
+        <target>What to Test saved</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="What to Test toevoegen" xml:space="preserve">
+        <source>Add What to Test</source>
+        <target>Add What to Test</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="What's New in %lld talen gezet" xml:space="preserve">
+        <source>What's New set in %lld languages</source>
+        <target>What's New set in %lld languages</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="What's New, beschrijving, keywords en promotietekst. Promotietekst kun je ook wijzigen als de versie live is." xml:space="preserve">
+        <source>What's New, description, keywords and promotional text. Promotional text can also be changed while the version is live.</source>
+        <target>What's New, description, keywords and promotional text. Promotional text can also be changed while the version is live.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Wijzig" xml:space="preserve">
+        <source>Edit</source>
+        <target>Edit</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Wijzigen" xml:space="preserve">
+        <source>Edit</source>
+        <target>Edit</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Wordt aangemaakt voor iOS. Andere platforms kun je in App Store Connect toevoegen." xml:space="preserve">
+        <source>Will be created for iOS. You can add other platforms in App Store Connect.</source>
+        <target>Will be created for iOS. You can add other platforms in App Store Connect.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Xcode Cloud" xml:space="preserve">
+        <source>Xcode Cloud</source>
+        <target>Xcode Cloud</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Xcode Cloud is niet ingesteld" xml:space="preserve">
+        <source>Xcode Cloud isn't set up</source>
+        <target>Xcode Cloud isn't set up</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Zoek app" xml:space="preserve">
+        <source>Search app</source>
+        <target>Search app</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Zoek app of bundle ID" xml:space="preserve">
+        <source>Search app or bundle ID</source>
+        <target>Search app or bundle ID</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Zoek land" xml:space="preserve">
+        <source>Search country</source>
+        <target>Search country</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="aangemaakt %@ · verloopt %@" xml:space="preserve">
+        <source>created %@ · expires %@</source>
+        <target>created %@ · expires %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="build %@" xml:space="preserve">
+        <source>build %@</source>
+        <target>build %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="dag 7: %@" xml:space="preserve">
+        <source>day 7: %@</source>
+        <target>day 7: %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="downloads" xml:space="preserve">
+        <source>downloads</source>
+        <target>downloads</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="downloads · %@" xml:space="preserve">
+        <source>downloads · %@</source>
+        <target>downloads · %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="geldig tot %@" xml:space="preserve">
+        <source>valid until %@</source>
+        <target>valid until %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="gem. %lld min %lld s" xml:space="preserve">
+        <source>avg. %lld min %lld s</source>
+        <target>avg. %lld min %lld s</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="gepromoveerd %@" xml:space="preserve">
+        <source>promoted %@</source>
+        <target>promoted %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="gestart %@" xml:space="preserve">
+        <source>started %@</source>
+        <target>started %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="groep" xml:space="preserve">
+        <source>group</source>
+        <target>group</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="herhaalbaar" xml:space="preserve">
+        <source>repeatable</source>
+        <target>repeatable</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="hoogste eerst" xml:space="preserve">
+        <source>highest first</source>
+        <target>highest first</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="i" xml:space="preserve">
+        <source>i</source>
+        <target>i</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="iPhone niet bereikbaar. Open DevTools op je iPhone." xml:space="preserve">
+        <source>iPhone not reachable. Open DevTools on your iPhone.</source>
+        <target>iPhone not reachable. Open DevTools on your iPhone.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="laagste eerst" xml:space="preserve">
+        <source>lowest first</source>
+        <target>lowest first</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="omgerekend per valuta, indicatief" xml:space="preserve">
+        <source>mixed currencies, indicative</source>
+        <target>mixed currencies, indicative</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="opbrengst %@" xml:space="preserve">
+        <source>proceeds %@</source>
+        <target>proceeds %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="prioriteit %@" xml:space="preserve">
+        <source>priority %@</source>
+        <target>priority %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="release %@" xml:space="preserve">
+        <source>release %@</source>
+        <target>release %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="som per dag" xml:space="preserve">
+        <source>summed per day</source>
+        <target>summed per day</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="stabiel" xml:space="preserve">
+        <source>stable</source>
+        <target>stable</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="tot %@" xml:space="preserve">
+        <source>until %@</source>
+        <target>until %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="v" xml:space="preserve">
+        <source>v</source>
+        <target>v</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="v%@" xml:space="preserve">
+        <source>v%@</source>
+        <target>v%@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="v%@ · %@" xml:space="preserve">
+        <source>v%@ · %@</source>
+        <target>v%@ · %@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="van %lld apps" xml:space="preserve">
+        <source>of %lld apps</source>
+        <target>of %lld apps</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="verloopt %@" xml:space="preserve">
+        <source>expires %@</source>
+        <target>expires %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="verlopen" xml:space="preserve">
+        <source>expired</source>
+        <target>expired</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="wacht op publicatie" xml:space="preserve">
+        <source>pending publication</source>
+        <target>pending publication</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="week t/m %@" xml:space="preserve">
+        <source>week ending %@</source>
+        <target>week ending %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="© DevTools - PixelForges" xml:space="preserve">
+        <source>© DevTools - PixelForges</source>
+        <target>© DevTools - PixelForges</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="· %@" xml:space="preserve">
+        <source>· %@</source>
+        <target>· %@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="· verloopt over %lld d" xml:space="preserve">
+        <source>· expires in %lld d</source>
+        <target>· expires in %lld d</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="⏳ %lld" xml:space="preserve">
+        <source>⏳ %lld</source>
+        <target>⏳ %lld</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="▲ %@ t.o.v. eerste helft" xml:space="preserve">
+        <source>▲ %@ vs first half</source>
+        <target>▲ %@ vs first half</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="▼ %@ t.o.v. eerste helft" xml:space="preserve">
+        <source>▼ %@ vs first half</source>
+        <target>▼ %@ vs first half</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="★ %@" xml:space="preserve">
+        <source>★ %@</source>
+        <target>★ %@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="✓ %lld" xml:space="preserve">
+        <source>✓ %lld</source>
+        <target>✓ %lld</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="⬇︎ %@%@" xml:space="preserve">
+        <source>⬇︎ %@%@</source>
+        <target>⬇︎ %@%@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
