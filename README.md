@@ -1,8 +1,8 @@
 # DevTools
 
-Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch, in the style of HomeyDev (Homey Developer Tools). It is built on the official [App Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi).
+Native SwiftUI **App Store Connect companion** for iPhone, iPad, Mac (Mac Catalyst) and Apple Watch, in the style of HomeyDev (Homey Developer Tools). It is built on the official [App Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi).
 
-**Version 1.0.0 (build 14)** · EN, NL, DE, FR, ES, PL, NB, DA, SV · Team `EU3UY476T6` · Bundle `nl.lrvdlinden.devtools`
+**Version 1.0.1 (build 19)** · EN, NL, DE, FR, ES, PL, NB, DA, SV · Team `EU3UY476T6` · Bundle `nl.lrvdlinden.devtools`
 
 ## Features
 
@@ -26,9 +26,11 @@ Native SwiftUI **App Store Connect companion** for iPhone, iPad and Apple Watch,
 | **Price & availability** | Base price, proceeds, prices per country, change the price, availability per country |
 | **In-app purchases** | IAPs and subscriptions: create, edit, localize, submit; offer codes (generate one-time codes, export CSV) |
 | **Xcode Cloud** | Workflows, build runs with actions and issues, start a build on a branch or tag |
-| **Webhooks & push** | Manage App Store Connect webhooks (events, ping, deliveries); optional push notifications through OneSignal and the `push-relay/` Cloudflare Worker |
+| **Webhooks & push** | Manage App Store Connect webhooks (events, ping, deliveries); push notifications through OneSignal (SDK + Notification Service Extension) and the `push-relay/` Cloudflare Worker. Notifications show the platform, version and build, like "Trailhead (iOS) · 2.5.0 (318)". Tapping one opens the matching version, build or tester feedback |
+| **Mac** | The same app as a native Mac app via Mac Catalyst (Apple silicon and Intel), with menu commands ⌘R / ⇧⌘R and widgets. The Apple Watch app is iPhone-only |
 | **Team** | Users and roles, invitations, certificates, identifiers, devices and provisioning profiles |
 | **More** | In-app events, custom product pages, product page A/B tests, Game Center |
+| **Homey** | Companion Homey app *App Store Connect* in `nl.lrvdlinden.appstoreconnect/` (v1.1.0) |
 | **Widgets** | Same layout as HomeyDev: *Downloads* (pick one app or all apps, Insights chart), *Top apps* (icons, sparklines, change), *Review & status* |
 | **Apple Watch** | Same layout as HomeyDev: vertical pages *Overview*, *My apps* (with icons) and *Attention*, a Fetch button and an app detail screen. Complications show downloads, change, live and in review |
 | **Guide** | Account → Guide: how to get the API key, Issuer ID, Key ID, .p8 and vendor number, which roles you need, and troubleshooting |
