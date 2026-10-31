@@ -4,7 +4,9 @@
     "portfolio_name": "Alle Apps"
   },
   "errors": {
-    "no_pending_release": "Es gibt keine Version, die auf die Freigabe wartet (Ausstehende Freigabe durch Entwickler)."
+    "no_pending_release": "Es gibt keine Version, die auf die Freigabe wartet (Ausstehende Freigabe durch Entwickler).",
+    "no_phased_release": "Diese App hat keine phasenweise Veröffentlichung für ihre aktuelle Version.",
+    "no_workflow": "Wähle einen Xcode Cloud-Workflow."
   },
   "widget": {
     "all_apps": "Alle Apps",
@@ -52,7 +54,12 @@
     "IN_BETA_TESTING": "Im Test",
     "READY_FOR_BETA_TESTING": "Bereit zum Testen",
     "MISSING_EXPORT_COMPLIANCE": "Exportkonformität",
-    "EXPIRED": "Abgelaufen"
+    "EXPIRED": "Abgelaufen",
+    "CI_SUCCEEDED": "Erfolgreich",
+    "CI_FAILED": "Fehlgeschlagen",
+    "CI_ERRORED": "Fehler",
+    "CI_CANCELED": "Abgebrochen",
+    "CI_SKIPPED": "Übersprungen"
   },
   "settings": {
     "subtitle": "Downloads, App-Review-Status, Builds und Bewertungen deiner iOS-Apps.",
@@ -86,5 +93,11 @@
     "g3l": "<li>Tippe auf „API-Schlüssel laden“ – Apple erlaubt das nur ein einziges Mal.</li><li>Öffne die .p8-Datei in einem Texteditor und füge den vollständigen Inhalt oben ein, einschließlich der BEGIN/END-Zeilen.</li><li>Der Schlüssel wird nur auf deinem Homey gespeichert.</li>",
     "g4": "4. Anbieternummer",
     "g4l": "<li>App Store Connect → <b>Geschäftlich</b>: die 8-stellige Nummer neben deiner Adresse.</li><li>Erforderlich für Downloads, Updates und Erlöse (Sales Reports). Apple veröffentlicht die Zahlen von gestern einmal täglich.</li>"
+  },
+  "phased": {
+    "INACTIVE": "Wartet auf Veröffentlichung",
+    "ACTIVE": "Aktiv",
+    "PAUSED": "Pausiert",
+    "COMPLETE": "Für alle veröffentlicht"
   }
 }

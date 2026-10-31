@@ -4,7 +4,9 @@
     "portfolio_name": "جميع التطبيقات"
   },
   "errors": {
-    "no_pending_release": "لا يوجد إصدار بانتظار النشر (Pending Developer Release)."
+    "no_pending_release": "لا يوجد إصدار بانتظار النشر (Pending Developer Release).",
+    "no_phased_release": "لا يوجد إصدار تدريجي للإصدار الحالي من هذا التطبيق.",
+    "no_workflow": "اختر سير عمل Xcode Cloud."
   },
   "widget": {
     "all_apps": "جميع التطبيقات",
@@ -52,7 +54,12 @@
     "IN_BETA_TESTING": "قيد الاختبار",
     "READY_FOR_BETA_TESTING": "جاهز للاختبار",
     "MISSING_EXPORT_COMPLIANCE": "امتثال التصدير",
-    "EXPIRED": "منتهي الصلاحية"
+    "EXPIRED": "منتهي الصلاحية",
+    "CI_SUCCEEDED": "نجح",
+    "CI_FAILED": "فشل",
+    "CI_ERRORED": "خطأ",
+    "CI_CANCELED": "أُلغي",
+    "CI_SKIPPED": "تم التخطي"
   },
   "settings": {
     "subtitle": "التنزيلات وحالة App Review والبنيات والمراجعات لتطبيقات iOS الخاصة بك.",
@@ -86,5 +93,11 @@
     "g3l": "<li>اضغط “Download API Key” – تسمح Apple بذلك مرة واحدة فقط.</li><li>افتح ملف .p8 في محرر نصوص والصق المحتوى كاملًا أعلاه، بما في ذلك سطرا BEGIN/END.</li><li>يُخزَّن المفتاح على Homey الخاص بك فقط.</li>",
     "g4": "4. رقم المورّد",
     "g4l": "<li>App Store Connect ← <b>Business</b>: الرقم المكوّن من 8 أرقام بجوار عنوانك.</li><li>مطلوب للتنزيلات والتحديثات والعائدات (Sales Reports). تنشر Apple أرقام الأمس مرة واحدة يوميًا.</li>"
+  },
+  "phased": {
+    "INACTIVE": "في انتظار الإصدار",
+    "ACTIVE": "نشط",
+    "PAUSED": "متوقف مؤقتًا",
+    "COMPLETE": "تم الإصدار للجميع"
   }
 }

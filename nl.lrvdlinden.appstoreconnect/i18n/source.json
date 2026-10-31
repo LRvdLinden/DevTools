@@ -145,6 +145,10 @@
   "en": "Not in review",
   "nl": "Niet in review"
  },
+ ".homeycompose/capabilities/asc_phased_release.json::/title": {
+  "en": "Phased release",
+  "nl": "Gefaseerde release"
+ },
  ".homeycompose/capabilities/asc_proceeds_30d.json::/title": {
   "en": "Proceeds 30 days",
   "nl": "Opbrengst 30 dagen"
@@ -164,6 +168,14 @@
  ".homeycompose/capabilities/asc_status.json::/title": {
   "en": "App Store status",
   "nl": "App Store-status"
+ },
+ ".homeycompose/capabilities/asc_testflight_installs.json::/title": {
+  "en": "TestFlight installs",
+  "nl": "TestFlight-installaties"
+ },
+ ".homeycompose/capabilities/asc_testflight_testers.json::/title": {
+  "en": "TestFlight testers",
+  "nl": "TestFlight-testers"
  },
  ".homeycompose/capabilities/asc_updates_30d.json::/title": {
   "en": "Updates 30 days",
@@ -280,6 +292,110 @@
  ".homeycompose/flow/triggers/any_new_live_version.json::/tokens/1/example": {
   "en": "Version",
   "nl": "Versie"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/title": {
+  "en": "An app received a TestFlight crash report",
+  "nl": "Een app kreeg een TestFlight-crashmelding"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/tokens/0/title": {
+  "en": "App",
+  "nl": "App"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/tokens/0/example": {
+  "en": "Trailhead",
+  "nl": "Trailhead"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/tokens/1/title": {
+  "en": "Comment",
+  "nl": "Opmerking"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/tokens/1/example": {
+  "en": "The app closes when I tap Save",
+  "nl": "De app sluit als ik op Bewaar tik"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/tokens/2/title": {
+  "en": "Tester",
+  "nl": "Tester"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/tokens/2/example": {
+  "en": "Sanne de Vries",
+  "nl": "Sanne de Vries"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/tokens/3/title": {
+  "en": "Device",
+  "nl": "Toestel"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/tokens/3/example": {
+  "en": "iPhone17,1",
+  "nl": "iPhone17,1"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/tokens/4/title": {
+  "en": "OS version",
+  "nl": "OS-versie"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/tokens/4/example": {
+  "en": "26.1",
+  "nl": "26.1"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/tokens/5/title": {
+  "en": "Build",
+  "nl": "Build"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_crash.json::/tokens/5/example": {
+  "en": "318",
+  "nl": "318"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/title": {
+  "en": "An app received TestFlight feedback",
+  "nl": "Een app kreeg TestFlight-feedback"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/tokens/0/title": {
+  "en": "App",
+  "nl": "App"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/tokens/0/example": {
+  "en": "Trailhead",
+  "nl": "Trailhead"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/tokens/1/title": {
+  "en": "Comment",
+  "nl": "Opmerking"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/tokens/1/example": {
+  "en": "The app closes when I tap Save",
+  "nl": "De app sluit als ik op Bewaar tik"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/tokens/2/title": {
+  "en": "Tester",
+  "nl": "Tester"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/tokens/2/example": {
+  "en": "Sanne de Vries",
+  "nl": "Sanne de Vries"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/tokens/3/title": {
+  "en": "Device",
+  "nl": "Toestel"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/tokens/3/example": {
+  "en": "iPhone17,1",
+  "nl": "iPhone17,1"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/tokens/4/title": {
+  "en": "OS version",
+  "nl": "OS-versie"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/tokens/4/example": {
+  "en": "26.1",
+  "nl": "26.1"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/tokens/5/title": {
+  "en": "Build",
+  "nl": "Build"
+ },
+ ".homeycompose/flow/triggers/any_new_testflight_feedback.json::/tokens/5/example": {
+  "en": "318",
+  "nl": "318"
  },
  ".homeycompose/flow/triggers/any_review_rejected.json::/title": {
   "en": "An app was rejected",
@@ -633,6 +749,142 @@
   "en": "Day before",
   "nl": "Dag ervoor"
  },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/12/title": {
+  "en": "New TestFlight feedback",
+  "nl": "Nieuwe TestFlight-feedback"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/12/tokens/0/title": {
+  "en": "Comment",
+  "nl": "Opmerking"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/12/tokens/0/example": {
+  "en": "The app closes when I tap Save",
+  "nl": "De app sluit als ik op Bewaar tik"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/12/tokens/1/title": {
+  "en": "Tester",
+  "nl": "Tester"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/12/tokens/1/example": {
+  "en": "Sanne de Vries",
+  "nl": "Sanne de Vries"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/12/tokens/2/title": {
+  "en": "Device",
+  "nl": "Toestel"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/12/tokens/2/example": {
+  "en": "iPhone17,1",
+  "nl": "iPhone17,1"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/12/tokens/3/title": {
+  "en": "OS version",
+  "nl": "OS-versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/12/tokens/3/example": {
+  "en": "26.1",
+  "nl": "26.1"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/12/tokens/4/title": {
+  "en": "Build",
+  "nl": "Build"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/12/tokens/4/example": {
+  "en": "318",
+  "nl": "318"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/13/title": {
+  "en": "New TestFlight crash report",
+  "nl": "Nieuwe TestFlight-crashmelding"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/13/tokens/0/title": {
+  "en": "Comment",
+  "nl": "Opmerking"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/13/tokens/0/example": {
+  "en": "The app closes when I tap Save",
+  "nl": "De app sluit als ik op Bewaar tik"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/13/tokens/1/title": {
+  "en": "Tester",
+  "nl": "Tester"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/13/tokens/1/example": {
+  "en": "Sanne de Vries",
+  "nl": "Sanne de Vries"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/13/tokens/2/title": {
+  "en": "Device",
+  "nl": "Toestel"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/13/tokens/2/example": {
+  "en": "iPhone17,1",
+  "nl": "iPhone17,1"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/13/tokens/3/title": {
+  "en": "OS version",
+  "nl": "OS-versie"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/13/tokens/3/example": {
+  "en": "26.1",
+  "nl": "26.1"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/13/tokens/4/title": {
+  "en": "Build",
+  "nl": "Build"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/13/tokens/4/example": {
+  "en": "318",
+  "nl": "318"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/14/title": {
+  "en": "Phased release changed",
+  "nl": "Gefaseerde release gewijzigd"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/14/tokens/0/title": {
+  "en": "Status",
+  "nl": "Status"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/14/tokens/0/example": {
+  "en": "Active · 5%",
+  "nl": "Bezig · 5%"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/14/tokens/1/title": {
+  "en": "Day",
+  "nl": "Dag"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/14/tokens/2/title": {
+  "en": "Percentage of users",
+  "nl": "Percentage gebruikers"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/15/title": {
+  "en": "Xcode Cloud build finished",
+  "nl": "Xcode Cloud-build klaar"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/15/tokens/0/title": {
+  "en": "Workflow",
+  "nl": "Workflow"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/15/tokens/0/example": {
+  "en": "Release – TestFlight",
+  "nl": "Release – TestFlight"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/15/tokens/1/title": {
+  "en": "Build number",
+  "nl": "Buildnummer"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/15/tokens/2/title": {
+  "en": "Result",
+  "nl": "Resultaat"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/15/tokens/2/example": {
+  "en": "Succeeded",
+  "nl": "Geslaagd"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/triggers/15/tokens/3/title": {
+  "en": "Succeeded",
+  "nl": "Geslaagd"
+ },
  "drivers/asc_app/driver.flow.compose.json::/conditions/0/title": {
   "en": "App !{{is|is not}} live",
   "nl": "App !{{is|is niet}} live"
@@ -705,6 +957,22 @@
   "en": "90",
   "nl": "90"
  },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/8/title": {
+  "en": "Phased release !{{is|is not}} in progress",
+  "nl": "Gefaseerde release !{{is|is niet}} bezig"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/9/title": {
+  "en": "TestFlight installs !{{are|are not}} above…",
+  "nl": "TestFlight-installaties !{{zijn|zijn niet}} hoger dan…"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/9/titleFormatted": {
+  "en": "TestFlight installs !{{are|are not}} above [[number]]",
+  "nl": "TestFlight-installaties !{{zijn|zijn niet}} hoger dan [[number]]"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/conditions/9/args/0/placeholder": {
+  "en": "100",
+  "nl": "100"
+ },
  "drivers/asc_app/driver.flow.compose.json::/actions/0/title": {
   "en": "Refresh App Store status",
   "nl": "App Store-status verversen"
@@ -732,6 +1000,42 @@
  "drivers/asc_app/driver.flow.compose.json::/actions/2/args/1/placeholder": {
   "en": "Thank you for your review!",
   "nl": "Bedankt voor je review!"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/3/title": {
+  "en": "Control the phased release",
+  "nl": "Gefaseerde release bedienen"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/3/titleFormatted": {
+  "en": "[[action]] the phased release",
+  "nl": "Gefaseerde release: [[action]]"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/3/hint": {
+  "en": "Pause, resume or release the current version to all users at once.",
+  "nl": "Pauzeer, hervat of breng de huidige versie in één keer uit aan alle gebruikers."
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/3/args/0/values/0/label": {
+  "en": "Pause",
+  "nl": "Pauzeren"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/3/args/0/values/1/label": {
+  "en": "Resume",
+  "nl": "Hervatten"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/3/args/0/values/2/label": {
+  "en": "Release to all users",
+  "nl": "Uitbrengen aan iedereen"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/4/title": {
+  "en": "Start an Xcode Cloud build",
+  "nl": "Xcode Cloud-build starten"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/4/titleFormatted": {
+  "en": "Start Xcode Cloud workflow [[workflow]]",
+  "nl": "Start Xcode Cloud-workflow [[workflow]]"
+ },
+ "drivers/asc_app/driver.flow.compose.json::/actions/4/args/0/placeholder": {
+  "en": "Workflow",
+  "nl": "Workflow"
  },
  "drivers/asc_portfolio/driver.compose.json::/name": {
   "en": "All apps (portfolio)",
@@ -832,6 +1136,14 @@
  "locale::errors.no_pending_release": {
   "en": "There is no version waiting for release (Pending Developer Release).",
   "nl": "Er staat geen versie klaar om vrij te geven (Klaar voor release)."
+ },
+ "locale::errors.no_phased_release": {
+  "en": "This app has no phased release for its current version.",
+  "nl": "Deze app heeft geen gefaseerde release voor de huidige versie."
+ },
+ "locale::errors.no_workflow": {
+  "en": "Choose an Xcode Cloud workflow.",
+  "nl": "Kies een Xcode Cloud-workflow."
  },
  "locale::widget.all_apps": {
   "en": "All apps",
@@ -1009,6 +1321,26 @@
   "en": "Expired",
   "nl": "Verlopen"
  },
+ "locale::status.CI_SUCCEEDED": {
+  "en": "Succeeded",
+  "nl": "Geslaagd"
+ },
+ "locale::status.CI_FAILED": {
+  "en": "Failed",
+  "nl": "Mislukt"
+ },
+ "locale::status.CI_ERRORED": {
+  "en": "Error",
+  "nl": "Fout"
+ },
+ "locale::status.CI_CANCELED": {
+  "en": "Canceled",
+  "nl": "Geannuleerd"
+ },
+ "locale::status.CI_SKIPPED": {
+  "en": "Skipped",
+  "nl": "Overgeslagen"
+ },
  "locale::settings.subtitle": {
   "en": "Downloads, App Review status, builds and reviews of your iOS apps.",
   "nl": "Downloads, App Review-status, builds en reviews van je iOS-apps."
@@ -1133,12 +1465,36 @@
   "en": "<li>App Store Connect → <b>Business</b>: the 8-digit number next to your address.</li><li>Needed for downloads, updates and proceeds (Sales Reports). Apple publishes the figures of yesterday once a day.</li>",
   "nl": "<li>App Store Connect → <b>Business</b>: het getal van 8 cijfers naast je adres.</li><li>Nodig voor downloads, updates en opbrengst (Sales Reports). Apple publiceert de cijfers van gisteren één keer per dag.</li>"
  },
+ "locale::phased.INACTIVE": {
+  "en": "Waiting for release",
+  "nl": "Wacht op release"
+ },
+ "locale::phased.ACTIVE": {
+  "en": "Active",
+  "nl": "Bezig"
+ },
+ "locale::phased.PAUSED": {
+  "en": "Paused",
+  "nl": "Gepauzeerd"
+ },
+ "locale::phased.COMPLETE": {
+  "en": "Released to everyone",
+  "nl": "Aan iedereen uitgebracht"
+ },
  "readme::text": {
-  "en": "App Store Connect brings your iOS, iPadOS, macOS and tvOS apps into Homey.\n\nAdd every app from your App Store Connect account as a device and follow:\n• Downloads yesterday, last 7 days, last 30 days and all-time\n• Updates and proceeds of the last 30 days\n• App Store status (Live, Waiting for Review, In Review, Ready for Distribution, Pending Release, Rejected)\n• Live version, next version and the latest TestFlight build\n• Rating and number of ratings\n\nThe \"All apps\" device shows the totals of your whole portfolio: total downloads, live apps, apps in review and apps that need attention.\n\nFlows\n• When: status changed, entered App Review, rejected, ready for distribution, waiting for your release, new live version, new build, build processed, new customer review, rating changed, new download figures, downloads dropped\n• And: app is live, in App Review, new version in progress, downloads above a number, rating above a number, live version older than X days\n• Then: refresh, release the approved version, reply to a customer review\n\nDashboard widgets\nDownloads (one app or all apps, with an Insights-style chart), Top apps and Review & status – the same design as the DevTools iPhone app.\n\nSetup: create an App Store Connect API team key (Admin role) and paste the Issuer ID, Key ID and the .p8 key in the app settings. Add your vendor number for downloads. A step-by-step guide is included in the settings.\n\nYour API key is stored only on your Homey. This app is not affiliated with Apple Inc.\n",
-  "nl": "App Store Connect brengt je iOS-, iPadOS-, macOS- en tvOS-apps naar Homey.\n\nVoeg elke app uit je App Store Connect-account toe als apparaat en volg:\n• Downloads gisteren, afgelopen 7 dagen, afgelopen 30 dagen en totaal\n• Updates en opbrengst van de afgelopen 30 dagen\n• App Store-status (Live, Wacht op review, In review, Klaar voor distributie, Klaar voor release, Afgewezen)\n• Live versie, volgende versie en de laatste TestFlight-build\n• Beoordeling en aantal beoordelingen\n\nHet apparaat \"Alle apps\" toont de totalen van je hele portfolio: totaal downloads, live apps, apps in review en apps die aandacht nodig hebben.\n\nFlows\n• Als: status veranderd, in App Review, afgewezen, klaar voor distributie, wacht op jouw vrijgave, nieuwe live versie, nieuwe build, build verwerkt, nieuwe klantreview, beoordeling veranderd, nieuwe downloadcijfers, downloads gedaald\n• En: app is live, in App Review, nieuwe versie in voorbereiding, downloads hoger dan, beoordeling hoger dan, live versie ouder dan X dagen\n• Dan: verversen, goedgekeurde versie vrijgeven, reageren op een klantreview\n\nDashboard-widgets\nDownloads (één app of alle apps, met Insights-grafiek), Top apps en Review & status – hetzelfde design als de DevTools iPhone-app.\n\nInstellen: maak een App Store Connect API-teamsleutel (rol Admin) en plak de Issuer ID, Key ID en de .p8-sleutel in de app-instellingen. Vul je vendornummer in voor downloads. Een stap-voor-stap-handleiding staat in de instellingen.\n\nJe API-sleutel wordt alleen op je Homey bewaard. Deze app is niet gelieerd aan Apple Inc.\n"
+  "en": "App Store Connect brings your iOS, iPadOS, macOS and tvOS apps into Homey. Every app becomes a device that shows its downloads, proceeds, App Store status, live and upcoming version, TestFlight builds and installs, phased release and rating, while an \"All apps\" device keeps track of your whole portfolio. Use it in Flows to be notified when a version enters App Review, gets approved or goes live, when testers send feedback or when new download figures arrive, and add the dashboard widgets for a quick look at how your apps are doing.\n\nSetup takes a minute: create an App Store Connect API key and add it, together with your vendor number, in the app settings, where a step-by-step guide is included. Your key is stored only on your Homey and talks directly to Apple. This app is not affiliated with Apple Inc.\n",
+  "nl": "App Store Connect brengt je iOS-, iPadOS-, macOS- en tvOS-apps naar Homey. Elke app wordt een apparaat met de downloads, opbrengst, App Store-status, live en komende versie, TestFlight-builds en -installaties, gefaseerde release en beoordeling, en een apparaat \"Alle apps\" houdt je hele portfolio bij. Gebruik het in Flows om een melding te krijgen als een versie in App Review gaat, wordt goedgekeurd of live gaat, als testers feedback sturen of als er nieuwe downloadcijfers zijn, en zet de dashboard-widgets neer voor een snelle blik op je apps.\n\nInstellen kost een minuut: maak een App Store Connect API-sleutel aan en voeg die samen met je vendornummer toe in de instellingen van de app, waar ook een stappenplan staat. Je sleutel wordt alleen op je Homey bewaard en praat rechtstreeks met Apple. Deze app is niet verbonden aan Apple Inc.\n"
  },
  "changelog::1.0.0": {
   "en": "First release: App Store apps as devices with downloads, status, versions, builds and ratings; portfolio device; flows; dashboard widgets.",
   "nl": "Eerste versie: App Store-apps als apparaten met downloads, status, versies, builds en beoordelingen; portfolio-apparaat; flows; dashboard-widgets."
+ },
+ "changelog::1.0.1": {
+  "en": "New app and device images, settings page in Homey style and neutral example values in the account fields.",
+  "nl": "Nieuwe app- en apparaatafbeeldingen, instellingenpagina in Homey-stijl en neutrale voorbeeldwaarden in de accountvelden."
+ },
+ "changelog::1.1.0": {
+  "en": "TestFlight installs and testers, new TestFlight feedback and crash reports, phased release (status, pause, resume, release to everyone), Xcode Cloud (start a build, build finished) and a shorter app description.",
+  "nl": "TestFlight-installaties en -testers, nieuwe TestFlight-feedback en crashmeldingen, gefaseerde release (status, pauzeren, hervatten, aan iedereen uitbrengen), Xcode Cloud (build starten, build klaar) en een kortere appbeschrijving."
  }
 }

@@ -1104,6 +1104,608 @@
           }
         }
       ]
+    },
+    {
+      "id": "new_testflight_feedback",
+      "title": {
+        "en": "New TestFlight feedback",
+        "nl": "Nieuwe TestFlight-feedback",
+        "de": "Neues TestFlight-Feedback",
+        "fr": "Nouveau retour TestFlight",
+        "it": "Nuovo feedback TestFlight",
+        "sv": "Ny TestFlight-feedback",
+        "no": "Ny TestFlight-tilbakemelding",
+        "es": "Nuevos comentarios de TestFlight",
+        "da": "Ny TestFlight-feedback",
+        "ru": "Новый отзыв TestFlight",
+        "pl": "Nowa opinia z TestFlight",
+        "ko": "새 TestFlight 피드백",
+        "ar": "ملاحظات جديدة من TestFlight"
+      },
+      "tokens": [
+        {
+          "name": "comment",
+          "type": "string",
+          "title": {
+            "en": "Comment",
+            "nl": "Opmerking",
+            "de": "Kommentar",
+            "fr": "Commentaire",
+            "it": "Commento",
+            "sv": "Kommentar",
+            "no": "Kommentar",
+            "es": "Comentario",
+            "da": "Kommentar",
+            "ru": "Комментарий",
+            "pl": "Komentarz",
+            "ko": "코멘트",
+            "ar": "التعليق"
+          },
+          "example": {
+            "en": "The app closes when I tap Save",
+            "nl": "De app sluit als ik op Bewaar tik",
+            "de": "Die App schließt sich, wenn ich auf Sichern tippe",
+            "fr": "L'app se ferme quand je touche Enregistrer",
+            "it": "L'app si chiude quando tocco Salva",
+            "sv": "Appen stängs när jag trycker på Spara",
+            "no": "Appen lukkes når jeg trykker på Lagre",
+            "es": "La app se cierra cuando toco Guardar",
+            "da": "Appen lukker, når jeg trykker på Gem",
+            "ru": "Приложение закрывается, когда я нажимаю «Сохранить»",
+            "pl": "Aplikacja zamyka się, gdy stuknę Zapisz",
+            "ko": "저장을 탭하면 앱이 종료됩니다",
+            "ar": "يُغلق التطبيق عندما أضغط على حفظ"
+          }
+        },
+        {
+          "name": "tester",
+          "type": "string",
+          "title": {
+            "en": "Tester",
+            "nl": "Tester",
+            "de": "Tester",
+            "fr": "Testeur",
+            "it": "Tester",
+            "sv": "Testare",
+            "no": "Tester",
+            "es": "Tester",
+            "da": "Tester",
+            "ru": "Тестировщик",
+            "pl": "Tester",
+            "ko": "테스터",
+            "ar": "المختبِر"
+          },
+          "example": {
+            "en": "Sanne de Vries",
+            "nl": "Sanne de Vries",
+            "de": "Sanne de Vries",
+            "fr": "Sanne de Vries",
+            "it": "Sanne de Vries",
+            "sv": "Sanne de Vries",
+            "no": "Sanne de Vries",
+            "es": "Sanne de Vries",
+            "da": "Sanne de Vries",
+            "ru": "Sanne de Vries",
+            "pl": "Sanne de Vries",
+            "ko": "Sanne de Vries",
+            "ar": "Sanne de Vries"
+          }
+        },
+        {
+          "name": "device",
+          "type": "string",
+          "title": {
+            "en": "Device",
+            "nl": "Toestel",
+            "de": "Gerät",
+            "fr": "Appareil",
+            "it": "Dispositivo",
+            "sv": "Enhet",
+            "no": "Enhet",
+            "es": "Dispositivo",
+            "da": "Enhed",
+            "ru": "Устройство",
+            "pl": "Urządzenie",
+            "ko": "기기",
+            "ar": "الجهاز"
+          },
+          "example": {
+            "en": "iPhone17,1",
+            "nl": "iPhone17,1",
+            "de": "iPhone17,1",
+            "fr": "iPhone17,1",
+            "it": "iPhone17,1",
+            "sv": "iPhone17,1",
+            "no": "iPhone17,1",
+            "es": "iPhone17,1",
+            "da": "iPhone17,1",
+            "ru": "iPhone17,1",
+            "pl": "iPhone17,1",
+            "ko": "iPhone17,1",
+            "ar": "iPhone17,1"
+          }
+        },
+        {
+          "name": "os_version",
+          "type": "string",
+          "title": {
+            "en": "OS version",
+            "nl": "OS-versie",
+            "de": "OS-Version",
+            "fr": "Version de l'OS",
+            "it": "Versione OS",
+            "sv": "OS-version",
+            "no": "OS-versjon",
+            "es": "Versión del SO",
+            "da": "OS-version",
+            "ru": "Версия ОС",
+            "pl": "Wersja systemu",
+            "ko": "OS 버전",
+            "ar": "إصدار النظام"
+          },
+          "example": {
+            "en": "26.1",
+            "nl": "26.1",
+            "de": "26.1",
+            "fr": "26.1",
+            "it": "26.1",
+            "sv": "26.1",
+            "no": "26.1",
+            "es": "26.1",
+            "da": "26.1",
+            "ru": "26.1",
+            "pl": "26.1",
+            "ko": "26.1",
+            "ar": "26.1"
+          }
+        },
+        {
+          "name": "build",
+          "type": "string",
+          "title": {
+            "en": "Build",
+            "nl": "Build",
+            "de": "Build",
+            "fr": "Build",
+            "it": "Build",
+            "sv": "Build",
+            "no": "Build",
+            "es": "Build",
+            "da": "Build",
+            "ru": "Сборка",
+            "pl": "Kompilacja",
+            "ko": "빌드",
+            "ar": "البنية"
+          },
+          "example": {
+            "en": "318",
+            "nl": "318",
+            "de": "318",
+            "fr": "318",
+            "it": "318",
+            "sv": "318",
+            "no": "318",
+            "es": "318",
+            "da": "318",
+            "ru": "318",
+            "pl": "318",
+            "ko": "318",
+            "ar": "318"
+          }
+        }
+      ]
+    },
+    {
+      "id": "new_testflight_crash",
+      "title": {
+        "en": "New TestFlight crash report",
+        "nl": "Nieuwe TestFlight-crashmelding",
+        "de": "Neuer TestFlight-Absturzbericht",
+        "fr": "Nouveau rapport de plantage TestFlight",
+        "it": "Nuovo rapporto di arresto anomalo TestFlight",
+        "sv": "Ny kraschrapport i TestFlight",
+        "no": "Ny krasjrapport i TestFlight",
+        "es": "Nuevo informe de fallo de TestFlight",
+        "da": "Ny nedbrudsrapport i TestFlight",
+        "ru": "Новый отчёт о сбое TestFlight",
+        "pl": "Nowy raport o awarii z TestFlight",
+        "ko": "새 TestFlight 충돌 보고서",
+        "ar": "تقرير تعطل جديد من TestFlight"
+      },
+      "tokens": [
+        {
+          "name": "comment",
+          "type": "string",
+          "title": {
+            "en": "Comment",
+            "nl": "Opmerking",
+            "de": "Kommentar",
+            "fr": "Commentaire",
+            "it": "Commento",
+            "sv": "Kommentar",
+            "no": "Kommentar",
+            "es": "Comentario",
+            "da": "Kommentar",
+            "ru": "Комментарий",
+            "pl": "Komentarz",
+            "ko": "코멘트",
+            "ar": "التعليق"
+          },
+          "example": {
+            "en": "The app closes when I tap Save",
+            "nl": "De app sluit als ik op Bewaar tik",
+            "de": "Die App schließt sich, wenn ich auf Sichern tippe",
+            "fr": "L'app se ferme quand je touche Enregistrer",
+            "it": "L'app si chiude quando tocco Salva",
+            "sv": "Appen stängs när jag trycker på Spara",
+            "no": "Appen lukkes når jeg trykker på Lagre",
+            "es": "La app se cierra cuando toco Guardar",
+            "da": "Appen lukker, når jeg trykker på Gem",
+            "ru": "Приложение закрывается, когда я нажимаю «Сохранить»",
+            "pl": "Aplikacja zamyka się, gdy stuknę Zapisz",
+            "ko": "저장을 탭하면 앱이 종료됩니다",
+            "ar": "يُغلق التطبيق عندما أضغط على حفظ"
+          }
+        },
+        {
+          "name": "tester",
+          "type": "string",
+          "title": {
+            "en": "Tester",
+            "nl": "Tester",
+            "de": "Tester",
+            "fr": "Testeur",
+            "it": "Tester",
+            "sv": "Testare",
+            "no": "Tester",
+            "es": "Tester",
+            "da": "Tester",
+            "ru": "Тестировщик",
+            "pl": "Tester",
+            "ko": "테스터",
+            "ar": "المختبِر"
+          },
+          "example": {
+            "en": "Sanne de Vries",
+            "nl": "Sanne de Vries",
+            "de": "Sanne de Vries",
+            "fr": "Sanne de Vries",
+            "it": "Sanne de Vries",
+            "sv": "Sanne de Vries",
+            "no": "Sanne de Vries",
+            "es": "Sanne de Vries",
+            "da": "Sanne de Vries",
+            "ru": "Sanne de Vries",
+            "pl": "Sanne de Vries",
+            "ko": "Sanne de Vries",
+            "ar": "Sanne de Vries"
+          }
+        },
+        {
+          "name": "device",
+          "type": "string",
+          "title": {
+            "en": "Device",
+            "nl": "Toestel",
+            "de": "Gerät",
+            "fr": "Appareil",
+            "it": "Dispositivo",
+            "sv": "Enhet",
+            "no": "Enhet",
+            "es": "Dispositivo",
+            "da": "Enhed",
+            "ru": "Устройство",
+            "pl": "Urządzenie",
+            "ko": "기기",
+            "ar": "الجهاز"
+          },
+          "example": {
+            "en": "iPhone17,1",
+            "nl": "iPhone17,1",
+            "de": "iPhone17,1",
+            "fr": "iPhone17,1",
+            "it": "iPhone17,1",
+            "sv": "iPhone17,1",
+            "no": "iPhone17,1",
+            "es": "iPhone17,1",
+            "da": "iPhone17,1",
+            "ru": "iPhone17,1",
+            "pl": "iPhone17,1",
+            "ko": "iPhone17,1",
+            "ar": "iPhone17,1"
+          }
+        },
+        {
+          "name": "os_version",
+          "type": "string",
+          "title": {
+            "en": "OS version",
+            "nl": "OS-versie",
+            "de": "OS-Version",
+            "fr": "Version de l'OS",
+            "it": "Versione OS",
+            "sv": "OS-version",
+            "no": "OS-versjon",
+            "es": "Versión del SO",
+            "da": "OS-version",
+            "ru": "Версия ОС",
+            "pl": "Wersja systemu",
+            "ko": "OS 버전",
+            "ar": "إصدار النظام"
+          },
+          "example": {
+            "en": "26.1",
+            "nl": "26.1",
+            "de": "26.1",
+            "fr": "26.1",
+            "it": "26.1",
+            "sv": "26.1",
+            "no": "26.1",
+            "es": "26.1",
+            "da": "26.1",
+            "ru": "26.1",
+            "pl": "26.1",
+            "ko": "26.1",
+            "ar": "26.1"
+          }
+        },
+        {
+          "name": "build",
+          "type": "string",
+          "title": {
+            "en": "Build",
+            "nl": "Build",
+            "de": "Build",
+            "fr": "Build",
+            "it": "Build",
+            "sv": "Build",
+            "no": "Build",
+            "es": "Build",
+            "da": "Build",
+            "ru": "Сборка",
+            "pl": "Kompilacja",
+            "ko": "빌드",
+            "ar": "البنية"
+          },
+          "example": {
+            "en": "318",
+            "nl": "318",
+            "de": "318",
+            "fr": "318",
+            "it": "318",
+            "sv": "318",
+            "no": "318",
+            "es": "318",
+            "da": "318",
+            "ru": "318",
+            "pl": "318",
+            "ko": "318",
+            "ar": "318"
+          }
+        }
+      ]
+    },
+    {
+      "id": "phased_release_changed",
+      "title": {
+        "en": "Phased release changed",
+        "nl": "Gefaseerde release gewijzigd",
+        "de": "Phasenweise Veröffentlichung geändert",
+        "fr": "La publication progressive a changé",
+        "it": "Il rilascio graduale è cambiato",
+        "sv": "Stegvis lansering ändrades",
+        "no": "Trinnvis lansering endret",
+        "es": "El lanzamiento por fases ha cambiado",
+        "da": "Trinvis udgivelse ændret",
+        "ru": "Поэтапный выпуск изменён",
+        "pl": "Zmieniono wydanie etapowe",
+        "ko": "단계별 출시가 변경됨",
+        "ar": "تغيّر الإصدار التدريجي"
+      },
+      "tokens": [
+        {
+          "name": "state",
+          "type": "string",
+          "title": {
+            "en": "Status",
+            "nl": "Status",
+            "de": "Status",
+            "fr": "Statut",
+            "it": "Stato",
+            "sv": "Status",
+            "no": "Status",
+            "es": "Estado",
+            "da": "Status",
+            "ru": "Статус",
+            "pl": "Status",
+            "ko": "상태",
+            "ar": "الحالة"
+          },
+          "example": {
+            "en": "Active · 5%",
+            "nl": "Bezig · 5%",
+            "de": "Aktiv · 5 %",
+            "fr": "Active · 5 %",
+            "it": "Attivo · 5%",
+            "sv": "Aktiv · 5 %",
+            "no": "Aktiv · 5 %",
+            "es": "Activo · 5 %",
+            "da": "Aktiv · 5 %",
+            "ru": "Активен · 5%",
+            "pl": "Aktywne · 5%",
+            "ko": "활성 · 5%",
+            "ar": "نشط · 5%"
+          }
+        },
+        {
+          "name": "day",
+          "type": "number",
+          "title": {
+            "en": "Day",
+            "nl": "Dag",
+            "de": "Tag",
+            "fr": "Jour",
+            "it": "Giorno",
+            "sv": "Dag",
+            "no": "Dag",
+            "es": "Día",
+            "da": "Dag",
+            "ru": "День",
+            "pl": "Dzień",
+            "ko": "일차",
+            "ar": "اليوم"
+          },
+          "example": 3
+        },
+        {
+          "name": "percentage",
+          "type": "number",
+          "title": {
+            "en": "Percentage of users",
+            "nl": "Percentage gebruikers",
+            "de": "Prozentsatz der Nutzer",
+            "fr": "Pourcentage d'utilisateurs",
+            "it": "Percentuale di utenti",
+            "sv": "Andel användare",
+            "no": "Andel brukere",
+            "es": "Porcentaje de usuarios",
+            "da": "Andel brugere",
+            "ru": "Процент пользователей",
+            "pl": "Odsetek użytkowników",
+            "ko": "사용자 비율",
+            "ar": "نسبة المستخدمين"
+          },
+          "example": 5
+        }
+      ]
+    },
+    {
+      "id": "xcode_cloud_build_finished",
+      "title": {
+        "en": "Xcode Cloud build finished",
+        "nl": "Xcode Cloud-build klaar",
+        "de": "Xcode Cloud-Build abgeschlossen",
+        "fr": "Build Xcode Cloud terminé",
+        "it": "Build Xcode Cloud completata",
+        "sv": "Xcode Cloud-build klar",
+        "no": "Xcode Cloud-build ferdig",
+        "es": "Build de Xcode Cloud finalizada",
+        "da": "Xcode Cloud-build færdig",
+        "ru": "Сборка Xcode Cloud завершена",
+        "pl": "Kompilacja Xcode Cloud zakończona",
+        "ko": "Xcode Cloud 빌드 완료",
+        "ar": "اكتملت بنية Xcode Cloud"
+      },
+      "tokens": [
+        {
+          "name": "workflow",
+          "type": "string",
+          "title": {
+            "en": "Workflow",
+            "nl": "Workflow",
+            "de": "Workflow",
+            "fr": "Workflow",
+            "it": "Workflow",
+            "sv": "Workflow",
+            "no": "Workflow",
+            "es": "Workflow",
+            "da": "Workflow",
+            "ru": "Workflow",
+            "pl": "Workflow",
+            "ko": "Workflow",
+            "ar": "Workflow"
+          },
+          "example": {
+            "en": "Release – TestFlight",
+            "nl": "Release – TestFlight",
+            "de": "Release – TestFlight",
+            "fr": "Release – TestFlight",
+            "it": "Release – TestFlight",
+            "sv": "Release – TestFlight",
+            "no": "Release – TestFlight",
+            "es": "Release – TestFlight",
+            "da": "Release – TestFlight",
+            "ru": "Release – TestFlight",
+            "pl": "Release – TestFlight",
+            "ko": "Release – TestFlight",
+            "ar": "Release – TestFlight"
+          }
+        },
+        {
+          "name": "number",
+          "type": "number",
+          "title": {
+            "en": "Build number",
+            "nl": "Buildnummer",
+            "de": "Build-Nummer",
+            "fr": "Numéro de build",
+            "it": "Numero di build",
+            "sv": "Buildnummer",
+            "no": "Buildnummer",
+            "es": "Número de build",
+            "da": "Buildnummer",
+            "ru": "Номер сборки",
+            "pl": "Numer kompilacji",
+            "ko": "빌드 번호",
+            "ar": "رقم البنية"
+          },
+          "example": 318
+        },
+        {
+          "name": "result",
+          "type": "string",
+          "title": {
+            "en": "Result",
+            "nl": "Resultaat",
+            "de": "Ergebnis",
+            "fr": "Résultat",
+            "it": "Risultato",
+            "sv": "Resultat",
+            "no": "Resultat",
+            "es": "Resultado",
+            "da": "Resultat",
+            "ru": "Результат",
+            "pl": "Wynik",
+            "ko": "결과",
+            "ar": "النتيجة"
+          },
+          "example": {
+            "en": "Succeeded",
+            "nl": "Geslaagd",
+            "de": "Erfolgreich",
+            "fr": "Réussi",
+            "it": "Riuscito",
+            "sv": "Lyckades",
+            "no": "Vellykket",
+            "es": "Correcto",
+            "da": "Lykkedes",
+            "ru": "Успешно",
+            "pl": "Powodzenie",
+            "ko": "성공",
+            "ar": "نجح"
+          }
+        },
+        {
+          "name": "succeeded",
+          "type": "boolean",
+          "title": {
+            "en": "Succeeded",
+            "nl": "Geslaagd",
+            "de": "Erfolgreich",
+            "fr": "Réussi",
+            "it": "Riuscito",
+            "sv": "Lyckades",
+            "no": "Vellykket",
+            "es": "Correcto",
+            "da": "Lykkedes",
+            "ru": "Успешно",
+            "pl": "Powodzenie",
+            "ko": "성공",
+            "ar": "نجح"
+          },
+          "example": true
+        }
+      ]
     }
   ],
   "conditions": [
@@ -1437,6 +2039,79 @@
           }
         }
       ]
+    },
+    {
+      "id": "phased_release_active",
+      "title": {
+        "en": "Phased release !{{is|is not}} in progress",
+        "nl": "Gefaseerde release !{{is|is niet}} bezig",
+        "de": "Phasenweise Veröffentlichung !{{läuft|läuft nicht}}",
+        "fr": "Publication progressive !{{en cours|pas en cours}}",
+        "it": "Rilascio graduale !{{in corso|non in corso}}",
+        "sv": "Stegvis lansering !{{pågår|pågår inte}}",
+        "no": "Trinnvis lansering !{{pågår|pågår ikke}}",
+        "es": "El lanzamiento por fases !{{está|no está}} en curso",
+        "da": "Trinvis udgivelse !{{er|er ikke}} i gang",
+        "ru": "Поэтапный выпуск !{{идёт|не идёт}}",
+        "pl": "Wydanie etapowe !{{trwa|nie trwa}}",
+        "ko": "단계별 출시가 !{{진행 중입니다|진행 중이 아닙니다}}",
+        "ar": "الإصدار التدريجي !{{قيد التنفيذ|ليس قيد التنفيذ}}"
+      }
+    },
+    {
+      "id": "testflight_installs_above",
+      "title": {
+        "en": "TestFlight installs !{{are|are not}} above…",
+        "nl": "TestFlight-installaties !{{zijn|zijn niet}} hoger dan…",
+        "de": "TestFlight-Installationen !{{liegen|liegen nicht}} über…",
+        "fr": "Les installations TestFlight !{{sont|ne sont pas}} supérieures à…",
+        "it": "Le installazioni TestFlight !{{sono|non sono}} superiori a…",
+        "sv": "TestFlight-installationer !{{är|är inte}} över…",
+        "no": "TestFlight-installasjoner !{{er|er ikke}} over…",
+        "es": "Las instalaciones de TestFlight !{{están|no están}} por encima de…",
+        "da": "TestFlight-installationer !{{er|er ikke}} over…",
+        "ru": "Установки TestFlight !{{больше|не больше}}…",
+        "pl": "Instalacje TestFlight !{{są|nie są}} powyżej…",
+        "ko": "TestFlight 설치 수가 …보다 !{{많습니다|많지 않습니다}}",
+        "ar": "عمليات تثبيت TestFlight !{{أعلى|ليست أعلى}} من…"
+      },
+      "titleFormatted": {
+        "en": "TestFlight installs !{{are|are not}} above [[number]]",
+        "nl": "TestFlight-installaties !{{zijn|zijn niet}} hoger dan [[number]]",
+        "de": "TestFlight-Installationen !{{liegen|liegen nicht}} über [[number]]",
+        "fr": "Les installations TestFlight !{{sont|ne sont pas}} supérieures à [[number]]",
+        "it": "Le installazioni TestFlight !{{sono|non sono}} superiori a [[number]]",
+        "sv": "TestFlight-installationer !{{är|är inte}} över [[number]]",
+        "no": "TestFlight-installasjoner !{{er|er ikke}} over [[number]]",
+        "es": "Las instalaciones de TestFlight !{{están|no están}} por encima de [[number]]",
+        "da": "TestFlight-installationer !{{er|er ikke}} over [[number]]",
+        "ru": "Установки TestFlight !{{больше|не больше}} [[number]]",
+        "pl": "Instalacje TestFlight !{{są|nie są}} powyżej [[number]]",
+        "ko": "TestFlight 설치 수가 [[number]]보다 !{{많습니다|많지 않습니다}}",
+        "ar": "عمليات تثبيت TestFlight !{{أعلى|ليست أعلى}} من [[number]]"
+      },
+      "args": [
+        {
+          "name": "number",
+          "type": "number",
+          "min": 0,
+          "placeholder": {
+            "en": "100",
+            "nl": "100",
+            "de": "100",
+            "fr": "100",
+            "it": "100",
+            "sv": "100",
+            "no": "100",
+            "es": "100",
+            "da": "100",
+            "ru": "100",
+            "pl": "100",
+            "ko": "100",
+            "ar": "100"
+          }
+        }
+      ]
     }
   ],
   "actions": [
@@ -1560,6 +2235,170 @@
             "pl": "Dziękujemy za recenzję!",
             "ko": "리뷰를 남겨 주셔서 감사합니다!",
             "ar": "شكرًا لك على مراجعتك!"
+          }
+        }
+      ]
+    },
+    {
+      "id": "phased_release_control",
+      "title": {
+        "en": "Control the phased release",
+        "nl": "Gefaseerde release bedienen",
+        "de": "Phasenweise Veröffentlichung steuern",
+        "fr": "Contrôler la publication progressive",
+        "it": "Controlla il rilascio graduale",
+        "sv": "Styr den stegvisa lanseringen",
+        "no": "Styr den trinnvise lanseringen",
+        "es": "Controlar el lanzamiento por fases",
+        "da": "Styr den trinvise udgivelse",
+        "ru": "Управлять поэтапным выпуском",
+        "pl": "Steruj wydaniem etapowym",
+        "ko": "단계별 출시 제어",
+        "ar": "التحكم في الإصدار التدريجي"
+      },
+      "titleFormatted": {
+        "en": "[[action]] the phased release",
+        "nl": "Gefaseerde release: [[action]]",
+        "de": "Phasenweise Veröffentlichung: [[action]]",
+        "fr": "[[action]] la publication progressive",
+        "it": "[[action]] il rilascio graduale",
+        "sv": "[[action]] den stegvisa lanseringen",
+        "no": "[[action]] den trinnvise lanseringen",
+        "es": "[[action]] el lanzamiento por fases",
+        "da": "[[action]] den trinvise udgivelse",
+        "ru": "Поэтапный выпуск: [[action]]",
+        "pl": "Wydanie etapowe: [[action]]",
+        "ko": "단계별 출시: [[action]]",
+        "ar": "[[action]] الإصدار التدريجي"
+      },
+      "hint": {
+        "en": "Pause, resume or release the current version to all users at once.",
+        "nl": "Pauzeer, hervat of breng de huidige versie in één keer uit aan alle gebruikers.",
+        "de": "Pausiere, setze fort oder veröffentliche die aktuelle Version sofort für alle Nutzer.",
+        "fr": "Mettez en pause, reprenez ou publiez immédiatement la version actuelle pour tous les utilisateurs.",
+        "it": "Metti in pausa, riprendi o rilascia subito la versione attuale a tutti gli utenti.",
+        "sv": "Pausa, återuppta eller släpp den aktuella versionen till alla användare på en gång.",
+        "no": "Sett på pause, gjenoppta eller slipp den gjeldende versjonen til alle brukere på én gang.",
+        "es": "Pausa, reanuda o publica la versión actual para todos los usuarios a la vez.",
+        "da": "Sæt på pause, genoptag eller udgiv den aktuelle version til alle brugere på én gang.",
+        "ru": "Приостановите, возобновите или выпустите текущую версию сразу для всех пользователей.",
+        "pl": "Wstrzymaj, wznów lub wydaj bieżącą wersję od razu wszystkim użytkownikom.",
+        "ko": "현재 버전을 일시 정지하거나 재개하거나 모든 사용자에게 한 번에 출시합니다.",
+        "ar": "أوقف الإصدار الحالي مؤقتًا أو استأنفه أو أصدره لجميع المستخدمين دفعة واحدة."
+      },
+      "args": [
+        {
+          "name": "action",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "PAUSED",
+              "label": {
+                "en": "Pause",
+                "nl": "Pauzeren",
+                "de": "Pausieren",
+                "fr": "Mettre en pause",
+                "it": "Metti in pausa",
+                "sv": "Pausa",
+                "no": "Sett på pause",
+                "es": "Pausar",
+                "da": "Sæt på pause",
+                "ru": "Приостановить",
+                "pl": "Wstrzymaj",
+                "ko": "일시 정지",
+                "ar": "إيقاف مؤقت"
+              }
+            },
+            {
+              "id": "ACTIVE",
+              "label": {
+                "en": "Resume",
+                "nl": "Hervatten",
+                "de": "Fortsetzen",
+                "fr": "Reprendre",
+                "it": "Riprendi",
+                "sv": "Återuppta",
+                "no": "Gjenoppta",
+                "es": "Reanudar",
+                "da": "Genoptag",
+                "ru": "Возобновить",
+                "pl": "Wznów",
+                "ko": "재개",
+                "ar": "استئناف"
+              }
+            },
+            {
+              "id": "COMPLETE",
+              "label": {
+                "en": "Release to all users",
+                "nl": "Uitbrengen aan iedereen",
+                "de": "Für alle Nutzer veröffentlichen",
+                "fr": "Publier pour tous les utilisateurs",
+                "it": "Rilascia a tutti gli utenti",
+                "sv": "Släpp till alla användare",
+                "no": "Slipp til alle brukere",
+                "es": "Publicar para todos los usuarios",
+                "da": "Udgiv til alle brugere",
+                "ru": "Выпустить для всех пользователей",
+                "pl": "Wydaj wszystkim użytkownikom",
+                "ko": "모든 사용자에게 출시",
+                "ar": "إصدار لجميع المستخدمين"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "start_xcode_cloud_build",
+      "title": {
+        "en": "Start an Xcode Cloud build",
+        "nl": "Xcode Cloud-build starten",
+        "de": "Xcode Cloud-Build starten",
+        "fr": "Lancer un build Xcode Cloud",
+        "it": "Avvia una build Xcode Cloud",
+        "sv": "Starta en Xcode Cloud-build",
+        "no": "Start en Xcode Cloud-build",
+        "es": "Iniciar una build de Xcode Cloud",
+        "da": "Start et Xcode Cloud-build",
+        "ru": "Запустить сборку Xcode Cloud",
+        "pl": "Uruchom kompilację Xcode Cloud",
+        "ko": "Xcode Cloud 빌드 시작",
+        "ar": "بدء بنية Xcode Cloud"
+      },
+      "titleFormatted": {
+        "en": "Start Xcode Cloud workflow [[workflow]]",
+        "nl": "Start Xcode Cloud-workflow [[workflow]]",
+        "de": "Xcode Cloud-Workflow [[workflow]] starten",
+        "fr": "Lancer le workflow Xcode Cloud [[workflow]]",
+        "it": "Avvia il workflow Xcode Cloud [[workflow]]",
+        "sv": "Starta Xcode Cloud-workflow [[workflow]]",
+        "no": "Start Xcode Cloud-workflow [[workflow]]",
+        "es": "Iniciar el workflow de Xcode Cloud [[workflow]]",
+        "da": "Start Xcode Cloud-workflow [[workflow]]",
+        "ru": "Запустить workflow Xcode Cloud [[workflow]]",
+        "pl": "Uruchom workflow Xcode Cloud [[workflow]]",
+        "ko": "Xcode Cloud 워크플로 [[workflow]] 시작",
+        "ar": "بدء سير عمل Xcode Cloud [[workflow]]"
+      },
+      "args": [
+        {
+          "name": "workflow",
+          "type": "autocomplete",
+          "placeholder": {
+            "en": "Workflow",
+            "nl": "Workflow",
+            "de": "Workflow",
+            "fr": "Workflow",
+            "it": "Workflow",
+            "sv": "Workflow",
+            "no": "Workflow",
+            "es": "Workflow",
+            "da": "Workflow",
+            "ru": "Workflow",
+            "pl": "Workflow",
+            "ko": "Workflow",
+            "ar": "Workflow"
           }
         }
       ]

@@ -18,15 +18,30 @@
     "en": "New app and device images, settings page in Homey style and neutral example values in the account fields.",
     "nl": "Nieuwe app- en apparaatafbeeldingen, instellingenpagina in Homey-stijl en neutrale voorbeeldwaarden in de accountvelden.",
     "de": "Neue App- und Gerätebilder, Einstellungsseite im Homey-Stil und neutrale Beispielwerte in den Kontofeldern.",
-    "fr": "Nouvelles images de l'app et des appareils, page de paramètres au style Homey et valeurs d'exemple neutres dans les champs du compte.",
-    "it": "Nuove immagini dell'app e dei dispositivi, pagina delle impostazioni in stile Homey e valori di esempio neutri nei campi dell'account.",
+    "fr": "Nouvelles images de l'app et des appareils, page de réglages au style Homey et valeurs d'exemple neutres dans les champs du compte.",
+    "it": "Nuove immagini di app e dispositivi, pagina delle impostazioni in stile Homey e valori di esempio neutri nei campi dell'account.",
     "sv": "Nya app- och enhetsbilder, inställningssida i Homey-stil och neutrala exempelvärden i kontofälten.",
     "no": "Nye app- og enhetsbilder, innstillingsside i Homey-stil og nøytrale eksempelverdier i kontofeltene.",
-    "es": "Nuevas imágenes de la app y de los dispositivos, página de ajustes con estilo Homey y valores de ejemplo neutros en los campos de la cuenta.",
+    "es": "Nuevas imágenes de la app y los dispositivos, página de ajustes con estilo Homey y valores de ejemplo neutros en los campos de la cuenta.",
     "da": "Nye app- og enhedsbilleder, indstillingsside i Homey-stil og neutrale eksempelværdier i kontofelterne.",
     "ru": "Новые изображения приложения и устройств, страница настроек в стиле Homey и нейтральные примеры значений в полях учётной записи.",
-    "pl": "Nowe obrazy aplikacji i urządzeń, strona ustawień w stylu Homey oraz neutralne przykładowe wartości w polach konta.",
+    "pl": "Nowe obrazy aplikacji i urządzeń, strona ustawień w stylu Homey i neutralne przykładowe wartości w polach konta.",
     "ko": "새 앱 및 기기 이미지, Homey 스타일의 설정 페이지, 계정 필드의 중립적인 예시 값.",
-    "ar": "صور جديدة للتطبيق والأجهزة، وصفحة إعدادات بنمط Homey، وقيم أمثلة محايدة في حقول الحساب."
+    "ar": "صور جديدة للتطبيق والأجهزة، وصفحة إعدادات بأسلوب Homey، وقيم أمثلة محايدة في حقول الحساب."
+  },
+  "1.1.0": {
+    "en": "TestFlight installs and testers, new TestFlight feedback and crash reports, phased release (status, pause, resume, release to everyone), Xcode Cloud (start a build, build finished) and a shorter app description.",
+    "nl": "TestFlight-installaties en -testers, nieuwe TestFlight-feedback en crashmeldingen, gefaseerde release (status, pauzeren, hervatten, aan iedereen uitbrengen), Xcode Cloud (build starten, build klaar) en een kortere appbeschrijving.",
+    "de": "TestFlight-Installationen und -Tester, neues TestFlight-Feedback und Absturzberichte, phasenweise Veröffentlichung (Status, pausieren, fortsetzen, für alle veröffentlichen), Xcode Cloud (Build starten, Build abgeschlossen) und eine kürzere App-Beschreibung.",
+    "fr": "Installations et testeurs TestFlight, nouveaux retours et rapports de plantage TestFlight, publication progressive (statut, pause, reprise, publication pour tous), Xcode Cloud (lancer un build, build terminé) et une description de l'app plus courte.",
+    "it": "Installazioni e tester TestFlight, nuovi feedback e rapporti di arresto anomalo TestFlight, rilascio graduale (stato, pausa, ripresa, rilascio a tutti), Xcode Cloud (avvio build, build completata) e una descrizione dell'app più breve.",
+    "sv": "TestFlight-installationer och testare, ny TestFlight-feedback och kraschrapporter, stegvis lansering (status, pausa, återuppta, släpp till alla), Xcode Cloud (starta en build, build klar) och en kortare appbeskrivning.",
+    "no": "TestFlight-installasjoner og testere, ny TestFlight-tilbakemelding og krasjrapporter, trinnvis lansering (status, pause, gjenoppta, slipp til alle), Xcode Cloud (start en build, build ferdig) og en kortere appbeskrivelse.",
+    "es": "Instalaciones y testers de TestFlight, nuevos comentarios e informes de fallos de TestFlight, lanzamiento por fases (estado, pausar, reanudar, publicar para todos), Xcode Cloud (iniciar una build, build finalizada) y una descripción de la app más corta.",
+    "da": "TestFlight-installationer og testere, ny TestFlight-feedback og nedbrudsrapporter, trinvis udgivelse (status, pause, genoptag, udgiv til alle), Xcode Cloud (start et build, build færdigt) og en kortere appbeskrivelse.",
+    "ru": "Установки и тестировщики TestFlight, новые отзывы и отчёты о сбоях TestFlight, поэтапный выпуск (статус, приостановка, возобновление, выпуск для всех), Xcode Cloud (запуск сборки, сборка завершена) и более короткое описание приложения.",
+    "pl": "Instalacje i testerzy TestFlight, nowe opinie i raporty o awariach z TestFlight, wydanie etapowe (status, wstrzymanie, wznowienie, wydanie wszystkim), Xcode Cloud (uruchomienie kompilacji, kompilacja zakończona) oraz krótszy opis aplikacji.",
+    "ko": "TestFlight 설치 수 및 테스터, 새 TestFlight 피드백 및 충돌 보고서, 단계별 출시(상태, 일시 정지, 재개, 모두에게 출시), Xcode Cloud(빌드 시작, 빌드 완료) 및 더 짧아진 앱 설명.",
+    "ar": "عمليات تثبيت TestFlight والمختبرون، وملاحظات وتقارير تعطل جديدة من TestFlight، والإصدار التدريجي (الحالة، الإيقاف المؤقت، الاستئناف، الإصدار للجميع)، وXcode Cloud (بدء بنية، اكتمال البنية)، ووصف أقصر للتطبيق."
   }
 }

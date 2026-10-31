@@ -4,7 +4,9 @@
     "portfolio_name": "Alle apps"
   },
   "errors": {
-    "no_pending_release": "Er staat geen versie klaar om vrij te geven (Klaar voor release)."
+    "no_pending_release": "Er staat geen versie klaar om vrij te geven (Klaar voor release).",
+    "no_phased_release": "Deze app heeft geen gefaseerde release voor de huidige versie.",
+    "no_workflow": "Kies een Xcode Cloud-workflow."
   },
   "widget": {
     "all_apps": "Alle apps",
@@ -52,7 +54,12 @@
     "IN_BETA_TESTING": "In test",
     "READY_FOR_BETA_TESTING": "Klaar om te testen",
     "MISSING_EXPORT_COMPLIANCE": "Export compliance",
-    "EXPIRED": "Verlopen"
+    "EXPIRED": "Verlopen",
+    "CI_SUCCEEDED": "Geslaagd",
+    "CI_FAILED": "Mislukt",
+    "CI_ERRORED": "Fout",
+    "CI_CANCELED": "Geannuleerd",
+    "CI_SKIPPED": "Overgeslagen"
   },
   "settings": {
     "subtitle": "Downloads, App Review-status, builds en reviews van je iOS-apps.",
@@ -86,5 +93,11 @@
     "testing": "Verbinding testen…",
     "downloads_ok": "downloads OK",
     "downloads": "downloads"
+  },
+  "phased": {
+    "INACTIVE": "Wacht op release",
+    "ACTIVE": "Bezig",
+    "PAUSED": "Gepauzeerd",
+    "COMPLETE": "Aan iedereen uitgebracht"
   }
 }

@@ -220,6 +220,102 @@ class AscClient {
     });
   }
 
+  // ---------- TestFlight ----------
+
+  /** Installs, sessions, crashes, feedback and invites of one build (no query parameters allowed). */
+  async betaUsage(buildId) {
+    const res = await this.request('GET', `/v1/builds/${buildId}/metrics/betaBuildUsages`);
+    const u = { installs: 0, sessions: 0, crashes: 0, feedback: 0, invites: 0 };
+    const walk = node => {
+      if (Array.isArray(node)) { node.forEach(walk); return; }
+      if (!node || typeof node !== 'object') return;
+      if (node.values && typeof node.values === 'object') {
+        const v = node.values;
+        u.installs += Number(v.installCount) || 0;
+        u.sessions += Number(v.sessionCount) || 0;
+        u.crashes += Number(v.crashCount) || 0;
+        u.feedback += Number(v.feedbackCount) || 0;
+        u.invites += Number(v.inviteCount) || 0;
+      }
+      for (const [k, v] of Object.entries(node)) if (k !== 'values') walk(v);
+    };
+    try { walk(JSON.parse(res.body.toString('utf8'))); } catch (e) { /* empty metrics */ }
+    return u;
+  }
+
+  async betaTesterCount(appId) {
+    const doc = await this.get('/v1/betaTesters', { 'filter[apps]': appId, limit: 1, 'fields[betaTesters]': 'state' });
+    return doc.meta && doc.meta.paging && typeof doc.meta.paging.total === 'number' ? doc.meta.paging.total : (doc.data || []).length;
+  }
+
+  /** Latest TestFlight feedback ('screenshot' or 'crash') with its build number. */
+  async feedback(appId, kind, limit = 5) {
+    const type = kind === 'crash' ? 'betaFeedbackCrashSubmissions' : 'betaFeedbackScreenshotSubmissions';
+    const doc = await this.get(`/v1/apps/${appId}/${type}`, { limit, sort: '-createdDate', include: 'build,tester' });
+    const inc = doc.included || [];
+    const find = rel => rel && rel.data && inc.find(i => i.type === rel.data.type && i.id === rel.data.id);
+    return (doc.data || []).map(f => {
+      const a = f.attributes || {};
+      const build = find(f.relationships && f.relationships.build);
+      const tester = find(f.relationships && f.relationships.tester);
+      const testerName = tester ? [tester.attributes.firstName, tester.attributes.lastName].filter(Boolean).join(' ') : '';
+      return {
+        id: f.id,
+        created: a.createdDate,
+        comment: a.comment || '',
+        tester: testerName || a.email || '',
+        device: a.deviceModel || '',
+        osVersion: a.osVersion || '',
+        build: build ? build.attributes.version || '' : '',
+      };
+    });
+  }
+
+  // ---------- Phased release ----------
+
+  async phasedRelease(versionId) {
+    try {
+      const doc = await this.get(`/v1/appStoreVersions/${versionId}/appStoreVersionPhasedRelease`);
+      if (!doc.data) return null;
+      const a = doc.data.attributes || {};
+      return { id: doc.data.id, state: a.phasedReleaseState || '', day: a.currentDayNumber || 0, start: a.startDate || null };
+    } catch (err) {
+      if (err.status === 404) return null;
+      throw err;
+    }
+  }
+
+  async setPhasedRelease(id, state) {
+    return this.write('PATCH', `/v1/appStoreVersionPhasedReleases/${id}`, {
+      data: { type: 'appStoreVersionPhasedReleases', id, attributes: { phasedReleaseState: state } },
+    });
+  }
+
+  // ---------- Xcode Cloud ----------
+
+  /** Workflows of the app's Xcode Cloud product ([] when Xcode Cloud isn't set up). */
+  async ciWorkflows(appId) {
+    let product;
+    try { product = await this.get(`/v1/apps/${appId}/ciProduct`); } catch (err) { if (err.status === 404) return []; throw err; }
+    if (!product.data) return [];
+    const doc = await this.get(`/v1/ciProducts/${product.data.id}/workflows`, { limit: 50 });
+    return (doc.data || []).map(w => ({ id: w.id, name: w.attributes.name, enabled: w.attributes.isEnabled !== false }));
+  }
+
+  async latestBuildRun(workflowId) {
+    const doc = await this.get(`/v1/ciWorkflows/${workflowId}/buildRuns`, { limit: 1, sort: '-number' });
+    const r = (doc.data || [])[0];
+    if (!r) return null;
+    const a = r.attributes || {};
+    return { id: r.id, number: a.number, progress: a.executionProgress, result: a.completionStatus || '', finished: a.finishedDate || null };
+  }
+
+  async startBuildRun(workflowId) {
+    return this.write('POST', '/v1/ciBuildRuns', {
+      data: { type: 'ciBuildRuns', relationships: { workflow: { data: { type: 'ciWorkflows', id: workflowId } } } },
+    });
+  }
+
   // ---------- Sales Reports ----------
 
   /** Returns parsed rows, [] when Apple has no sales for that period (404), throws on other errors. */

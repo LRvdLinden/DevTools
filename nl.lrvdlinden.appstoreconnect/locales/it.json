@@ -4,7 +4,9 @@
     "portfolio_name": "Tutte le app"
   },
   "errors": {
-    "no_pending_release": "Non c'è nessuna versione in attesa di pubblicazione (In attesa di pubblicazione da parte dello sviluppatore)."
+    "no_pending_release": "Non c'è nessuna versione in attesa di pubblicazione (In attesa di pubblicazione da parte dello sviluppatore).",
+    "no_phased_release": "Questa app non ha un rilascio graduale per la versione attuale.",
+    "no_workflow": "Scegli un workflow Xcode Cloud."
   },
   "widget": {
     "all_apps": "Tutte le app",
@@ -52,7 +54,12 @@
     "IN_BETA_TESTING": "In test",
     "READY_FOR_BETA_TESTING": "Pronta per il test",
     "MISSING_EXPORT_COMPLIANCE": "Conformità all'esportazione",
-    "EXPIRED": "Scaduta"
+    "EXPIRED": "Scaduta",
+    "CI_SUCCEEDED": "Riuscito",
+    "CI_FAILED": "Non riuscito",
+    "CI_ERRORED": "Errore",
+    "CI_CANCELED": "Annullato",
+    "CI_SKIPPED": "Saltato"
   },
   "settings": {
     "subtitle": "Download, stato di App Review, build e recensioni delle tue app iOS.",
@@ -86,5 +93,11 @@
     "g3l": "<li>Tocca “Scarica chiave API” – Apple lo consente una sola volta.</li><li>Apri il file .p8 in un editor di testo e incolla qui sopra l'intero contenuto, comprese le righe BEGIN/END.</li><li>La chiave viene salvata solo sul tuo Homey.</li>",
     "g4": "4. Numero fornitore",
     "g4l": "<li>App Store Connect → <b>Business</b>: il numero di 8 cifre accanto al tuo indirizzo.</li><li>Serve per download, aggiornamenti e ricavi (Sales Reports). Apple pubblica i dati di ieri una volta al giorno.</li>"
+  },
+  "phased": {
+    "INACTIVE": "In attesa di rilascio",
+    "ACTIVE": "Attivo",
+    "PAUSED": "In pausa",
+    "COMPLETE": "Rilasciato a tutti"
   }
 }

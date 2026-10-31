@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "title": {
+    "en": "TestFlight testers",
+    "nl": "TestFlight-testers",
+    "de": "TestFlight-Tester",
+    "fr": "Testeurs TestFlight",
+    "it": "Tester TestFlight",
+    "sv": "TestFlight-testare",
+    "no": "TestFlight-testere",
+    "es": "Testers de TestFlight",
+    "da": "TestFlight-testere",
+    "ru": "Тестировщики TestFlight",
+    "pl": "Testerzy TestFlight",
+    "ko": "TestFlight 테스터",
+    "ar": "مختبرو TestFlight"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capabilities/apps.svg",
+  "insights": true,
+  "decimals": 0
+}

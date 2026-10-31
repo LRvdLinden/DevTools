@@ -5,6 +5,10 @@ const status = require('../../lib/status');
 
 module.exports = class AscAppDevice extends Homey.Device {
   async onInit() {
+    // Capabilities added in 1.1.0
+    for (const cap of ['asc_testflight_installs', 'asc_testflight_testers', 'asc_phased_release']) {
+      if (!this.hasCapability(cap)) await this.addCapability(cap).catch(this.error);
+    }
     const rec = this.homey.app.data.apps[this.getData().id];
     if (rec) await this.applyData(rec, this.homey.app.data.currency);
   }
@@ -34,6 +38,11 @@ module.exports = class AscAppDevice extends Homey.Device {
       await this.set('asc_updates_30d', a.stats.updates30);
       await this.set('asc_proceeds_30d', Math.round(a.stats.proceeds30 * 100) / 100);
     }
+    if (a.testflight) {
+      await this.set('asc_testflight_installs', a.testflight.installs);
+      await this.set('asc_testflight_testers', a.testflight.testers || 0);
+    }
+    await this.set('asc_phased_release', this.homey.app.phasedText(a.phased));
     await this.setSettings({ bundle_id: a.bundleId || '', account: a.accountName || '', currency: currency || '' }).catch(() => {});
   }
 };

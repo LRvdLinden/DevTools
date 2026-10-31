@@ -29,7 +29,10 @@
     "asc_version_live",
     "asc_version_next",
     "asc_build",
-    "asc_build_state"
+    "asc_build_state",
+    "asc_testflight_installs",
+    "asc_testflight_testers",
+    "asc_phased_release"
   ],
   "platforms": [
     "local"

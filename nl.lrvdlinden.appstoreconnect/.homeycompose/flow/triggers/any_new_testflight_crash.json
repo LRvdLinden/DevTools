@@ -1,0 +1,223 @@
+{
+  "title": {
+    "en": "An app received a TestFlight crash report",
+    "nl": "Een app kreeg een TestFlight-crashmelding",
+    "de": "Eine App hat einen TestFlight-Absturzbericht erhalten",
+    "fr": "Une app a reçu un rapport de plantage TestFlight",
+    "it": "Un'app ha ricevuto un rapporto di arresto anomalo TestFlight",
+    "sv": "En app fick en kraschrapport i TestFlight",
+    "no": "En app mottok en krasjrapport i TestFlight",
+    "es": "Una app recibió un informe de fallo de TestFlight",
+    "da": "En app modtog en nedbrudsrapport i TestFlight",
+    "ru": "Приложение получило отчёт о сбое TestFlight",
+    "pl": "Aplikacja otrzymała raport o awarii z TestFlight",
+    "ko": "앱이 TestFlight 충돌 보고서를 받았습니다",
+    "ar": "تلقى تطبيق تقرير تعطل من TestFlight"
+  },
+  "tokens": [
+    {
+      "name": "app",
+      "type": "string",
+      "title": {
+        "en": "App",
+        "nl": "App",
+        "de": "App",
+        "fr": "App",
+        "it": "App",
+        "sv": "App",
+        "no": "App",
+        "es": "App",
+        "da": "App",
+        "ru": "Приложение",
+        "pl": "Aplikacja",
+        "ko": "앱",
+        "ar": "التطبيق"
+      },
+      "example": {
+        "en": "Trailhead",
+        "nl": "Trailhead",
+        "de": "Trailhead",
+        "fr": "Trailhead",
+        "it": "Trailhead",
+        "sv": "Trailhead",
+        "no": "Trailhead",
+        "es": "Trailhead",
+        "da": "Trailhead",
+        "ru": "Trailhead",
+        "pl": "Trailhead",
+        "ko": "Trailhead",
+        "ar": "Trailhead"
+      }
+    },
+    {
+      "name": "comment",
+      "type": "string",
+      "title": {
+        "en": "Comment",
+        "nl": "Opmerking",
+        "de": "Kommentar",
+        "fr": "Commentaire",
+        "it": "Commento",
+        "sv": "Kommentar",
+        "no": "Kommentar",
+        "es": "Comentario",
+        "da": "Kommentar",
+        "ru": "Комментарий",
+        "pl": "Komentarz",
+        "ko": "코멘트",
+        "ar": "التعليق"
+      },
+      "example": {
+        "en": "The app closes when I tap Save",
+        "nl": "De app sluit als ik op Bewaar tik",
+        "de": "Die App schließt sich, wenn ich auf Sichern tippe",
+        "fr": "L'app se ferme quand je touche Enregistrer",
+        "it": "L'app si chiude quando tocco Salva",
+        "sv": "Appen stängs när jag trycker på Spara",
+        "no": "Appen lukkes når jeg trykker på Lagre",
+        "es": "La app se cierra cuando toco Guardar",
+        "da": "Appen lukker, når jeg trykker på Gem",
+        "ru": "Приложение закрывается, когда я нажимаю «Сохранить»",
+        "pl": "Aplikacja zamyka się, gdy stuknę Zapisz",
+        "ko": "저장을 탭하면 앱이 종료됩니다",
+        "ar": "يُغلق التطبيق عندما أضغط على حفظ"
+      }
+    },
+    {
+      "name": "tester",
+      "type": "string",
+      "title": {
+        "en": "Tester",
+        "nl": "Tester",
+        "de": "Tester",
+        "fr": "Testeur",
+        "it": "Tester",
+        "sv": "Testare",
+        "no": "Tester",
+        "es": "Tester",
+        "da": "Tester",
+        "ru": "Тестировщик",
+        "pl": "Tester",
+        "ko": "테스터",
+        "ar": "المختبِر"
+      },
+      "example": {
+        "en": "Sanne de Vries",
+        "nl": "Sanne de Vries",
+        "de": "Sanne de Vries",
+        "fr": "Sanne de Vries",
+        "it": "Sanne de Vries",
+        "sv": "Sanne de Vries",
+        "no": "Sanne de Vries",
+        "es": "Sanne de Vries",
+        "da": "Sanne de Vries",
+        "ru": "Sanne de Vries",
+        "pl": "Sanne de Vries",
+        "ko": "Sanne de Vries",
+        "ar": "Sanne de Vries"
+      }
+    },
+    {
+      "name": "device",
+      "type": "string",
+      "title": {
+        "en": "Device",
+        "nl": "Toestel",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기",
+        "ar": "الجهاز"
+      },
+      "example": {
+        "en": "iPhone17,1",
+        "nl": "iPhone17,1",
+        "de": "iPhone17,1",
+        "fr": "iPhone17,1",
+        "it": "iPhone17,1",
+        "sv": "iPhone17,1",
+        "no": "iPhone17,1",
+        "es": "iPhone17,1",
+        "da": "iPhone17,1",
+        "ru": "iPhone17,1",
+        "pl": "iPhone17,1",
+        "ko": "iPhone17,1",
+        "ar": "iPhone17,1"
+      }
+    },
+    {
+      "name": "os_version",
+      "type": "string",
+      "title": {
+        "en": "OS version",
+        "nl": "OS-versie",
+        "de": "OS-Version",
+        "fr": "Version de l'OS",
+        "it": "Versione OS",
+        "sv": "OS-version",
+        "no": "OS-versjon",
+        "es": "Versión del SO",
+        "da": "OS-version",
+        "ru": "Версия ОС",
+        "pl": "Wersja systemu",
+        "ko": "OS 버전",
+        "ar": "إصدار النظام"
+      },
+      "example": {
+        "en": "26.1",
+        "nl": "26.1",
+        "de": "26.1",
+        "fr": "26.1",
+        "it": "26.1",
+        "sv": "26.1",
+        "no": "26.1",
+        "es": "26.1",
+        "da": "26.1",
+        "ru": "26.1",
+        "pl": "26.1",
+        "ko": "26.1",
+        "ar": "26.1"
+      }
+    },
+    {
+      "name": "build",
+      "type": "string",
+      "title": {
+        "en": "Build",
+        "nl": "Build",
+        "de": "Build",
+        "fr": "Build",
+        "it": "Build",
+        "sv": "Build",
+        "no": "Build",
+        "es": "Build",
+        "da": "Build",
+        "ru": "Сборка",
+        "pl": "Kompilacja",
+        "ko": "빌드",
+        "ar": "البنية"
+      },
+      "example": {
+        "en": "318",
+        "nl": "318",
+        "de": "318",
+        "fr": "318",
+        "it": "318",
+        "sv": "318",
+        "no": "318",
+        "es": "318",
+        "da": "318",
+        "ru": "318",
+        "pl": "318",
+        "ko": "318",
+        "ar": "318"
+      }
+    }
+  ]
+}

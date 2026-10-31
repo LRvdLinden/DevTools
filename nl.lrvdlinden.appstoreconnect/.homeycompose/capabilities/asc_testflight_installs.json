@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "title": {
+    "en": "TestFlight installs",
+    "nl": "TestFlight-installaties",
+    "de": "TestFlight-Installationen",
+    "fr": "Installations TestFlight",
+    "it": "Installazioni TestFlight",
+    "sv": "TestFlight-installationer",
+    "no": "TestFlight-installasjoner",
+    "es": "Instalaciones de TestFlight",
+    "da": "TestFlight-installationer",
+    "ru": "Установки TestFlight",
+    "pl": "Instalacje TestFlight",
+    "ko": "TestFlight 설치 수",
+    "ar": "عمليات تثبيت TestFlight"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capabilities/download.svg",
+  "insights": true,
+  "decimals": 0
+}

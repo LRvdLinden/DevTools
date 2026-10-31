@@ -1,6 +1,6 @@
 {
   "name": "nl.lrvdlinden.appstoreconnect",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "App Store Connect for Homey: downloads, App Review status, builds and reviews of your iOS apps",
   "main": "app.js",
   "scripts": { "test": "node test/asc.test.js" },

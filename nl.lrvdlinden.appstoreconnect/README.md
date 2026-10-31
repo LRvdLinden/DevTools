@@ -1,6 +1,6 @@
 # App Store Connect for Homey
 
-`nl.lrvdlinden.appstoreconnect` · v1.0.0 · Homey Pro (local) · SDK 3 · Homey ≥ 12.3.0 · 13 languages (en, nl, de, fr, it, sv, no, es, da, ru, pl, ko, ar)
+`nl.lrvdlinden.appstoreconnect` · v1.1.0 · Homey Pro (local) · SDK 3 · Homey ≥ 12.3.0 · 13 languages (en, nl, de, fr, it, sv, no, es, da, ru, pl, ko, ar)
 
 This app brings App Store Connect into Homey, with the same design as the DevTools iPhone app. It is inspired by *App Insights for Developers*, but for Apple's App Store instead of the Homey App Store.
 
@@ -17,10 +17,12 @@ This app brings App Store Connect into Homey, with the same design as the DevToo
 | Live version, Next version | |
 | Latest build, Build status | TestFlight status |
 | Rating, Ratings | From the public App Store |
+| TestFlight installs, TestFlight testers | Sum of all builds (`betaBuildUsages`), refreshed every few hours. Insights is enabled. |
+| Phased release | Waiting for release, Active · 5%, Paused, Released to everyone |
 
 ### All apps (portfolio)
 
-Shows the same totals as above, plus the number of apps, live apps, apps in review and apps that need attention.
+Shows the same totals as above, plus the number of apps, live apps, apps in review and apps that need attention, and the TestFlight installs of all apps.
 
 ## Flows
 
@@ -37,6 +39,9 @@ Shows the same totals as above, plus the number of apps, live apps, apps in revi
 - Rating changed
 - New download figures
 - Downloads dropped
+- New TestFlight feedback, new TestFlight crash report (comment, tester, device, OS version, build)
+- Phased release changed (status, day, percentage)
+- Xcode Cloud build finished (workflow, number, result, succeeded)
 
 **Triggers (app level)** fire for any app, with an App token:
 - Status changed
@@ -45,6 +50,7 @@ Shows the same totals as above, plus the number of apps, live apps, apps in revi
 - New live version
 - New review
 - Total downloads updated
+- New TestFlight feedback, new TestFlight crash report
 
 **Conditions**
 - Is live
@@ -53,12 +59,16 @@ Shows the same totals as above, plus the number of apps, live apps, apps in revi
 - Downloads yesterday, last 7 days or total are above a value
 - Rating above a value
 - Live version older than X days
+- Phased release in progress
+- TestFlight installs above a value
 - For all apps: downloads above a value, any app in review
 
 **Actions**
 - Refresh
 - Release the approved version (Pending Developer Release)
 - Reply to a customer review
+- Control the phased release: pause, resume, or release to all users
+- Start an Xcode Cloud workflow (autocomplete)
 
 ## Widgets
 

@@ -4,7 +4,9 @@
     "portfolio_name": "Todas las apps"
   },
   "errors": {
-    "no_pending_release": "No hay ninguna versión esperando publicación (Pendiente de publicación por el desarrollador)."
+    "no_pending_release": "No hay ninguna versión esperando publicación (Pendiente de publicación por el desarrollador).",
+    "no_phased_release": "Esta app no tiene lanzamiento por fases para su versión actual.",
+    "no_workflow": "Elige un workflow de Xcode Cloud."
   },
   "widget": {
     "all_apps": "Todas las apps",
@@ -52,7 +54,12 @@
     "IN_BETA_TESTING": "En prueba",
     "READY_FOR_BETA_TESTING": "Lista para probar",
     "MISSING_EXPORT_COMPLIANCE": "Cumplimiento de exportación",
-    "EXPIRED": "Caducada"
+    "EXPIRED": "Caducada",
+    "CI_SUCCEEDED": "Correcto",
+    "CI_FAILED": "Fallido",
+    "CI_ERRORED": "Error",
+    "CI_CANCELED": "Cancelado",
+    "CI_SKIPPED": "Omitido"
   },
   "settings": {
     "subtitle": "Descargas, estado de App Review, builds y reseñas de tus apps de iOS.",
@@ -86,5 +93,11 @@
     "g3l": "<li>Toca “Descargar clave de API” – Apple solo lo permite una vez.</li><li>Abre el archivo .p8 en un editor de texto y pega arriba el contenido completo, incluidas las líneas BEGIN/END.</li><li>La clave solo se guarda en tu Homey.</li>",
     "g4": "4. Número de proveedor",
     "g4l": "<li>App Store Connect → <b>Negocio</b>: el número de 8 dígitos junto a tu dirección.</li><li>Necesario para descargas, actualizaciones e ingresos (Sales Reports). Apple publica las cifras de ayer una vez al día.</li>"
+  },
+  "phased": {
+    "INACTIVE": "Esperando el lanzamiento",
+    "ACTIVE": "Activo",
+    "PAUSED": "En pausa",
+    "COMPLETE": "Publicado para todos"
   }
 }

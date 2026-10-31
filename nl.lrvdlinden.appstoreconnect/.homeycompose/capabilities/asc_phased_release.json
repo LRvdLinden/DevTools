@@ -1,0 +1,22 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Phased release",
+    "nl": "Gefaseerde release",
+    "de": "Phasenweise Veröffentlichung",
+    "fr": "Publication progressive",
+    "it": "Rilascio graduale",
+    "sv": "Stegvis lansering",
+    "no": "Trinnvis lansering",
+    "es": "Lanzamiento por fases",
+    "da": "Trinvis udgivelse",
+    "ru": "Поэтапный выпуск",
+    "pl": "Wydanie etapowe",
+    "ko": "단계별 출시",
+    "ar": "إصدار تدريجي"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capabilities/status.svg"
+}

@@ -4,7 +4,9 @@
     "portfolio_name": "All apps"
   },
   "errors": {
-    "no_pending_release": "There is no version waiting for release (Pending Developer Release)."
+    "no_pending_release": "There is no version waiting for release (Pending Developer Release).",
+    "no_phased_release": "This app has no phased release for its current version.",
+    "no_workflow": "Choose an Xcode Cloud workflow."
   },
   "widget": {
     "all_apps": "All apps",
@@ -52,7 +54,12 @@
     "IN_BETA_TESTING": "In Testing",
     "READY_FOR_BETA_TESTING": "Ready to Test",
     "MISSING_EXPORT_COMPLIANCE": "Export Compliance",
-    "EXPIRED": "Expired"
+    "EXPIRED": "Expired",
+    "CI_SUCCEEDED": "Succeeded",
+    "CI_FAILED": "Failed",
+    "CI_ERRORED": "Error",
+    "CI_CANCELED": "Canceled",
+    "CI_SKIPPED": "Skipped"
   },
   "settings": {
     "subtitle": "Downloads, App Review status, builds and reviews of your iOS apps.",
@@ -86,5 +93,11 @@
     "g3l": "<li>Tap “Download API Key” – Apple allows this only once.</li><li>Open the .p8 file in a text editor and paste the full contents above, including the BEGIN/END lines.</li><li>The key is stored only on your Homey.</li>",
     "g4": "4. Vendor number",
     "g4l": "<li>App Store Connect → <b>Business</b>: the 8-digit number next to your address.</li><li>Needed for downloads, updates and proceeds (Sales Reports). Apple publishes the figures of yesterday once a day.</li>"
+  },
+  "phased": {
+    "INACTIVE": "Waiting for release",
+    "ACTIVE": "Active",
+    "PAUSED": "Paused",
+    "COMPLETE": "Released to everyone"
   }
 }

@@ -4,7 +4,9 @@
     "portfolio_name": "Alle apper"
   },
   "errors": {
-    "no_pending_release": "Det finnes ingen versjon som venter på utgivelse (Venter på utviklerutgivelse)."
+    "no_pending_release": "Det finnes ingen versjon som venter på utgivelse (Venter på utviklerutgivelse).",
+    "no_phased_release": "Denne appen har ingen trinnvis lansering for gjeldende versjon.",
+    "no_workflow": "Velg en Xcode Cloud-workflow."
   },
   "widget": {
     "all_apps": "Alle apper",
@@ -52,7 +54,12 @@
     "IN_BETA_TESTING": "Testes",
     "READY_FOR_BETA_TESTING": "Klar til testing",
     "MISSING_EXPORT_COMPLIANCE": "Eksportsamsvar",
-    "EXPIRED": "Utløpt"
+    "EXPIRED": "Utløpt",
+    "CI_SUCCEEDED": "Vellykket",
+    "CI_FAILED": "Mislyktes",
+    "CI_ERRORED": "Feil",
+    "CI_CANCELED": "Avbrutt",
+    "CI_SKIPPED": "Hoppet over"
   },
   "settings": {
     "subtitle": "Nedlastinger, App Review-status, builds og anmeldelser av iOS-appene dine.",
@@ -86,5 +93,11 @@
     "g3l": "<li>Trykk på «Last ned API-nøkkel» – Apple tillater dette bare én gang.</li><li>Åpne .p8-filen i et tekstredigeringsprogram og lim inn hele innholdet ovenfor, inkludert BEGIN/END-linjene.</li><li>Nøkkelen lagres bare på din Homey.</li>",
     "g4": "4. Leverandørnummer",
     "g4l": "<li>App Store Connect → <b>Business</b>: det 8-sifrede nummeret ved siden av adressen din.</li><li>Kreves for nedlastinger, oppdateringer og inntekter (Sales Reports). Apple publiserer gårsdagens tall én gang om dagen.</li>"
+  },
+  "phased": {
+    "INACTIVE": "Venter på lansering",
+    "ACTIVE": "Aktiv",
+    "PAUSED": "Satt på pause",
+    "COMPLETE": "Sluppet til alle"
   }
 }

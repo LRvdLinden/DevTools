@@ -4,6 +4,7 @@ const Homey = require('homey');
 
 module.exports = class AscPortfolioDevice extends Homey.Device {
   async onInit() {
+    if (!this.hasCapability('asc_testflight_installs')) await this.addCapability('asc_testflight_installs').catch(this.error);
     await this.applyData(this.homey.app.portfolio(), this.homey.app.data.currency);
   }
 
@@ -17,6 +18,7 @@ module.exports = class AscPortfolioDevice extends Homey.Device {
     await this.set('asc_apps_live', p.live);
     await this.set('asc_apps_review', p.inReview);
     await this.set('asc_apps_attention', p.attention);
+    await this.set('asc_testflight_installs', p.testflightInstalls || 0);
     if (p.rating) await this.set('asc_rating', Math.round(p.rating * 10) / 10);
     if (p.salesDay) {
       await this.set('asc_downloads_yesterday', p.yesterday);

@@ -4,7 +4,9 @@
     "portfolio_name": "Toutes les apps"
   },
   "errors": {
-    "no_pending_release": "Aucune version n'attend de publication (En attente de publication par le développeur)."
+    "no_pending_release": "Aucune version n'attend de publication (En attente de publication par le développeur).",
+    "no_phased_release": "Cette app n'a pas de publication progressive pour sa version actuelle.",
+    "no_workflow": "Choisissez un workflow Xcode Cloud."
   },
   "widget": {
     "all_apps": "Toutes les apps",
@@ -52,7 +54,12 @@
     "IN_BETA_TESTING": "En test",
     "READY_FOR_BETA_TESTING": "Prêt à tester",
     "MISSING_EXPORT_COMPLIANCE": "Conformité à l'exportation",
-    "EXPIRED": "Expiré"
+    "EXPIRED": "Expiré",
+    "CI_SUCCEEDED": "Réussi",
+    "CI_FAILED": "Échec",
+    "CI_ERRORED": "Erreur",
+    "CI_CANCELED": "Annulé",
+    "CI_SKIPPED": "Ignoré"
   },
   "settings": {
     "subtitle": "Téléchargements, statut App Review, builds et avis de vos apps iOS.",
@@ -86,5 +93,11 @@
     "g3l": "<li>Touchez « Télécharger la clé API » – Apple ne l'autorise qu'une seule fois.</li><li>Ouvrez le fichier .p8 dans un éditeur de texte et collez l'intégralité du contenu ci-dessus, lignes BEGIN/END comprises.</li><li>La clé est stockée uniquement sur votre Homey.</li>",
     "g4": "4. Numéro de fournisseur",
     "g4l": "<li>App Store Connect → <b>Business</b> : le numéro à 8 chiffres à côté de votre adresse.</li><li>Nécessaire pour les téléchargements, mises à jour et recettes (Sales Reports). Apple publie les chiffres de la veille une fois par jour.</li>"
+  },
+  "phased": {
+    "INACTIVE": "En attente de publication",
+    "ACTIVE": "Active",
+    "PAUSED": "En pause",
+    "COMPLETE": "Publiée pour tous"
   }
 }

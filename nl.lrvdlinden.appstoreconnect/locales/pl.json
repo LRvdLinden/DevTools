@@ -4,7 +4,9 @@
     "portfolio_name": "Wszystkie aplikacje"
   },
   "errors": {
-    "no_pending_release": "Żadna wersja nie czeka na publikację (Oczekuje na publikację przez dewelopera)."
+    "no_pending_release": "Żadna wersja nie czeka na publikację (Oczekuje na publikację przez dewelopera).",
+    "no_phased_release": "Ta aplikacja nie ma wydania etapowego dla bieżącej wersji.",
+    "no_workflow": "Wybierz workflow Xcode Cloud."
   },
   "widget": {
     "all_apps": "Wszystkie aplikacje",
@@ -52,7 +54,12 @@
     "IN_BETA_TESTING": "W testach",
     "READY_FOR_BETA_TESTING": "Gotowy do testów",
     "MISSING_EXPORT_COMPLIANCE": "Zgodność eksportowa",
-    "EXPIRED": "Wygasł"
+    "EXPIRED": "Wygasł",
+    "CI_SUCCEEDED": "Powodzenie",
+    "CI_FAILED": "Niepowodzenie",
+    "CI_ERRORED": "Błąd",
+    "CI_CANCELED": "Anulowano",
+    "CI_SKIPPED": "Pominięto"
   },
   "settings": {
     "subtitle": "Pobrania, status App Review, buildy i recenzje Twoich aplikacji iOS.",
@@ -86,5 +93,11 @@
     "g3l": "<li>Stuknij „Pobierz klucz API” – Apple pozwala na to tylko raz.</li><li>Otwórz plik .p8 w edytorze tekstu i wklej całą zawartość powyżej, łącznie z liniami BEGIN/END.</li><li>Klucz jest przechowywany wyłącznie na Twoim Homey.</li>",
     "g4": "4. Numer dostawcy",
     "g4l": "<li>App Store Connect → <b>Biznes</b>: 8-cyfrowy numer obok Twojego adresu.</li><li>Potrzebny do pobrań, aktualizacji i przychodów (Sales Reports). Apple publikuje dane z poprzedniego dnia raz dziennie.</li>"
+  },
+  "phased": {
+    "INACTIVE": "Oczekuje na wydanie",
+    "ACTIVE": "Aktywne",
+    "PAUSED": "Wstrzymane",
+    "COMPLETE": "Wydane dla wszystkich"
   }
 }

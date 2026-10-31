@@ -49,7 +49,8 @@ console.log('✓ aggregation (per app, portfolio, IAP → parent)');
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'asc-'));
 const triggered = [];
 const settingsStore = { accounts: [{ id: 'a1', name: 'Test', issuerId: 'iss', keyId: 'KEY123', privateKey: pem, vendorNumber: '12345678' }] };
-const card = id => ({ trigger: async (...args) => { triggered.push(id); }, registerRunListener: fn => { cards[id] = fn; } });
+const tokensOf = {};
+const card = id => ({ trigger: async (...args) => { triggered.push(id); tokensOf[id] = args[args.length - 1]; }, registerRunListener: fn => { cards[id] = fn; }, registerArgumentAutocompleteListener: (arg, fn) => { cards[`${id}:${arg}`] = fn; } });
 const cards = {};
 const devices = { asc_app: [], asc_portfolio: [] };
 class Base { constructor() { } log() {} error(...a) { console.error('APP ERROR', ...a); } }
@@ -57,7 +58,7 @@ const homeyMock = {
   App: Base, Driver: Base,
   Device: class extends Base {
     constructor(data) { super(); this._data = data; this.caps = {}; }
-    getData() { return this._data; } hasCapability() { return true; } getCapabilityValue(c) { return this.caps[c]; }
+    getData() { return this._data; } hasCapability() { return true; } async addCapability() {} getCapabilityValue(c) { return this.caps[c]; }
     async setCapabilityValue(c, v) { this.caps[c] = v; } getAvailable() { return true; } async setSettings() {}
   },
 };
@@ -78,6 +79,19 @@ AscClient.prototype.versions = async id => (id === '111'
 AscClient.prototype.builds = async () => [{ id: 'b1', number: '318', version: '2.5.0', processingState: 'VALID', internalState: 'IN_BETA_TESTING', externalState: '', expired: false }];
 AscClient.prototype.reviews = async () => reviewSet;
 AscClient.prototype.releaseVersion = async () => ({});
+let feedbackSet = [];
+let phasedState = { id: 'p1', state: 'ACTIVE', day: 2 };
+let runSet = { id: 'run1', number: 41, progress: 'RUNNING', result: '' };
+const patched = [];
+const started = [];
+AscClient.prototype.feedback = async (id, kind) => (id === '111' && kind === 'screenshot' ? feedbackSet : []);
+AscClient.prototype.phasedRelease = async () => phasedState;
+AscClient.prototype.setPhasedRelease = async (id, state) => { patched.push(state); };
+AscClient.prototype.betaUsage = async () => ({ installs: 40, sessions: 300, crashes: 1, feedback: 2, invites: 50 });
+AscClient.prototype.betaTesterCount = async () => 25;
+AscClient.prototype.ciWorkflows = async id => (id === '111' ? [{ id: 'wf1', name: 'Release', enabled: true }] : []);
+AscClient.prototype.latestBuildRun = async () => runSet;
+AscClient.prototype.startBuildRun = async id => { started.push(id); };
 require('../lib/asc').storeLookup = async () => ({});
 
 const App = require('../app.js');
@@ -126,6 +140,31 @@ app.sales = null;
   assert.strictEqual(await cards.downloads_yesterday_above({ device: dev, number: 10 }), true);
   assert.strictEqual(await cards.is_live({ device: dev }), true);
   console.log('✓ conditions');
+
+  // TestFlight, phased release and Xcode Cloud (1.1.0)
+  assert.strictEqual(dev.caps.asc_testflight_installs, 40);
+  assert.strictEqual(dev.caps.asc_testflight_testers, 25);
+  assert.strictEqual(port.caps.asc_testflight_installs, 80, 'two apps × 40');
+  assert.strictEqual(dev.caps.asc_phased_release, 'phased.ACTIVE · 2%');
+  feedbackSet = [{ id: 'f1', comment: 'Crash on save', tester: 'Sanne', device: 'iPhone17,1', osVersion: '26.1', build: '318' }];
+  phasedState = { id: 'p1', state: 'PAUSED', day: 2 };
+  runSet = { id: 'run1', number: 41, progress: 'COMPLETE', result: 'SUCCEEDED' };
+  await app.refreshAll({ sales: false });
+  for (const id of ['new_testflight_feedback', 'any_new_testflight_feedback', 'phased_release_changed', 'xcode_cloud_build_finished']) {
+    assert(triggered.includes(id), `trigger ${id} fired`);
+  }
+  assert.strictEqual(tokensOf.new_testflight_feedback.comment, 'Crash on save');
+  assert.strictEqual(tokensOf.xcode_cloud_build_finished.succeeded, true);
+  assert.strictEqual(tokensOf.phased_release_changed.percentage, 2);
+  assert.strictEqual(await cards.testflight_installs_above({ device: dev, number: 30 }), true);
+  assert.strictEqual(await cards.phased_release_active({ device: dev }), false);
+  await cards.phased_release_control({ device: dev, action: 'ACTIVE' });
+  assert.deepStrictEqual(patched, ['ACTIVE']);
+  const wfs = await cards['start_xcode_cloud_build:workflow']('', { device: dev });
+  assert.deepStrictEqual(wfs, [{ id: 'wf1', name: 'Release' }]);
+  await cards.start_xcode_cloud_build({ device: dev, workflow: { id: 'wf1' } });
+  assert.deepStrictEqual(started, ['wf1']);
+  console.log('✓ TestFlight installs, feedback, phased release and Xcode Cloud');
 
   const w = app.widgetData();
   assert.strictEqual(w.apps.length, 2);

@@ -26,7 +26,8 @@
     "asc_apps_total",
     "asc_apps_live",
     "asc_apps_review",
-    "asc_apps_attention"
+    "asc_apps_attention",
+    "asc_testflight_installs"
   ],
   "platforms": [
     "local"

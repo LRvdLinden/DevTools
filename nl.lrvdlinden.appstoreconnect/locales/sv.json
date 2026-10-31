@@ -4,7 +4,9 @@
     "portfolio_name": "Alla appar"
   },
   "errors": {
-    "no_pending_release": "Det finns ingen version som väntar på publicering (Väntar på utvecklarens publicering)."
+    "no_pending_release": "Det finns ingen version som väntar på publicering (Väntar på utvecklarens publicering).",
+    "no_phased_release": "Den här appen har ingen stegvis lansering för sin aktuella version.",
+    "no_workflow": "Välj ett Xcode Cloud-workflow."
   },
   "widget": {
     "all_apps": "Alla appar",
@@ -52,7 +54,12 @@
     "IN_BETA_TESTING": "Testas",
     "READY_FOR_BETA_TESTING": "Klar att testa",
     "MISSING_EXPORT_COMPLIANCE": "Exportefterlevnad",
-    "EXPIRED": "Utgången"
+    "EXPIRED": "Utgången",
+    "CI_SUCCEEDED": "Lyckades",
+    "CI_FAILED": "Misslyckades",
+    "CI_ERRORED": "Fel",
+    "CI_CANCELED": "Avbruten",
+    "CI_SKIPPED": "Hoppades över"
   },
   "settings": {
     "subtitle": "Nedladdningar, App Review-status, builds och recensioner av dina iOS-appar.",
@@ -86,5 +93,11 @@
     "g3l": "<li>Tryck på ”Hämta API-nyckel” – Apple tillåter detta bara en gång.</li><li>Öppna .p8-filen i en textredigerare och klistra in hela innehållet ovan, inklusive BEGIN/END-raderna.</li><li>Nyckeln lagras endast på din Homey.</li>",
     "g4": "4. Leverantörsnummer",
     "g4l": "<li>App Store Connect → <b>Affärer</b>: det 8-siffriga numret bredvid din adress.</li><li>Behövs för nedladdningar, uppdateringar och intäkter (Sales Reports). Apple publicerar gårdagens siffror en gång om dagen.</li>"
+  },
+  "phased": {
+    "INACTIVE": "Väntar på lansering",
+    "ACTIVE": "Aktiv",
+    "PAUSED": "Pausad",
+    "COMPLETE": "Släppt till alla"
   }
 }

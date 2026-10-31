@@ -76,7 +76,10 @@ module.exports = class AppStoreConnectApp extends Homey.App {
     this.busy = true;
     try {
       await this.refreshStatus();
-      if (sales || !this.data.salesUpdated) await this.refreshSales();
+      if (sales || !this.data.salesUpdated) {
+        await this.refreshExtras();
+        await this.refreshSales();
+      }
       await this.publish();
     } finally {
       this.busy = false;
@@ -92,14 +95,28 @@ module.exports = class AppStoreConnectApp extends Homey.App {
         const apps = await client.apps();
         for (let i = 0; i < apps.length; i += 4) {
           await Promise.all(apps.slice(i, i + 4).map(async app => {
-            const [versions, builds, reviews] = await Promise.all([
+            const [versions, builds, reviews, shots, crashes] = await Promise.all([
               client.versions(app.id).catch(() => null),
               client.builds(app.id, 3).catch(() => null),
               client.reviews(app.id, 10).catch(() => null),
+              client.feedback(app.id, 'screenshot', 5).catch(() => null),
+              client.feedback(app.id, 'crash', 5).catch(() => null),
             ]);
             const prev = this.data.apps[app.id] || {};
             const v = versions ? status.summarize(versions) : { live: prev.live, pending: prev.pending, headline: prev.headline };
             const build = builds ? builds[0] || null : prev.build;
+            // Phased release of the live version. Once complete it no longer changes, so stop asking.
+            let phased = null;
+            if (v.live) {
+              const done = prev.phased && prev.phased.versionId === v.live.id && prev.phased.state === 'COMPLETE';
+              phased = done ? prev.phased : await client.phasedRelease(v.live.id).catch(() => prev.phased || null);
+              if (phased) phased.versionId = v.live.id;
+            }
+            // Latest Xcode Cloud run per workflow (workflows are refreshed with the extras).
+            const runs = {};
+            for (const wf of (prev.workflows || []).filter(w => w.enabled)) {
+              runs[wf.id] = await client.latestBuildRun(wf.id).catch(() => (prev.runs || {})[wf.id] || null);
+            }
             fresh[app.id] = {
               ...prev,
               ...app,
@@ -111,6 +128,10 @@ module.exports = class AppStoreConnectApp extends Homey.App {
               build,
               buildState: status.buildState(build),
               reviews: reviews || prev.reviews || [],
+              feedback: shots || prev.feedback || [],
+              crashes: crashes || prev.crashes || [],
+              phased,
+              runs,
             };
           }));
         }
@@ -134,6 +155,33 @@ module.exports = class AppStoreConnectApp extends Homey.App {
     }
     this.data.apps = fresh;
     this.data.updated = new Date().toISOString();
+  }
+
+  /** TestFlight installs/testers and Xcode Cloud workflows: heavier calls, so only every few hours. */
+  async refreshExtras() {
+    const cache = this.buildUsage || (this.buildUsage = {});
+    for (const account of this.getAccounts()) {
+      const client = this.client(account);
+      const apps = Object.values(this.data.apps).filter(a => a.accountId === account.id);
+      for (const a of apps) {
+        try {
+          const builds = await client.builds(a.id, 100);
+          const total = { installs: 0, sessions: 0, crashes: 0, feedback: 0, invites: 0 };
+          for (let i = 0; i < builds.length; i += 6) {
+            await Promise.all(builds.slice(i, i + 6).map(async b => {
+              let u = cache[b.id];
+              if (!u || !b.expired) u = await client.betaUsage(b.id).catch(() => cache[b.id] || null);
+              if (!u) return;
+              cache[b.id] = u;
+              for (const k of Object.keys(total)) total[k] += u[k] || 0;
+            }));
+          }
+          total.testers = await client.betaTesterCount(a.id).catch(() => (a.testflight || {}).testers || 0);
+          a.testflight = total;
+        } catch (err) { this.log(`TestFlight ${a.name}: ${err.message}`); }
+        a.workflows = await client.ciWorkflows(a.id).catch(() => a.workflows || []);
+      }
+    }
   }
 
   async refreshSales() {
@@ -185,6 +233,10 @@ module.exports = class AppStoreConnectApp extends Homey.App {
         buildState: a.buildState,
         reviewId: a.reviews[0] ? a.reviews[0].id : m.reviewId || null,
         rating: a.rating,
+        feedbackId: a.feedback && a.feedback[0] ? a.feedback[0].id : m.feedbackId || null,
+        crashId: a.crashes && a.crashes[0] ? a.crashes[0].id : m.crashId || null,
+        phased: a.phased ? `${a.phased.state}:${a.phased.day}` : null,
+        runs: Object.fromEntries(Object.entries(a.runs || {}).filter(([, r]) => r).map(([id, r]) => [id, `${r.id}:${r.progress}`])),
         yesterday: a.stats ? a.stats.yesterday : m.yesterday,
         salesDay: a.stats && a.stats.history.length ? a.stats.history[a.stats.history.length - 1].date : m.salesDay,
       };
@@ -245,6 +297,35 @@ module.exports = class AppStoreConnectApp extends Homey.App {
         any(this.cards.anyNewReview, tokens);
       }
     }
+    const newItems = (list, lastId) => {
+      if (!list || !list.length || list[0].id === lastId) return [];
+      const known = list.findIndex(x => x.id === lastId);
+      return (lastId === undefined ? [] : (known === -1 ? [list[0]] : list.slice(0, known))).reverse();
+    };
+    for (const f of newItems(a.feedback, m.feedbackId)) {
+      const tokens = { comment: f.comment, tester: f.tester, device: f.device, os_version: f.osVersion, build: f.build };
+      dev(this.cards.newFeedback, tokens);
+      any(this.cards.anyFeedback, tokens);
+    }
+    for (const f of newItems(a.crashes, m.crashId)) {
+      const tokens = { comment: f.comment, tester: f.tester, device: f.device, os_version: f.osVersion, build: f.build };
+      dev(this.cards.newCrash, tokens);
+      any(this.cards.anyCrash, tokens);
+    }
+    const phasedKey = a.phased ? `${a.phased.state}:${a.phased.day}` : null;
+    if (a.phased && phasedKey !== m.phased && m.phased !== undefined) {
+      dev(this.cards.phasedChanged, { state: phasedLabel(a.phased, this.homey), day: a.phased.day || 0, percentage: phasedPercent(a.phased) });
+    }
+    for (const [wfId, r] of Object.entries(a.runs || {})) {
+      if (!r || r.progress !== 'COMPLETE') continue;
+      const before = (m.runs || {})[wfId];
+      if (before === undefined || before === `${r.id}:COMPLETE`) continue;
+      const wf = (a.workflows || []).find(w => w.id === wfId);
+      dev(this.cards.ciFinished, {
+        workflow: wf ? wf.name : '', number: r.number || 0,
+        result: status.label(`CI_${r.result}`, this.lang), succeeded: r.result === 'SUCCEEDED',
+      });
+    }
     if (a.rating && m.rating && Math.abs(a.rating - m.rating) >= 0.01) {
       dev(this.cards.ratingChanged, { rating: Math.round(a.rating * 100) / 100, previous: Math.round(m.rating * 100) / 100 });
     }
@@ -260,6 +341,8 @@ module.exports = class AppStoreConnectApp extends Homey.App {
     }
   }
 
+  phasedText(p) { return phasedLabel(p, this.homey); }
+
   portfolio() {
     const apps = Object.values(this.data.apps);
     const p = this.data.portfolio || { yesterday: 0, last7: 0, prev7: 0, last30: 0, total: 0, updates30: 0, iap30: 0, proceeds30: 0, history: [] };
@@ -272,6 +355,7 @@ module.exports = class AppStoreConnectApp extends Homey.App {
       inReview: apps.filter(a => status.REVIEW.has(a.headline)).length,
       attention: apps.filter(a => needsAttention(a)).length,
       rating: count ? rated.reduce((s, a) => s + a.rating * a.ratingCount, 0) / count : null,
+      testflightInstalls: apps.reduce((s, a) => s + (a.testflight ? a.testflight.installs : 0), 0),
       salesDay: p.history.length ? p.history[p.history.length - 1].date : null,
     };
   }
@@ -295,6 +379,12 @@ module.exports = class AppStoreConnectApp extends Homey.App {
       downloadsUpdated: dt('downloads_updated'),
       downloadsDropped: dt('downloads_dropped'),
       portfolioUpdated: dt('portfolio_downloads_updated'),
+      newFeedback: dt('new_testflight_feedback'),
+      newCrash: dt('new_testflight_crash'),
+      phasedChanged: dt('phased_release_changed'),
+      ciFinished: dt('xcode_cloud_build_finished'),
+      anyFeedback: f.getTriggerCard('any_new_testflight_feedback'),
+      anyCrash: f.getTriggerCard('any_new_testflight_crash'),
       anyStatus: f.getTriggerCard('any_status_changed'),
       anyReview: f.getTriggerCard('any_entered_review'),
       anyRejected: f.getTriggerCard('any_review_rejected'),
@@ -316,6 +406,8 @@ module.exports = class AppStoreConnectApp extends Homey.App {
       if (!a.live || !a.live.created) return false;
       return (Date.now() - new Date(a.live.created).getTime()) / 86400000 > args.days;
     });
+    cond('phased_release_active', a => !!a.phased && a.phased.state === 'ACTIVE');
+    cond('testflight_installs_above', (a, args) => (a.testflight ? a.testflight.installs : 0) > args.number);
     f.getConditionCard('portfolio_downloads_yesterday_above').registerRunListener(async args => this.portfolio().yesterday > args.number);
     f.getConditionCard('portfolio_any_in_review').registerRunListener(async () => this.portfolio().inReview > 0);
 
@@ -329,6 +421,27 @@ module.exports = class AppStoreConnectApp extends Homey.App {
       const account = this.getAccounts().find(x => x.id === a.accountId);
       await this.client(account).releaseVersion(a.pending.id);
       await this.refreshAll({ sales: false });
+      return true;
+    });
+    f.getActionCard('phased_release_control').registerRunListener(async args => {
+      const a = rec(args);
+      if (!a.phased) throw new Error(this.homey.__('errors.no_phased_release'));
+      const account = this.getAccounts().find(x => x.id === a.accountId);
+      await this.client(account).setPhasedRelease(a.phased.id, args.action);
+      await this.refreshAll({ sales: false });
+      return true;
+    });
+    const startBuild = f.getActionCard('start_xcode_cloud_build');
+    startBuild.registerArgumentAutocompleteListener('workflow', async (query, args) => {
+      const a = rec(args);
+      const q = String(query || '').toLowerCase();
+      return (a.workflows || []).filter(w => w.enabled && (!q || w.name.toLowerCase().includes(q))).map(w => ({ id: w.id, name: w.name }));
+    });
+    startBuild.registerRunListener(async args => {
+      const a = rec(args);
+      const account = this.getAccounts().find(x => x.id === a.accountId);
+      if (!account || !args.workflow || !args.workflow.id) throw new Error(this.homey.__('errors.no_workflow'));
+      await this.client(account).startBuildRun(args.workflow.id);
       return true;
     });
     f.getActionCard('reply_to_review').registerRunListener(async args => {
@@ -386,6 +499,18 @@ module.exports = class AppStoreConnectApp extends Homey.App {
     };
   }
 };
+
+const PHASED_PERCENT = [1, 2, 5, 10, 20, 50, 100];
+function phasedPercent(p) {
+  if (!p) return 0;
+  if (p.state === 'COMPLETE') return 100;
+  return PHASED_PERCENT[Math.max(1, Math.min(7, p.day || 1)) - 1];
+}
+function phasedLabel(p, homey) {
+  if (!p) return '—';
+  const base = homey.__(`phased.${p.state}`) || p.state;
+  return p.state === 'ACTIVE' || p.state === 'PAUSED' ? `${base} · ${phasedPercent(p)}%` : base;
+}
 
 function needsAttention(a) {
   return status.REJECTED.has(a.headline) || a.headline === 'PENDING_DEVELOPER_RELEASE'
