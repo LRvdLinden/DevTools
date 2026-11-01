@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2 (build 20)
+- **Rating request:** DevTools asks for an App Store rating at a quiet moment:
+  - first 4 hours after the first use on the device, after that at most once a week;
+  - only a few seconds after opening, never during the splash or welcome screen, in demo mode or while a notification screen is open;
+  - and only once at least one account with apps is set up.
+  - Apple decides whether the prompt actually appears (at most 3 times per year).
+
 ## 1.0.1 (build 19)
 - **Push notifications open the right screen:**
   - Tapping a notification opens the matching screen: the version (status, phased release), the build (TestFlight), the tester's feedback or crash, or otherwise the app.

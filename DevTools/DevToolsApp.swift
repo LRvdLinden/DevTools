@@ -13,6 +13,7 @@ struct DevToolsApp: App {
     init() {
         LanguageManager.apply()
         PushManager.initialize()
+        ReviewPrompter.markFirstUse()
         PhoneWatchBridge.shared.activate()
     }
 
@@ -46,8 +47,10 @@ struct DevToolsApp: App {
 struct RootView: View {
     @Environment(DevStore.self) private var store
     @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.requestReview) private var requestReview
     @State private var showSplash = !LaunchArgs.noSplash
     @State private var splashFinished = 0
+    @State private var reviewTask: Task<Void, Never>?
 
     var body: some View {
         ZStack {
@@ -75,6 +78,7 @@ struct RootView: View {
         .sensoryFeedback(.success, trigger: splashFinished)
         .task { await runSplash() }
         .onChange(of: scenePhase) { _, phase in
+            if phase != .active { reviewTask?.cancel() } else if !showSplash { scheduleReview() }
             guard phase == .active, !showSplash, store.active != nil else { return }
             if let last = store.lastRefresh, Date().timeIntervalSince(last) < 600 { return }
             Task { await store.refresh() }
@@ -103,6 +107,17 @@ struct RootView: View {
         }
         withAnimation(.easeInOut(duration: 0.55)) { showSplash = false }
         splashFinished += 1
+        scheduleReview()
+    }
+
+    private func scheduleReview() {
+        guard !LaunchArgs.noSplash, !LaunchArgs.demo else { return }
+        reviewTask?.cancel()
+        reviewTask = Task {
+            await ReviewPrompter.considerAsking(store: store, isQuiet: {
+                !showSplash && scenePhase == .active && store.active != nil && PushManager.shared.pendingRoute == nil
+            }, request: requestReview)
+        }
     }
 }
 

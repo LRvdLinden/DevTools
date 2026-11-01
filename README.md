@@ -2,7 +2,7 @@
 
 Native SwiftUI **App Store Connect companion** for iPhone, iPad, Mac (Mac Catalyst) and Apple Watch, in the style of HomeyDev (Homey Developer Tools). It is built on the official [App Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi).
 
-**Version 1.0.1 (build 19)** · EN, NL, DE, FR, ES, PL, NB, DA, SV · Team `EU3UY476T6` · Bundle `nl.lrvdlinden.devtools`
+**Version 1.0.2 (build 20)** · EN, NL, DE, FR, ES, PL, NB, DA, SV · Team `EU3UY476T6` · Bundle `nl.lrvdlinden.devtools`
 
 ## Features
 
