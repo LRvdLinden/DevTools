@@ -1,0 +1,5 @@
+[catalyst] ** BUILD SUCCEEDED **
+[frameworks] OneSignalCore.framework OneSignalExtension.framework OneSignalFramework.framework OneSignalLiveActivities.framework OneSignalNotifications.framework OneSignalOSCore.framework OneSignalOutcomes.framework OneSignalUser.framework 
+[rpath] app: @executable_path /Users/runner/Library/Developer/Xcode/DerivedData/DevTools-aqgcmbwlijflbwcbywzivcdgfjhz/Build/Products/Debug-iphoneos/PackageFrameworks @executable_path/Frameworks 
+[rpath] nse: @executable_path /Users/runner/Library/Developer/Xcode/DerivedData/DevTools-aqgcmbwlijflbwcbywzivcdgfjhz/Build/Products/Debug-iphoneos/PackageFrameworks @executable_path/Frameworks @executable_path/../../Frameworks 
+** BUILD SUCCEEDED **
