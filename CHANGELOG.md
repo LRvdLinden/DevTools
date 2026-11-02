@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 (build 23)
+- **"More apps from the developer" in the LRvdLinden house style:** the same card as in the other LRvdLinden apps.
+  - It has the LR logo, the brand blue and a "View" button, and opens lrvdlinden.app.
+  - It works in light and dark mode and in all 9 languages.
+
 ## 1.0.2 (build 22)
 - **Mac upload fixed:** `LSApplicationCategoryType = public.app-category.developer-tools` is now in Info.plist. The Mac App Store requires this category; without it the upload is rejected.
 
