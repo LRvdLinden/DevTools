@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.2 (build 22)
+- **Mac upload fixed:** `LSApplicationCategoryType = public.app-category.developer-tools` is now in Info.plist. The Mac App Store requires this category; without it the upload is rejected.
+
 ## 1.0.2 (build 21)
 - **Discover:** new card "More apps from the developer" at the bottom of Account, in the DevTools brand colours. It opens lrvdlinden.app and is available in all 9 languages.
 
