@@ -3968,5 +3968,45 @@
   "nb": "Dette varselet hører ikke til en skjerm i DevTools.",
   "da": "Denne notifikation hører ikke til en skærm i DevTools.",
   "sv": "Den här notisen hör inte till någon skärm i DevTools."
+ },
+ "Ontdekken": {
+  "en": "Discover",
+  "de": "Entdecken",
+  "fr": "Découvrir",
+  "es": "Descubrir",
+  "pl": "Odkrywaj",
+  "nb": "Oppdag",
+  "da": "Opdag",
+  "sv": "Upptäck"
+ },
+ "Meer apps van de ontwikkelaar": {
+  "en": "More apps from the developer",
+  "de": "Weitere Apps des Entwicklers",
+  "fr": "Plus d’apps du développeur",
+  "es": "Más apps del desarrollador",
+  "pl": "Więcej aplikacji dewelopera",
+  "nb": "Flere apper fra utvikleren",
+  "da": "Flere apps fra udvikleren",
+  "sv": "Fler appar från utvecklaren"
+ },
+ "Apps voor iPhone, iPad, Apple TV en Homey": {
+  "en": "Apps for iPhone, iPad, Apple TV and Homey",
+  "de": "Apps für iPhone, iPad, Apple TV und Homey",
+  "fr": "Apps pour iPhone, iPad, Apple TV et Homey",
+  "es": "Apps para iPhone, iPad, Apple TV y Homey",
+  "pl": "Aplikacje na iPhone’a, iPada, Apple TV i Homey",
+  "nb": "Apper for iPhone, iPad, Apple TV og Homey",
+  "da": "Apps til iPhone, iPad, Apple TV og Homey",
+  "sv": "Appar för iPhone, iPad, Apple TV och Homey"
+ },
+ "Bekijk": {
+  "en": "View",
+  "de": "Ansehen",
+  "fr": "Voir",
+  "es": "Ver",
+  "pl": "Zobacz",
+  "nb": "Vis",
+  "da": "Se",
+  "sv": "Visa"
  }
 }

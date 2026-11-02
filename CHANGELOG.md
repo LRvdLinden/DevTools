@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.2 (build 21)
+- **Discover:** new card "More apps from the developer" at the bottom of Account, in the DevTools brand colours. It opens lrvdlinden.app and is available in all 9 languages.
+
 ## 1.0.2 (build 20)
 - **Rating request:** DevTools asks for an App Store rating at a quiet moment:
   - first 4 hours after the first use on the device, after that at most once a week;

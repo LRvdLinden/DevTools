@@ -121,6 +121,7 @@
 "Apps aanmaken" = "Create apps";
 "Apps die met dit certificaat zijn ondertekend kunnen niet meer worden geïnstalleerd voor ontwikkeling. Dit kan niet ongedaan gemaakt worden." = "Apps signed with this certificate can no longer be installed for development. This can't be undone.";
 "Apps laden…" = "Loading apps…";
+"Apps voor iPhone, iPad, Apple TV en Homey" = "Apps for iPhone, iPad, Apple TV and Homey";
 "Apps, versies, teksten, builds en TestFlight: App Manager of Admin." = "Apps, versions, texts, builds and TestFlight: App Manager or Admin.";
 "Auteur" = "Author";
 "Authenticatie mislukt (401). Controleer Issuer ID, Key ID en de .p8-sleutel." = "Authentication failed (401). Check the Issuer ID, Key ID and the .p8 key.";
@@ -135,6 +136,7 @@
 "Basisprijs" = "Base price";
 "Batterij" = "Battery";
 "Beheerder" = "Admin";
+"Bekijk" = "View";
 "Bekijk DevTools met voorbeeldgegevens, zonder API-sleutel." = "Explore DevTools with sample data, no API key needed.";
 "Bekijk demo" = "Try the demo";
 "Bekijk in App Store" = "View in App Store";
@@ -439,6 +441,7 @@
 "Marketing" = "Marketing";
 "Marketing-URL" = "Marketing URL";
 "Meer" = "More";
+"Meer apps van de ontwikkelaar" = "More apps from the developer";
 "Meeste downloads" = "Most downloads";
 "Meldingen van App Store Connect" = "Notifications from App Store Connect";
 "Meldingen zijn uitgeschakeld voor DevTools in Instellingen." = "Notifications are turned off for DevTools in Settings.";
@@ -508,6 +511,7 @@
 "Ondertitel" = "Subtitle";
 "Ongeldig rapportbestand" = "Invalid report file";
 "Ongeldige ES256 .p8-sleutel: %@" = "Invalid ES256 .p8 key: %@";
+"Ontdekken" = "Discover";
 "Ontwikkel- en distributiecertificaten" = "Development and distribution certificates";
 "Ontwikkelaar" = "Developer";
 "Op datum vrijgeven" = "Release on a date";

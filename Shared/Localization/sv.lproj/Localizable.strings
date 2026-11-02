@@ -121,6 +121,7 @@
 "Apps aanmaken" = "Skapa appar";
 "Apps die met dit certificaat zijn ondertekend kunnen niet meer worden geïnstalleerd voor ontwikkeling. Dit kan niet ongedaan gemaakt worden." = "Appar som har signerats med det här certifikatet kan inte längre installeras för utveckling. Det går inte att ångra.";
 "Apps laden…" = "Läser in appar…";
+"Apps voor iPhone, iPad, Apple TV en Homey" = "Appar för iPhone, iPad, Apple TV och Homey";
 "Apps, versies, teksten, builds en TestFlight: App Manager of Admin." = "Appar, versioner, texter, byggen och TestFlight: App Manager eller Admin.";
 "Auteur" = "Författare";
 "Authenticatie mislukt (401). Controleer Issuer ID, Key ID en de .p8-sleutel." = "Autentiseringen misslyckades (401). Kontrollera Issuer ID, Key ID och .p8-nyckeln.";
@@ -135,6 +136,7 @@
 "Basisprijs" = "Baspris";
 "Batterij" = "Batteri";
 "Beheerder" = "Administratör";
+"Bekijk" = "Visa";
 "Bekijk DevTools met voorbeeldgegevens, zonder API-sleutel." = "Utforska DevTools med exempeldata, ingen API-nyckel behövs.";
 "Bekijk demo" = "Prova demon";
 "Bekijk in App Store" = "Visa i App Store";
@@ -439,6 +441,7 @@
 "Marketing" = "Marknadsföring";
 "Marketing-URL" = "Marknadsförings-URL";
 "Meer" = "Mer";
+"Meer apps van de ontwikkelaar" = "Fler appar från utvecklaren";
 "Meeste downloads" = "Flest nedladdningar";
 "Meldingen van App Store Connect" = "Notiser från App Store Connect";
 "Meldingen zijn uitgeschakeld voor DevTools in Instellingen." = "Notiser är avstängda för DevTools i Inställningar.";
@@ -508,6 +511,7 @@
 "Ondertitel" = "Underrubrik";
 "Ongeldig rapportbestand" = "Ogiltig rapportfil";
 "Ongeldige ES256 .p8-sleutel: %@" = "Ogiltig ES256 .p8-nyckel: %@";
+"Ontdekken" = "Upptäck";
 "Ontwikkel- en distributiecertificaten" = "Utvecklings- och distributionscertifikat";
 "Ontwikkelaar" = "Utvecklare";
 "Op datum vrijgeven" = "Publicera på ett datum";

@@ -120,6 +120,12 @@ struct AccountView: View {
             .cardRows()
 
             Section {
+                MoreAppsCard()
+                    .listRowInsets(EdgeInsets())
+                    .listRowBackground(Color.clear)
+            } header: { Text("Ontdekken") }
+
+            Section {
                 LabeledContent("Versie", value: appVersion)
                 Text("Onafhankelijke app, niet gelieerd aan Apple. Je .p8-sleutel blijft in de Keychain van dit toestel.")
                     .font(.caption).foregroundStyle(Theme.textSecondary)
@@ -227,5 +233,53 @@ struct AccountEditorSheet: View {
             dismiss()
             Task { await store.refresh() }
         } catch { self.error = error.localizedDescription }
+    }
+}
+
+/// "More apps from the developer" card in the DevTools brand colours; opens lrvdlinden.app.
+struct MoreAppsCard: View {
+    @Environment(\.openURL) private var openURL
+    private let url = URL(string: "https://lrvdlinden.app")!
+
+    var body: some View {
+        Button { openURL(url) } label: {
+            HStack(spacing: 14) {
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .fill(Theme.brandGradient)
+                    .frame(width: 60, height: 60)
+                    .overlay {
+                        Image(systemName: "square.grid.2x2.fill")
+                            .font(.system(size: 26, weight: .semibold))
+                            .foregroundStyle(.white)
+                    }
+                    .shadow(color: Theme.accent.opacity(0.35), radius: 8, y: 4)
+                VStack(alignment: .leading, spacing: 3) {
+                    Text("Meer apps van de ontwikkelaar")
+                        .font(.headline)
+                        .foregroundStyle(Theme.accent)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text("Apps voor iPhone, iPad, Apple TV en Homey")
+                        .font(.subheadline)
+                        .foregroundStyle(Theme.textSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 8)
+                VStack(spacing: 2) {
+                    Text("Bekijk")
+                        .font(.headline)
+                        .foregroundStyle(Theme.cyan)
+                    Text(verbatim: "lrvdlinden.app")
+                        .font(.caption)
+                        .foregroundStyle(Theme.textSecondary)
+                }
+            }
+            .padding(16)
+            .background(Theme.card, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+            .contentShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+        }
+        .buttonStyle(.plain)
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isLink)
+        .accessibilityHint(Text(verbatim: "lrvdlinden.app"))
     }
 }

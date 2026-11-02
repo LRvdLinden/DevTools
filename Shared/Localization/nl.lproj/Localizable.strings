@@ -121,6 +121,7 @@
 "Apps aanmaken" = "Apps aanmaken";
 "Apps die met dit certificaat zijn ondertekend kunnen niet meer worden geïnstalleerd voor ontwikkeling. Dit kan niet ongedaan gemaakt worden." = "Apps die met dit certificaat zijn ondertekend kunnen niet meer worden geïnstalleerd voor ontwikkeling. Dit kan niet ongedaan gemaakt worden.";
 "Apps laden…" = "Apps laden…";
+"Apps voor iPhone, iPad, Apple TV en Homey" = "Apps voor iPhone, iPad, Apple TV en Homey";
 "Apps, versies, teksten, builds en TestFlight: App Manager of Admin." = "Apps, versies, teksten, builds en TestFlight: App Manager of Admin.";
 "Auteur" = "Auteur";
 "Authenticatie mislukt (401). Controleer Issuer ID, Key ID en de .p8-sleutel." = "Authenticatie mislukt (401). Controleer Issuer ID, Key ID en de .p8-sleutel.";
@@ -135,6 +136,7 @@
 "Basisprijs" = "Basisprijs";
 "Batterij" = "Batterij";
 "Beheerder" = "Beheerder";
+"Bekijk" = "Bekijk";
 "Bekijk DevTools met voorbeeldgegevens, zonder API-sleutel." = "Bekijk DevTools met voorbeeldgegevens, zonder API-sleutel.";
 "Bekijk demo" = "Bekijk demo";
 "Bekijk in App Store" = "Bekijk in App Store";
@@ -439,6 +441,7 @@
 "Marketing" = "Marketing";
 "Marketing-URL" = "Marketing-URL";
 "Meer" = "Meer";
+"Meer apps van de ontwikkelaar" = "Meer apps van de ontwikkelaar";
 "Meeste downloads" = "Meeste downloads";
 "Meldingen van App Store Connect" = "Meldingen van App Store Connect";
 "Meldingen zijn uitgeschakeld voor DevTools in Instellingen." = "Meldingen zijn uitgeschakeld voor DevTools in Instellingen.";
@@ -508,6 +511,7 @@
 "Ondertitel" = "Ondertitel";
 "Ongeldig rapportbestand" = "Ongeldig rapportbestand";
 "Ongeldige ES256 .p8-sleutel: %@" = "Ongeldige ES256 .p8-sleutel: %@";
+"Ontdekken" = "Ontdekken";
 "Ontwikkel- en distributiecertificaten" = "Ontwikkel- en distributiecertificaten";
 "Ontwikkelaar" = "Ontwikkelaar";
 "Op datum vrijgeven" = "Op datum vrijgeven";
