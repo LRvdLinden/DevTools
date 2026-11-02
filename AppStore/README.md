@@ -61,6 +61,17 @@ If "DevTools – Developer Dashboard" is already taken, use one of these alterna
 
 The order is the file name order (01, 02, …). The screenshots were taken in the iOS 26 simulator with the app's demo mode, so they show real app screens.
 
+## Mac App Store (Mac Catalyst)
+
+| App Store Connect slot | Folder | Size |
+|---|---|---|
+| Mac (16:10) | `Mac-2880x1800` | 2880 × 1800 (highest resolution, preferred) |
+| Mac (16:10), alternative | `Mac-1280x800` | 1280 × 800 |
+
+There are four screenshots: dashboard, app detail with TestFlight, release with reviews, and insights. They show a Mac window with the sidebar layout and the DevTools menu bar. Regenerate them with `cd _generator && python3 mac_shots.py ../Mac-2880x1800 ../Mac-1280x800`.
+
+The Mac version requires the category `public.app-category.developer-tools`, which is already in Info.plist. In App Store Connect, add the macOS platform to DevTools and upload these screenshots under **macOS → Mac**.
+
 ## Promo
 
 - `promo/AppIcon-1024.png`: the App Store icon. Xcode supplies it automatically from the asset catalog.
